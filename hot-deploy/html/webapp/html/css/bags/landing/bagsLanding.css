@@ -1,0 +1,145 @@
+body {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffbe02+0,ffd02b+25,ffd02b+75,ffbe02+100 */
+	background: #ffbe02; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ffbe02 0%, #ffd02b 25%, #ffd02b 75%, #ffbe02 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #ffbe02 0%,#ffd02b 25%,#ffd02b 75%,#ffbe02 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #ffbe02 0%,#ffd02b 25%,#ffd02b 75%,#ffbe02 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbe02', endColorstr='#ffbe02',GradientType=1 ); /* IE6-9 */
+}
+
+.bagsLanding {
+	padding-bottom: 30px;
+	background: inherit;
+}
+	.bagsLanding .bagsCenteredContent {
+		margin: auto;
+		width: 724px;
+		background: url('/html/img/bags/landing/bags/bodyImage.png') no-repeat;
+		min-height: 619px;
+		text-align: center;
+	}
+		.bagsCenteredContent .textContentImage {
+			display: none;
+		}
+		.bagsCenteredContent img.bagsLogo {
+			margin-top: 120px;
+		}
+		.bagsCenteredContent .contentParagraph1,
+		.bagsCenteredContent .contentParagraph2 {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.bagsCenteredContent .contentParagraph1 {
+			width: 450px;
+		}
+		.bagsCenteredContent .contentParagraph2 {
+			width: 480px;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.bagsCenteredContent .bagsSignUpRow {
+			width: 570px;
+			padding: 25px;
+			background-color: #f7b702;
+			margin: 20px auto 10px auto;
+		}
+			.bagsSignUpRow .bagsSignUpInputs {
+				width: 100%;
+				margin: auto;
+				display: table;
+			}
+				.bagsSignUpInputs input {
+					display: table-cell;
+					width: 100%;
+				}
+				.bagsSignUpInputs div.bagsButton {
+					width: 120px;
+					display: table-cell;
+				}
+		.bagsCenteredContent .bigNameLogoRow,
+		.bagsCenteredContent .otherLogoRow {
+			margin: auto;
+		}
+		.bagsCenteredContent .bigNameLogoRow {
+			width: 415px;
+			margin-top: 50px;
+		}
+		.bagsCenteredContent .otherLogoRow {
+			width: 600px;
+		}
+			.bigNameLogoRow .bigNameLogo {
+				padding: 5px 0px;
+			}
+			.bigNameLogoRow .bigNameLogoToTextSplitter {
+				border-right: 2px solid #231f20;
+				width: 15px;
+				height: 57px;
+			}
+			.bigNameLogoRow .bigNameLogoText {
+				padding-left: 15px;
+				width: auto;
+				font-weight: bold;
+				line-height: 30px;
+			}
+			.otherLogoRow .envelopesLogoRow,
+			.otherLogoRow .foldersLogoRow {
+				width: 50%;
+				margin: auto;
+				text-align: center;
+				padding: 0px 10px;
+				display: block;
+			}
+				.envelopesLogoRow img {
+					padding: 2px 0px;
+				}
+@media only screen and (max-width: 767px) {
+	h1 {
+		font-size: 28px;
+	}
+	.bagsCenteredContent .textContentImage {
+		display: inline-block;
+	}
+	.bagsCenteredContent .textContent {
+		display: none;
+	}
+	.bagsLanding .bagsCenteredContent {
+		width: 100%;
+		background: none;
+	}
+	.bagsCenteredContent img.bagsLogo {
+		width: 130px;
+	}
+	.bagsCenteredContent .bagsSignUpRow {
+		padding: 10px;
+		width: auto;
+		margin-top: 10px;
+	}
+	.bagsCenteredContent .contentParagraph1 {
+		font-size: 12px;
+		padding: 0px 10px;
+		width: auto;
+	}
+		.bagsCenteredContent .bagsSignUpRow h2 {
+			font-size: 16px;
+		}
+	.bagsSignUpInputs input {
+		height: 45px;
+	}
+	.bagsCenteredContent .otherLogoRow {
+		width: auto;
+	}
+	.bagsCenteredContent .bigNameLogoRow {
+		width: 365px;
+		margin-top: 10px;
+		padding: 0px 10px;
+	}
+		.bigNameLogoRow .bigNameLogoText {
+			width: 85px;
+			line-height: 17px;
+			font-size: 12px;
+		}
+	.bagsSignUpInputs div.bagsButton {
+		line-height: 24px;
+		height: 45px;
+	}
+}

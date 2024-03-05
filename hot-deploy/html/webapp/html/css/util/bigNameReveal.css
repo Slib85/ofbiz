@@ -1,0 +1,77 @@
+[data-bnreveal] {
+	cursor: pointer;
+}
+.bnRevealNoOverflow {
+	overflow: hidden !important;
+}
+.bnRevealContainer {
+	display: none;
+	z-index: 10000;
+	background-color: #ffffff;
+	/*position: fixed;
+	top: 5%;
+	height: 90%;*/
+	position: absolute;
+	top: 20px;
+	-webkit-box-shadow: 0 0 2px 7px rgba(212,212,212,.4);
+	-moz-box-shadow: 0 0 2px 7px rgba(212,212,212,.4);
+	box-shadow: 0 0 2px 7px rgba(212,212,212,.4);
+	width: 1000px;
+	margin-left: calc(50% - 500px);
+	left: 0px;
+}
+.bnRevealContainer.bnRevealActive {
+	display: block !important;
+}
+	.bnRevealContainer .bnRevealBody {
+		height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 10px;
+	}
+.bnRevealShadowedBackground {
+	opacity: .5;
+	background-color: #000000;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+}
+.bnRevealHeader:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+	.bnRevealHeader > * {
+		padding: 10px;
+		float: left;
+		font-size: 18px;
+	}
+	.bnRevealHeader i {
+		cursor: pointer;
+		float: right;
+		font-size: 20px;
+	}
+.bnRevealContainer.invalid {
+	height: 420px !important;
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+	.bnRevealContainer {
+		width: 650px;
+		margin-left: calc(50% - 325px);
+	}
+}
+@media only screen and (max-width: 767px) {
+	.bnRevealContainer {
+		width: 300px;
+		margin-left: calc(50% - 150px);
+	}
+	.bnRevealHeader > * {
+		font-size: 14px;
+	}
+	.bnRevealHeader i {
+		font-size: 16px;
+	}
+}

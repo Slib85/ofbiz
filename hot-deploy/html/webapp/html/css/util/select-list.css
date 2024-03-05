@@ -1,0 +1,48 @@
+.f-select {
+	padding: 10px 5px;
+	border: 1px solid #f0f1f6;
+	background-color: #F1F1F1;
+	display: inline-block;
+	width: auto;
+}
+
+.f-select > div {
+	display: table;
+	width: 100%;
+}
+
+.f-select > div > * {
+	display: table-cell;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.f-select-list {
+	padding: 0px;
+	margin: 0px;
+}
+
+.f-select-list > div {
+	padding: 10px 5px;
+	border-bottom: 1px solid #f0f1f6;
+    border-top: 1px solid #f0f1f6;
+    cursor: pointer;
+    width: auto;
+}
+
+.f-select-list > div:not(.f-selected):hover {
+	background-color: #F1F1F1;
+}
+
+.f-selected {
+	background-color: #bbccee;
+	cursor: default !important;
+}
+
+.f-ellipsis {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: inherit;
+}

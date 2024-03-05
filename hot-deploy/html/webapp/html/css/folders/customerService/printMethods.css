@@ -1,0 +1,16 @@
+.printMethods .descriptionRow > *:first-child {
+	width: 400px;
+}
+.printMethods .foldersContainerBody {
+	background-color: #ffffff;
+	padding: 20px;
+}
+.printMethods .shortcuts {
+	display: block;
+}
+@media only screen and (max-width: 767px) {
+	.printMethods .descriptionRow > * {
+		width: 100%;
+		display: block;
+	}
+}

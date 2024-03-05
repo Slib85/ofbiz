@@ -1,0 +1,2 @@
+ssl_certificate            /etc/ssl/nginx/20190409_www_bags_com.crt;
+ssl_certificate_key        /etc/ssl/nginx/20190409_www_bags_com.key;

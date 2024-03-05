@@ -1,0 +1,59 @@
+.fileTransferCenter h1 {
+	font-size: 24px;
+}
+.fileTransferForm {
+	border: 1px solid #dadada;
+	margin-bottom: 40px;
+	max-width: 800px;
+}
+.fileTransferForm input[type='file'] {
+	background: transparent;
+	border: none;
+	margin-top: 0;
+	padding: 0;
+}
+.fileTransferForm .foldersTabularRow > div {
+	vertical-align: top;
+	width: 50%;
+}
+.fileTransferForm .foldersTabularRow > div:first-child {
+	padding-left: 0;
+}
+.fileTransferForm .foldersTabularRow > div:last-child {
+	padding-right: 0;
+}
+.fileTransferForm input,
+.fileTransferForm textarea {
+	font-family: 'Arial';
+	font-size: 14px;
+}
+.fileTransferForm select {
+	padding: 8.5px;
+	width: 100%;
+}
+.fileTransferCenter p,
+.fileTransferCenter ol {
+	margin: 0 0 20px;
+}
+.fileTransferCenter ul {
+	padding-left: 30px;
+}
+.fileTransferCenter ol {
+	padding: 0;
+	counter-reset: item;
+}
+.fileTransferCenter ol > li {
+	padding: 0 0 0 30px;
+	margin-bottom: 2px;
+	text-indent: -15px;
+	list-style-type: none;
+	counter-increment: item;
+}
+.fileTransferCenter ol > li:before {
+  display: inline-block;
+  width: 15px;
+  padding-right: 7.5px;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}

@@ -1,0 +1,121 @@
+.collections-result {
+	background-color: #ffffff;
+}
+.collections-result:after {
+ content: " ";
+ display: table;
+ clear: both;
+}
+	.collections-result > div > h3 {
+		font-weight: 300;
+	}
+	.collections-result >  div > a {
+		display: inline-block;
+		text-align: center;
+	}
+		.collections-result > div > a > div {
+			background-color: #0000ff;
+			width: 110px;
+			height: 110px;
+		}
+
+@media only screen and (max-width: 1023px) {
+	.collections-result {
+		text-align: center;
+	}
+}
+
+.search .results {
+    margin: 20px 0 20px 0;
+}
+.search .results a.product-image {
+    overflow: hidden;
+    display: block;
+    height: 119px;
+    max-height: 119px;
+}
+.search .results ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search .results ul li {
+    list-style: none;
+    display: inline-block;
+    background-color: #fff;
+    width: 230px;
+    margin: 15px;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+.search .results ul li img.prodImage {
+    display: block;
+    max-width: 175px;
+    max-height: 109px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.search .results ul li h2 {
+    overflow: hidden;
+    line-height: 25px;
+    font-size: 18px;
+	max-height: 55px;
+    height: 55px;
+    color: #1a345f;
+    font-weight: 700;
+}
+
+.search .results ul li h3 {
+    font-size: 16px;
+    padding-bottom: 4px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.search .results ul li div.ratings {
+    float: left;
+}
+
+.search .results ul li div.price {
+    font-size: 14px;
+    color: #1a345f;
+}
+
+@media only screen and (max-width: 767px) {
+	.search .results a.product-image {
+		height: auto;
+		max-height: none;
+	}
+	.search .results ul li {
+		width: auto;
+		padding: 5px;
+	}
+		.search .results ul li h2 {
+			padding-top: 5px;
+			line-height: auto;
+			font-size: 12px;
+			height: auto;
+			max-height: none;
+			padding-top: 10px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			width: 75px;
+		}
+	.search .results .product-image img {
+		width: 75px;
+	}
+	.search.colors .results ul li div.price {
+		display: none;
+	}
+}
+

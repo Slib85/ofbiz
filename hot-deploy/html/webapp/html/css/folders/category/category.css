@@ -1,0 +1,368 @@
+a:hover {
+    color: inherit;
+}
+.category .categoryHeader {
+    background-color: #4f9bd5;
+    display: inline-block;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    color: #ffffff;
+}
+.specialty9x12Container {
+    display: table;
+    width: 100%;
+}
+.standardFolderCell {
+    display: table-cell;
+    width: auto;
+}
+.quickShipFoldersContainer {
+    display: table-cell;
+    width: 420px;
+    vertical-align: top;  
+}
+.quickShipFolders {
+    background-color: #063b63;
+    height: 100%;
+    margin: 10px;
+}
+.quickShipText .fa-bolt {
+    color: #ffb400;
+    font-weight: bold;
+    font-size: 26px;
+    margin-right: 5px;
+}
+.quickShipText {
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 30px;
+}
+.quickShipProduct {
+    background-color: white;
+    width: 94%;
+    margin: 20px auto 10px;
+    padding: 29px 20px;
+}
+.quickShipProductInfo {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 0 20px 20px;
+}
+.quickShipProduct .standardFolderButton {
+    color: #ffffff;
+    width: 100%;
+    padding: 15px;
+}
+.searchResultsProductInfo span {
+    font-weight: bold;
+}
+.quickShipProductFolder {
+    font-size: 16px;
+}
+.quickShipProductFolder .fa-bolt {
+    color: #ffb400;
+}
+    .category .categoryHeader img {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .category .categoryHeader h1 {
+        padding: 30px 0px 10px 20px;
+        font-size: 34px;
+        width: 60%;
+    }
+    .category .categoryHeader p {
+        width: 45%;
+        padding-left: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #063b63;
+    }
+    .category .categoryText2 {
+        font-size: 18px !important;
+        color: white !important;
+        font-weight: normal !important;
+    }
+.category .resultsSet h3 {
+    font-size: 30px;
+    background-color: #e5e5e5;
+    padding: 10px;
+}
+.category .categorySubHeader, 
+.category .slideIt-container {
+    background-color: #ffffff;
+}
+.category .slideIt-container {
+    height: 380px;
+}
+    .category .categorySubHeader h2 {
+        font-size: 22px;
+    }
+.standardFolderImg {
+    display: table-cell;
+    width: 150px;
+    padding: 20px 0 0 20px;
+}
+.standardFolderList {
+    background-color: #ffffff;
+    margin: 10px 10px 20px 0;
+    height: 240px;
+    width: 100%;
+    display: table;
+}  
+.standardFolderInfo {
+    display: table-cell;
+    width: 280px;
+    vertical-align: top;
+    padding: 30px 0 0 20px;
+}
+.standardFolderInfo a {
+    display: block;
+}
+.standardFolderButton {
+    background-color: #4dae51;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.standardFolderButton a {
+    color: #ffffff;
+}
+.folderType {
+    font-weight: bold;
+    font-size: 14px;
+}
+.font13 {
+    font-size: 13px;
+}
+.minQuantity {
+    color: #3da6ff;
+}
+.printMethod {
+    font-size: 24px;
+    font-weight: bold;
+}
+.categorySlideContainer {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+}
+.categorySlideContainer .slideIt-container {
+    height: 200px !important;
+}
+.slideIt-right .fa-chevron-right, .slideIt-left .fa-chevron-left {
+    font-size: 33px !important;
+}
+.categoryGetQuoteButton {
+    left: 18%;
+    background-color: #063b63;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 16px;
+}
+.specialQuote {
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+.specialQuote p {
+    font-size: 20px;
+    display: inline-block;
+}
+.specialQuote a {
+    font-size: 18px;
+    color: #e16e12;
+}
+.positionRelative {
+    position: relative;
+}
+.categoryResults a {
+    list-style: none;
+    display: inline-block;
+    background-color: #fff;
+    width: 220px;
+    margin: 5px;
+    padding: 15px;
+    position: relative;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+    white-space: initial;
+}
+    .categoryResults a h2 {
+        font-size: 18px;
+    }
+    .categoryResults a h4 {
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .categoryResults a:hover {
+		outline: 2px solid #38a900;
+		-webkit-transition: border-color 0.5s linear; /* Saf3.2+, Chrome */
+		-moz-transition: border-color 0.5s linear; /* FF3.7+ */
+		-o-transition: border-color 0.5s linear; /* Opera 10.5 */
+		transition: border-color 0.5s linear;
+	}
+
+.bottomInfo {
+    position: absolute;
+    bottom: 10px;
+}
+.category .resultsSet a {
+    min-height: 455px;
+    border:1.3px solid #e5e5e5;
+}
+.legalStandardPocket {
+    text-align: center;
+    vertical-align: top;
+    display: table-cell;
+    width: auto;
+    padding: 30px 30px 20px 0;
+}
+.customQuoteSection {
+    display: table-cell;
+    width: 615px;
+}
+.customQuoteSection > div {
+    border: 1px solid #063b63;
+    margin: 10px 0px 10px 15px;
+    background-color: #ffffff;
+    height: 246px;
+}
+.legalFolderContainer {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+}
+.legalFolderContainer .standardFolderList {
+    height: 246px !important;
+}
+.customQuoteDetails {
+    display: inline-block;
+    padding: 50px 15px;
+    vertical-align: top;
+    width: 62%;
+    text-align: center;
+}
+.customQuoteDetails h4 {
+    color: #e16e12;
+    font-size: 24px;
+}
+.customQuoteDetails h5 {
+    font-weight: normal;
+    font-size: 18px;
+}
+.customQuoteDetails p {
+    font-size: 18px;
+    font-style: italic;
+}
+.customQuoteDetails .standardFolderButton {
+    width: 100%;
+}
+.seoH1NoBanner {
+    width: 100% !important;
+    text-align: center;
+    padding: 50px 0 !important;
+}
+@media only screen and (max-width:1024px) {
+    .specialty9x12Container {
+        display: block;
+    }
+    .standardFolderCell {
+        display: block;
+        width: 100%;
+    }
+    .quickShipFoldersContainer {
+        display: block;
+        width: 100%;
+    }
+    .quickShipFolders {
+        margin: 10px 0;
+    }
+    .legalFolderContainer {
+        display: block;
+        width: 100%;
+    }
+    .customQuoteSection {
+        display: block;
+        width: 100%;
+    }
+    .customQuoteSection > div {
+        margin: 10px 0;
+    }
+    .customQuoteDetails {
+        width: 68%;
+    }
+    .category .categoryHeader h1 {
+        font-size: 30px;
+    }
+    .category .categoryHeader p {
+        font-size: 20px;
+    }
+    .specialQuote {
+        top: -10px;
+    }
+    .specialQuote p {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .category .categoryHeader img {
+        display: none;
+    }
+    .category .categoryHeader {
+        text-align: center;
+        min-height: initial;
+    }
+    .category .categoryHeader h1 {
+        width: 100%;
+        line-height: 34px;
+        font-size: 30px;
+        padding: 15px;
+    }
+    .category .categoryHeader p {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .standardFolderInfo {
+        width: auto;
+    }
+    .categorySlideContainer {
+        display: none;
+    }
+    .category .slideIt-container {
+        height: 280px;
+    }
+    .categoryResults a {
+        width: 165px;
+    }
+        .categoryResults a h2 {
+            font-size: 16px;
+        }
+        .categoryResults a h4 {
+            font-weight: 400;
+            font-size: 14px;
+        }
+    .category .resultsSet h3 {
+        font-size: 20px;
+    }
+    .customQuoteDetails {
+        width: 100%;
+        display: block;
+    }
+    .customQuoteSection > div {
+        height: inherit;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .standardFolderImg {
+        width: 120px;
+        padding: 30px 0 0 20px;
+    }
+}

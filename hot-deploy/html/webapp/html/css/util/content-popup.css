@@ -1,0 +1,27 @@
+#background-popup {
+	z-index: 998;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #000000;
+	filter: alpha(opacity=40);
+	opacity: .4;
+	-moz-opacity:0.4;
+	-khtml-opacity: 0.4;
+	display: none;
+}
+
+
+.content-popup {
+	display: none;
+	margin-left: -40%;
+	width: 80%;
+	left: 50%;
+	position: fixed;
+	z-index: 999;
+	padding: 20px;
+	background-color: #ffffff;
+	border: 1px solid #666666;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}

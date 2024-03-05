@@ -1,0 +1,191 @@
+.cross-sell {
+		padding: 0px 40px;
+	}
+		.cross-sell [class*="rating-"] {
+			font-size: 16px !important;
+			width: 90px;
+		}
+		.cross-sell .container {
+			max-width: 944px;
+			margin: auto;
+		}
+			/* Begin Item Added */
+			.cross-sell .added {
+				width: 100%;
+				background-color: #37d378;
+				color: #ffffff;
+				display: table;
+				line-height: 30px;
+				font-size: 18px;
+			}
+				.cross-sell .added > div {
+					display: table-cell;
+					vertical-align: middle;
+				}
+				.cross-sell .added-left {
+					width: 75px;
+				}
+				.cross-sell .added-middle {
+					width: auto;
+				}
+				.cross-sell .added-right {
+					width: 200px;
+					text-align: right;
+				}
+					.cross-sell .added i {
+						font-size: 60px;
+					}
+					.cross-sell .added span {
+						display: block;
+					}
+					.cross-sell .added span.larger-font {
+						font-size: 24px;
+					}
+					.cross-sell .added a {
+						color: inherit;
+						text-decoration: underline;
+					}
+			@media only screen and (max-width: 767px) {
+				.cross-sell .added > div {
+					display: block;
+					text-align: center;
+					width: 100%;
+				}
+			}
+			/* End Item Added */
+			/* Begin Savings and Printing */
+			.cross-sell .savings-and-printing .savings {
+				padding: 0px 4px 0px 0px;
+			}
+			.cross-sell .savings-and-printing .printing {
+				padding: 0px 0px 0px 4px;
+			}
+				.cross-sell .savings-and-printing > div > div {
+					background-color: #ffffff;
+				}
+					.cross-sell .savings-and-printing > div > div > div {
+						display: table;
+						width: 100%;
+					}
+						.cross-sell .savings-and-printing > div > div > div > div {
+							display: table-cell;
+							vertical-align: top;
+						}
+				.cross-sell .savings-and-printing img {
+					width: 207px;
+				}
+				.cross-sell span.item-name {
+					display: block;
+					font-size: 20px;
+					top: 0px;
+				}
+				.cross-sell span.item-benefit {
+					display: block;
+					padding: 10px 0px;
+					font-size: 15px;
+					line-height: 25px;
+				}
+				.cross-sell div.button-regular {
+					font-size: 16px;
+					text-transform: none;
+				}
+			@media only screen and (max-width: 1023px) {
+				.cross-sell .savings-and-printing h4 {
+					text-align: center;
+				}
+				.cross-sell .savings-and-printing img {
+					width: 100%;
+					max-width: 207px;
+					height: auto;
+				}
+				.cross-sell .savings-and-printing .info {
+					min-width: 195px;
+				}
+				.cross-sell .savings-and-printing > div > div {
+					max-width: 470px;
+					margin: auto;
+				}
+			}
+			@media only screen and (max-width: 767px) {
+				.cross-sell .savings-and-printing > div > div {
+					text-align: center;
+					max-width: 265px;
+				}
+					.cross-sell .savings-and-printing > div > div > div > div {
+						display: block;
+					}
+				.cross-sell .savings-and-printing .info {
+					margin-top: 15px;
+				}
+			}
+			/* End Savings and Printing */
+			/* Begin Item List */
+			.cross-sell .item-list {
+				display: inline-block;
+			}
+				.cross-sell .item-list .head-left {
+					padding: 0px 5px 0px 0px;
+				}
+					.cross-sell .item-list .head-left h4 {
+						margin-left: 15px;
+					}
+				.cross-sell .item-list .head-right {
+					padding: 0px 0px 0px 5px;
+				}
+					.cross-sell .item-list .head-right div.button-regular {
+						font-size: 16px;
+						text-transform: none;
+						float: right;
+						margin-right: 15px;
+					}
+				.cross-sell .item-list .item-info {
+					display: inline-block;
+					width: 220px;
+					background-color: #ffffff;
+					margin: 8px;
+				}
+					.cross-sell .item-list .item-info img {
+						margin: auto;
+						display: block;
+						margin: 5px auto;
+					}
+					.cross-sell .item-list .item-info > div {
+						padding: 0px 10px;
+					}
+						.cross-sell .item-list .item-info span.item-name {
+							display: block;
+							font-size: 16px;
+							height: 40px;
+						}
+						.cross-sell .item-list .item-info span.item-color {
+							display: block;
+							line-height: 28px;
+							height: 20px;
+						}
+						.cross-sell .item-list .item-info span.item-cost {
+							color: #009cdd;
+							float: right;
+							font-size: 12px;
+						}
+			@media only screen and (max-width: 1023px) {
+				.cross-sell .item-list {
+					text-align: center;
+					width: 100%;
+				}
+					.cross-sell .item-list .item-info {
+						margin-top: 16px;
+					}
+					.cross-sell .item-list .hidden-for-large-up {
+						width: 100%;
+					}
+				.cross-sell .item-list .item-info span.item-cost {
+					float: none;
+					display: block;
+				}
+			}
+			/* End Item List */
+	@media only screen and (max-width: 1023px) {
+		.cross-sell {
+			padding: 0px 20px;
+		}
+	}

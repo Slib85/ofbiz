@@ -1,0 +1,313 @@
+/* 
+The following Classing should be used after a reset.css and globally for every site.  We can't implement this directly because we are not modifying every page so we will leave it here and one day clean it up.
+ */
+
+.site_header i {
+    vertical-align: middle;
+    padding: 0px 5px;
+}
+.site_header a {
+    color: inherit;
+    text-decoration: none;
+}
+.site_header a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+.site_header a:visited {
+    color: inherit;
+}
+
+/*
+==============================
+=== BEGIN FRAMEWORK STYLES ===
+==============================
+*/
+.tabular_row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+    .tabular_row > * {
+        display: table-cell;
+        width: auto;
+        vertical-align: middle;
+        padding: 5px;
+    }
+.flex_row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+.flex_row.flex_center {
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.flex_row.flex_left {
+    justify-content: left;
+    -webkit-justify-content: left;
+}
+    .flex_row.flex_count-6 > *,
+    .flex_row.flex_count-5 > *,
+    .flex_row.flex_count-4 > *,
+    .flex_row.flex_count-3 > *,
+    .flex_row.flex_count-2 > * {
+        width: 100%;
+    }
+    .flex_row.flex_count-6 > * {
+        max-width: 16.66666%;
+    }
+    .flex_row.flex_count-5 > * {
+        max-width: 20%;
+    }
+    .flex_row.flex_count-4 > * {
+        max-width: 25%;
+    }
+    .flex_row.flex_count-3 > * {
+        max-width: 33.33333%;
+    }
+    .flex_row.flex_count-2 > * {
+        max-width: 50%;
+    }
+    .env_row {
+        width: 100%;
+        display: block;
+    }
+        .env_row:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+        .env_row > * {
+        vertical-align: top;
+        display: inline-block;
+        }
+        .env_row .column {
+            /*height: calc(100% - 10px);*/
+            float: left;
+            display: block;
+            padding: 0px 5px;
+            margin: 5px 0px;
+        }
+    .env_row .column.large-1 {
+        width: 8.33333% !important;
+    }
+    .env_row .column.large-2 {
+        width: 16.66667% !important;
+    }
+    .env_row .column.large-3 {
+        width: 25% !important;
+    }
+    .env_row .column.large-4 {
+        width: 33.33333% !important;
+    }
+    .env_row .column.large-5 {
+        width: 41.66667% !important;
+    }
+    .env_row .column.large-6 {
+        width: 50% !important;
+    }
+    .env_row .column.large-7 {
+        width: 58.33333% !important;
+    }
+    .env_row .column.large-8 {
+        width: 66.66667% !important;
+    }
+    .env_row .column.large-9 {
+        width: 75% !important;
+    }
+    .env_row .column.large-10 {
+        width: 83.33333% !important;
+    }
+    .env_row .column.large-11 {
+        width: 91.66667%;
+    }
+    .env_row .column.large-12 {
+        width: 100% !important;
+    }
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        .env_row .column.medium-1 {
+            width: 8.33333% !important;
+        }
+        .env_row .column.medium-2 {
+            width: 16.66667% !important;
+        }
+        .env_row .column.medium-3 {
+            width: 25% !important;
+        }
+        .env_row .column.medium-4 {
+            width: 33.33333% !important;
+        }
+        .env_row .column.medium-5 {
+            width: 41.66667% !important;
+        }
+        .env_row .column.medium-6 {
+            width: 50% !important;
+        }
+        .env_row .column.medium-7 {
+            width: 58.33333% !important;
+        }
+        .env_row .column.medium-8 {
+            width: 66.66667% !important;
+        }
+        .env_row .column.medium-9 {
+            width: 75% !important;
+        }
+        .env_row .column.medium-10 {
+            width: 83.33333% !important;
+        }
+        .env_row .column.medium-11 {
+            width: 91.66667%;
+        }
+        .env_row .column.medium-12 {
+            width: 100% !important;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .flex_row.flex_count-6.noflex_count-mobile > *,
+        .flex_row.flex_count-5.noflex_count-mobile > *,
+        .flex_row.flex_count-4.noflex_count-mobile > *,
+        .flex_row.flex_count-3.noflex_count-mobile > *,
+        .flex_row.flex_count-2.noflex_count-mobile > * {
+            width: auto;
+            max-width: initial;
+        }
+        .tabular_row > * {
+            padding: 5px;
+        }
+        .env_row .column.small-1 {
+            width: 8.33333% !important;
+        }
+        .env_row .column.small-2 {
+            width: 16.66667% !important;
+        }
+        .env_row .column.small-3 {
+            width: 25% !important;
+        }
+        .env_row .column.small-4 {
+            width: 33.33333% !important;
+        }
+        .env_row .column.small-5 {
+            width: 41.66667% !important;
+        }
+        .env_row .column.small-6 {
+            width: 50% !important;
+        }
+        .env_row .column.small-7 {
+            width: 58.33333% !important;
+        }
+        .env_row .column.small-8 {
+            width: 66.66667% !important;
+        }
+        .env_row .column.small-9 {
+            width: 75% !important;
+        }
+        .env_row .column.small-10 {
+            width: 83.33333% !important;
+        }
+        .env_row .column.small-11 {
+            width: 91.66667%;
+        }
+        .env_row .column.small-12 {
+            width: 100% !important;
+        }
+        .env_row .column {
+            padding: 0px 5px;
+            margin: 5px 0px;
+        }
+    }
+/*
+=======================
+===== Begin VIEWS =====
+=======================
+*/
+    .desktop-block,
+    .tablet_desktop-block {
+        display: block !important;
+    }
+    .desktop-inline_block,
+    .tablet_desktop-inline_block {
+        display: inline-block !important;
+    }
+    .tablet_desktop-table_cell,
+    .desktop-table_cell {
+        display: table-cell !important;
+    }
+    .mobile-block,
+    .mobile-inline_block,
+    .mobile-table,
+    .mobile-table_cell,
+    .mobile_tablet-block,
+    .mobile_tablet-inline_block,
+    .mobile_tablet-table_cell {
+        display: none !important;
+    }
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        .mobile_tablet-block,
+        .tablet_desktop-block {
+            display: block !important;
+        }
+        .mobile_tablet-inline_block,
+        .tablet_desktop-inline_block {
+            display: inline-block !important;
+        }
+        .tablet_desktop-table_cell,
+        .mobile_tablet-table_cell {
+            display: table-cell !important;
+        }
+        .mobile-block,
+        .mobile-inline_block,
+        .mobile-table,
+        .mobile-table_cell,
+        .desktop-block,
+        .desktop-inline_block,
+        .desktop-table_cell {
+            display: none !important;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .noMobile {
+            display: none !important;
+        }
+        .mobile-table {
+            display: table !important;
+        }
+        .mobile-table_cell {
+            display: table-cell !important;
+        }
+        .mobile-block,
+        .mobile_tablet-block {
+            display: block !important;
+        }
+        .mobile-inline_block,
+        .mobile_tablet-inline_block {
+            display: inline-block !important;
+        }
+        .mobile_tablet-table_cell {
+            display: table-cell !important;
+        }
+        .tablet_desktop-table_cell,
+        .tablet_desktop-inline_block,
+        .tablet_desktop-block,
+        .desktop-block,
+        .desktop-inline_block,
+        .desktop-table_cell {
+            display: none !important;
+        }
+    }
+/*
+=====================
+===== End VIEWS =====
+=====================
+*/
+
+/*
+============================
+=== END FRAMEWORK STYLES ===
+============================
+*/

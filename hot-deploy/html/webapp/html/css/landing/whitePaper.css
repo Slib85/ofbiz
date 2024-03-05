@@ -1,0 +1,198 @@
+.content div.photoBusiness {
+    border: none;
+    max-width: 1170px;
+    margin: 40px auto;
+}
+.photoBusiness .ribbon {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding-left: 20px;
+    font-size: 45px!important;
+    background: #00a5e1;
+}
+    .photoBusiness .ribbon h1 {
+        font-size: 35px!important;
+        color: #ffffff;
+        margin:0px;
+        padding: 10px 10px;
+    }
+.photoBusiness .ribbon:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #84cbef;
+    z-index: -1;
+}
+.photoBusiness .ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+    -webkit-box-shadow: rgba(000,000,000,0.4) 0px 0px 0px;
+    -moz-box-shadow: rgba(000,000,000,0.4) 0px 0px 0px;
+    box-shadow: rgba(000,000,000,0.4) 0px 0px 0px;
+}
+    .photoBusiness .borderContainer .textContainer{
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+        .photoBusiness .borderContainer .textContainer .whitepaperThankYou {
+            text-align: center;
+            height: 370px;
+        }
+            .photoBusiness .borderContainer .textContainer .whitepaperThankYou img{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 250px;
+            }
+        .photoBusiness .borderContainer .textContainer p,
+        .photoBusiness .borderContainer .textContainer label{
+            color: #16347a;
+        }
+        .photoBusiness .borderContainer .textContainer label {
+            font-weight: bold;
+            padding: 9px 0px;
+        }
+
+        .photoBusiness .borderContainer .textContainer ul{
+            color: #16347a;
+        }
+            .photoBusiness .borderContainer .textContainer ul li {
+                list-style: none;
+                padding: 5px 0;
+                font-size: 14px;
+            }
+                .photoBusiness .borderContainer .textContainer ul li:before {
+                    content: '\2022';
+                    position: relative;
+                    max-width: 0;
+                    max-height: 0;
+                    left: -10px;
+                    top: 0;
+                    color: #f17121;
+                    font-size: 10px;
+                }
+            .photoBusiness .borderContainer .textContainer p.headline{
+                color: #f17121;
+                padding: 10px 0;
+            }
+            .photoBusiness .borderContainer .textContainer p.formHeadline{
+                padding: 0 0 20px;
+            }
+        .photoBusiness .borderContainer .textContainer form > div{
+            padding: 0;
+        }
+        .photoBusiness .borderContainer .textContainer .btnOrange {
+            padding: 10px;
+            font-size: 18px;
+            background-color: #f17121;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .photoBusiness .borderContainer .textContainer .swatchBook {
+            padding-top: 20px;
+            height: 135px;
+        }
+        .photoBusiness .borderContainer .textContainer .swatchBook.swatchThankYou {
+            height: auto;
+        }
+            .photoBusiness .borderContainer .textContainer .swatchBook.swatchThankYou a{
+                color: #f17121;
+            }
+            .photoBusiness .borderContainer .textContainer .swatchBook.swatchThankYou strong{
+                color: #f17121;
+            }
+        .photoBusiness .borderContainer .textContainer .swatchBook .swatchText{
+            display: table-cell;
+            vertical-align: top;
+            max-width: 280px;
+        }
+        .photoBusiness .borderContainer .textContainer .swatchBook .swatchImage{
+            display: table-cell;
+        }
+
+.photoBusiness .bottomBorder {
+    border-top: 1px solid #84cbef;
+    width: 25%;
+    clear: left;
+    padding-bottom: 45px;
+}
+
+.photoBusiness h3 {
+    color: #16347a;
+    padding: 20px 0 20px 0;
+}
+
+@media only screen and (max-width: 1023px) {
+    .photoBusiness .borderContainer .textContainer .swatchBook {
+        height: auto;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .photoBusiness .borderContainer .textContainer .swatchBook .swatchImage img{
+        max-width: 60%;
+    }
+    .photoBusiness .borderContainer .textContainer p span {
+        display: none;
+    }
+
+    .photoBusiness .borderContainer .textContainer .swatchBook.swatchThankYou .swatchText{
+        display: block;
+        max-width: 100%;
+    }
+    .photoBusiness .borderContainer .textContainer .swatchBook.swatchThankYou .swatchImage{
+        display: block;
+        max-width: 100%;
+    }
+    .photoBusiness .borderContainer .textContainer .swatchBook.swatchThankYou {
+        padding-top: 0px;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .content div.photoBusiness {
+        margin: 10px auto;
+    }
+    .photoBusiness h3 {
+        padding: 10px 0 10px 0;
+        font-size: 1.15rem;
+    }
+    .photoBusiness .borderContainer .textContainer .btnOrange {
+        margin-bottom: 25px;
+    }
+    .photoBusiness .ribbon h1 {
+        font-size: 18px!important;
+        line-height: 21px;
+    }
+    .photoBusiness .borderContainer .textContainer {
+        margin-top: 0;
+    }
+    .photoBusiness .borderContainer .textContainer .whitepaperThankYou {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .photoBusiness .borderContainer .textContainer .whitepaperThankYou {
+        text-align: center;
+        height: auto;
+    }
+    .photoBusiness .borderContainer .textContainer .swatchBook.swatchThankYou {
+        padding: 0 0 20px;
+    }
+    .photoBusiness .borderContainer .textContainer .whitepaperThankYou img{
+        position: static;
+        top: auto;
+        transform: initial;
+        max-width: 175px;
+        box-shadow: 6px 4px 10px #888;
+    }
+}
+
+[data-abide] .error small.error {
+    background-color: #F7F8FA;
+}

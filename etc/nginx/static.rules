@@ -1,0 +1,9 @@
+location ^~ /html/ {
+    root /usr/local/ofbiz/hot-deploy/html/webapp/;
+    add_header Cache-Control "public";
+    add_header Access-Control-Allow-Origin *;
+    expires 1w;
+    access_log off;
+    log_not_found off;
+    autoindex off;
+}

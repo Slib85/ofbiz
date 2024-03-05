@@ -1,0 +1,568 @@
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+.flex-row > * {
+    display: inline-flex;
+}
+.flex-row.flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.flex-row.flex-left {
+	justify-content: left;
+	-webkit-justify-content: left;
+  }
+	  .flex-row.flexCount6 > *,
+	  .flex-row.flexCount5 > *,
+	  .flex-row.flexCount4 > *,
+	  .flex-row.flexCount3 > *,
+	  .flex-row.flexCount2 > * {
+		  width: 100%;
+	  }
+	  .flex-row.flexCount6 > * {
+		  max-width: 16.66666%;
+	  }
+	  .flex-row.flexCount5 > * {
+		  max-width: 20%;
+	  }
+	  .flex-row.flexCount4 > * {
+		  max-width: 25%;
+	  }
+	  .flex-row.flexCount3 > * {
+		  max-width: 33.33333%;
+	  }
+	  .flex-row.flexCount2 > * {
+		  max-width: 50%;
+	  }
+/*------ MAIN WRAPPER ------*/
+.bnc_package_mailers_shop * {
+    margin:0;
+    padding:0;
+}
+
+.bnc_package_mailers_shop{
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_package_mailers_shop:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+/*------ TOP BANNER ------*/
+.bnc_package_mailers_top_banner{
+    position: relative;
+}
+.bnc_package_mailers_banner_wrap{
+    
+}
+.bnc_package_mailers_banner_content{
+    background-color: transparent;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* position the div in center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bnc_package_mailers_banner_content h1{
+    font-family: 'OpenSansExtraBold', sans-serif;
+    font-size:75px;
+    text-transform: uppercase;
+    color: #2f2f2f;
+}
+.bnc_package_mailers_banner_content h1 span {
+    display: block;
+    line-height: 67px;
+}
+.bnc_package_mailers_banner_content p{
+    font-family: 'OpenSansBold', sans-serif;
+    font-size: 17px;
+    color: #2f2f2f;
+}
+/*----------------------------------------*/
+/*----- Envelope Icon in TOP BANNER ------*/
+/*----------------------------------------*/
+.bnc_env_icon-wrap{
+    font-weight:700;
+    color:#1a345f;
+    font-size:16px;
+    overflow: hidden;
+    margin: 30px 0 0 0;
+}
+.bnc_env_icon-wrap:before,
+.bnc_env_icon-wrap:after {
+  background-color: #a7916f;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 25%;
+}
+
+.bnc_env_icon-wrap:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.bnc_env_icon-wrap:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+.bnc_env_icon-wrap svg{
+    width: 16px;
+    height: 11px;
+}
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="wedding-shop-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_package_mailers_shop_nav1 */
+nav[role="bnc_package_mailers_shop_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_package_mailers_shop_nav1"] a, 
+nav[role="bnc_package_mailers_shop_nav1"] label {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'OpenSansBold';
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_package_mailers_shop_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_package_mailers_shop_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #1a345f;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(50, 84, 140, .35);
+    cursor: pointer;
+}
+nav[role="bnc_package_mailers_shop_nav1"] ul > li:hover {
+    background-color: #32548c;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #32548c, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_package_mailers_shop_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_package_mailers_shop_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_package_mailers_shop_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_package_mailers_shop_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_package_mailers_shop_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_package_mailers_shop_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: -7px;
+        content: "\2261";
+        font-size: 1.8em;
+   }
+    nav[role="bnc_package_mailers_shop_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_package_mailers_shop_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_package_mailers_shop_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_package_mailers_shop_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_package_mailers_content_container {
+	display: table;
+	width: 100%;
+	margin-top: 20px;
+}
+.bnc_package_mailers_content_container > * {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    padding: 20px;
+}
+.bnc_package_mailers_content_container > *:first-child {
+    width: 320px;
+    padding: 0 0 20px 0;
+}
+.bnc_package_mailers_content_container > *:last-child {
+    padding-right: 0px;
+    padding-top: 0px;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_section_block{
+    /* background-color: #404f60; */
+    /* padding:14px; */
+    color:#fff;
+}
+.bnc_section_content{
+    background-color: #413a34;
+    padding: 15px 45px 15px 15px;
+}
+/*----------------*/
+.bnc_section_block div .bnc_section_header,
+.bnc_section_block div .bnc_section_header h1,
+.bnc_section_block div .bnc_section_header h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.bnc_section_block div .bnc_section_desc{
+	font-size: 14px;
+}
+/*--------------*/
+.bnc_package_mailers_product_wrap{
+    /* display: block; */
+    position: relative;
+    width: 100%;
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod{
+    border: 1px solid #dddddd;
+    margin: 0 24px 24px 0;
+    /* display: inline-block; */
+    vertical-align: top;
+    width: 295px;
+}
+/* .WS_widthOverWrite{
+    width: 100% !important;
+    max-width: 608px;
+} */
+.bnc_package_mailers_product_wrap .bnc_pm_prod:last-child {
+    margin-right: 0;
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod a{
+    display:block;
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content{
+
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content .bnc_pm_prod_name{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    /* background-color: #fff; */
+    font-family: 'OpenSansExtraBold';
+    padding: 15px 10px;
+    text-align: center;
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content .bnc_pm_prod_name h4, 
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content .bnc_pm_prod_name h5, 
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content .bnc_pm_prod_name i{
+    display: inline-block;
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content .bnc_pm_prod_name h4{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content .bnc_pm_prod_name i{
+    color: #672938;
+    font-size: 1.23em;
+}
+.bnc_package_mailers_product_wrap .bnc_pm_prod .bnc_pm_prod_content .bnc_pm_prod_img {
+    background-color:#dcdcdc;
+    text-align: center;
+}
+
+/* .WS_defaultOverWrite,
+.WS_defaultOverWrite i {
+    background-color: #404f60 !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    border-radius: 0 0 8px 8px;
+    font-family: 'OpenSansRegular' !important;
+    letter-spacing: 1px;
+}
+.WS_defaultOverWrite i{
+    font-family: FontAwesome !important;
+} */
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_package_mailers_section {
+    /* padding: 20px; */
+}
+.bnc_package_mailers_section_hdr {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 0 14px 0;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: #413a34;
+    color: #fff;
+}
+.bnc_package_mailers_section_hdr h3{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.bnc_package_mailers_prod_type {
+    width: 100%;
+    margin: 0 auto;
+}
+.pm_prod_cat_hdr {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #1a345f;
+    font-family: 'OpenSansBold';
+    margin: 9px 0;
+}
+.bnc_package_mailers_prod_type a{
+    width: 154px;
+	border: 2px solid #cdbd8c;
+    position: relative;
+    margin-bottom: 14px;
+    padding: 36px 0;
+}
+.bnc_package_mailers_prod_type a span {
+    font-family: 'OpenSansBold';
+}
+.bnc_package_mailers_prod_type a span, 
+.bnc_package_mailers_prod_type a p {
+    display: block;
+    text-align: center;
+    color: #1a345f;
+    font-weight: 700;
+}
+.bnc_package_mailers_prod_type a:hover, 
+.bnc_package_mailers_prod_type a:hover span, 
+.bnc_package_mailers_prod_type a:hover p {
+    background-color: #1a345f;
+    color: #fff;
+}
+.bnc_package_mailers_prod_type a.removeStyles{
+    border:none;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+.bnc_package_mailers_prod_type a.removeStyles:hover{
+    background-color:transparent;
+}
+.bnc_package_mailers_prod_type a p{
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 100%;
+}
+.bnc_package_mailers_prod_type a p span{
+	display: inline-block;
+	margin: 0 5px;
+}
+.bnc_package_mailers_prod_type a p sup {
+    font-size: 10px;
+}
+.bnc_package_mailers_prod_type a p sup.fracDigit1{
+	vertical-align: top;
+}
+.bnc_package_mailers_prod_type a p sup.fracDigit2 {
+    vertical-align: baseline;
+}
+.bnc_package_mailers_viewall {
+	margin: 0;
+    background-color: #1a345f;
+    text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+.color-name{
+    color: #672938;
+    text-align: center;
+    font-family: 'OpenSansBold';
+    font-size: 16px;
+    display: block;
+    margin: 8px 0;
+}
+.bnc_package_mailers_viewall p {
+    color: #fff;
+    font-size: 17px;
+}
+.bnc_pm_prod_category.placecards{
+
+}
+.bnc_pm_prod_category.placecards a {
+    width: 100% !important;
+    display: block;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (max-width: 1024px){
+    .bnc_package_mailers_content_container > *:first-child {
+        display: none;
+    }
+    .bnc_package_mailers_content_container > *:last-child {
+        padding: 0;
+    }
+    /*---------------------*/
+    .bnc_env_icon-wrap{
+        margin: 10px 0 0 0;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .bnc_package_mailers_nav2{
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+    }
+    .bnc_package_mailers_nav2 a img, 
+    .bnc_package_mailers_nav2 a span {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 768px){
+    .bnc_package_mailers_nav2 a {
+        display: table-cell;
+        border: 0;
+        width: 33.33333%;
+    }
+    .bnc_package_mailers_content_container > *:first-child {
+        display: none;
+    }
+    .bnc_package_mailers_content_container > *:last-child {
+        padding: 0;
+    }
+    /*----------------*/
+    .bnc_package_mailers_banner_content h1{
+        font-size: 45px;
+    }
+    .bnc_package_mailers_banner_content h1 span{
+        line-height: 1;
+    }
+    .bnc_package_mailers_banner_content p {
+        font-family: 'OpenSansBold', sans-serif;
+        font-size: 14px;
+    }
+    .bnc_env_icon-wrap {
+        margin: 5px 0 0 0;
+    }
+}
+@media only screen and (max-width: 767px){
+    .bnc_package_mailers_nav2 a{
+        display: block;
+        width: 100%;
+        border-right: none;
+        border-bottom: solid 1px white;
+        padding: 12px 0;
+    }
+}
+@media only screen and (max-width: 425px){
+    .bnc_package_mailers_banner_content p {
+        display: none;
+    }
+    .bnc_section_block div .bnc_section_header, 
+    .bnc_section_block div .bnc_section_desc {
+        text-align: center;
+    }
+
+}
+@media only screen and (max-width: 375px){
+
+}

@@ -1,0 +1,250 @@
+/* backToBusiness_shop STYLES */
+/*----------------------------------------*/
+/*----------------------------------------*/
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+.flex-row > * {
+    display: inline-flex;
+}
+.flex-row.flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.glow {
+    display: inline-block;
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.glow:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.backtobusiness_shop *{
+    margin:0;
+    padding:0;
+}
+.backtobusiness_shop{
+    max-width: 1240px;
+    margin: 20px auto;
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.backtobusiness-top-banner {
+    display: table;
+    width: 100%;
+    /* height: 120px; */
+    background-image: url('/html/img/landing/backToBusinessShop/back-to-business-shop-top-banner-v2.jpg');
+    background-position: top center;
+    /* background-repeat: no-repeat; */
+}
+.backtobusiness-top-banner h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size:65px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.backtobusiness-top-banner h1 span{
+    font-size: 35px;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.backtobusiness-workspace{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.backtobusiness-workspace .backtobusiness-desc2 {
+    position: absolute;
+    top: 3em;
+    left: 4em;
+    width: 50%;
+}
+.backtobusiness-workspace .backtobusiness-desc2 h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 52px;
+}
+.backtobusiness-workspace .backtobusiness-desc2 h2 span{
+    display: block;
+}
+.backtobusiness-workspace .backtobusiness-desc2 p{
+    color: #fff;
+    margin-top: 1em;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.backtobusiness-product-categories .prod-thumb {
+    width: 390px;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    margin: 10px;
+}
+.backtobusiness-product-categories .prod-thumb .prod-content {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.backtobusiness-product-categories .prod-thumb .prod-content .prod-img, 
+.backtobusiness-product-categories .prod-thumb .prod-content .prod-info {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+.backtobusiness-product-categories .prod-thumb .prod-content .prod-info {
+    padding: 0 12px 0 12px;
+}
+.backtobusiness-product-categories .prod-thumb .prod-content .prod-info .prod-title {
+    font-size: 17px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.backtobusiness-product-categories .prod-thumb .prod-content .prod-info .prod-copy{
+    color: #404040;
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 18px;
+}
+.backtobusiness-product-categories .prod-thumb .prod-content .prod-info .prod-shopnow{
+    color: #0688ec;
+    font-weight: 900;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.backtobusiness-customPS{
+    display: block;
+    width:100%;
+    position: relative;
+}
+.backtobusiness-customPS .cps-banner{
+    background-color: #16345c;
+    padding:24px;
+    color:#fff;
+}
+.backtobusiness-customPS .cps-banner .section-header {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.backtobusiness-customPS .cps-banner p{
+    line-height: 33px;
+}
+.cps-block{
+
+}
+.cps-block .cps-thumb{
+    border: 1px solid #dddddd;
+    margin: 5px;
+}
+.cps-block .cps-thumb a{
+    display:block;
+}
+.cps-block .cps-thumb .cps-content{
+
+}
+.cps-block .cps-thumb .cps-content .cps-title{
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+}
+.cps-block .cps-thumb .cps-content .cps-title i{
+    color:#0688ec;
+}
+.cps-block .cps-thumb .cps-content .cps-img {
+    background-color:#f1f3f7;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+@media only screen and (max-width: 1205px) {
+    .backtobusiness-workspace .backtobusiness-desc2 {
+        top: 1em;
+        left: 3em;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 p{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .backtobusiness-workspace .backtobusiness-desc2 {
+        top: 3em;
+        left: 2em;
+        width: 70%;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 h2{
+        font-size: 46px;
+        line-height: 48px;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 p{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .backtobusiness-top-banner h1{
+        font-size: 45px;
+    }
+    .backtobusiness-top-banner h1 span {
+        font-size: 25px;
+    }
+    .backtobusiness-workspace{
+        overflow: hidden;
+        height: 143px;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 {
+        top: 1.5em;
+        left: 1.5em;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 h2 {
+        font-size: 2.5em;
+        line-height: normal;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 p{
+        display: none;
+    }
+    .backtobusiness-customPS .cps-banner p {
+        line-height: 23px;
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .backtobusiness-top-banner h1, 
+    .backtobusiness-top-banner h1 span{
+        font-size: 25px;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 {
+        top: 2em;
+        width:70%;
+    }
+    .backtobusiness-workspace .backtobusiness-desc2 h2 {
+        font-size: 32px;
+    }
+    .backtobusiness-customPS .cps-banner .section-header{
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,261 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+	<head>
+		<#if .locale == "ru_RU">
+			<link name="verdana" type="font" subtype="opentype" src="${nsfont.verdana}" src-bold="${nsfont.verdana_bold}" bytes="2" />
+		</#if>
+		<style type="text/css">table {
+			font-family: sans-serif;
+			font-size: 12px;
+		}
+		div.h1 {
+			color: #ff1c15;
+			display: block;
+		}
+		.dotSpacing {
+			width: 200px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.dotSpacing-s {
+			width: 150px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.dotSpacing-l {
+			width: 300px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.padding-right-xs {
+			padding-right: 10px;
+		}
+		.padding-left-s {
+			padding-left: 20px;
+		}
+		.padding-top-xs {
+			padding-top: 10px;
+		}
+		.padding-bottom-xs {
+			padding-bottom: 10px;
+		}
+		.poNumber {
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			margin-top: 10px;
+			padding: 10px 0;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		.optionHeader {
+			font-weight: bold;
+			font-size: 16px;
+			font-style: italic;
+			text-decoration: underline;
+			color: #160090;
+		}
+		.address {
+			font-size: 15px;
+		}
+		</style>
+	</head>
+	<body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+	<table cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td class="padding-bottom-xs" valign="top"><img height="50" src="https://cdn.envelopemedia.com/html/img/logo/foldersNavy.png" width="123" /></td>
+			<td class="padding-bottom-xs address" valign="top">Folders.com<br />105 Maxess Rd.<br />Suite S215<br />Melville, NY 11747</td>
+			<td class="padding-bottom-xs address" valign="top">Web: www.folders.com<br />Phone: 800-296-4321<br />Email: artwork@folders.com</td>
+		</tr>
+		<tr>
+			<td class="poNumber" colspan="2">Folders.com Purchase Order for Job# ${record.tranid}</td>
+			<td class="poNumber">${record.trandate}</td>
+		</tr>
+		<#if record.item?has_content>
+		<#list record.item as item>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="h1">Approved to Manufacture per all specs. Use the art contained in the &quot;Art-Approved.pdf&quot;.</div>
+
+				<table cellpadding="0" cellspacing="0"><tr>
+					<td class="padding-right-xs">
+						<div class="dotSpacing">Job # ......................................................................</div>
+					</td>
+					<td>: ${record.tranid}</td>
+				</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing">Salesrep ......................................................................</div>
+						</td>
+						<td>: Andy Gentile</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing">Type of Artwork/Order ......................................................................</div>
+						</td>
+						<td>: New Art</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing">Vendor ......................................................................</div>
+						</td>
+						<td>: Admore</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing">Quantity ......................................................................</div>
+						</td>
+						<td>: 1000</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing">Mfg Cost ......................................................................</div>
+						</td>
+						<td>: $707.00</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing">Production Schedule ......................................................................</div>
+						</td>
+						<td>: Standard - Standard - 7 Day</td>
+					</tr></table>
+			</td>
+		</tr>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="optionHeader">Paper Stock / Material</div>
+
+				<div class="optionValue">${item.custcol24}</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="optionHeader">Style</div>
+
+				<div class="optionValue">${item.custcol23}</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="optionHeader">Style Description</div>
+
+				<div class="optionValue">${item.custcol_model_description}</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="optionHeader">Card Slit Options</div>
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-s">Pocket Style ......................................................................</div>
+						</td>
+						<td>: ${item.custcol_pocket_style}</td>
+						<td class="padding-left-s">Position</td>
+						<td>: ${item.custcol7}</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-s">Coating Side 1 ......................................................................</div>
+						</td>
+						<td>: ${item.custcol9}</td>
+						<td class="padding-left-s"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-s">Coating Side 2 ......................................................................</div>
+						</td>
+						<td>: ${item.custcol10}</td>
+						<td class="padding-left-s"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="optionHeader">Print Method Required</div>
+
+				<div class="optionValue">First Print Method - Foil Stamping Foil Stamping</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="optionHeader">Foil Stamping Specs</div>
+
+				<table cellpadding="0" cellspacing="0"><tr>
+					<td class="padding-right-xs">
+						<div class="dotSpacing-l">Number Of Foil Images Under 15 ......................................................................</div>
+					</td>
+					<td>: 0</td>
+				</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-l">Number Of Foil Images Under 36 ......................................................................</div>
+						</td>
+						<td>: 0</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-l">Number Of Foil Images Under 40 ......................................................................</div>
+						</td>
+						<td>: 0</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-l">Number Of Foil Images Over 40 ......................................................................</div>
+						</td>
+						<td>: 1</td>
+					</tr></table>
+			</td>
+		</tr>
+		</#list>
+		</#if>
+		<tr>
+			<td class="padding-top-xs" colspan="3">
+				<div class="optionHeader">Shipping Address</div>
+
+				<table cellpadding="0" cellspacing="0"><tr>
+					<td class="padding-right-xs">
+						<div class="dotSpacing-s">Contact ......................................................................</div>
+					</td>
+					<td>: Gay Ketchum</td>
+					<td class="padding-left-s">Quantity</td>
+					<td>: 1,000</td>
+				</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-s">Company ......................................................................</div>
+						</td>
+						<td>: Gordon Cooper Technology Center</td>
+						<td class="padding-left-s">Carrier</td>
+						<td>: UPS</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-s">Street 1 ......................................................................</div>
+						</td>
+						<td>: 1 John C. Bruton Blvd</td>
+						<td class="padding-left-s">Method</td>
+						<td>: Ground</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-s">City/State ......................................................................</div>
+						</td>
+						<td>: Shawnee, OK 74804</td>
+						<td class="padding-left-s">Charge</td>
+						<td>: Admore</td>
+					</tr>
+					<tr>
+						<td class="padding-right-xs">
+							<div class="dotSpacing-s">Phone ......................................................................</div>
+						</td>
+						<td>: (405)273-7493 x 2241</td>
+						<td class="padding-left-s">Box Label</td>
+						<td>: FF Label</td>
+					</tr></table>
+			</td>
+		</tr></table>
+	</body>
+</pdf>

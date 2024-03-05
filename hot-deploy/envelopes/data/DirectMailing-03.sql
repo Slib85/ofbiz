@@ -1,0 +1,1 @@
+UPDATE `direct_mailing_option` SET `OPTION_VALUE` = 'Address Printed On Envelope' WHERE (`OPTION_ID` = '30');

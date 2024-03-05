@@ -1,0 +1,1956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<site-conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xmlns="http://ofbiz.apache.org/Site-Conf" xsi:schemaLocation="http://ofbiz.apache.org/Site-Conf http://ofbiz.apache.org/dtds/site-conf.xsd">
+	<include location="component://common/webcommon/WEB-INF/common-controller.xml"/>
+	<description>Envelopes Controller Configuration File</description>
+	<errorpage>/error/error.jsp</errorpage>
+
+	<handler name="java" type="request" class="org.apache.ofbiz.webapp.event.JavaEventHandler"/>
+	<handler name="groovy" type="request" class="org.apache.ofbiz.webapp.event.GroovyEventHandler"/>
+	<handler name="soap" type="request" class="org.apache.ofbiz.webapp.event.SOAPEventHandler"/>
+	<handler name="service" type="request" class="org.apache.ofbiz.webapp.event.ServiceEventHandler"/>
+	<handler name="service-multi" type="request" class="org.apache.ofbiz.webapp.event.ServiceMultiEventHandler"/>
+	<handler name="simple" type="request" class="org.apache.ofbiz.webapp.event.SimpleEventHandler"/>
+	<handler name="rome" type="request" class="org.apache.ofbiz.webapp.event.RomeEventHandler"/>
+
+	<handler name="jsp" type="view" class="org.apache.ofbiz.webapp.view.JspViewHandler"/>
+	<handler name="http" type="view" class="org.apache.ofbiz.webapp.view.HttpViewHandler"/>
+	<handler name="screen" type="view" class="org.apache.ofbiz.widget.renderer.macro.MacroScreenViewHandler"/>
+	<handler name="simplecontent" type="view" class="org.apache.ofbiz.content.view.SimpleContentViewHandler"/>
+	<handler name="screenfop" type="view" class="org.apache.ofbiz.widget.renderer.fo.ScreenFopViewHandler"/>
+
+	<!-- Events to run on every request before security (chains exempt) -->
+	<!--
+	<preprocessor>
+	</preprocessor>
+	-->
+	<!-- Events to run on every request after all other processing (chains exempt) -->
+	<!--
+	<postprocessor>
+	</postprocessor>
+	-->
+
+	<!-- General Request Mappings -->
+	<request-map uri="blank">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="blank"/>
+		<response name="error" type="view" value="blank"/>
+	</request-map>
+	<request-map uri="main">
+		<security https="true" auth="true"/>
+		<!--<event type="java" path="com.bigname.analytics.GoogleAnalytics" invoke="getSessionReport"/>-->
+		<response name="success" type="view" value="main"/>
+		<response name="error" type="view" value="main"/>
+	</request-map>
+
+	<!-- Admin Pages -->
+	<request-map uri="adminSearch">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="adminSearch"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Order Pages -->
+	<request-map uri="addWorkOrderEmployee">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="addWorkOrderEmployee"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeWorkOrderEmployee">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="removeWorkOrderEmployee"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="vendorOrderList">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="vendorOrderList"/>
+		<response name="error" type="view" value="vendorOrderList"/>
+	</request-map>
+	<request-map uri="addVendorTracking">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.cxml.CXMLEvents" invoke="addVendorTracking"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateOutsourceComments">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateVendorOrder"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="orderList">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="orderList"/>
+		<response name="error" type="view" value="orderList"/>
+	</request-map>
+	<request-map uri="viewOrder">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="viewOrder"/>
+		<response name="error" type="view" value="viewOrder"/>
+	</request-map>
+	<request-map uri="viewOrderLegacy">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="viewOrderLegacy"/>
+		<response name="error" type="view" value="viewOrderLegacy"/>
+	</request-map>
+	<request-map uri="sendOrderConfirmation">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="sendOrderConfirmation"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createOrder">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="createOrder"/>
+		<response name="error" type="view" value="createOrder"/>
+	</request-map>
+	<request-map uri="sampleOrder">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="sampleOrder"/>
+		<response name="error" type="view" value="sampleOrder"/>
+	</request-map>
+	<request-map uri="workOrder">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="workOrder"/>
+		<response name="error" type="view" value="workOrder"/>
+	</request-map>
+	<request-map uri="workOrderAdmin">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="workOrderAdmin"/>
+		<response name="error" type="view" value="workOrderAdmin"/>
+	</request-map>
+	<request-map uri="getNetsuiteJSON">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.netsuite.NetsuiteEvents" invoke="getNetsuiteJSON"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- CART -->
+	<request-map uri="addCustomOrder">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.order.CheckoutEvents" invoke="createOrder"/>
+		<response name="success" type="view" value="viewOrder"/>
+		<response name="error" type="view" value="createOrder"/>
+	</request-map>
+	<request-map uri="addToCart">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.cart.CartEvents" invoke="addToCart"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeFromCart">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.cart.CartEvents" invoke="removeFromCart"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getProductPrice">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="getProductPrice"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getCart">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.cart.CartEvents" invoke="getCart"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="calcShippingRates">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.shipping.ShippingEvents" invoke="getShippingRates"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getProductName">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="getProductName"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<!-- CART -->
+
+	<request-map uri="linkDesignsAndProducts">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="linkDesignsAndProducts" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="changeOrderStatus">
+		<security https="true" auth="true"/>
+		<event type="service" invoke="changeOrderStatus"/>
+		<response name="success" type="view" value="viewOrder"/>
+		<response name="error" type="view" value="viewOrder"/>
+	</request-map>
+	<request-map uri="changeOrderPayment">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="changeOrderPayment"/>
+		<response name="success" type="none"/>
+	</request-map>
+    <request-map uri="changeOrderBillingAddress">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.order.OrderEvents" invoke="updateBillingAddress"/>
+        <response name="success" type="none"/>
+    </request-map>
+    <request-map uri="changeOrderShippingAddress">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.order.OrderEvents" invoke="updateShippingAddress"/>
+        <response name="success" type="none"/>
+    </request-map>
+	<request-map uri="changeOrderBillingPhone">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updatePhone"/>
+		<response name="success" type="none"/>
+	</request-map>
+	<request-map uri="changeOrderShippingPhone">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updatePhone"/>
+		<response name="success" type="none"/>
+	</request-map>
+    <request-map uri="changeOrderEmailAddress">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.order.OrderEvents" invoke="updateEmailAddress"/>
+        <response name="success" type="none"/>
+    </request-map>
+	<request-map uri="changeOrderItemStatus">
+		<security https="true" auth="true"/>
+		<event type="service" invoke="changeOrderItemStatus"/>
+		<response name="success" type="view" value="viewOrder"/>
+		<response name="error" type="view" value="viewOrder"/>
+	</request-map>
+	<request-map uri="setDueDate">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="setDueDate"/>
+		<response name="success" type="none"/>
+	</request-map>
+	<request-map uri="createCustomerFromNetsuite">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.netsuite.NetsuiteEvents" invoke="createCustomerFromNetsuite"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateFulfillmentFromNetsuite">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.netsuite.NetsuiteEvents" invoke="updateFulfillmentFromNetsuite"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="exportOrder">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.netsuite.NetsuiteEvents" invoke="exportOrder"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getNetsuitePO">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.netsuite.NetsuiteEvents" invoke="getPO"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getItemWorkOrder">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.netsuite.NetsuiteEvents" invoke="getItemWorkOrder"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="serveFileForStream">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.http.FileHelper" invoke="serveFileForStream"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+    <request-map uri="serveLabelForStream">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.http.FileHelper" invoke="serveFileForStream"/>
+        <response name="success" type="none" />
+        <response name="error" type="none" />
+    </request-map>
+	<request-map uri="envelopesQuoteList">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="envelopesQuoteList"/>
+		<response name="error" type="view" value="envelopesQuoteList"/>
+	</request-map>
+	<request-map uri="foldersQuoteList">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="foldersQuoteList"/>
+		<response name="error" type="view" value="foldersQuoteList"/>
+	</request-map>
+	<request-map uri="envelopesQuoteView">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="envelopesQuoteView"/>
+		<response name="error" type="view" value="envelopesQuoteView"/>
+	</request-map>
+	<request-map uri="foldersQuoteView">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="foldersQuoteView"/>
+		<response name="error" type="view" value="foldersQuoteView"/>
+	</request-map>
+	<request-map uri="sendCompletedQuoteEmail">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="sendCompletedQuoteEmail" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="sendCompletedQuoteToNetsuite">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="sendCompletedQuoteToNetsuite" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="changeQuoteStatus">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="changeQuoteStatus" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateCustomOrderAssignedTo">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="updateCustomOrderAssignedTo" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateCustomOrder">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="updateCustomOrder" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addQuoteNote">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="addQuoteNote"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="discontinueChildQuote">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="discontinueChildQuote"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="generateQuotePDF">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="generateQuotePDF"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="generatePurchaseOrderPDF">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="generatePurchaseOrderPDF"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="channelSalesReport">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="channelSalesReport"/>
+		<response name="error" type="view" value="channelSalesReport"/>
+	</request-map>
+	<request-map uri="getChannelSalesReport">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.netsuite.NetsuiteEvents" invoke="getChannelSalesReport" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="downloadAddressBook">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.addressbook.AddressBookEvents" invoke="downloadAddressBook" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+    <request-map uri="downloadNewAddressBook">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.addressbook.AddressBookEvents" invoke="downloadNewAddressBook" />
+        <response name="success" type="none" />
+        <response name="error" type="none" />
+    </request-map>
+	<request-map uri="prepress">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="prepress"/>
+		<response name="error" type="view" value="prepress"/>
+	</request-map>
+    <request-map uri="updatePrepressQueueFilter">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.order.OrderEvents" invoke="updatePrepressQueueFilter" />
+        <response name="success" type="none" />
+        <response name="error" type="none" />
+    </request-map>
+	<request-map uri="prepressOrderList">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="prepressOrderList"/>
+		<response name="error" type="view" value="prepressOrderList"/>
+	</request-map>
+	<request-map uri="pressMan">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="pressMan"/>
+		<response name="error" type="view" value="pressMan"/>
+	</request-map>
+	<request-map uri="reAuth">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="reAuth"/>
+		<response name="error" type="view" value="reAuth"/>
+	</request-map>
+	<request-map uri="refundAmazon">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.payments.amazon.AmazonPaymentEvents" invoke="refundFunds" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="captureAuth">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.payments.amazon.AmazonPaymentEvents" invoke="captureFunds" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="refundPayPal">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.payments.paypal.PayPalCheckoutEvents" invoke="refundFunds" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="persistentCartAssist">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="persistentCartAssist"/>
+		<response name="error" type="view" value="persistentCartAssist"/>
+	</request-map>
+	<request-map uri="deletePersistentCart">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.cart.CartEvents" invoke="deletePersistentCart" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="setDriftQuote">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.quote.QuoteEvents" invoke="setDriftQuote" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<!-- Editor Pages -->
+	<request-map uri="homepageEditor">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="homepageEditor"/>
+		<response name="error" type="view" value="homepageEditor"/>
+	</request-map>
+	<request-map uri="doHomepageImageInsertsOrUpdates">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.homepage.HomepageEvents" invoke="doHomepageImageInsertsOrUpdates"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="navigationEditor">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="navigationEditor"/>
+		<response name="error" type="view" value="navigationEditor"/>
+	</request-map>
+	<request-map uri="updateMegaMenu">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.navigation.NavigationEvents" invoke="updateMegaMenu"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Production -->
+	<request-map uri="productionDashboard">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="productionDashboard"/>
+		<response name="error" type="view" value="productionDashboard"/>
+	</request-map>
+
+	<request-map uri="jobGoodToGo">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.printing.PressManEvents" invoke="jobGoodToGo"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+    <!-- Label Printer -->
+    <request-map uri="printLabel">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="printLabel"/>
+        <response name="error" type="view" value="printLabel"/>
+    </request-map>
+
+    <request-map uri="labelCenter">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="labelCenter"/>
+        <response name="error" type="view" value="labelCenter"/>
+    </request-map>
+
+	<request-map uri="sampleFolderLabelEditor">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="sampleFolderLabelEditor"/>
+		<response name="error" type="view" value="sampleFolderLabelEditor"/>
+	</request-map>
+
+	<request-map uri="overrideFolderJobData">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.label.LabelPrintEvents" invoke="overrideJobData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="overrideFolderLabelData">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.label.LabelPrintEvents" invoke="overrideLabelData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="getFolderName">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.label.LabelPrintEvents" invoke="getFolderName"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+    <request-map uri="rebuildLabel">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.label.LabelPrintEvents" invoke="rebuildLabel"/>
+        <response name="success" type="none" />
+        <response name="error" type="none" />
+    </request-map>
+
+    <request-map uri="invalidateLabel">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.label.LabelPrintEvents" invoke="invalidateLabel"/>
+        <response name="success" type="none" />
+        <response name="error" type="none" />
+    </request-map>
+
+    <request-map uri="getLabelData">
+        <security https="true" auth="true"/>
+        <event type="java" path="com.envelopes.label.LabelPrintEvents" invoke="getLabelData"/>
+        <response name="success" type="none" />
+        <response name="error" type="none" />
+    </request-map>
+
+	<request-map uri="getPrintJobData">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="getPrintJobData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="getPrintJobStatus">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="getPrintJobStatus"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+
+	<!-- QuoteCalculator -->
+	<request-map uri="qcVendors">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="qcVendors"/>
+		<response name="error" type="view" value="qcVendors"/>
+	</request-map>
+	<request-map uri="qcVendor">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getVendor"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcSaveVendor">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="saveVendor"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcIsValidId">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="isIdValid"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcStyleGroups">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="qcStyleGroups"/>
+		<response name="error" type="view" value="qcStyleGroups"/>
+	</request-map>
+	<request-map uri="qcStyleGroup">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getStyleGroup"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcSaveStyleGroup">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="saveStyleGroup"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcStyles">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="qcStyles"/>
+		<response name="error" type="view" value="qcStyles"/>
+	</request-map>
+	<request-map uri="qcStyle">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getStyle"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcSaveStyle">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="saveStyle"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcMaterialTypes">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="qcMaterialTypes"/>
+		<response name="error" type="view" value="qcMaterialTypes"/>
+	</request-map>
+	<request-map uri="qcMaterialType">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getMaterialType"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcSaveMaterialType">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="saveMaterialType"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcStockTypes">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="qcStockTypes"/>
+		<response name="error" type="view" value="qcStockTypes"/>
+	</request-map>
+	<request-map uri="qcStockType">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getStockType"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcSaveStockType">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="saveStockType"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcStocks">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="qcStocks"/>
+		<response name="error" type="view" value="qcStocks"/>
+	</request-map>
+	<request-map uri="qcStock">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getStock"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcSaveStock">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="saveStock"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcAvailableVendorStyleGroups">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getAssignedAndAvailableVendorStyleGroups"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcAvailableStyleGroupPricingAttributes">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getAssignedAndAvailablePricingAttributes"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcAddOrRemoveVendorStyleGroups">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="addOrRemoveVendorStyleGroups"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+	<request-map uri="qcAddOrRemoveStyleGroupPricingAttributes">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="addOrRemoveStyleGroupPricingAttributes"/>
+		<response name="success" type="none"/>
+		<response name="error" type="none"/>
+	</request-map>
+
+	<request-map uri="quoteCalculator">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="quoteCalculator"/>
+		<response name="error" type="view" value="quoteCalculator"/>
+	</request-map>
+
+	<request-map uri="getDetailedPrice">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getDetailedPrice"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getQuoteMinMaxQuantities">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="getMinMaxQuantities"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createOrUpdateQuoteCustomer">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.quote.calculator.CalculatorEvents" invoke="createOrUpdateQuoteCustomer"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Marketplace Pages -->
+	<request-map uri="marketplaceSellers">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="marketplaceSellers"/>
+		<response name="error" type="view" value="marketplaceSellers"/>
+	</request-map>
+	<request-map uri="marketplaceHierarchy">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="marketplaceHierarchy"/>
+		<response name="error" type="view" value="marketplaceHierarchy"/>
+	</request-map>
+	<request-map uri="marketplaceProductAttributes">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="marketplaceProductAttributes"/>
+		<response name="error" type="view" value="marketplaceProductAttributes"/>
+	</request-map>
+	<request-map uri="marketplaceCategories">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="marketplaceCategories"/>
+		<response name="error" type="view" value="marketplaceCategories"/>
+	</request-map>
+	<request-map uri="marketplaceProducts">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="marketplaceProducts"/>
+		<response name="error" type="view" value="marketplaceProducts"/>
+	</request-map>
+	<request-map uri="marketplaceOrders">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="marketplaceOrders"/>
+		<response name="error" type="view" value="marketplaceOrders"/>
+	</request-map>
+	<request-map uri="syncSellers">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="syncSellers"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="syncHierarchies">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="syncHierarchies"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="syncCategories">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="syncCategories"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="syncProductAttributes">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="syncProductAttributes"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="exportHierarchies">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="exportHierarchiesToMirakl"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="exportCategories">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="exportCategoriesToMirakl"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="exportProductAttributes">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="exportProductAttributesToMirakl"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="publishSellerProducts">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="publishSellerProducts"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="holdSellerProducts">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="holdSellerProducts"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="importedSellerProducts">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.marketplace.MarketplaceEvents" invoke="importedSellerProducts"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<!-- Channels Pages -->
+	<request-map uri="channelsQuantityOverride">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="channelsQuantityOverride"/>
+		<response name="error" type="view" value="channelsQuantityOverride"/>
+	</request-map>
+	<request-map uri="addChannelsQuantityOverride">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.channels.ChannelsEvents" invoke="addChannelsQuantityOverride"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateChannelsQuantityOverride">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.channels.ChannelsEvents" invoke="updateChannelsQuantityOverride"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	
+	<!-- Product Pages -->
+	<request-map uri="productEditor">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="productEditor"/>
+		<response name="error" type="view" value="productEditor"/>
+	</request-map>
+	<request-map uri="productCategoryEditor">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="productCategoryEditor"/>
+		<response name="error" type="view" value="productCategoryEditor"/>
+	</request-map>
+	<request-map uri="addProductCategory">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="addProductCategory"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addProduct">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="addProduct"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateProduct">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="updateProduct"/>
+		<response name="success" type="view" value="productEditor"/>
+		<response name="error" type="view" value="productEditor"/>
+	</request-map>
+	<request-map uri="removeProductPrice">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="removeProductPrice"/>
+		<response name="success" type="view" value="productEditor"/>
+		<response name="error" type="view" value="productEditor"/>
+	</request-map>
+	<request-map uri="addQuantity">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="createProductPrice"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="vendors">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="vendors"/>
+		<response name="error" type="view" value="vendors"/>
+	</request-map>
+	<request-map uri="productVendor">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="productVendor"/>
+		<response name="error" type="view" value="productVendor"/>
+	</request-map>
+	<request-map uri="addVendorQuantity">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="addVendorQuantity"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateVendorProduct">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="updateVendorProduct"/>
+		<response name="success" type="view" value="productVendor"/>
+		<response name="error" type="view" value="productVendor"/>
+	</request-map>
+	<request-map uri="addVendorProduct">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="addVendorProduct"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addUpdateVendor">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="addUpdateVendor"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="outsourceableProducts">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="outsourceableProducts"/>
+		<response name="error" type="view" value="outsourceableProducts"/>
+	</request-map>
+	<request-map uri="productOutsourceRules">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="productOutsourceRules"/>
+		<response name="error" type="view" value="productOutsourceRules"/>
+	</request-map>
+	<request-map uri="addUpdateProductOutsource">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="addUpdateProductOutsource"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="outsourceZones">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="outsourceZones"/>
+		<response name="error" type="view" value="outsourceZones"/>
+	</request-map>
+	<request-map uri="addZone">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.cxml.CXMLEvents" invoke="addZone"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="outsourceList">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.cxml.OutsourceRule" invoke="outsourceList"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="templateEditor">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="templateEditor"/>
+		<response name="error" type="view" value="templateEditor"/>
+	</request-map>
+	<request-map uri="uploadProductFile">
+		<event type="java" path="com.envelopes.product.ProductImportEvents" invoke="uploadProductFile"/>
+		<response name="success" type="view" value="productImport"/>
+		<response name="error" type="view" value="productImport"/>
+	</request-map>
+	<request-map uri="uploadProductPriceFile">
+		<event type="java" path="com.envelopes.product.ProductImportEvents" invoke="uploadProductPriceFile"/>
+		<response name="success" type="view" value="productImport"/>
+		<response name="error" type="view" value="productImport"/>
+	</request-map>
+	<request-map uri="productImport">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="productImport"/>
+		<response name="error" type="view" value="productImport"/>
+	</request-map>
+	<request-map uri="productExport">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="productExport"/>
+		<response name="error" type="view" value="productExport"/>
+	</request-map>
+	<request-map uri="generateProductExport">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductEvents" invoke="generateProductExport"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="insertProduct">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductImportEvents" invoke="insertProduct"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createProductFeature">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductImportEvents" invoke="createProductFeature"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getFolderStyleList">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.FolderProductEvents" invoke="getFolderStyleList"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getProductMaterials">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.FolderProductEvents" invoke="getProductMaterials"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="importOrders">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="importOrders"/>
+		<response name="error" type="view" value="importOrders"/>
+	</request-map>
+	<request-map uri="importOrderFile">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="bulkImportOrders"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- SEO Pages -->
+	<request-map uri="seoRules">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="seoRules"/>
+		<response name="error" type="view" value="seoRules"/>
+	</request-map>
+	<request-map uri="setSEORule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.seo.SeoEvents" invoke="setSEORule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeSEORule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.seo.SeoEvents" invoke="removeSEORule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="rewriteRules">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="rewriteRules"/>
+		<response name="error" type="view" value="rewriteRules"/>
+	</request-map>
+	<request-map uri="setRewriteRule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.seo.SeoEvents" invoke="setRewriteRule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeRewriteRule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.seo.SeoEvents" invoke="removeRewriteRule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="canonicalRules">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="canonicalRules"/>
+		<response name="error" type="view" value="canonicalRules"/>
+	</request-map>
+	<request-map uri="saveCanonicalRule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.seo.CanonicalEvents" invoke="saveCanonicalRule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="deleteCanonicalRule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.seo.CanonicalEvents" invoke="deleteCanonicalRule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Review Pages -->
+	<request-map uri="reviews">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="reviews"/>
+		<response name="error" type="view" value="reviews"/>
+	</request-map>
+	<request-map uri="approveReview">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.product.ProductReviewEvents" invoke="approveReview"/>
+		<response name="success" type="view" value="reviews"/>
+		<response name="error" type="view" value="reviews"/>
+	</request-map>
+	<request-map uri="sendBusinessReviewEmail">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="sendBusinessReviewEmail"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Customer Screens -->
+	<request-map uri="customers">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="customers"/>
+		<response name="error" type="view" value="customers"/>
+	</request-map>
+	<request-map uri="updatePerson">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.party.PartyEvents" invoke="updatePerson"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addLoyaltyPoints">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.party.PartyEvents" invoke="addLoyaltyPoints"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addUser">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.party.PartyEvents" invoke="addUser"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateUser">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.party.PartyEvents" invoke="updateUser"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addOrRemovePartyRole">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.party.PartyEvents" invoke="addOrRemovePartyRole"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateSalesRep">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.party.PartyEvents" invoke="updateSalesRep" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Promo Pages -->
+	<request-map uri="promoList">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="promoList"/>
+		<response name="error" type="view" value="promoList"/>
+	</request-map>
+	<request-map uri="createPromo">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="createPromo"/>
+		<response name="error" type="view" value="createPromo"/>
+	</request-map>
+
+	<!-- Content Pages -->
+	<request-map uri="homePageBanner">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="homePageBanner"/>
+		<response name="error" type="view" value="homePageBanner"/>
+	</request-map>
+	<!-- End of Request Mappings -->
+
+	<!-- JSON Request Mappings -->
+	<!-- ORDER DATA -->
+	<request-map uri="getOrderList">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="getOrderList"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateLineItemDescription">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateLineItemDescription"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- USER DATA -->
+	<request-map uri="getUserList">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.party.PartyEvents" invoke="getUserList"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- SHIPPING -->
+	<request-map uri="getShippingRates">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="getShippingRates"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="setShippingRate">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="setShippingRate"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateOrderTotals">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateOrderTotals"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- ORDER & ARTWORK -->
+	<request-map uri="addOrderNote">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="addOrderNote"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="setOrderItem">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="setOrderItem"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="setOrderItemArtwork">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="setOrderItemArtwork"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="setOrderItemAttribute">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="setOrderItemAttribute"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="uploadArtwork">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="uploadArtwork"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="discontinueOrderItemContent">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="discontinueOrderItemContent"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getOrderItemContent">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="getOrderItemContent"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="generateArtwork">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="generateArtwork"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateOrderItemOutSourceData">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateOrderItemOutSourceData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateOrderItemPendingChangeData">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateOrderItemPendingChangeData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateOrderItemSyracuseable">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateOrderItemSyracuseable"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateOrderBlindShipData">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateOrderBlindShipData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="setArtworkInternalComment">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="setArtworkInternalComment"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addItemToOrder">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="addItemToOrder"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="updateItemInOrder">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="updateItemInOrder"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getOrderTotals">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="getOrderTotals"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+    <request-map uri="applyManualAdjustments">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="applyManualAdjustments"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="cancelPlate">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.plating" invoke="cancelPlate"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="plateSchedule">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="plateSchedule" />
+	</request-map>
+	<request-map uri="plateReceipt">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="plateReceipt" />
+	</request-map>
+	<request-map uri="plateEdit">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="plateEdit" />
+	</request-map>
+	<request-map uri="createOrUpdatePlate">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.plating.PlateEvents" invoke="createOrUpdatePlate"/>
+		<response name="plateEdit" type="request-redirect" value="plateEdit"/>
+	</request-map>
+	<request-map uri="createOrUpdatePlateItem">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.plating.PlateEvents" invoke="createOrUpdatePlateItem"/>
+		<response name="plateEdit" type="request-redirect" value="plateEdit"/>
+	</request-map>
+	<request-map uri="startJobTime">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.plating.PlateHelper" invoke="startJobTime"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeFromSchedule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.plating.PlateHelper" invoke="removeFromSchedule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="addToSchedule">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.plating.PlateHelper" invoke="addToSchedule"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getOrderPlate">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.plating.PlateEvents" invoke="getOrderPlate"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="pickOrderItemStock">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="pickOrderItemStock"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="pickInk">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="pickInk"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- DESKCOM -->
+	<request-map uri="getCaseData">
+		<security https="false" auth="false"/>
+		<event type="java" path="com.envelopes.desk.DeskEvents" invoke="getCaseData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Scene7 -->
+	<request-map uri="saveProject">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.scene7.Scene7Events" invoke="saveProject"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="loadProject">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.scene7.Scene7Events" invoke="loadProject"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getImageLibrary">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.scene7.Scene7Events" invoke="getImageLibrary" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="uploadUGCFile">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.scene7.Scene7Events" invoke="uploadUGCFile" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getSpotColors">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.scene7.Scene7Events" invoke="getSpotColors" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getVariableDataGroupNames">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.variabledata.VariableDataEvents" invoke="getVariableDataGroupNames" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="findVariableDataGroup">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.variabledata.VariableDataEvents" invoke="findVariableDataGroup" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="uploadVariableDataFile">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.variabledata.VariableDataEvents" invoke="uploadVariableDataFile" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="saveVariableData">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.variabledata.VariableDataEvents" invoke="saveVariableData" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="saveVariableDataForLater">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.variabledata.VariableDataEvents" invoke="saveVariableDataForLater" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="deleteVariableData">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.variabledata.VariableDataEvents" invoke="deleteVariableData" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- JANRAIN -->
+	<request-map uri="getAppSettings">
+		<security https="false" auth="false"/>
+		<event type="java" path="com.envelopes.janrain.SocialLoginEvents" invoke="getAppSettings"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getAvailableProviders">
+		<security https="false" auth="false"/>
+		<event type="java" path="com.envelopes.janrain.SocialLoginEvents" invoke="getAvailableProviders"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getJanRainAuthInfo">
+		<security https="false" auth="false"/>
+		<event type="java" path="com.envelopes.janrain.SocialLoginEvents" invoke="getAuthInfo"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getJanRainToken">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.janrain.SocialLoginEvents" invoke="getAccessToken"/>
+		<response name="success" type="view-last"/>
+		<response name="error" type="view-last"/>
+	</request-map>
+	<!-- End JSON Request Mappings -->
+
+	<!-- Request for cXML -->
+	<request-map uri="outsourceOrderRequest">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.cxml.CXMLEvents" invoke="outsourceOrderRequest"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Promo Creation/Editing -->
+	<request-map uri="createOrUpdateProductPromo">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.envelopes.promo.PromoEvents" invoke="createOrUpdateProductPromo"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Check if user is logged in -->
+	<request-map uri="isUserLoggedIn">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.login.EnvLoginEvents" invoke="isUserLoggedIn"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- PLATING EVENTS FROM SWITCH -->
+	<request-map uri="processSwitchPlateXML">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.plating.PlateEvents" invoke="processPlateXML"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="processSwitchOrderXML">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="processSwitchOrderItemData"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="processSwitchProof">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="processSwitchProof"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="processSwitchWorker">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.order.OrderEvents" invoke="processSwitchWorker"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<!-- End JSON Request Mappings -->
+
+	<!-- ElasticSearch Endpoints -->
+	<request-map uri="searchSettings">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="searchSettings"/>
+		<response name="error" type="view" value="searchSettings"/>
+	</request-map>
+	<request-map uri="saveSettings">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="saveSettings"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createSynonym">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="createSynonym"/>
+		<response name="error" type="view" value="createSynonym"/>
+	</request-map>
+	<request-map uri="setSynonym">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="setSynonym"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeSynonym">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="removeSynonym"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="generateSynonymFile">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="generateSynonymFile"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createRedirect">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="createRedirect"/>
+		<response name="error" type="view" value="createRedirect"/>
+	</request-map>
+	<request-map uri="setRedirect">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="setRedirect"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeRedirect">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="removeRedirect"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createBanner">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="createBanner"/>
+		<response name="error" type="view" value="createBanner"/>
+	</request-map>
+	<request-map uri="setBanner">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="setBanner"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeBanner">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="removeBanner"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createTunedResult">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="createTunedResult"/>
+		<response name="error" type="view" value="createTunedResult"/>
+	</request-map>
+	<request-map uri="setTune">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="setTune"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeTune">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="removeTune"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="createSearchPage">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="createSearchPage"/>
+		<response name="error" type="view" value="createSearchPage"/>
+	</request-map>
+	<request-map uri="setSearchPage">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="setSearchPage"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="removeSearchPage">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="removeSearchPage"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getSearchResult">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="getSearchResult" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Pricing Engine -->
+	<request-map uri="pricingEngineDashboard">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="pricingEngineDashboard"/>
+		<response name="error" type="view" value="pricingEngineDashboard"/>
+	</request-map>
+	<request-map uri="pricingEngineDataImport">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="pricingEngineDataImport"/>
+		<response name="error" type="view" value="pricingEngineDataImport"/>
+	</request-map>
+	<request-map uri="peProducts">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="peProducts"/>
+		<response name="error" type="view" value="peProducts"/>
+	</request-map>
+	<request-map uri="pePricingAttributes">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="pePricingAttributes"/>
+		<response name="error" type="view" value="pePricingAttributes"/>
+	</request-map>
+	<request-map uri="peVendors">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="peVendors"/>
+		<response name="error" type="view" value="peVendors"/>
+	</request-map>
+	<request-map uri="peColors">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="peColors"/>
+		<response name="error" type="view" value="peColors"/>
+	</request-map>
+	<request-map uri="peSaveProduct">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="saveProduct" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="peSaveVendor">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="saveVendor" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="peSaveAttribute">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="saveAttribute" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="peSaveColorAndStock">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="saveColorAndStock" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="peSavePricingAttributeValue">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="savePricingAttributeValue" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="peProductUpload">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="uploadProducts" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="uploadScene7Files">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.scene7.Scene7Events" invoke="uploadScene7Files"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="getPricing">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="getPricing" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Clear Cache -->
+	<request-map uri="getSearchHealth">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="getSearchHealth" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="cl3arAllCach3">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.util.EnvUtil" invoke="clearAllCache" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="cl3arP3Cach3">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.pricingengine.PricingEngineEvents" invoke="clearCache" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="cl3arM3nuCach3">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.navigation.NavigationEvents" invoke="clearMegaMenu" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="cl3arS3archCach3">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.search.SearchEvents" invoke="clearSearchCache" />
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="cl3arCach3">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.envelopes.util.EnvUtil" invoke="clearCache"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="createJob">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="createJob"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="updateJob">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="updateJob"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="createJobProof">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="createJobProof"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="createAddressList">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="createAddressList"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="uploadDocument">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="uploadDocument"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="deleteAddress">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="deleteAddress"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="getJobCost">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="getJobCoast"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="submitJob">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="submitJob"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<request-map uri="getProductOptions">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.integration.click2mail.Click2MailEvents" invoke="getProductOptions"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!--Cimpress-->
+	<request-map uri="refreshCimpressConfig">
+		<security https="true" auth="true"/>
+		<event type="java" path="com.bigname.integration.cimpress.CimpressEvents" invoke="refreshCimpressConfig"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+	<request-map uri="cimpressOrders">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="cimpressOrders"/>
+		<response name="error" type="view" value="cimpressOrders"/>
+	</request-map>
+	<!-- Jobs -->
+	<request-map uri="jobs">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="jobs"/>
+		<response name="error" type="view" value="jobs"/>
+	</request-map>
+	<request-map uri="jobMessages">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="jobMessages"/>
+		<response name="error" type="view" value="jobMessages"/>
+	</request-map>
+
+	<!-- Braintree Payment -->
+	<request-map uri="preAuth">
+		<security https="true" auth="false"/>
+		<event type="java" path="com.bigname.payments.braintree.BraintreeEvents" invoke="preAuth"/>
+		<response name="success" type="none" />
+		<response name="error" type="none" />
+	</request-map>
+
+	<!-- Debugging/Testing Pages -->
+	<request-map uri="shippingRates">
+		<security https="true" auth="true"/>
+		<response name="success" type="view" value="shippingRates"/>
+		<response name="error" type="view" value="shippingRates"/>
+	</request-map>
+	
+
+	<!-- View Mappings -->
+	<view-map name="error" page="/error/error.jsp"/>
+	<view-map name="blank" type="screen" page="component://admin/widget/CommonScreens.xml#blank"/>
+	<view-map name="main" type="screen" page="component://admin/widget/CommonScreens.xml#main"/>
+	<view-map name="productionDashboard" type="screen" page="component://admin/widget/CommonScreens.xml#productionDashboard"/>
+
+	<!-- Order Pages -->
+	<view-map name="vendorOrderList" type="screen" page="component://admin/widget/OrderScreens.xml#vendorOrderList"/>
+	<view-map name="orderList" type="screen" page="component://admin/widget/OrderScreens.xml#orderList"/>
+	<view-map name="viewOrder" type="screen" page="component://admin/widget/OrderScreens.xml#viewOrder"/>
+	<view-map name="viewOrderLegacy" type="screen" page="component://admin/widget/OrderScreens.xml#viewOrderLegacy"/>
+	<view-map name="channelSalesReport" type="screen" page="component://admin/widget/OrderScreens.xml#channelSalesReport"/>
+	<view-map name="createOrder" type="screen" page="component://admin/widget/OrderScreens.xml#createOrder"/>
+	<view-map name="sampleOrder" type="screen" page="component://admin/widget/OrderScreens.xml#sampleOrder"/>
+	<view-map name="workOrder" type="screen" page="component://admin/widget/OrderScreens.xml#workOrder"/>
+	<view-map name="workOrderAdmin" type="screen" page="component://admin/widget/OrderScreens.xml#workOrderAdmin"/>
+	<view-map name="prepress" type="screen" page="component://admin/widget/OrderScreens.xml#prepress"/>
+	<view-map name="prepressOrderList" type="screen" page="component://admin/widget/OrderScreens.xml#prepressOrderList"/>
+	<view-map name="pressMan" type="screen" page="component://admin/widget/OrderScreens.xml#pressMan"/>
+	<view-map name="reAuth" type="screen" page="component://admin/widget/OrderScreens.xml#reAuth"/>
+	<view-map name="persistentCartAssist" type="screen" page="component://admin/widget/OrderScreens.xml#persistentCartAssist"/>
+	<view-map name="importOrders" type="screen" page="component://admin/widget/OrderScreens.xml#importOrders"/>
+	<view-map name="cimpressOrders" type="screen" page="component://admin/widget/OrderScreens.xml#cimpressOrders"/>
+
+	<!-- Jobs Pages -->
+	<view-map name="jobs" type="screen" page="component://admin/widget/JobScreens.xml#jobs"/>
+	<view-map name="jobMessages" type="screen" page="component://admin/widget/JobScreens.xml#jobMessages"/>
+
+	<!-- Quote Pages -->
+	<view-map name="envelopesQuoteList" type="screen" page="component://admin/widget/QuoteScreens.xml#envelopesQuoteList"/>
+	<view-map name="foldersQuoteList" type="screen" page="component://admin/widget/QuoteScreens.xml#foldersQuoteList"/>
+	<view-map name="envelopesQuoteView" type="screen" page="component://admin/widget/QuoteScreens.xml#envelopesQuoteView"/>
+	<view-map name="foldersQuoteView" type="screen" page="component://admin/widget/QuoteScreens.xml#foldersQuoteView"/>
+
+	<!-- Customer Pages -->
+	<view-map name="customers" type="screen" page="component://admin/widget/CustomerScreens.xml#customers"/>
+
+	<!-- Editor Pages -->
+	<view-map name="homepageEditor" type="screen" page="component://admin/widget/EditorScreens.xml#homepageEditor"/>
+	<view-map name="navigationEditor" type="screen" page="component://admin/widget/EditorScreens.xml#navigationEditor"/>
+
+	<!-- Marketplace Pages -->
+	<view-map name="marketplaceSellers" type="screen" page="component://admin/widget/MarketplaceScreens.xml#sellers"/>
+	<view-map name="marketplaceHierarchy" type="screen" page="component://admin/widget/MarketplaceScreens.xml#hierarchy"/>
+	<view-map name="marketplaceProductAttributes" type="screen" page="component://admin/widget/MarketplaceScreens.xml#productAttributes"/>
+	<view-map name="marketplaceCategories" type="screen" page="component://admin/widget/MarketplaceScreens.xml#categories"/>
+	<view-map name="marketplaceProducts" type="screen" page="component://admin/widget/MarketplaceScreens.xml#products"/>
+	<view-map name="marketplaceOrders" type="screen" page="component://admin/widget/MarketplaceScreens.xml#orders"/>
+
+	<!-- Quote Calculator -->
+	<view-map name="quoteCalculator" type="screen" page="component://admin/widget/QuoteCalculatorScreens.xml#quoteCalculator"/>
+	<view-map name="qcVendors" type="screen" page="component://admin/widget/QuoteCalculatorScreens.xml#qcVendors"/>
+	<view-map name="qcStyleGroups" type="screen" page="component://admin/widget/QuoteCalculatorScreens.xml#qcStyleGroups"/>
+	<view-map name="qcStyles" type="screen" page="component://admin/widget/QuoteCalculatorScreens.xml#qcStyles"/>
+	<view-map name="qcMaterialTypes" type="screen" page="component://admin/widget/QuoteCalculatorScreens.xml#qcMaterialTypes"/>
+	<view-map name="qcStockTypes" type="screen" page="component://admin/widget/QuoteCalculatorScreens.xml#qcStockTypes"/>
+	<view-map name="qcStocks" type="screen" page="component://admin/widget/QuoteCalculatorScreens.xml#qcStocks"/>
+
+	<view-map name="peProducts" type="screen" page="component://admin/widget/PricingEngineScreens.xml#peProducts"/>
+	<view-map name="pePricingAttributes" type="screen" page="component://admin/widget/PricingEngineScreens.xml#pePricingAttributes"/>
+	<view-map name="peVendors" type="screen" page="component://admin/widget/PricingEngineScreens.xml#peVendors"/>
+	<view-map name="peColors" type="screen" page="component://admin/widget/PricingEngineScreens.xml#peColors"/>
+
+	<!-- Channels Pages -->
+	<view-map name="channelsQuantityOverride" type="screen" page="component://admin/widget/ChannelsScreens.xml#channelsQuantityOverride"/>
+
+	<!-- Product Pages -->
+	<view-map name="printLabel" type="screen" page="component://admin/widget/ProductScreens.xml#printLabel"/>
+	<view-map name="labelCenter" type="screen" page="component://admin/widget/ProductScreens.xml#labelCenter"/>
+	<view-map name="sampleFolderLabelEditor" type="screen" page="component://admin/widget/ProductScreens.xml#sampleFolderLabelEditor"/>
+	<view-map name="productEditor" type="screen" page="component://admin/widget/ProductScreens.xml#productEditor"/>
+	<view-map name="productCategoryEditor" type="screen" page="component://admin/widget/ProductScreens.xml#productCategoryEditor"/>
+	<view-map name="vendors" type="screen" page="component://admin/widget/ProductScreens.xml#vendors"/>
+	<view-map name="productVendor" type="screen" page="component://admin/widget/ProductScreens.xml#productVendor"/>
+	<view-map name="outsourceZones" type="screen" page="component://admin/widget/ProductScreens.xml#zoneCost"/>
+	<view-map name="templateEditor" type="screen" page="component://admin/widget/ProductScreens.xml#templateEditor"/>
+	<view-map name="productImport" type="screen" page="component://admin/widget/ProductScreens.xml#productImport"/>
+	<view-map name="productExport" type="screen" page="component://admin/widget/ProductScreens.xml#productExport"/>
+	<view-map name="outsourceableProducts" type="screen" page="component://admin/widget/ProductScreens.xml#outsourceableProducts"/>
+	<view-map name="productOutsourceRules" type="screen" page="component://admin/widget/ProductScreens.xml#productOutsourceRules"/>
+
+	<!-- Review Pages -->
+	<view-map name="reviews" type="screen" page="component://admin/widget/ReviewScreens.xml#reviews"/>
+
+	<!-- Promo Pages -->
+	<view-map name="promoList" type="screen" page="component://admin/widget/PromoScreens.xml#promoList"/>
+	<view-map name="createPromo" type="screen" page="component://admin/widget/PromoScreens.xml#createPromo"/>
+
+	<view-map name="plateSchedule" type="screen" page="component://admin/widget/OrderScreens.xml#plateSchedule"/>
+	<view-map name="plateReceipt" type="screen" page="component://admin/widget/OrderScreens.xml#plateReceipt"/>
+	<view-map name="plateEdit" type="screen" page="component://admin/widget/OrderScreens.xml#plateEdit"/>
+
+	<!-- SEO Pages -->
+	<view-map name="seoRules" type="screen" page="component://admin/widget/SEOScreens.xml#seoRules"/>
+	<view-map name="rewriteRules" type="screen" page="component://admin/widget/SEOScreens.xml#rewriteRules"/>
+	<view-map name="canonicalRules" type="screen" page="component://admin/widget/SEOScreens.xml#canonicalRules"/>
+
+	<!-- Content Pages -->
+	<view-map name="homePageBanner" type="screen" page="component://admin/widget/CommonScreens.xml#homePageBanner"/>
+
+	<!-- ElasticSearch -->
+	<view-map name="searchSettings" type="screen" page="component://admin/widget/SearchScreens.xml#searchSettings"/>
+	<view-map name="createSynonym" type="screen" page="component://admin/widget/SearchScreens.xml#createSynonym"/>
+	<view-map name="createRedirect" type="screen" page="component://admin/widget/SearchScreens.xml#createRedirect"/>
+	<view-map name="createBanner" type="screen" page="component://admin/widget/SearchScreens.xml#createBanner"/>
+	<view-map name="createTunedResult" type="screen" page="component://admin/widget/SearchScreens.xml#createTunedResult"/>
+	<view-map name="createSearchPage" type="screen" page="component://admin/widget/SearchScreens.xml#createSearchPage"/>
+
+	<view-map name="pricingEngineDashboard" type="screen" page="component://admin/widget/PricingEngineScreens.xml#dashboard"/>
+	<view-map name="pricingEngineDataImport" type="screen" page="component://admin/widget/PricingEngineScreens.xml#dataImport"/>
+	
+	<!-- Debugging/Testing Pages -->
+	<view-map name="shippingRates" type="screen" page="component://admin/widget/DebugAndTestingScreens.xml#shippingRates"/>
+	
+	<!-- Admin Pages -->
+	<!-- <view-map name="login" type="screen" page="component://admin/widget/CommonScreens.xml#admin-login"/> -->
+	<!-- End of View Mappings -->
+
+</site-conf>

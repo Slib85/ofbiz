@@ -1,0 +1,521 @@
+.noPaddingTop {
+	padding-top: 0;
+}
+
+.accountContainer {
+	background-color: white;
+	padding: 20px;
+}
+
+.accountHeader {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #4ba7f1;
+	padding: 15px 10px;
+	color: white;
+}
+
+.accountHeader h1{
+	font-size: 30px;
+}
+
+.orderWidth{
+	width: 250px;
+}
+
+.reorderWidth{
+	width: 300px;
+}
+
+.timelineWidth {
+	width: auto;
+}
+
+.foldersFlexRow h3{
+	margin: 12px 0 0 15px;
+}
+
+.foldersFlexRow a{
+	margin: 15px 15px 20px 0;
+	text-decoration: underline;
+}
+
+.orderBorder {
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.orderWidth img{
+	float: left;
+	margin-right: 10px;
+}
+
+.orderInfo{
+	margin-top: 10px;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.orderInfo h4{
+	font-size: 18px;
+	color: #113e60;
+}
+
+.orderInfo p{
+	color: #bec2c5;
+}
+
+.orderInfo a{
+	color: #4caf50;
+}
+
+.timelineWidth ul{
+	margin: 0 0 0 30px;
+	padding: 0;
+	display: block;
+}
+
+.progressBar li {
+	list-style-type: none;
+	float: left;
+	width: 25%;
+	position: relative;
+	text-align: center;
+	color: #113e60;
+}
+
+.progressBar li:before {
+	content: '';
+	width: 18px;
+	height: 18px;
+	line-height: 30px;
+	border: 3px solid #113e60;
+	display: block;
+	margin: 0 auto 10px auto;
+	border-radius: 50%;
+	background-color: white;
+	z-index: 1;
+	position: relative;
+}
+
+.progressBar li:after{
+	content: "";
+	position: absolute;
+	width: 130%;
+	height: 3px;
+	background-color: #113e60;
+	top: 7px;
+	left: -50%;
+	z-index: 0;
+}
+
+.progressBar li:first-child:after {
+	content: "";
+	width: 30%;
+	left: 20%;
+	background-color: #4caf50;
+}
+
+.progressBar li.active {
+	color: #4caf50;
+}
+
+.progressBar li.active:before {
+	border-color: #4caf50;
+	background-color: #4caf50;
+}
+
+.timelineWidth ul:after{
+	content: '';
+	display: block;
+	clear: both ;
+}
+
+.deliveryInfo{
+	margin: 0 0 0 30px !important;
+}
+
+.deliveryInfo li{
+	list-style-type: none;
+	float: left;
+	width: 33%;
+	margin: 10px 0 14px 1px;
+}
+
+.deliveryInfo li.deliveredOn{
+	text-align: center;
+	width: 100%;
+}
+
+.deliveryInfo li p{
+	display: inline-block;
+	font-size: 13px;
+	color: #113e60;
+}
+
+.deliveryInfo li p:nth-child(1){
+	font-weight: bold;
+}
+
+.deliveryInfo li p:nth-child(2){
+	color: #4caf50;
+}
+
+.progressBar li.active.shipped:before {
+	border: none;
+	background: none;
+}
+
+.progressBar li.active.shipped:after {
+	background-color: #4caf50;
+}
+
+.progressBar li.active:nth-child(4):after {
+	background-color: #4caf50;
+}
+
+.reorder, .approval{
+	float: right;
+	margin-right: 15px;
+}
+
+.approvalButton{
+	color: white;
+	background-color: #fbae28;
+	display: block;
+	padding: 10px 32px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	border-radius: 0px;
+	border: 1px solid #fbae28;
+	text-transform: none !important;
+}
+
+.approval, {
+	display: block;
+}
+
+.approval i, .approval p{
+	display: inline-block;
+}
+.approval i{
+
+	color: #fbae28;
+}
+
+.approval p{
+	color: #fbae28;
+	font-weight: normal;
+}
+
+#pleaseComplete{
+	display: block;
+	text-align: right;
+}
+
+.reorderButton{
+	display: block;
+	padding: 10px 15px;
+	background-color: #4caf50;
+	margin-bottom: 10px;
+	border-radius: 0;
+	text-transform: none !important;
+	color: white;
+	font-size: 17px;
+}
+
+.reorder i{
+	font-size: 20px;
+	color: white;
+}
+
+.reorder a{
+	color: #4caf50;
+	text-decoration: underline;
+}
+
+.viewOrders{
+	margin: 20px 24px 30px 0;
+	text-align: right;
+	text-decoration: underline;
+}
+
+.savedDesigns h2, a{
+	display: inline;
+}
+
+.savedDesigns a{
+	float: right;
+	margin: 20px 20px 0 0;
+	text-decoration: underline;
+}
+
+.width19{
+	width: 19% !important;
+	margin: 0 0.5% !important;
+}
+
+.width20 a{
+	display: block;
+	margin-top: 10px;
+	color: #5aacf1;
+}
+
+.savedDesignColumn {
+	text-align: center;
+	margin: 0 auto;
+	background-color: #f4f4f4;
+}
+
+.savedDesignColumn img{
+	background-color: white;
+	margin: 16px 0 0;
+	padding: 2% 30%;
+}
+
+.savedDesignColumn h4 {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.savedDesignColumn p {
+	margin-bottom: 10px;
+}
+
+.savedDesignLinks {
+	padding: 10px 30px !important;
+}
+
+.savedDesignLinks a{
+	display: block;
+	color: #5aacf1;
+	padding: 8px 0;	
+	font-weight: bold;
+}
+
+.myAccount{
+	padding: 0 2% 0 0 !important;
+	width: 48% !important;
+}
+
+.myAccount h2, .contactUsOrders h2{
+	margin-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+.myAccount a, .contactUsOrders a{
+	color: #5aacf1;
+}
+
+.myAccount a{
+	display: block;
+	line-height: 26px;
+}
+
+.contactUsOrders{
+	padding: 0 0 0 2% !important;
+	width: 48% !important;
+}
+
+.contactUsOrders i{
+	display: block !important;
+}
+
+.contactUsOrders a{
+	font-family: Lato, sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+    line-height: 26px;
+}
+
+.foldersColumn.large9 {
+	margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 767px) {
+	.orderWidth, .timelineWidth, .reorderWidth{
+		width: 100%;
+		display: block;
+		margin: 0;
+	}
+
+	.reorderWidth {
+		width: auto !important;
+	}
+
+	.timelineWidth{
+		margin-top: 10px;
+	}
+
+	.timelineWidth:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.approval, .reorder{
+		float: none;
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#pleaseComplete{
+		text-align: inherit;
+	}
+
+	
+}
+
+@media only screen and (max-width: 480px){
+	.foldersFlexRow h3{
+		font-size: 24px;
+	}
+
+	.foldersFlexRow a{
+		display: none;
+	}
+
+	.viewOrders{
+		text-align: inherit;
+		font-size: 18px;
+	}
+
+	.savedDesigns h2 {
+		font-size: 24px; 
+	}
+
+	.savedDesigns a{
+		display: none;
+	}
+
+	.timelineWidth ul, .progressBar ul{
+		margin: 10px 0 !important;
+	}
+
+	.progressBar li{
+		width: 20%;
+	}
+
+	.progressBar li:first-child:after {
+		display: none;
+	}
+
+	.progressBar li:after{
+		width: 110%;
+	}
+
+	.deliveryInfo {
+		margin: 10px 0 !important;
+	}
+
+	.deliveryInfo li{
+		float: none;
+		width: 50%;
+		margin: 5px 0;
+	}
+
+	.deliveryInfo li p{
+		font-size: 12px;
+	}
+
+	.approval{
+		float: none;
+		width: inherit;
+	}
+
+	.approvalButton{
+		margin: auto;
+		width: 85%;
+	}
+
+	.approval i{
+		margin: 8px 0 0 2%;
+	}
+
+	.approval p{
+		margin: 4px 5px 0px
+	}
+
+	.reorderWidth {
+		padding-top: 0 !important;
+	}
+
+	#pleaseComplete {
+		text-align: left;
+		margin: 0 20% 10px;
+		width: 100%;
+	}
+
+	.deliveredOn {
+		display: none;
+	}
+
+	.reorder{
+		float: none;
+		margin: 0 auto;
+	}
+
+	.reorderButton{
+		width: 80%;
+	}
+
+	.reorder a{
+		margin: 0 25px 0 0;
+		font-size: 14px;
+	}
+
+	.savedDesignLinks {
+		display: none !important;
+	}
+
+	.foldersRow .foldersColumn.small5{
+		margin: 5px !important;
+	}
+
+	.myAccount, .contactUsOrders{
+		width: 120% !important;
+	}
+
+	.myAccount h2, .contactUsOrders h2{
+		font-size: 26px;	
+	}
+
+	.myAccount a {
+		font-size: 16px;
+	}
+
+	.contactUsOrders{
+		margin: 10px 0 !important;
+	}
+
+	.contactUsOrders a{
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.marginTop10{
+		margin: 10px !important;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

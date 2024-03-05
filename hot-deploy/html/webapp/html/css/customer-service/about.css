@@ -1,0 +1,100 @@
+.about .about-title {
+	background-color: #4f9bd5 !important;
+	padding: 0 !important;
+}
+.about .about-title > div {
+	display: inline-block;
+	float: left;
+	padding: 32px;
+}
+.about .about-title .bannerImg {
+	float: right;
+}
+.about .about-title h5 {
+	font-weight: bold;
+	color: #ffffff !important;
+	padding-bottom: 2px !important;
+}
+.about .about-title span {
+	font-size: 16px;
+	color: #ffffff;
+}
+
+/* .aboutBackground {
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/envAboutUsBackgroundN?wid=818&fmt=jpeg&qlt=100&ts=3') repeat;
+	display: table;
+}
+.aboutBackgroundImg {
+	display: table-cell;
+	width: 420px;
+	max-width: none;
+}
+.about-story {
+	display: table-cell;
+	width: auto;
+	vertical-align: top;
+} */
+
+.aboutBackground {
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/envAboutUsBackgroundN?wid=818&fmt=jpeg&qlt=100&ts=3') repeat;
+}
+.aboutBackgroundImg {
+	float: right;
+}
+
+.about-story h1 {
+	color: #1d5783;
+    font-weight: bold;
+}
+.about-story p {
+	color: #000000;
+}
+.through-the-years {
+	background-color: #ffffff !important;
+}
+.through-the-years h5 {
+	font-weight: bold;
+}
+.through-the-years p {
+	color: #000000;
+}
+.aboutUsLink {
+	font-weight: bold;
+	color: #000000 !important;
+}
+.brands {
+	padding-bottom: 10px;
+}
+.brands img {
+	display: inline-block;
+	vertical-align: text-bottom;
+	padding: 10px 10px;
+}
+@media only screen and (max-width: 1024px) {
+	.aboutBackgroundImg {
+		display: none;
+	}
+	.about-story {
+		width: 100%;
+		float: none;
+		padding-right: 20px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.about-title .bannerImg {
+		display: none;
+	}
+	.about .about-title > div {
+		display: block;
+		text-align: center;
+	}
+	.about .about-story {
+		text-align: center;
+	}
+	.about .through-the-years {
+		text-align: center;
+	}
+		.about .through-the-years > div h5 {
+			padding-top: 10px;
+		}
+}

@@ -1,0 +1,90 @@
+h2 {
+	font-size: 30px;
+	line-height: 30px;
+	padding: 0px 0px 10px 0px;
+	font-weight: 200;
+	color: #000000;
+}
+.fa-check {
+	color: #fc7e22;
+}
+.required {
+	color: #ff0000;
+}
+.jqs-response {
+	border: 1px solid #E7D6C7;
+	background-color: #F7F8FA;
+	margin: 10px;
+	padding: 10px;
+	display: none;
+}
+	.jqs-response p {
+		font-weight: bold;
+		color: #ff0000;
+	}
+input[type="radio"] {
+	margin: 4px 0px 0px 0px;
+}
+.custom_quote_shop .cqs_header img {
+	float: right;
+}
+.custom_quote_shop .content-body .pbar {
+	padding: 0px 10px;
+}
+.custom_quote_shop .parent_text {
+	font-weight: 200;
+	font-size: 14px;
+	color: #000000;
+}
+.custom_quote_shop .child_text {
+	font-size: 14px;
+	font-weight: 300;
+}
+.custom_quote_shop .step_header {
+	margin-top: 10px;
+	color: #00A4E4;
+	font-weight: bold;
+	font-size: 22px;
+}
+.custom_quote_shop .content_container {
+	margin: 20px 20px 0px 20px;
+}
+.custom_quote_shop .button {
+	margin-bottom: 0px;
+	padding: 15px !important;
+}
+.custom_quote_shop .button.submit {
+	padding: 25px 15px 26px 15px !important;
+}
+	.custom_quote_shop .button span {
+		font-size: 12px;
+	}
+.custom_quote_shop .button.new_quote {
+	margin-top: 30px;
+}
+	.custom_quote_shop .button.new_quote span {
+		font-size: 16px;
+	}
+.custom_quote_shop .sealing_method_description {
+	font-weight: 200;
+}
+.custom_quote_shop .review_and_submit .edit_button {
+	font-size: 11px;
+	color: #00A4E4;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.cq-right {
+	width: 250px;
+}
+	.cq-right > div:first-child {
+		margin-top: 0px;
+	}
+[name="window_description"] {
+	display: none;
+}
+@media only screen and (max-width: 1023px) {
+	.cq-right {
+		display: none !important;
+	}
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+	<description>Envelopes.com Services</description>
+	<vendor>Envelopes.com</vendor>
+	<version>1.0</version>
+
+	<service name="sendEmail" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendEmail">
+		<description>Send email notification</description>
+		<attribute name="email" type="String" mode="IN" optional="false" />
+		<attribute name="messageType" type="String" mode="IN" optional="false" />
+		<attribute name="data" type="Map" mode="IN" optional="true" />
+        <attribute name="rawData" type="Map" mode="IN" optional="true" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="false" />
+	</service>
+
+    <service name="sendListrakEmail" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.bigname.integration.listrak.ListrakHelper" invoke="sendEmail">
+        <description>Send Listrak email notification</description>
+        <attribute name="listName" type="String" mode="IN" optional="true" />
+        <attribute name="messageName" type="String" mode="IN" optional="false" />
+        <attribute name="data" type="Map" mode="IN" optional="true" />
+        <attribute name="email" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="false" />
+    </service>
+
+    <service name="sendSMS" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendSMS">
+        <description>Send SMS notification</description>
+        <attribute name="email" type="String" mode="IN" optional="false" />
+        <attribute name="messageType" type="String" mode="IN" optional="false" />
+        <attribute name="data" type="Map" mode="IN" optional="true" />
+        <attribute name="rawData" type="Map" mode="IN" optional="true" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="false" />
+    </service>
+
+	<service name="addOrUpdateContact" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="addOrUpdateContact">
+		<description>Add or update an email account</description>
+		<attribute name="email" type="String" mode="IN" optional="false" />
+        <attribute name="rawData" type="Map" mode="IN" optional="true" />
+        <attribute name="translated" type="Boolean" mode="IN" optional="true" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="false" />
+	</service>
+
+    <service name="sendProofReadyReminder" engine="java" auth="false" transaction-timeout="200" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendProofReadyReminder">
+        <description>Send proof ready email</description>
+    </service>
+
+    <service name="sendProofReadyEmail" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendProofReadyEmail">
+        <description>Send proof ready email</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendProofReadySMS" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendProofReadySMS">
+        <description>Send proof ready SMS</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendNeedNewArtworkEmail" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendNeedNewArtworkEmail">
+        <description>Send new artwork needed email</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendItemShippedEmail" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendItemShippedEmail">
+        <description>Send order shipped email</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendOrderShippedEmail" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendOrderShippedEmail">
+        <description>Send order shipped email</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendOrderShippedSMS" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="sendOrderShippedSMS">
+        <description>Send order shipped SMS</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="updateContactProofStatus" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.envelopes.email.EmailServices" invoke="updateContactProofStatus">
+        <description>Update proof approval status for email</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendReorderEmail" engine="java" auth="false" transaction-timeout="200" max-retry="0" location="com.envelopes.email.EmailServices" invoke="sendReorderEmail">
+        <description>Send reorder email post 90 days</description>
+        <attribute name="numberOfDays" type="Integer" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendProductionEmail" engine="java" auth="false" transaction-timeout="200" max-retry="0" location="com.envelopes.email.EmailServices" invoke="sendProductionEmail">
+        <description>Send order in production email</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendQuoteCompletedEmail" engine="java" auth="false" transaction-timeout="200" max-retry="0" location="com.envelopes.email.EmailServices" invoke="sendQuoteCompletedEmail">
+        <description>Send quote completed email</description>
+        <attribute name="quoteIds" type="String" mode="IN" optional="false" />
+        <attribute name="webSiteId" type="String" mode="IN" optional="true" />
+    </service>
+
+    <service name="sendTradeAnniversaryEmails" engine="java" auth="false" transaction-timeout="200" max-retry="0" location="com.envelopes.email.EmailServices" invoke="sendTradeAnniversaryEmails">
+        <description>Send Trade Anniversary Email</description>
+    </service>
+
+</services>

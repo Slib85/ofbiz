@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+	<!-- Update Inventory -->
+	<RecurrenceRule recurrenceRuleId="8001" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8001" startDateTime="2000-01-01 00:00:00.000" recurrenceRuleId="8001" recurrenceCount="0"/>
+	<JobSandbox jobId="getProductInventory" jobName="Update Inventory" runTime="2000-01-01 00:00:00.000" serviceName="getProductInventory" poolId="pool" runAsUser="system" recurrenceInfoId="8001"/>
+
+	<!-- Get Tracking Numbers -->
+	<RecurrenceRule recurrenceRuleId="8002" untilDateTime="" frequency="HOURLY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8002" startDateTime="2000-01-01 00:00:00.000" recurrenceRuleId="8002" recurrenceCount="0"/>
+	<JobSandbox jobId="getOrderTracking" jobName="Update Tracking Numbers" runTime="2000-01-01 00:00:00.000" serviceName="getOrderTracking" poolId="pool" runAsUser="system" recurrenceInfoId="8002"/>
+
+	<RecurrenceRule recurrenceRuleId="8003" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8003" startDateTime="2000-01-01 10:00:00.000" recurrenceRuleId="8003" recurrenceCount="0"/>
+	<JobSandbox jobId="sendReorderEmail" jobName="Send Reorder Emails" runTime="2000-01-01 10:00:00.000" serviceName="sendReorderEmail" poolId="pool" runAsUser="system" recurrenceInfoId="8003"/>
+
+	<RecurrenceRule recurrenceRuleId="8004" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8004" startDateTime="2000-01-01 23:45:00.000" recurrenceRuleId="8004" recurrenceCount="0"/>
+	<JobSandbox jobId="autoApprove" jobName="Auto approve orders older then certain time" runTime="2000-01-01 23:45:00.000" serviceName="autoApprove" poolId="pool" runAsUser="system" recurrenceInfoId="8004"/>
+
+	<RecurrenceRule recurrenceRuleId="8005" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8005" startDateTime="2000-01-01 00:10:00.000" recurrenceRuleId="8005" recurrenceCount="0"/>
+	<JobSandbox jobId="cleanJobSandbox" jobName="JobSandbox cleaning process" runTime="2000-01-01 00:10:00.000" serviceName="cleanJobSandbox" poolId="pool" runAsUser="system" recurrenceInfoId="8005"/>
+
+	<RecurrenceRule recurrenceRuleId="8006" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8006" startDateTime="2000-01-01 00:30:00.000" recurrenceRuleId="8006" recurrenceCount="0"/>
+	<JobSandbox jobId="cleanSyncRemoveInfo" jobName="Clear EntitySyncRemove Info" runTime="2000-01-01 00:30:00.000" serviceName="cleanSyncRemoveInfo" poolId="pool" runAsUser="system" recurrenceInfoId="8006"/>
+
+	<RecurrenceRule recurrenceRuleId="8007" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8007" startDateTime="2000-01-01 00:30:00.000" recurrenceRuleId="8007" recurrenceCount="0"/>
+	<JobSandbox jobId="sendTradeAnniversaryEmails" jobName="Clear EntitySyncRemove Info" runTime="2000-01-01 10:30:00.000" serviceName="sendTradeAnniversaryEmails" poolId="pool" runAsUser="system" recurrenceInfoId="8007"/>
+
+	<RecurrenceRule recurrenceRuleId="8008" untilDateTime="" frequency="HOURLY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8008" startDateTime="2018-06-12 00:50:00.000" recurrenceRuleId="8008" recurrenceCount="0"/>
+	<JobSandbox jobId="cimpressOrderImport" jobName="Cimpress Order Import" runTime="2018-06-12 00:00:00.000" serviceName="getNewOrdersFromCimpress" poolId="pool" runAsUser="system" recurrenceInfoId="8008"/>
+
+	<RecurrenceRule recurrenceRuleId="8009" untilDateTime="" frequency="HOURLY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8009" startDateTime="2018-06-12 00:55:00.000" recurrenceRuleId="8009" recurrenceCount="0"/>
+	<JobSandbox jobId="cimpressAddressChangeImport" jobName="Cimpress Address Change Import" runTime="2018-06-12 00:15:00.000" serviceName="getAddressChangesFromCimpress" poolId="pool" runAsUser="system" recurrenceInfoId="8009"/>
+
+	<RecurrenceRule recurrenceRuleId="8010" untilDateTime="" frequency="HOURLY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8010" startDateTime="2018-06-12 00:58:00.000" recurrenceRuleId="8010" recurrenceCount="0"/>
+	<JobSandbox jobId="cimpressOrderCancelImport" jobName="Cimpress Order Cancellation Import" runTime="2018-06-12 00:25:00.000" serviceName="getCancelledOrdersFromCimpress" poolId="pool" runAsUser="system" recurrenceInfoId="8010"/>
+
+	<RecurrenceRule recurrenceRuleId="8011" untilDateTime="" frequency="HOURLY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8011" startDateTime="2018-06-12 00:58:00.000" recurrenceRuleId="8011" recurrenceCount="0"/>
+	<JobSandbox jobId="cimpressShippingChangeImport" jobName="Cimpress Carrier Change Import" runTime="2018-06-12 00:30:00.000" serviceName="getShippingCarrierChangesFromCimpress" poolId="pool" runAsUser="system" recurrenceInfoId="8011"/>
+
+	<RecurrenceRule recurrenceRuleId="8012" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8012" startDateTime="2018-06-12 03:00:00.000" recurrenceRuleId="8012" recurrenceCount="0"/>
+	<JobSandbox jobId="getAnalyticsProductStats" jobName="Analytics Product Stats" runTime="2018-06-12 03:00:00.000" serviceName="getAnalyticsProductStats" poolId="pool" runAsUser="system" recurrenceInfoId="8012"/>
+
+	<RecurrenceRule recurrenceRuleId="8013" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8013" startDateTime="2018-10-12 13:00:00.000" recurrenceRuleId="8013" recurrenceCount="0"/>
+	<JobSandbox jobId="sendProofReadyReminder" jobName="Send Proof Ready Reminder" runTime="2018-10-12 13:00:00.000" serviceName="sendProofReadyReminder" poolId="pool" runAsUser="system" recurrenceInfoId="8013"/>
+
+	<RecurrenceRule recurrenceRuleId="8014" untilDateTime="" frequency="DAILY" intervalNumber="1" countNumber="-1"/>
+	<RecurrenceInfo recurrenceInfoId="8014" startDateTime="2018-10-12 08:00:00.000" recurrenceRuleId="8014" recurrenceCount="0"/>
+	<JobSandbox jobId="retryDeclinedOrders" jobName="Retry Declined Orders" runTime="2018-10-12 08:00:00.000" serviceName="retryDeclinedOrders" poolId="pool" runAsUser="system" recurrenceInfoId="8014"/>
+</entity-engine-xml>

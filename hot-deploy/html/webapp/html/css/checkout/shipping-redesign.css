@@ -1,0 +1,34 @@
+.shippingRateList > div {
+	position: relative;
+}
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+.bnc_shipping_options_header{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #1a345f;
+    display: block;
+    font-size: 12px;
+}
+.bnc_shipping_options_header span{
+    
+}
+.bnc_shipping_options{
+    text-align: left;
+}
+.bnc_shipping_options span.section_selector {
+    text-align: left;
+}
+.bnc_shipping_options span.section_selector span.bnc_shipping_selection,
+.bnc_shipping_options span.section_selector span.bnc_shipping_cost {
+
+}
+.bnc_shipping_options span.section_selector span.bnc_shipping_cost {
+    text-align: right;
+    color: #FC7E22;
+}
+.bnc_estimate_delivery_date,
+.bnc_estimate_delivery_date span {
+    font-size: 11px;
+    display: block;
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /folders/
+Disallow: /envelopes/
+
+Sitemap:  https://www.bigname.com/folders-urls-sitemap.xml

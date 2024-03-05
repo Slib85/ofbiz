@@ -1,0 +1,17 @@
+.shippingRateList > div {
+	position: relative;
+}
+	.shippingRateList .estDeliveryDate {
+		font-size: 11px;
+	}
+	.shippingRateList label > span {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	.shippingRateList .foldersTabularRow > * {
+		vertical-align: top;
+	}
+	.shippingRateList .foldersTabularRow > *:first-child {
+		width: 35px;
+	}

@@ -1,0 +1,386 @@
+/*--- Graduation Shop CSS - ReDesign ---*/
+@font-face {
+	font-family: 'FuturaStdBook';
+    src: url('../../../fonts/FuturaStdBook.otf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'FuturaBold';
+    src: url('../../../fonts/FuturaBold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'FuturaStdExtraBold';
+    src: url('../../../fonts/FuturaStdExtraBold.otf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'FuturaBoldItalic';
+    src: url('../../../fonts/FuturaBoldItalic.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'GoodVibrationsScript';
+    src: url('../../../fonts/GoodVibrationsScript.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+.glow {
+	/* display: inline-block; */
+	transition-duration: 0.3s;
+	transition-property: box-shadow;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	border-radius: 8px;
+}
+.glow:hover {
+	box-shadow: 0 0 8px rgb(26, 52, 95, 0.6);
+	border-radius: 8px;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*------ MAIN WRAPPER ------*/
+.bnc_fol_grad_shop * {
+    margin:0;
+    padding:0;
+}
+
+.bnc_fol_grad_shop{
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_fol_grad_shop:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+/*------ TOP BANNER ------*/
+.fol_grad_shop_banner_wrap {
+    background-color: #2c6cbc;
+    border: 2px solid #eeeeee;
+    position: relative;
+    /* display: table;
+    table-layout: fixed; */
+}
+.fol_grad_shop_banner_wrap .fol_grad-shop-banner-image, 
+.fol_grad_shop_banner_wrap .fol_grad_shop_banner_content {
+    /* display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 25px 30px; */
+}
+.fol_grad_shop_banner_wrap .fol_grad-shop-banner-image img{
+    /* max-width: 670px; */
+}
+.fol_grad_shop_banner_wrap .fol_grad-shop-banner-image{
+    /* padding-right: 0; */
+}
+.fol_grad_shop_banner_wrap .fol_grad_shop_banner_content{
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 205px;
+}
+.fol_grad_shop_banner_content h1 {
+    font-family: 'OpenSansBold';
+    text-transform: uppercase;
+    font-size: 5em;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+.fol_grad_shop_banner_content h1 span{
+    display: block;
+}
+.fol_grad_shop_banner_content h1 span:first-child {
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+.fol_grad_shop_banner_content h1 span:last-child {
+    font-size: 46px;
+    letter-spacing: 7px;
+}
+.fol_grad_shop_banner_content p{
+    font-family: 'OpenSansSemiBold';
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    margin: 8px auto 15px auto;
+    width: 66%;
+}
+.fol_graduation-quote {
+    position: relative;
+}
+.fol_graduation-quote div:last-child {
+    font-family: 'GoodVibrationsScript';
+    font-size: 4em;
+    color: #fff;
+}
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="fol_grad-shop-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_fol_gradshop_nav1 */
+nav[role="fol_bnc_gradshop_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_fol_gradshop_nav1"] a, 
+nav[role="bnc_fol_gradshop_nav1"] label {
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'OpenSansSemiBold';
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_fol_gradshop_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_fol_gradshop_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #eeeeee;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+nav[role="bnc_fol_gradshop_nav1"] ul > li:hover {
+    background-color: #0b3360;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #b89e99, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_fol_gradshop_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_fol_gradshop_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_fol_gradshop_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_fol_gradshop_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_fol_gradshop_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_fol_gradshop_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: -7px;
+        content: "\2261";
+        font-size: 1.8em;
+        color: #fff;
+   }
+    nav[role="bnc_fol_gradshop_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_fol_gradshop_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_fol_gradshop_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_fol_gradshop_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.bnc-siderail-banner {
+    float: left;
+    display: block;
+    margin-top: 62px;
+    margin-right: 15px;
+}
+.bnc-siderail-banner a {
+    display: block;
+}
+.grad-shop-section-header {
+    font-family: 'OpenSansSemiBold';
+    color: #000;
+    font-size: 2em;
+    margin: 0 0 25px 0;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.grad-prod-grid {
+    padding: 2rem 0rem;
+}
+
+.grad-prod-grid > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    grid-gap: 1rem;
+}
+.grad-prod-grid > ul > li {
+    list-style: none;
+    border: 1px solid #dddddd;
+}
+.grad-prod-grid > ul > li > figure {
+    text-align: center;
+    max-height: 235px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+}
+.grad-prod-grid > ul > li > a > figure > img {
+    margin: 0 auto;
+    display: block;
+}
+.grad-prod-grid > ul > li > a {
+    padding: 0rem 1rem;
+    margin: .5rem;
+    display: block;
+    position: relative;
+}
+.grad-prod-grid > ul > li > a > p {
+    font-family: 'OpenSansSemiBold';
+    font-size: 1rem;
+    padding: 0rem;
+    color: #000;
+    text-align: center;
+}
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+@media only screen and (max-width: 767px) {
+    .tablet-desktop-only,
+    .fol_grad_shop_banner_content {
+		display: none !important;
+	}
+    .fol_grad_shop_banner_content p span{
+        display: inline-block;
+    }
+    
+}
+@media only screen and (min-width: 768px) {
+    .mobile-only {
+		display: none !important;
+	}
+	.tablet-desktop-only {
+		display: block !important;
+	}
+    .fol_grad_shop_banner_wrap .fol_grad_shop_banner_content{
+        height: 130px;
+    }
+    .fol_grad_shop_banner_content h1{
+        font-size: 2em;
+    }
+    .fol_grad_shop_banner_content p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .fol_graduation-quote div:last-child{
+        font-size: 2em;
+    }
+}
+@media only screen and (min-width: 1024px) {
+	.mobile-only {
+		display: none !important;
+	}
+    .fol_grad_shop_banner_wrap .fol_grad_shop_banner_content {
+        height: 145px;
+    }
+    .fol_grad_shop_banner_content h1{
+        font-size: 4em;
+    }
+    .fol_grad_shop_banner_content p{
+        font-size: 15px;
+        width: 80%;
+    }
+    .fol_grad_shop_banner_content p span{
+        display: block;
+    }
+    .fol_graduation-quote div:last-child {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 1256px) {
+    .bnc-siderail-banner{
+        display: none;
+    }
+}

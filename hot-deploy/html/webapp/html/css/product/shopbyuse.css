@@ -1,0 +1,113 @@
+.shop-by-use .sbu-head{
+	background-color: #63BAE2;
+	margin: 20px auto;
+	position: relative;
+}
+
+.shop-by-use div.overlay {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	opacity: .1;
+	
+	background:-webkit-linear-gradient(-90deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(-88deg, transparent 50%, #439fc2 50%, #439fc2),    
+		-webkit-linear-gradient(-76deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(-71deg, transparent 50%, #439fc2 50%, #439fc2),    
+		-webkit-linear-gradient(-63deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(-48deg, transparent 50%, #439fc2 50%, #439fc2),    
+		-webkit-linear-gradient(-33deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(-15deg, transparent 50%, #439fc2 50%, #439fc2),    
+		-webkit-linear-gradient(15deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(33deg, transparent 50%, #439fc2 50%, #439fc2),    
+		-webkit-linear-gradient(48deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(63deg, transparent 50%, #439fc2 50%, #439fc2),    
+		-webkit-linear-gradient(71deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(76deg, transparent 50%, #439fc2 50%, #439fc2),    
+		-webkit-linear-gradient(88deg, transparent 50%, #fff 50%, #fff),    
+		-webkit-linear-gradient(90deg, transparent 50%, #fff 50%, #fff);
+	background:
+		linear-gradient(180deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(182deg, transparent 50%, #439fc2 50%, #439fc2),
+		linear-gradient(194deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(199deg, transparent 50%, #439fc2 50%, #439fc2),
+		linear-gradient(207deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(222deg, transparent 50%, #439fc2 50%, #439fc2),
+		linear-gradient(237deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(255deg, transparent 50%, #439fc2 50%, #439fc2),
+		linear-gradient(285deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(303deg, transparent 50%, #439fc2 50%, #439fc2),
+		linear-gradient(318deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(333deg, transparent 50%, #439fc2 50%, #439fc2),
+		linear-gradient(341deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(346deg, transparent 50%, #439fc2 50%, #439fc2),
+		linear-gradient(358deg, transparent 50%, #fff 50%, #fff),
+		linear-gradient(360deg, transparent 50%, #fff 50%, #fff);
+	background-position: center top;  
+	background-size: 100% 900%;
+	height: 63px;
+	width: 100%;
+}
+
+.shop-by-use .sbu-head span{
+	color: #FFFFFF;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 18px;
+}
+
+.shop-by-use .sbu-head img{
+	display: block;
+	float: right;
+	width: 339px;
+}
+
+.shop-by-use .sbu-sub-head span, .shop-by-use .sbu-body span{
+	color: #FF6600;
+}
+
+.shop-by-use .sbu-sub-head span{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.shop-by-use .sbu-sub-head > div{
+	padding-bottom: 15px;
+}
+
+.shop-by-use .sbu-sub-head > div:first-child{
+	border-right: 1px solid #D7D7D7;
+}
+
+.shop-by-use .body-left{
+	background-color: #EEF8FF;
+	border-left: 1px solid #D7D7D7;
+	border-bottom: 1px solid #D7D7D7;
+	padding-top: 20px;
+	height: 200px;
+}
+
+.shop-by-use .body-right{
+	border-bottom: 1px solid #D7D7D7;
+	border-right: 1px solid #D7D7D7;
+	font-size: 11px;
+	height: 200px;
+}
+
+.shop-by-use .sbu-body {
+	margin-bottom: 50px;
+}
+
+.shop-by-use .sbu-body img {
+	display: block;
+	margin: 20px 0px 15px 0px;
+	max-height: 35px;
+    max-width: 55px;
+    width: 100%;
+}
+
+.shop-by-use .sbu-body a {
+	display: block;
+	color: #0F8AEB;
+}

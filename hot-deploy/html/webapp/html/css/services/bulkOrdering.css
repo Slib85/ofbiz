@@ -1,0 +1,153 @@
+.bulkOrderingHeader {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/saveOnBulkOrdersBanner?fmt=png-alpha&wid=3000) repeat-x;
+    margin: 0 auto;
+    min-height: 135px;
+    position: relative;
+    border: 1px solid #d2d2d2 !important;
+    color: #000000;
+}
+.bulkOrderingContent .leftContent, .bulkOrderingContent .rightContent {
+	width: 48% !important;
+	display: inline-block;
+	background-color: #ffffff !important;
+	border: 1px solid #d2d2d2 !important;
+}
+.bulkOrderingContent .rightContent {
+	margin-right: 0 !important;
+	margin-left: 1.5% !important;
+	vertical-align: top;
+}
+.leftContent h3{
+	color: #000000;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+.leftContent img {
+	margin-bottom: 8px;
+}
+.rightContent img{
+	float: left;
+}
+.rightContent h3{
+	padding-top: 20px;
+	color: #00a4e4;
+	font-size: 22px;
+}
+.palletQuantityTable {
+	display: table;
+	padding: 20px;
+	width: 100%;
+}
+.palletQuantityHeader {
+	width: 100%;
+	text-align: center;
+	display: table;
+}
+.palletQuantityHeader > div {
+	color: #ffffff;
+	background-color: #00a4e4;
+	padding: 10px;
+	display: table-cell;
+}
+.palletQuantityHeader .product, .palletQuantityRow .product {
+	width: 50%;
+}
+.palletQuantityHeader .width, .palletQuantityHeader .quantity, .palletQuantityRow .width, .palletQuantityRow .quantity {
+	width: 25%;
+}
+.palletQuantityRow {
+	width: 100%;
+	color: #000000;
+	display: table;
+	text-align: center;	
+}
+.palletQuantityRow > div {
+	display: table-cell;
+	padding: 10px;
+}
+.palletQuantityRow {
+	background-color: #b9ebff;
+}
+.palletQuantityRow:nth-child(odd) {
+	background-color: #d8f4ff;
+}
+.vipBusiness {
+	background-color: #000000;
+	padding: 20px;
+	margin: 0 20px;
+	position: relative;
+}
+.vipBusiness h3 {
+	color: #ffffff !important;
+	padding-top: 0;
+	font-size: 20px !important;
+}
+.vipBusiness p {
+	color: #ffffff !important;
+	font-size: 14px;
+	width: 80%;
+}
+.vipButton {
+	background-color: #b58d49;
+	color: #ffffff;
+	text-align: center;
+	width: 30%;
+	padding: 8px;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.vipBusiness img {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+.popularBulkItems {
+	background-color: #ffffff !important;
+	border: 1px solid #d2d2d2 !important;
+}
+.popularBulkItems .row {
+	margin-top: 10px;
+}
+.popularBulkItems h3 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+}
+.products {
+	padding: 10px 20px;
+	border: 1px solid #d2d2d2;
+	width: 24%;
+	margin-right: 1%;
+}
+.products img {
+	display: block;
+	margin: 0 auto;
+}
+.products h4 {
+	font-size: 16px;
+	color: #00a4e4;
+	font-weight: bold;
+}
+.products p {
+	font-size: 13px;
+	color: #7d7d7d;
+	line-height: 14px;
+}
+.products .price {
+	float: right;
+	color: #00a4e4;
+}
+.bulkOrderButtons {
+	width: 24%;
+	margin-right: 1%;
+	padding: 0;
+}
+.popularBulkItemsButton {
+	background-color: #fc7e22;
+	color: #ffffff;
+	padding: 20px;
+}
+
+
+
+

@@ -1,0 +1,106 @@
+.run-container {
+    border-left-width: 40px;
+    padding-left:0;
+    min-height: 212px
+}
+
+.padding-left-20 {
+    padding-left:20px;
+}
+
+.padding-bottom-40 {
+    padding-bottom:40px;
+}
+
+.padding-bottom-20 {
+    padding-bottom:20px;
+}
+
+.jqs-run table, .jqs-run table th {
+    text-align:center;
+}
+
+.margin-left--49 {
+    margin-left:-49px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.jqs-run a {
+    color: #ffffff;
+}
+
+.jqs-run {
+    border-left-width: 40px;
+    padding-left:0;
+    min-height: 112px;
+}
+
+.jqs-run .run-label {
+    width:0;
+    word-wrap:break-word;
+    margin-left: -26px;
+    font-size: 0.8em;
+    position: absolute;
+    color: white;
+}
+
+.jqs-image {
+    padding: 0 0 20px 20px;
+    float:left;
+}
+
+.jqs-image .img-label {
+    width : 230px;
+}
+
+.jqs-lbl-text {
+    padding: 0 0 20px 20px;
+    float:left;
+}
+
+.jqs-lbl-text .ctl-label {
+    width : 230px;
+}
+
+.jqs-lbl-text .ctl-label .btn{
+    width : 70px;
+    background-color: #76838f;
+}
+
+.pull-left {
+    float:left;
+}
+.jqs-qty-tile {
+    width:0;word-wrap:break-word;margin-left: -45px;margin-top:-13px;font-size: 1em;font-weight:500;color:white;position: absolute;line-height:16px;
+}
+.jqs-quote-modal {
+    max-width: 900px;
+}
+
+.jqs-total-tile {
+    font-size: 2.3em;
+    font-weight: 400;
+    color: white;
+    position: relative;
+    left:-15px;
+}
+
+.jqs-each {
+    font-size: 1.2em;
+    font-weight: 200;
+    color: white;
+    padding-left:10px;
+    position: relative;
+    top:-35px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,25 @@
+.positionRelative {
+	position: relative;
+}
+.toolTip {
+	position: absolute;
+    border: 1px solid #000;
+    z-index: 1;
+    background-color: #ffffff;
+    max-width: 500px;
+}
+.toolTip:after{
+    content:'';
+    width:20px;
+    height:20px;
+    background:#fff;
+    position:absolute;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+    bottom:-11px;
+    left:50%;
+    border-right:#000 solid 1px;
+    border-bottom:#000 solid 1px;
+    margin-left: -10px;
+}

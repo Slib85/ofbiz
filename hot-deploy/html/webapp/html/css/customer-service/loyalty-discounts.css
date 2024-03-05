@@ -1,0 +1,107 @@
+.loyalty-discounts a {
+	color: #0F8AEB;
+}
+
+.loyalty-discounts .content-left > div {
+	max-width: 650px;
+	line-height: 20px;
+}
+
+.loyalty-discounts .content-left .panel-heading {
+	color: #FF6600;
+	font-size: 15px;
+	font-weight: bold;
+	border-bottom: 1px solid #D7D7D7;
+}
+
+.loyalty-discounts .content-left ul {
+	list-style: none;
+}
+
+.loyalty-discounts .content-left li:before {
+	color: #0A86E5;
+	content: "\02022  ";
+	font-size: 10px;
+}
+
+.loyalty-discounts .content-left .panel-body > span {
+	display: block;
+}
+
+.loyalty-discounts .content-left li > span {
+	font-weight: bold;
+}
+
+.loyalty-discounts .content-right > div {
+	background: -moz-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: -ms-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: -o-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232,245,253,1)), color-stop(100%, rgba(232,245,253,0)));
+	background: -webkit-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: linear-gradient(to bottom, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: rgba(232,245,253,1);
+	border-radius: 4px;
+	border: 4px solid #CAE0F1;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8f5fd', endColorstr='#e8f5fd', GradientType=0 );
+	margin-right: 15px;
+	padding: 25px;
+	position: relative;
+}
+
+.loyalty-discounts .content-right .box-head {
+	color: #0A86E5;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.loyalty-discounts .content-right .point-conversion {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.loyalty-discounts .content-right .row > div {
+	background-color: #ffffff;
+	border: 1px solid #D7D7D7;
+	color: #0A86E5;
+	display: table;
+	font-size: 11px;
+	height: 115px;
+	padding: 10px;
+	text-align: center;
+}
+
+.loyalty-discounts .content-right .dark {
+	color: #074679 !important;
+	font-size: 10px !important;
+	font-weight: bold;
+}
+
+.loyalty-discounts .content-right .gradient {
+	background: rgba(249,249,249,1);
+	background: -moz-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: -ms-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: -o-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,249,249,1)), color-stop(100%, rgba(237,237,237,1)));
+	background: -webkit-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: linear-gradient(to right, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ededed', GradientType=1 );
+}
+
+.loyalty-discounts .content-right .row > div > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.loyalty-discounts .content-right .row > div span.percent {
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.loyalty-discounts .content-right .row > div span.account-mgr {
+	font-style: italic;
+}

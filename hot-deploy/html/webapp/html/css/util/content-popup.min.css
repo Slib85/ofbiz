@@ -1,0 +1,1 @@
+#background-popup{z-index:998;width:100%;position:fixed;top:0;left:0;background-color:#000;filter:alpha(opacity=40);opacity:.4;-moz-opacity:.4;-khtml-opacity:.4;display:none}.content-popup{display:none;margin-left:-40%;width:80%;left:50%;position:fixed;z-index:999;padding:20px;background-color:#fff;border:1px solid #666;box-shadow:0 0 10px rgba(0,0,0,.4)}

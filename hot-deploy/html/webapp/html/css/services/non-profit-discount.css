@@ -1,0 +1,363 @@
+.banner h1 {
+	font-size: 28px;
+	color: #000000;
+	z-index: 1;
+}
+.non-profit-discount .button-regular {
+	width: 125px;
+	font-size: 16px;
+	margin: 10px 5px 0px 0px;
+}
+.non-profit-discount .apply-now form textarea {
+	resize: none;
+}
+.non-profit-discount .content-right {
+	width: 500px;
+}
+.content-left{
+	width: auto;
+	padding-right: 20px;
+}
+body>.content .section {
+	width: 100% !important;
+}
+.profitButton{
+	padding: 15px 25px !important;
+	text-transform: none !important;
+}
+.alreadyAccount {
+	padding-bottom: 50px !important;
+}
+.noMarginL {
+	margin-left: 0 !important;
+}
+
+.non-profit-bottom {
+	padding-bottom: 30px !important;
+}
+
+.non-profit-bottom h5 span, .application span, .howToDropdown span{
+	font-weight: bold;
+}
+.howToSave{
+	border: 1px solid #d2d2d2 !important;
+	background-color: #f1f1f1;
+	padding: 5px 20px 20px !important;
+}
+.profitButton i{
+	color: #ffffff;
+}
+
+/* BEGIN BOTTOM OF NON-PROFIT DISCOUNT */
+.non-profit-discount .non-profit-bottom {
+	border: 1px solid #dee0e3;
+	background-color: #ffffff;
+}
+	.non-profit-discount .non-profit-bottom > div {
+		display: table;
+		width: 100%;
+		text-align: center;
+	}
+		.non-profit-discount .non-profit-bottom > div > div {
+			display: table-row;
+		}
+			.non-profit-discount .non-profit-bottom > div > div > div {
+				display: table-cell;
+				width: 18%;
+				vertical-align: middle;
+			}
+				.non-profit-discount .non-profit-bottom > div > div.bottom-header > div > span {
+					font-weight: bold;
+				}
+				.non-profit-discount .non-profit-bottom > div > div.bottom-header > div  > span > span {
+					color: #fc7e22;
+				}
+				.non-profit-discount .non-profit-bottom > div > div > div.pixel-pad-left {
+					padding-left: 1px;
+				}
+			.non-profit-discount .non-profit-bottom > div > div > div.cell-large {
+				width: 28%;
+			}
+			.non-profit-discount .non-profit-bottom > div > div > div.bottom-save {
+				background-color: #009cdd;
+			}
+				.non-profit-discount .non-profit-bottom > div > div > div.bottom-save span {
+					display: block;
+					color: #ffffff;
+				}
+				.non-profit-discount .non-profit-bottom > div > div > div.bottom-save span.save-percent {
+					font-size: 30px;
+					line-height: 30px;
+					font-weight: bold;
+				}
+				.non-profit-discount .non-profit-bottom > div > div > div.bottom-save span.save-what {
+					font-size: 20px;
+					line-height: 20px;
+				}
+			.non-profit-discount .non-profit-bottom > div > div > div.bottom-info {
+				background-color: #caefff;
+			}
+				.non-profit-discount .non-profit-bottom > div > div > div.bottom-info > span {
+					display: block;
+					font-size: 12px;
+					color: #0f1419;
+					line-height: 16px;
+				}
+					.non-profit-discount .non-profit-bottom > div > div > div.bottom-info > span > span {
+						font-weight: bold;
+					}
+				.non-profit-discount .non-profit-bottom > div > div > div .bottom-point-save-first {
+					background-color: #caefff;
+				}
+				.non-profit-discount .non-profit-bottom > div > div > div .bottom-point-save-second {
+					background-color: #99e1ff;
+				}
+				.non-profit-discount .non-profit-bottom > div > div > div .bottom-point-save-third {
+					background-color: #32bdf7;
+				}
+				.non-profit-discount .non-profit-bottom > div > div > div .bottom-point-save-fourth {
+					background-color: #009cdd;
+				}
+				.non-profit-discount .non-profit-bottom > div > div > div [class*="bottom-point-save-"] {
+					height: 80px;
+				}
+					.non-profit-discount .non-profit-bottom > div > div > div [class*="bottom-point-save-"] span {
+						display: block;
+						color: #404040;
+						font-size: 30px;
+						font-weight: bold;
+						padding-top: 9px;
+					}
+					.non-profit-discount .non-profit-bottom > div > div > div span.point-name,
+					.non-profit-discount .non-profit-bottom > div > div > div span.point-amount {
+						font-size: 18px;
+						padding-top: 0px;
+					}
+					.non-profit-discount .non-profit-bottom > div > div > div span.point-name {
+						text-transform: uppercase;
+					}
+					.non-profit-discount .non-profit-bottom > div > div > div span.point-amount {
+						color: #5c7883;
+					}
+			.non-profit-discount .non-profit-bottom > div > div > div[class*="bottom-line-"] > div {
+				border-bottom: 1px solid #000000;
+				height: 20px;
+			}
+			.non-profit-discount .non-profit-bottom > div > div > div.bottom-line-left > div {
+				margin-left: 50%;
+				border-left: 1px solid #000000;
+			}
+			.non-profit-discount .non-profit-bottom > div > div > div.bottom-line-right > div {
+				width: 50%;
+				border-right: 1px solid #000000;
+			}
+.non-profit-discount .non-profit-legend {
+	display: block;
+	font-size: 12px;
+}
+	.non-profit-discount .non-profit-legend > span {
+		font-weight: bold;
+	}
+/* END BOTTOM OF NON-PROFIT DISCOUNT */
+
+.section{
+	border: 1px solid #d2d2d2 !important;
+}
+
+.banner {
+	height: 100px;
+	padding: 30px 20px !important;
+}
+
+.banner img {
+	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 0;
+}
+
+.join, .sidebar {
+	font-size: 17px;
+	color: #0F1419;
+}
+
+.join i, .sidebar i{
+	color: #00a4e4;
+}
+
+.section h5{
+	color: #000000;
+}
+
+.application h5, .non-profit-bottom h5{
+	color: #fc7e22 !important;
+}
+
+#customWidth {
+	width: 90%;
+}
+
+#customWidth:after {
+	right: -7% !important;
+}
+
+
+.mobileOnly	{
+	display: none !important;
+}
+
+@media only screen and (max-width: 1023px) {
+	.banner h1 {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.banner{
+		background-color: #ffffff !important;
+	}
+	.section {
+		margin-left: 0 !important;
+	}
+	.application {
+		text-align: center;
+	}
+	.content-left {
+		padding-right: 0;
+	}
+	.mobileDisplay {
+		font-size: 20px;
+		width: 100% !important;
+	}
+	.mobileDisplay .section{
+		margin-top: 10px !important;
+		font-size: 16px !important;
+		padding: 15px !important;
+		color: #000000;
+	}
+	.mobileDisplay .section i, .howToDropdown i{
+		float: right;
+		cursor: pointer;
+	}
+	.nonprofitButton{
+		text-align: center;
+	}
+	.nonprofitButton .button-cta {
+		float: none !important;
+		text-transform: none;
+		width: 50% !important;
+		margin: 10px 5px 20px 0 !important;
+
+	}
+	.howToDropdown {
+		background-color: #009cdd !important;
+		border: 1px solid #009cdd !important;
+		color: #ffffff;
+		text-align: center;
+		cursor: pointer;
+
+	}
+	.howToDropdown h5{
+		color: #ffffff !important;
+		font-weight: 100;
+		padding: 10px;
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	.howToDropdown i{
+		position: absolute;
+		right: 10px;
+		font-size: 26px;
+		top: 44%;
+	}
+	.mobileDropdown {
+		width: 100%;
+	}
+	.discount10{
+		background-color: #ffffff;
+		color: #000000;
+		padding: 10px 15px 20px;
+
+	}
+	.point {
+		background-color: #5a5a5a;
+		color: #ffffff;
+		text-align: center;
+		padding: 5px;
+
+	}
+	.point h5 {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.priceMobile{
+		text-align: center;
+	}
+	.bronze {
+		background-color: #caefff;
+	}
+	.silver {
+		background-color: #99e1ff;
+	}
+	.gold {
+		background-color: #32bdf7;
+	}
+	.platinum {
+		background-color: #009cdd;
+	}
+	.priceMobile h5{
+		color: #000000;
+		font-weight: bold;
+		padding: 10px 0 0;
+		font-size: 24px;
+	}
+	.priceMobile p{
+		color: #555555;
+		font-size: 20px;
+	}
+	.priceMobile span{
+		font-weight: bold;
+		color: #000000;
+	}
+	.priceMobile div p{
+		display: inline-block;
+		margin: 10px 0;
+		color: #000000;
+	}
+
+	.priceMobile hr{
+		margin: 10px auto;
+		width: 90%;
+		color: #ffffff;
+		border: solid .5px #ffffff !important;
+	}
+	.loginButton{
+		text-transform: none !important;
+	}
+	.row .small-5 h5{
+		font-size: 20px !important;
+		padding-bottom: 0 !important;
+	}
+
+	.mobileOnly {
+		display: block !important
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+	#customWidth:after {
+		right: -4% !important;
+	}
+}
+
+
+
+
+
+
+
+
+

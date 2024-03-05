@@ -1,0 +1,91 @@
+.accountingEnvelopes .accountingHeader {
+	background: url('/html/img/landing/accountingEnvelopes/wood_bg_lg.png') repeat;
+	padding: 30px;
+}
+	.accountingEnvelopes .accountingHeader > div {
+		background-color: #ffffff;
+		padding: 20px;
+	}
+		.accountingEnvelopes .accountingHeader > div h1 {
+			color: #201b1a;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+		}
+		.accountingEnvelopes .accountingHeader > div div {
+			color: #1ba4e1;
+			font-size: 31px;
+			line-height: 31px;
+			margin: 5px 0px 0px 0px;
+			text-align: center;
+		}
+			.accountingEnvelopes .accountingHeader > div div span {
+				font-weight: bold;
+				font-style: italic;
+			}
+		.accountingEnvelopes .accountingHeader > div p {
+			font-weight: 200;
+			font-size: 15px;
+			padding: 0px 60px;
+			margin: 15px 0px 0px 0px;
+			line-height: 17px;
+		}
+			.accountingEnvelopes .accountingHeader > div p a {
+				text-decoration: underline;
+			}
+			.accountingEnvelopes .accountingHeader > div p span {
+				color: #3e5c68;
+				font-weight: initial;
+			}
+.accountingEnvelopes .productList {
+	padding: 5px;
+	text-align: center;
+}
+	.productList a {
+		text-align: center;
+		width: 291px;
+		height: 269px;
+		padding: 15px;
+		margin: 5px;
+		background: url('/html/img/landing/accountingEnvelopes/wood_bg_sm.png');
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+	}
+		.productList p {
+			color: #ffffff;
+			line-height: 19px;
+		}
+			.productList p span {
+				color: #cba80c;
+				display: block;
+			}
+		.productList img {
+			margin-top: 15px;
+		}
+		.productList div {
+			border: 2px solid #1ba4e1;
+			width: 252px;
+			color: #ffffff;
+			text-transform: uppercase;
+			padding: 5px;
+			margin-top: 15px;
+			font-size: 18px;
+			position: absolute;
+			bottom: 17px;
+		}
+@media only screen and (max-width: 1023px) {
+	.accountingEnvelopes .accountingHeader {
+		padding: 15px;
+	}
+		.accountingEnvelopes .accountingHeader > div {
+			padding: 10px;
+		}
+			.accountingEnvelopes .accountingHeader > div div {
+				font-size: 24px;
+				line-height: 24px;
+			}
+			.accountingEnvelopes .accountingHeader > div p {
+				padding: 0px 10px;
+			}
+}

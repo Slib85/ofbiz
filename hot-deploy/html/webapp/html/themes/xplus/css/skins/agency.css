@@ -1,0 +1,829 @@
+/*------------------------------------------
+
+Project Name : xPlus;
+Desgined By  : Faridul Haque;
+Developed By : Sumaiya Shampa & Faridul Haque;
+Date         : 25-Jan-2017
+------------------------------------------*/
+
+/*
+************************************************
+         == Section Padding ==
+************************************************ 
+*/
+#service {
+    padding-bottom: 80px;
+}
+.promo-info,
+#pricing_table,
+#blog{
+    padding-bottom: 110px;
+}
+.promo_wrapper {
+    padding: 80px 0px 135px;
+}
+#why_choose_us {
+    padding-bottom: 50px;
+}
+.plan-price {
+    padding: 55px 0 30px;
+}
+.pricing_bg_color_agency {
+    padding-bottom: 48px;
+}
+.price_feature {
+    padding: 0 0 20px;
+}
+
+/*
+************************************************
+         == Font Formating (Slick Style) ==
+************************************************ 
+*/
+h1,
+h2, 
+h3, 
+h4,
+h5,
+h6,
+p,
+.title h3, 
+.service_text h3,
+.btn.xplus-btn,
+.tp-resizeme-subtitle
+{
+    font-family: 'proxima_nova_rgregular'!important;
+    text-transform: initial!important;
+}
+.title h3{
+    font-family: 'proxima_novasemibold'!important;
+    font-size: 30px;
+}
+.top_title h3,
+.content_right_text h4,
+.count_text h3,
+.footer_column_title h5,
+.client_testimonial_3column_bottom h4{
+    font-family: 'proxima_novasemibold'!important;
+}
+.title_subtitle span{
+    font-size: 15px;
+}
+.btn.xplus-btn{
+    font-size: 16px;
+}
+/*
+************************************************
+            == background image css ==
+************************************************ 
+*/
+.slider-image {
+    background-image: url(/html/themes/xplus/img/slider-image/banner-1.jpg);
+
+}
+#why_choose_us {
+    background-image: url(/html/themes/xplus/img/image3.jpg) ;
+}
+
+.promo-big_img_l {
+    background: url(/html/themes/xplus/img/promo_sections.jpg);
+}
+
+.promo_sections_img_r{
+    background: url(/html/themes/xplus/img/section-bg-5.jpg);
+}
+
+.subscribe_area{
+    /*background-image: url(/html/themes/xplus/img/stag-forest-slide1.jpg);*/
+}
+/*
+
+/*
+************************************************
+         == Color Presets CSS Start ==
+************************************************ 
+*/
+
+.hero_content p a,
+.menuzord-menu ul.dropdown li.active>a,
+.menuzord-menu>li>.megamenu .megamenu-row li:hover>a,
+.menuzord-menu>li>.megamenu .megamenu-row li.active>a,
+.menuzord .menuzord-menu>li.active>a,
+.menuzord .menuzord-menu>li.active>a>i,
+.menuzord .menuzord-menu>li:hover>a,
+.menuzord .menuzord-menu>li:hover>a>i,
+.client_testimonial_3column_info:after,
+.footer_left_icon li a:hover,
+.upgraded_1 input[type=email]:focus:not([readonly])+label, 
+.upgraded_h_1 input[type=email]:focus:not([readonly])+label, 
+.upgraded_field input[type=email]:focus:not([readonly])+label, 
+.upgraded_field input[type=text]:focus:not([readonly])+label, 
+textarea.massage_textarea:focus:not([readonly])+label,
+.copyright p a,
+.latest_tweets_info p i,
+.latest_tweets_info p a:hover,
+.footer_menu_bottom ul li a:hover,
+.quick_link_list li a:hover{
+    color: #FF5351!important;
+}
+.nav-border-bottom .menuzord .menuzord-menu>li.active>a,
+.nav-border-bottom .menuzord .menuzord-menu>li:hover>a {
+    border-bottom: 3px solid #FF5351;
+}
+.nav-border-box .menuzord-menu > li.active > a,
+.nav-border-box .menuzord-menu > li:hover > a{
+    border:1px solid #FF5351;
+}
+.btn.subscribe-btn,
+.input-field-modal button,
+.social_icon ul li a:hover,
+.nav-boxed-color .menuzord-menu > li.active > a,
+.nav-boxed-color .menuzord-menu > li:hover > a,
+.footer_left_icon li a:hover,
+.footer_menu_bottom ul li a:after, 
+.footer_menu_bottom ul li a:before,
+span.scroll_top_up
+{
+    background: #FF5351!important;
+}
+.menuzord-menu ul.dropdown li >a::before,
+.menuzord-menu>li>.megamenu .megamenu-row li >a::before {
+    background-color: #FF5351!important;
+}
+
+/*
+************************************************
+         == Navigation CSS Strat ==
+************************************************ 
+*/
+.menuzord-menu>li>a {
+    line-height: 80px;
+}
+.logo-brand {
+    margin: 18px 30px 0 0;
+}
+
+/* search modal */
+.btn-search {
+    margin: 28px 0px 0 40px;
+}
+
+/*
+************************************************
+         == Slider CSS Strat ==
+************************************************ 
+*/
+.tp-resizeme{
+    font-family: 'proxima_nova_rgbold';
+    font-size: 80px;
+    line-height: 80px;
+    color: rgba(0, 0, 0, 1.00);
+}
+.tp-resizeme-subtitle{
+    color: #444;
+}
+/*
+************************************************
+         == Promo CSS Strat ==
+************************************************ 
+*/
+.promo_wrapper {
+    background: #f8f8f8;
+    border-radius: 3px;
+    width: 100%;
+}
+.promo-info.promo_title {
+    margin-top: 5px;
+}
+.promo-info h3{
+    margin-bottom: 10px;
+    font-size: 30px;
+
+}
+.project_info h6 {
+    font-size: 16px;
+}
+
+/*
+************************************************
+         == Counter CSS Start ==
+************************************************ 
+*/
+.single_count:hover .count_icon{
+    background: #FF5351;
+}
+.counterup_area .small_box_shadow{
+    box-shadow: none;
+}
+.count_icon span {
+    font-size: 38px;
+}
+.single_count:hover .count_icon span {
+    color: #fff;
+}
+
+/*
+************************************************
+         ==Our quality service==
+************************************************ 
+*/
+
+.promo-big_img_l {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.video_intro{
+    background: url(/html/themes/xplus/img/section-bg-5.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.promo-big_img_l, .video_intro, .promo-big_content {
+    float: left;
+    width: 50%;
+}
+.promo-big_content {
+    height: 500px;
+    padding: 100px 0 0 10%;
+}
+.choose_caption_top {
+    height: 500px;
+}
+.choose_caption_bottom {
+    height: 500px;
+}
+.choose_single_img img{
+    width: 100%;
+}
+
+.promo_title h3 {
+    margin: 0 0 20px 0
+}
+.single_checkcont_choose p {
+    margin-bottom: 38px;
+}
+.single_checkcont p, .single_checkcont_choose p{
+    max-width: 478px;
+}
+.single_checkcont_list {
+    margin-top: 15px;
+}
+.single_checkcont_list li {
+    position: relative;
+    margin-left: 18px;
+    line-height: 30px;
+}
+.single_checkcont_list li:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #888;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 10px 0 0 -20px;
+    padding: 0 0;
+}
+.single_checkcont_list li a {
+    font-size: 15px;
+    color: #888;
+}
+.content_right {
+    padding: 220px 10%;
+}
+.content_right_text {
+    float: left;
+    margin: 16px 45px 0 115px;
+}
+.content_right_text p {
+    color: #333333;
+    font-size: 14px;
+    margin-top: -14px;
+}
+.content_right_text h4{
+    color: #333333;
+    font-size: 20px;
+}
+a.video-autoplay-true {
+    display: inline-block;
+    font-size: 48px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF5351;
+    box-shadow: 0 5px 10px -3px rgba(0,0,0,.5);
+    height: 85px;
+    width: 85px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 50%;
+    position: relative;
+    border: 5px solid #fff; 
+    box-shadow: none;
+}
+a.video-autoplay-true i {
+    background: none;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+/*
+************************************************
+         ==  Subscribe CSS Strat ==
+************************************************ 
+*/
+.subscribe_area{
+    padding:90px 0 69px;
+}
+.subscribe_info {
+    padding-top: 14px;
+}
+.subscribe_info h3 {
+    font-size: 30px;
+    color: #fff;
+}
+form.subscribe-form i {
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    margin: 24px 0 0 30px;
+}
+input.wid-subscribe {
+    color: #eeeeee;
+    height: 60px;
+    width: 350px;
+    padding-left: 48px;
+    border: 1px solid #4d4d53;
+    font-size: 14px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+input.wid-subscribe[type=email]:focus:not([readonly]) {
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #4d4d53;
+}
+input.wid-signup {
+    color: #333333;
+    font-size: 15px;
+    background: #fff;
+    border: 1px solid #fff;
+    height: 61px;
+    width: 154px;
+    margin: 0 0 0 -6px;
+    border-radius: 2px;
+}
+
+/*
+************************************************
+         ==  Client Testimonial CSS Strat ==
+************************************************ 
+*/
+
+
+/*
+************************************************
+         == Pricing CSS Strat ==
+************************************************ 
+*/
+#pricing_table{
+    background: #f8f8f8;
+}
+.price_feature li {
+    line-height: 50px;
+}
+.price_icon_h_2{
+    font-size: 15px;
+    color: #ffffff;
+    background: #333333;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+}
+.pricing_table:hover .price_btn_h_2 a, .price_icon_1_h_2 {
+    color: #fff;
+}
+a.price_icon_1:focus, .price_icon_h_2:focus,
+.price_icon_h_2:hover{
+    color: #fff
+} 
+
+/*
+************************************************
+         == Blog CSS Start ==
+************************************************ 
+*/
+.blog_item_agency {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    margin: 2px 0 2px 25px;
+    padding: 8px 0 10px 0;
+    width: 47%;
+}
+.blog_item_agency:nth-child(2), .blog_item_agency:nth-child(4) {
+    margin-left: 30px;
+}
+.blog_item_agency:nth-child(3), .blog_item_agency:nth-child(4) {
+    margin-top: 25px;
+}
+.blog_img {
+    margin-left: 10px;
+    width: 250px;
+}
+
+/*
+************************************************
+         == Client CSS Start ==
+************************************************ 
+*/
+.client_area {
+    background: none;
+    padding: 78px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+
+
+/* ============================  Rsponsive Css ================================= */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .header_area{
+        display: none;
+    }
+    
+    .promo-info h3 {
+        font-size: 27px;
+    }
+    .promo-big_content {
+        padding: 100px 0 0 5%;
+    }
+    .single_count {
+        margin-left: 10px;
+    }
+    .count_text {
+        margin-left: 15px;
+    }
+    .count_text h3{
+        font-size: 30px
+    }
+    .content_right {
+        padding: 180px 0;
+        text-align: center;
+        float: none;
+    }
+    .content_right_text {
+        float: none;
+        margin: 20px 0 0 0;
+    }
+    .single_checkcont p, .single_checkcont_choose p {
+        max-width: 408px;
+    }
+    input.wid-subscribe {
+        width: 252px;
+    }
+    .blog_item_agency {
+        padding-top: 0px;
+    }
+    .blog_item_agency .blog_img, .blog_item_agency .blog_img img, 
+    .blog_item_agency .blog_cont {
+        width: 100%;
+        margin: 0;
+    }
+    .blog_item_agency .blog_cont{
+        padding: 15px 20px 0 20px;
+    }
+    .blog_cont .colorWh{
+        max-width: 100%;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .header_area{
+        display: none;
+    }
+    .promo-info{
+    padding-bottom: 0px;
+    }
+    .choose_single_img {
+        margin-top: 63px;
+    }
+    .service_text {
+        width: 85%;
+        padding: 0 5px;
+    }
+    .promo_title h3 {
+        font-size: 22px;
+    }
+    .project_btn {
+        float: right;
+    }
+    .choose_single_img img, .choose_single_img {
+        width: 100%;
+    }
+    .promo-big_content {
+        padding: 100px 0 0 4%;
+    }
+    .single_checkcont p, .single_checkcont_choose p {
+        max-width: 310px;
+    }
+    .content_right {
+        padding: 190px 0;
+    }
+    .content_right{
+        text-align: center;
+    }
+    .content_right_text {
+        float: none;
+        margin: 15px 0;
+    }    
+    .subscribe_area {
+        text-align: center;
+    }
+    .subscribe_area {
+        padding: 50px 0 55px;
+    }
+    .subscribe_info h3 {
+        margin-bottom: 40px;
+    }
+    .client_testimonial_3column_details {
+        text-align: left;
+    }
+    .pricing_bg_color_agency {
+        padding-bottom: 48px;
+        margin-bottom: 30px;
+    }
+    .blog_item_agency {
+        margin: 2px 0 2px 12px;
+        width: 46%;
+        padding-top: 0;
+    }
+    .blog_img {
+        width: 100%;
+        margin: 0;
+    }
+    .blog_img img {
+        width: 100%;
+    }
+    .blog_item_agency .blog_cont {
+        padding: 32px 15px 0 15px;
+    }
+   #pricing_table{
+        padding-bottom: 80px;
+    }    
+
+}
+
+@media  (max-width: 768px){
+    div#rev_slider_1174_1_wrapper {
+        padding-top: 45px!important;
+    }
+}
+
+@media  (max-width: 767px){
+    .header_area{
+        display: none;
+    }
+    div#rev_slider_1174_1_wrapper {
+        padding-top: 45px!important;
+        }
+    .count_text h3 {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    .section-padding {
+        padding-bottom: 70px;
+    }
+    .service_text {
+        width: 95%;
+        padding: 0 5px;
+    }
+    .promo_title h3 {
+        font-size: 26px;
+    }
+    .promo-info {
+        text-align: center;
+    }
+    .promo_wrapper {
+        padding: 65px 0 225px;
+    }
+    .content_right{
+        text-align: center;
+        padding: 180px 0%;
+    }
+    .content_right_text {
+        float: none;
+        margin: 15px 0 0 0;
+    }    
+    .project_info h6 {
+        margin: 0 0 30px;
+    }
+    .counterup_area {
+        padding: 78px 0 25px;
+    }
+    .count_text{
+        margin: -12px 0 40px 15px;
+        text-align: left;
+    }
+    .promo-big_img_l, .video_intro, .promo-big_content {
+        float: left;
+        width: 100%;
+    }
+    .video_intro {
+        margin-top: -200px;
+    }
+    .single_count {
+        padding: 0 5px;
+    }
+    .single_checkcont  {
+        margin-top: -170px;
+    }
+    .single_checkcont p, .single_checkcont_choose p {
+        max-width: 565px;
+    }
+    .promo-info {
+        padding-bottom: 0px;
+    }
+    .subscribe_area {
+        text-align: center;
+    }
+    .subscribe_info h3 {
+        margin-bottom: 20px;
+    }
+    input.wid-subscribe {
+        width: 300px;
+    }
+    .colorWh{
+        margin-left: 0px;
+        max-width: 288px;
+    }
+    .client_testimonial_3column_info {
+        margin: 0 auto;
+        max-width: 470px;
+    }
+    #pricing_table {
+        padding-bottom: 60px;
+    }
+    .pricing_bg_color_agency {
+        margin-bottom: 30px;
+    }
+    #blog {
+        padding-bottom: 90px;
+    }
+    .blog_item_agency {
+        margin: 0 0 0 -5px;
+        padding: 0;
+    }
+    .blog_img {
+        margin: 0;
+    }
+    .blog_img img {
+        width: 100%;
+    }
+    .colorWh {
+        max-width: 95%!important;
+    }
+    .quick_link_list a, .upgraded_h_1 label{
+        font-size: 13px;
+    }
+    .matx-form-valid.contact-form {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 580px){
+    input.wid-subscribe {
+        width: 190px;
+    }
+    .promo_title h3 {
+        font-size: 20px;
+    }
+    .promo-info h3, .subscribe_info h3{
+        font-size: 26px;
+    }
+    .video_intro {
+        margin-top: -160px;
+    }
+
+    .single_count {
+        padding: 0;
+    }
+    .project_info h6 {
+        font-size: 15px;
+    }
+    .promo-big_content {
+        padding: 100px 5% 0 5%;
+    }
+    .blog_item_agency {
+        width: 100%;
+        margin: 0;
+    }
+    .blog_item_agency:nth-child(2), .blog_item_agency:nth-child(4) {
+        margin: 25px 0 0;
+    }
+    .quick_link {
+        float: left;
+    }
+    .contact-form {
+        margin-bottom: 64px;
+    }
+    
+    
+}
+
+@media (max-width: 479px){
+    a.btn.xplus-btn.slider_btn, .xplus-btn.slider_btn_ghost {
+        margin: 6px 15px;
+    }
+    
+    .btn.xplus-btn{
+        height: 45px;
+        line-height: 45px;
+    }
+    #service {
+        padding-bottom: 60px;
+    }
+    .promo_title h3 {
+        font-size: 22px;
+    }
+    .single_checkcont p, .single_checkcont_choose p, .single_checkcont_list li a{
+        font-size: 14px;
+    }
+    .single_checkcont_choose p {
+        margin-bottom: 15px;
+    }
+    .promo-big_content {
+        height: 490px;
+        padding: 40px 10%;
+    }
+    .promo_wrapper {
+        padding: 65px 0 220px;
+    }
+    .promo_wrapper .project_info h3 {
+        font-size: 20px;
+    }
+    .project_info h6 {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    .video_intro {
+        height: 370px;
+    }
+     a.video-autoplay-true {
+        font-size: 22px;
+        height: 65px;
+        width: 65px;
+        line-height: 70px;
+    }
+    a.video-autoplay-true i {
+        font-size: 34px;
+    }
+    .content_right_text {
+        margin: 20px 0 0 0;
+        text-align: center;
+        float: none;
+    }
+    .content_right {
+        text-align: center;
+        padding: 140px 48px;
+    }
+    .subscribe_info h3 {
+        font-size: 24px;
+    }
+    input.wid-subscribe {
+        width: auto;
+    }
+     #client_testimonial_agency {
+        padding-bottom: 58px;
+    }
+    .client_testimonial_3column_info p {
+        font-size: 12px;
+    }
+    .blog_item_agency {
+        width: 100%;
+        margin: 0;
+    }
+    .blog_item_agency:nth-child(2), .blog_item_agency:nth-child(4) {
+        margin: 25px 0 0 0;
+    }
+    .xplus-btn.footer-subscribe-btn {
+        width: 115px;
+        margin: 25px 0 0 -10px;
+        font-size: 15px;
+    }
+    
+}
+@media(max-width: 372px){
+    .video_intro {
+        margin-top: -160px;
+    }
+}

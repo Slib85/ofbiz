@@ -1,0 +1,87 @@
+.quoteListContainer {
+	max-width: 1080px;
+    margin: 0 auto;
+}
+.productAttr p {
+	font-weight: bold;
+	text-align: right;
+}
+.quantitiesTable {
+	width: 100%;
+	margin: 25px 0;
+}
+.quantitiesTable .foldersButton {
+	margin: 0 auto;
+}
+.quantitiesTable tr td:first-child {
+	background: #c1c1c1;
+	font-weight: bold;
+}
+.quantitiesTable tr:last-child td {
+	padding: 5px;
+}
+.quantitiesTable tr:nth-child(odd) {
+	background: #eaeaea;
+}
+.quantitiesTable th,
+.quantitiesTable td {
+	padding: 10px;
+	text-align: center;
+}
+
+.quantitiesTable th {
+	font-size: 20px;
+}
+.quantitiesTable th {
+	border-left: 1px solid #063b63;
+	border-right: 1px solid #063b63;
+}
+.quantitiesTable td {
+	border: 1px solid #063b63;
+	border-top: none;
+}
+.quoteBottomDetails h3 {
+	margin-bottom: 12px;
+}
+.quoteBottomDetails h3:after {
+	display: block;
+	content: "";
+	background: #063b63;
+	height: 3px;
+	width: 100%;
+	margin-top: 8px;
+}
+.quoteBottomDetails p {
+	line-height: 1.6;
+	margin-bottom: 25px;
+}
+.artworkRow {
+	margin-bottom: 25px;
+}
+.artworkRow > div {
+	vertical-align: top;
+}
+.artworkRow .upload-file-button,
+.artworkRow .design-files {
+	font-size: 16px;
+}
+.artworkRow .upload-file-button {
+	padding: 11px 15px;
+}
+.artworkRow > div:first-child {
+	width: 145px;
+}
+.artworkRow .design-files {
+	border: 1px dashed #063b63;
+}
+.artworkRow .design-file {
+	margin-bottom: 6px;
+}
+.artworkRow .design-file:last-child {
+	margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+	.productAttr p {
+		text-align: left;
+	}
+}

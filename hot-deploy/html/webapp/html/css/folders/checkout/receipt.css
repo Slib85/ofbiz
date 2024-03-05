@@ -1,0 +1,66 @@
+.certonaData.certonaSearch {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto !important;
+}
+.receipt .receiptTopHeaderContent{
+	border-bottom: 2px solid #063b63;
+}
+.receipt h1 {
+	font-size: 35px;
+}
+.receipt .foldersContainerContent {
+    margin: 10px 0;
+    padding: 15px;
+}
+.receipt .foldersContainerContent .orderId {
+	font-size: 30px;
+	font-weight: 600;
+}
+.receipt .foldersShippingBillingContent,
+.receipt .foldersOrderSummaryContent,
+.receipt .foldersPaymentInfoContent {
+	border:1px solid #dadada;
+}
+.foldersShippingBillingContent .foldersContainerContent {
+    margin: 0;
+}
+.receipt .foldersShippingBillingContent > div:first-child {
+    border-right: 1px solid #c5c5c5;
+}
+.receipt .foldersShippingBillingContent h3,
+.receipt .foldersOrderSummaryContent h3,
+.receipt .foldersPaymentInfoContent h3 {
+    border-bottom: 1px solid #dadada;
+    padding: 0 0 10px 0;
+    margin: 0 0 20px 0;
+}
+.receipt .foldersOrderSummaryContent #jqs-order-summary > .orderSummary {
+    background-color: #f1f1f1;
+}
+.imgBlock {
+	width: 618px;
+	vertical-align: top;
+}
+.widthAuto {
+	width: auto;
+	vertical-align: top;
+}
+.paddingRight {
+	padding: 0 20px 0 0;
+}
+@media only screen and (max-width: 900px) {
+	.widthAuto {
+		width: 100%;
+	}
+	.imgBlock {
+		width: 100%;
+		text-align: center;
+		padding-top: 0;
+		display: block;
+	}
+	.paddingRight {
+		padding: 0;
+		display: block;
+	}
+}

@@ -1,0 +1,381 @@
+/* BEGIN TRADE DISCOUNT */
+.trade-discount {
+    padding: 20px 50px;
+}
+    .trade-discount h5 {
+        color: #1a345f !important;
+    }
+    /* BEGIN TRADE HEADER */
+    .trade-discount .trade-header {
+        border: 1px solid #dee0e3;
+        background-color: #ffffff;
+    }
+        .trade-discount .trade-header .trade-pro-logo {
+            padding: 14px;
+        }
+        .trade-pro-banner {
+            height: 97px;
+            width: auto;
+        }
+    @media only screen and (max-width: 767px) {
+        .trade-discount .trade-header {
+            margin: 20px 15px 0px 15px !important;
+            text-align: center;
+        }
+            .trade-discount .trade-header .trade-pro-logo {
+                padding: 8px 0px;
+            }
+    }
+    /* END TRADE HEADER */
+    /* BEGIN TOP OF TRADE DISCOUNT */
+    .trade-discount .trade-top {
+        width: 100%;
+    }
+        /* BEGIN FORM APPLICATION */
+        .trade-discount .apply-now {
+            width: auto;
+            vertical-align: top;
+        }
+                .trade-discount .apply-now form .button-regular {
+                    width: 125px;
+                    font-size: 16px;
+                }
+                .trade-discount .apply-now form h5 {
+                    color: #FC7E22;
+                }
+                .trade-discount .apply-now form textarea {
+                    resize: none;
+                }
+                .trade-discount textarea {
+                    height: 140px;
+                }
+        /* END FORM APPLICATION */
+        /* BEGIN BENEFITS */
+        .trade-discount .trade-benefits {
+            display: table-cell;
+            width: 385px;
+        }
+            .trade-discount .trade-benefits > div {
+                border: 1px solid #dee0e3;
+            }
+                .trade-discount .trade-benefits .benefits-offer > div {
+                    width: 50%;
+                    text-align: center;
+                }
+                    .trade-discount .trade-benefits .benefits-offer > div span {
+                        display: block;
+                        color: #009cdd;
+                        line-height: 18px;
+                    }
+            .trade-discount .trade-benefits .benefits-head {
+                background-color: #009cdd;
+                color: #ffffff;
+                text-align: center;
+                line-height: 40px;
+            }
+                .trade-discount .trade-benefits .benefits-head span {
+                    display: block;
+                }
+                .trade-discount .trade-benefits .benefits-head span.head-save {
+                    font-size: 40px;
+                }
+                .trade-discount .trade-benefits .benefits-head span.head-see {
+                    font-size: 20px;
+                }
+                .benefits-info span {
+                    font-size: 15px;
+                    margin-right: 15px;
+                    display: block;
+                    padding-left: 20px;
+                }
+                .benefits-info span i {
+                    display: inline-block;
+                    width: 25px;
+                    text-align: center;
+                    margin-left: -25px;
+                }
+                .benefits-info i {
+                    color: #009CDD;
+                }
+        /* END BENEFITS */
+    /* END TOP OF TRADE DISCOUNT */
+
+    /* BEGIN BOTTOM OF TRADE DISCOUNT */
+    .trade-discount .trade-bottom {
+        background-color: #F7F8FA;
+    }
+        .trade-discount .trade-bottom > div {
+            display: table;
+            width: 100%;
+            text-align: center;
+        }
+        .trade-discount .trade-bottom h5 {
+            color: #FC7E22 !important;
+        }
+        .trade-discount .trade-bottom .trade-discount-chart {
+            background: #f1f1f1;
+            border: 1px solid #e3e3e3;
+        }
+            .trade-discount .trade-bottom > div > div {
+                display: table-row;
+            }
+                .trade-discount .trade-bottom > div > div > div {
+                    display: table-cell;
+                    width: 18%;
+                    vertical-align: middle;
+                }
+                    .trade-discount .trade-bottom > div > div.bottom-header > div > span {
+                        font-weight: bold;
+                    }
+                    .trade-discount .trade-bottom > div > div.bottom-header > div  > span > span {
+                        color: #fc7e22;
+                    }
+                    .trade-discount .trade-bottom > div > div > div.pixel-pad-left {
+                        padding-left: 1px;
+                    }
+                .trade-discount .trade-bottom > div > div > div.cell-large {
+                    width: 28%;
+                }
+                .trade-discount .trade-bottom > div > div > div.bottom-save {
+                    background-color: #009cdd;
+                }
+                    .trade-discount .trade-bottom > div > div > div.bottom-save span {
+                        display: block;
+                        color: #ffffff;
+                    }
+                    .trade-discount .trade-bottom > div > div > div.bottom-save span.save-percent {
+                        font-size: 30px;
+                        line-height: 30px;
+                        font-weight: bold;
+                    }
+                    .trade-discount .trade-bottom > div > div > div.bottom-save span.save-what {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                .trade-discount .trade-bottom > div > div > div.bottom-info {
+                    background-color: #caefff;
+                }
+                    .trade-discount .trade-bottom > div > div > div.bottom-info > span {
+                        display: block;
+                        font-size: 12px;
+                        color: #0f1419;
+                        line-height: 16px;
+                    }
+                        .trade-discount .trade-bottom > div > div > div.bottom-info > span > span {
+                            font-weight: bold;
+                        }
+                    .trade-discount .trade-bottom > div > div > div .bottom-point-save-first {
+                        background-color: #caefff;
+                    }
+                    .trade-discount .trade-bottom > div > div > div .bottom-point-save-second {
+                        background-color: #99e1ff;
+                    }
+                    .trade-discount .trade-bottom > div > div > div .bottom-point-save-third {
+                        background-color: #32bdf7;
+                    }
+                    .trade-discount .trade-bottom > div > div > div .bottom-point-save-fourth {
+                        background-color: #009cdd;
+                    }
+                    .trade-discount .trade-bottom > div > div > div [class*="bottom-point-save-"] {
+                        height: 80px;
+                    }
+                        .trade-discount .trade-bottom > div > div > div [class*="bottom-point-save-"] span {
+                            display: block;
+                            color: #404040;
+                            font-size: 30px;
+                            font-weight: bold;
+                            padding-top: 9px;
+                        }
+                        .trade-discount .trade-bottom > div > div > div span.point-name,
+                        .trade-discount .trade-bottom > div > div > div span.point-amount {
+                            font-size: 18px;
+                            padding-top: 0px;
+                        }
+                        .trade-discount .trade-bottom > div > div > div span.point-name {
+                            text-transform: uppercase;
+                        }
+                        .trade-discount .trade-bottom > div > div > div span.point-amount {
+                            color: #5c7883;
+                        }
+                .trade-discount .trade-bottom > div > div > div[class*="bottom-line-"] > div {
+                    border-bottom: 1px solid #000000;
+                    height: 20px;
+                }
+                .trade-discount .trade-bottom > div > div > div.bottom-line-left > div {
+                    margin-left: 50%;
+                    border-left: 1px solid #000000;
+                }
+                .trade-discount .trade-bottom > div > div > div.bottom-line-right > div {
+                    width: 50%;
+                    border-right: 1px solid #000000;
+                }
+    /* END BOTTOM OF TRADE DISCOUNT */
+    .trade-discount .trade-legend {
+        display: block;
+        font-size: 12px;
+    }
+        .trade-discount .trade-legend > span {
+            font-weight: bold;
+        }
+    .free_swatchbook_image {
+        transform: rotate(0deg);
+        width: 400px;
+    }
+
+    .response_text,
+    .free_swatchbook_text {
+        font-size: 18px;
+    }
+
+    .learn-how-to-save {
+        display: inline-block;
+        background: #009cdd;
+        color: #ffffff;
+        padding: 22px;
+        font-size: 24px;
+        line-height: 1.25;
+        transition: background .25s ease;
+        width: 100%;
+    }
+    .learn-how-to-save:hover {
+        background: #0f88bb;
+        color: #ffffff;
+    }
+    .learn-how-to-save strong {
+        white-space: nowrap;
+    }
+
+@media only screen and (max-width: 767px) {
+    body .apply-now > .section {
+        background: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .content.trade-discount {
+        padding: 20px 10px;
+        background: #ffffff;
+    }
+    .benefits-info h5 {
+        cursor: pointer;
+        padding-bottom: 0 !important;
+        font-size: 16px !important;
+        font-weight: bold;
+        position: relative;
+    }
+    .benefits-info h5:after {
+        content: '\f0da';
+        font-family: FontAwesome;
+           position: absolute;
+           color: #797977;
+           right: 22px;
+           top: 50%;
+           transform: translateY(-50%);
+           transition: transform .25s ease;
+    }
+    .benefits-info.benefits-info-active h5:after {
+        transform: translateY(-50%) rotate(90deg);
+    }
+    .benefits-info {
+        margin: 10px 0 !important;
+        padding: 20px 12px !important;
+        background: #ffffff !important;
+    }
+    .banner-mobile {
+        width: 100%;
+        max-width: 490px;
+        height: auto;
+        margin: 20px auto;
+    }
+    .benefits-info > div {
+        display: none;
+        margin-top: 15px;
+    }
+    #trade-form [class*=column]+[class*=column]:last-child {
+        float: left;
+    }
+    #trade-form h5 {
+        margin: 20px 0;
+    }
+}
+/* END TRADE DISCOUNT */
+
+/* MOBILE TRADE DISCOUNT CHART */
+#trade-discount-chart-mobile .intro-paragraph {
+background: #f1f1f1;
+margin-bottom: 5px;
+padding: 15px;
+color: #000000;
+}
+#trade-discount-chart-mobile p {
+margin-bottom: 8px;
+text-align: left;
+}
+#trade-discount-chart-mobile p:last-child {
+margin-bottom: 0;
+}
+#trade-discount-chart-mobile .row {
+color: #2c2925;
+}
+#trade-discount-chart-mobile .row > div:first-child p {
+font-size: 19px;
+margin-top: 10px;
+white-space: nowrap;
+}
+#trade-discount-chart-mobile .row > div:last-child p {
+font-size: 32px;
+font-weight: bold;
+}
+#trade-discount-chart-mobile h4,
+#trade-discount-chart-mobile h5 {
+font-size: 24px;
+padding: 15px;
+}
+#trade-discount-chart-mobile h4 {
+background: #5a5a5a;
+color: #ffffff;
+font-weight: bold;
+}
+#trade-discount-chart-mobile h5 {
+color: #000000;
+font-weight: bold;
+}
+#trade-discount-chart-mobile h5 span {
+font-weight: 400;
+color: #555555;
+}
+#trade-discount-chart-mobile hr {
+width: 85%;
+border: none;
+height: 1px;
+background: #ffffff;
+margin: 0 auto;
+}
+.tint-bronze,
+.tint-silver,
+.tint-gold,
+.tint-platinum {
+margin-bottom: 5px;
+}
+.tint-bronze {
+background: #caefff;
+}
+.tint-silver {
+background: #99e1ff;
+}
+.tint-gold {
+background: #32bdf7;
+}
+.tint-platinum {
+background: #009cdd;
+}
+.alreadyAccount {
+padding-bottom: 50px !important;
+}
+.profitButton i{
+color: #ffffff;
+}
+.profitButton{
+padding: 15px 25px !important;
+text-transform: none !important;
+}

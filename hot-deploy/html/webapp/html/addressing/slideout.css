@@ -1,0 +1,90 @@
+.slideoutMenu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background: #f1f1f1;
+    z-index: 10;
+}
+.slideoutMenu .menuTitle {
+    /*position: fixed;
+    top: 0*/
+}
+.slideoutMenu h3 {
+    position: relative;
+    padding: 12px 10px;
+    color: #b6b6b6;
+    font-size: 1.2em;
+    font-weight: 400;
+    border-bottom: 2px solid #cccccc;
+}
+.slideoutMenu .slideoutMenuToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    padding: 6px 9px 5px;
+    vertical-align: top;
+}
+.slideoutMenu .slideoutMenuToggle img {
+    max-height: 15px;
+}
+.slideoutMenu .mainContainer {
+    overflow-y: auto;
+    height: 100%;
+}
+.slideoutMenu .addressContainer {
+    margin: 5px 10px;
+    background-color:#ffffff;
+    color:#454545;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    border: 1px solid #cccccc;
+    padding: 15px 5px;
+}
+.slideoutMenu .addressContainer:last-child {
+    margin-bottom:20px;
+}
+.slideoutMenu .addressContainer.centerAlign {
+    text-align: center;
+}
+.slideoutMenu .addressContainer > div {
+    margin: 4px 0;
+}
+.slideoutMenu .addressContainer > div.addressControls {
+    float: right;
+    margin: 0;
+}
+.slideoutMenu .addressContainer > div.addressControls img {
+    max-height: 10px;
+}
+.gridOverlayBg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:11000;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.gridOverlay {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    padding: 0px;
+    border: 1px solid orange;
+    background-color: #f3f3f3;
+    z-index:11001;
+    /*overflow: hidden;*/
+    -webkit-box-sizing: content-box;
+}
+.grid-hide {
+    display: none;
+}

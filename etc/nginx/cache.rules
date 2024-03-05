@@ -1,0 +1,38 @@
+#cache rules - short
+location ~* (getDueDate$) {
+    add_header Cache-Control "public";
+    expires 30m;
+
+    proxy_pass $ofbiz;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded_For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Cache $cache;
+    proxy_redirect off;
+    proxy_intercept_errors on;
+    proxy_http_version 1.1;
+
+    #cookies should not be cached
+    proxy_hide_header       Set-Cookie;
+    proxy_ignore_headers    Set-Cookie;
+}
+#cache rules
+location ~* (^/$|\/category|\/product\/|\/business|\/invitation|\/shipping|\/labels|\/paper|\/notecards|\/bordercards|\/popular|\/new\-arrivals|\/petalsAndLayers|\/pocketsAndLayers|\/folded\-tags|\/made\-to\-order|\/colors|\/collections|\/sizes|\/uses|\/brands|\/shops|\/gogreen|\/direct\-mail|\/print\-services|\/help|\/contact|\/privacy|\/terms|\/service|\/about|\/sitemap|\/coupons|\/reviewcontest|\/printgallery|\/print\-services\#overview|\/print\-services\#options|\/print\-services\#production|\/print\-services\#start|\/postnet|\/allegra|\/mohawk|\/variable\-addressing|\/fsc\-certified|\/sfi\-certified|\/collections\#black|\/collections\#brights|\/collections\#clear|\/collections\#color\-linings|\/collections\#denim|\/collections\#earthtones|\/collections\#exclusive|\/collections\#fashion|\/collections\#express|\/collections\#grocery\-bag|\/collections\#ivory|\/collections\#kraft|\/collections\#linen|\/collections\#metallics|\/collections\#mirror|\/collections\#parchments|\/collections\#pastels|\/collections\#translucents|\/collections\#white|\/recycled\-envelopes|\/breastCancerAwareness|\/white\-ink|\/recipient\-addressing|\/tradepro|\/luxpaper|\/weddingshop|\/wedding\-shop|\/holiday|\/clearance|\/envelope\-templates|\/TYSBMakeover|\/folded\-cards|\/flat\-cards|\/cardstock|\/null|\/design|\/a10\-envelopes|\/a1\-envelopes|\/a2\-envelopes|\/a4\-envelopes|\/a6\-envelopes|\/a7\-envelopes|\/a8\-envelopes|\/a9\-envelopes|\/10\-envelopes|\/1\-coin|\/taxEnvelopesShop|\/envelope\-sizes|\/envelope\-templates|\/tax\-envelopes|\/diy\-invitations|\/search|getProduct$|getProductPrice$|getOriginalPrice$|getProductName$|getProductDesc$|getProductImage$|getProductFeatures$|getProductColors$|getMatchingProducts$|getMinAndMaxPrintColor$|getDesignProductName$|getProductsForDesign$|getDesignsForProduct$|getAddOnProductsForDesign$|getOtherSideDesigns$|fxg.xml$|getTransitTimes$|getProductReviews$|getProductAssets$|getTransitTime$|getProductSizeAndStyle$|categoryResults$|searchResults$|getCostEstimate$) {
+    add_header Cache-Control "public";
+    expires @00h02m;
+
+    proxy_pass $ofbiz;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Cache $cache;
+    proxy_redirect off;
+    proxy_intercept_errors on;
+    proxy_http_version 1.1;
+
+    #cookies should not be cached
+    proxy_hide_header       Set-Cookie;
+    proxy_ignore_headers    Set-Cookie;
+}

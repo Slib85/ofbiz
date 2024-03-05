@@ -1,0 +1,117 @@
+
+    .shop-by-size .no-results {
+        font-size: 26px;
+    }
+    .shop-by-size .size-selection-content {
+        background-color: #ffffff;
+    }
+    .shop-by-size .size-selection-content .border-divider {
+        border-left: 1px solid #cccccc;
+    }
+    .shop-by-size .size-selection-content .divider-text {
+        position: absolute;
+        text-align: center;
+        top: 63px;
+        left: -10px;
+        display: inline-block;
+        border-radius: 10px;
+        background-color: #00a4e4;
+        color: #ffffff;
+        font-size: 10px;
+        width: 20px;
+        height: 20px;
+    }
+    .shop-by-size .size-selection-content .selection-header {
+        font-size: 16px;
+    }
+    .shop-by-size .size-selection-content .left-select {
+        float: left;
+        max-width: 175px;
+    }
+    .shop-by-size .size-selection-content .button {
+        width: 125px;
+        float: left;
+        text-transform: none;
+    }
+    .shop-by-size .size-selection-content .select-text {
+        position: relative;
+        font-size: 18px;
+        top: 15px;
+        width: 60px;
+        text-align: right;
+        float: left;
+        display: inline-block;
+    }
+    .shop-by-size .size-selection-content .select-list {
+        float: left;
+        max-width: 100px;
+    }
+    .shop-by-size .size-selection-content .select-radio {
+        float: left;
+        margin-top: 7px;
+    }
+    .shop-by-size .sizes > div {
+		margin-top: 8px;
+	}
+		.shop-by-size .sizes > div > a > div {
+			width: 150px;
+			margin: auto;
+			background-color: #ffffff;
+			border: 1px solid #cfd1d3;
+		}
+		.shop-by-size .sizes > div > a > div > div {
+			display: table-cell;
+			height: 139px;
+			width: 150px;
+			padding: 5px;
+			vertical-align: middle;
+		}
+			.shop-by-size .sizes .type {
+				font-size: 40px;
+				color: #009cdd;
+				line-height: 40px;
+			}
+			.shop-by-size .sizes .size {
+				font-size: 14px;
+				color: #009cdd;
+				line-height: 20px;
+			}
+			.shop-by-size .sizes .envelopes {
+				font-size: 20px;
+				color: #858d93;
+				line-height: 20px;
+			}
+			.shop-by-size .sizes .colors {
+				font-size: 14px;
+				color: #f67432;
+				line-height: 20px;
+			}
+    @media only screen and (max-width: 767px) {
+        .shop-by-size .size-selection-content {
+            text-align: center;
+        }
+        .shop-by-size .size-selection-content .left-select,
+        .shop-by-size .size-selection-content .button,
+        .shop-by-size .size-selection-content .select-text,
+        .shop-by-size .size-selection-content .select-list,
+        .shop-by-size .size-selection-content .select-radio {
+            float: none;
+        }
+        .shop-by-size .size-selection-content .select-text {
+            top: 0px;
+        }
+        .shop-by-size .size-selection-content .left-select,
+        .shop-by-size .size-selection-content .select-list {
+            max-width: none;
+            margin-left: 0px !important;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .shop-by-size .size-selection-content .border-divider {
+            border-left: none;
+        }
+        .shop-by-size .size-selection-content .divider-text {
+            display: none;
+        }
+    }

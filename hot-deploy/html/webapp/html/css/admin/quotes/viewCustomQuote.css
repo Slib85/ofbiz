@@ -1,0 +1,109 @@
+
+.info-header {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 5px 0px 5px 0px;
+}
+.panel-body {
+	padding-bottom: 10px !important;	
+}
+.table {
+	font-size: 12px;
+}
+.table .quoteDataProduct {
+	max-width: 250px;
+	min-width: 150px;
+}
+.table .quoteDataPricing {
+	white-space: nowrap;	
+}
+.table .quoteDataInternalComment {
+	min-width: 250px;	
+}
+.table a {
+	text-decoration: none;
+}
+.breakNextLine:after {
+	display: table;
+	clear: both;
+	content: " ";
+}
+/* Comment List CSS */
+.comment-list {
+	height: 190px;
+	overflow-y: scroll;
+}
+.non-add-comment:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+.non-add-comment>input {
+	width: 125px;
+	float: right;
+}
+.comment-add {
+	padding-top: 10px;
+	height: 190px;
+	display: none;
+}
+.comment-add>textarea {
+	width: 100%;
+	resize: none;
+	height: 122px;
+}
+.comment-add .add-comment {
+	text-align: right;
+}
+.comment-add .add-comment:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+.comment-add .add-comment>input {
+	width: 60px;
+}
+.comment-list {
+	border: 1px solid #d6d6d6;
+	overflow-y: auto;
+	margin-bottom: 15px;
+}
+.comment {
+	font-size: 12px;
+	text-align: left;
+	margin: 0;
+	padding: 8px;
+	border-bottom: 1px solid #d6d6d6;
+}
+.comment > .row {
+	margin: 0;
+}
+.comment:last-child {
+	border-bottom: none;
+}
+.comment .col-xs-4 {
+	padding: 0;
+}
+.comment .commenter-name {
+	font-weight: 500;
+	font-size: 11px;
+}
+.comment .date {
+	text-align: right;
+	font-style: italic;
+	font-size: 11px;
+	margin-top: 4px;
+}
+.comment-add > textarea {
+	padding: 4px 5px;
+}
+.add-comment .btn {
+	line-height: 1.35;
+	white-space: normal;
+	margin-bottom: 4px;
+}
+input.form-control,
+.add-comment .btn {
+	cursor: pointer;
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="main-decorator">
+		<section>
+			<actions>
+				<!-- base/top/specific map first, then more common map added for shared labels -->
+				<script location="component://envelopes/widget/ecommerce.setup.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/open-redesign.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/header-redesign.ftl"/></html></platform-specific>
+				<decorator-section-include name="body"/>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/footer.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/close.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="empty-decorator">
+		<section>
+			<actions>
+				<!-- base/top/specific map first, then more common map added for shared labels -->
+				<script location="component://envelopes/widget/ecommerce.setup.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/open.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/emptyHeader.ftl"/></html></platform-specific>
+				<decorator-section-include name="body"/>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/emptyFooter.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/close.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="data-decorator">
+		<section>
+			<actions>
+				<!-- base/top/specific map first, then more common map added for shared labels -->
+				<script location="component://envelopes/widget/ecommerce.setup.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-section-include name="body"/>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="headerHead">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/headerHead.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="analyticsTop">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/analytics/google.top.ftl"/></html></platform-specific>
+				<!--<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/analytics/inspectlet.ftl"/></html></platform-specific>-->
+				<!--<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/analytics/mixpanel.top.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/analytics/clicktale.top.ftl"/></html></platform-specific>-->
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="analyticsBottom">
+		<section>
+			<widgets>
+				<!--<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/analytics/clicktale.bottom.ftl"/></html></platform-specific>-->
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/analytics/google.datalayer.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/analytics/google.bottom.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="thirdPartiesTop">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/third-parties/wedding_wire-top.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="thirdPartiesBottom">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/third-parties/wedding_wire-bottom.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="main">
+		<section>
+            <actions>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/main-redesign.groovy"/>
+            </actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/main-redesign.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+    <screen name="main-env">
+        <section>
+            <actions>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/main-env.groovy"/>
+            </actions>
+            <widgets>
+                <platform-specific><html><html-template location="component://envelopes/webapp/envelopes/main-env.ftl"/></html></platform-specific>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="main-ae">
+        <section>
+            <widgets>
+                <platform-specific><html><html-template location="component://envelopes/webapp/envelopes/main-ae.ftl"/></html></platform-specific>
+            </widgets>
+        </section>
+    </screen>
+
+	<screen name="uploadtest">
+		<section>
+			<actions>
+				<set field="headerItem" value="uploadtest"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/uploadtest.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="sli">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/sli.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="states">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/common/states.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="countries">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/includes/common/countries.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="secure-wrapper">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/secure-wrapper.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/account/secure-wrapper.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+</screens>

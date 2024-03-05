@@ -1,0 +1,58 @@
+.couponsHeader {
+	background-color: #4f9bd5;
+	height: 200px;
+}
+.couponsHeader h1 {
+	color: #ffffff;
+}
+.couponsHeader h3, .couponsHeader p {
+	color: #063b63;
+}
+.couponsHeaderText {
+	width: 60%;
+	display: inline-block;
+}
+.folderCoupons .headerImage {
+	float: right;
+}
+@media only screen and (max-width: 1024px) {
+	.couponsHeaderText {
+		width: 52%;
+	}
+	.couponsHeaderText h1 {
+		font-size: 24px;
+	}
+	.couponsHeaderText h3 {
+		font-size: 20px;
+	}
+	.couponsHeaderText p {
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.folderCoupons .headerImage {
+		display: none;
+	}
+	.couponsHeader {
+		height: 190px;
+	}
+	.couponsHeaderText {
+		width: 80%;
+	    text-align: center;
+	    margin: 0px auto;
+	    display: block;
+	    padding-top: 20px !important;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.couponsHeaderText {
+		width: 100%;
+	}
+	.couponsHeaderText h1 {
+		font-size: 20px;
+	}
+	.couponsHeaderText h3 {
+		font-size: 18px;
+	}
+
+}

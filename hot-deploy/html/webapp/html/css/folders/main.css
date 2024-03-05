@@ -1,0 +1,42 @@
+.main .quickShipText {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 12px;
+}
+.main .hpImageContainer {
+	background-color: #0a0c0c;
+	text-align: center;
+}
+.main .bannerText {
+	text-align: center;
+	padding: 10px;
+	font-size: 18px;
+}
+.linkListing a {
+	background-color: #ffffff;
+	text-align: center;
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+	position: relative;
+}
+.linkListing a.foldersColumn {
+	width: 20%;
+}
+.squareProductContent i.fa-bolt {
+	color: #4caf50;
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+	.linkListing a.foldersColumn {
+		width: 50%;
+	}
+	.linkListing a.foldersColumn:last-child {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.linkListing a.foldersColumn {
+		width: 100%;
+	}
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="promoList">
+		<section>
+			<actions>
+				<set field="screenGroup" value="promos"/>
+				<set field="screenTitle" value="promoList"/>
+				<set field="titleProperty" value="Coupon List"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/promos/promoList.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/promos/promoList.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="createPromo">
+		<section>
+			<actions>
+				<set field="screenGroup" value="promos"/>
+				<set field="screenTitle" value="createPromo"/>
+				<set field="titleProperty" value="Create Coupons"/>
+
+				<!-- General Data for Drop-downs, etc -->
+				<entity-condition entity-name="Enumeration" list="inputParamEnums" use-cache="true">
+					<condition-expr field-name="enumTypeId" value="PROD_PROMO_IN_PARAM"/>
+					<order-by field-name="sequenceId"/>
+				</entity-condition>
+				<entity-condition entity-name="CarrierShipmentMethod" list="carrierShipmentMethods" use-cache="true">
+					<order-by field-name="shipmentMethodTypeId"/>
+				</entity-condition>
+				<entity-condition entity-name="Enumeration" list="condOperEnums" use-cache="true">
+					<condition-expr field-name="enumTypeId" value="PROD_PROMO_COND"/>
+					<order-by field-name="sequenceId"/>
+				</entity-condition>
+				<entity-condition entity-name="Enumeration" list="productPromoActionEnums" use-cache="true">
+					<condition-expr field-name="enumTypeId" value="PROD_PROMO_ACTION"/>
+					<order-by field-name="sequenceId"/>
+				</entity-condition>
+				<entity-condition entity-name="Enumeration" list="productPromoApplEnums" use-cache="true">
+					<condition-expr field-name="enumTypeId" value="PROD_PROMO_PCAPPL"/>
+					<order-by field-name="sequenceId"/>
+				</entity-condition>
+
+				<entity-condition entity-name="OrderAdjustmentType" list="orderAdjustmentTypes" use-cache="true">
+					<order-by field-name="description"/>
+				</entity-condition>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/promos/createPromo.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

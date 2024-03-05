@@ -1,0 +1,209 @@
+a.cpButtons {
+	margin-top: 10px;
+	border: 3px solid #f17230;
+	color: #f17230;
+	display: inline-block;
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px;
+}
+body > .content .corporatePrinters {
+	background-color: #666868;
+	padding: 30px;
+	color: #666868;
+}
+	.corporatePrinters .cpSubSet {
+		padding: 25px;
+		background-color: #ffffff;
+		-webkit-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.5);
+		box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.5);
+	}
+	.corporatePrinters .cpOffer {
+		text-align: center;
+	}
+		.cpOffer > div {
+			color: #1ba4e1;
+			font-size: 31px;
+			line-height: 31px;
+		}
+			.cpOffer > div span {
+				color: #666868;
+				font-weight: bold;
+			}
+		.cpOffer a {
+			display: block;
+			margin: 10px auto 0px auto;
+			width: 460px;
+		}
+			.cpOffer > a span {
+				font-size: 17px;
+				text-transform: initial;
+				display: block;
+			}
+	.corporatePrinters .cpDigitalCapabilities,
+	.corporatePrinters .cpInterestedIn,
+	.corporatePrinters .cpTools {
+		margin-top: 30px;
+	}
+		.digitalCapabilitiesHeader,
+		.interestedInHeader,
+		.toolsHeader {
+			font-size: 19px;
+			line-height: 19px;
+			text-align: center;
+		}
+			.digitalCapabilitiesHeader span,
+			.interestedInHeader span,
+			.toolsHeader span {
+				display: block;
+				color: #29a2d9;
+				font-size: 31px;
+				line-height: 31px;
+				padding-bottom: 5px;
+			}
+			.digitalCapabilitiesBody-1,
+			.digitalCapabilitiesBody-2 {
+				margin: 20px 0px 0px 0px;
+				display: table;
+				width: 100%;
+			}
+				.b1ContentLeft,
+				.b1ContentRight,
+				.b2ContentLeft,
+				.b2ContentRight {
+					vertical-align: top;
+					display: table-cell;
+					width: 50%;
+				}
+				.b1ContentLeft,
+				.b2ContentLeft {
+					padding: 0px 15px 0px 0px;
+				}
+				.b1ContentRight,
+				.b2Contentright {
+					padding: 0px 0px 0px 15px;
+				}
+				.b1ContentText-1,
+				.b1ContentText-2 {
+					font-size: 14px;
+					font-weight: bold;
+					color: #2ca1d8;
+				}
+				.b1ContentText-2 {
+					margin: 20px 0px 0px 0px;
+				}
+					.b1ContentText-1 span,
+					.b1ContentText-2 span {
+						height: 10px;
+						width: 10px;
+						display: inline-block;
+					}
+					.b1ContentLeft .b1ContentText-1 span {
+						background-color: #00afec;
+					}
+					.b1ContentLeft .b1ContentText-2 span {
+						background-color: #ea148c;
+					}
+					.b1ContentRight .b1ContentText-1 span {
+						background-color: #fff02a;
+					}
+					.b1ContentRight .b1ContentText-2 span {
+						background-color: #000000;
+					}
+				.b2ContentText-1 {
+					font-size: 31px;
+					line-height: 31px;
+					text-align: center;
+					color: #3ba9dc;
+				}
+	.corporatePrinters .cpInterestedIn {
+		text-align: center;
+	}
+		.cpInterestedIn .cpInterestedInLink {
+			color: inherit;
+			width: 215px;
+			display: inline-block;
+			margin: 10px 15px 0px 15px;
+			font-size: 18px;
+		}
+			.cpInterestedInLink img {
+				margin: auto;
+				display: block;
+				margin-top: 10px;
+			}
+			.cpInterestedInLink .shopNowButton {
+				border: 1px solid #1ba4e1;
+				margin-top: 5px;
+				color: #1ba4e1;
+				font-size: 17px;
+				text-transform: uppercase;
+				padding: 5px;
+				font-weight: bold;
+			}
+	.corporatePrinters .cpTools .shopBySection {
+		margin: 10px auto 0px auto; text-align: center;
+	}
+		.cpTools .shopBySection a {
+			background-color: #1ba4e1;
+			margin: 10px 5px 0px 5px;
+			max-width: 285px;
+			display: inline-block;
+			padding: 10px;
+			color: #ffffff;
+			text-transform: uppercase;
+			width: 100%;
+			text-align: center;
+			font-size: 24px;
+		}
+@media only screen and (max-width: 767px) {
+	a.cpButtons {
+		font-size: 18px;
+		line-height: 18px;
+	}
+	body > .content .corporatePrinters {
+		padding: 10px;
+	}
+		.corporatePrinters .cpSubSet {
+			padding: 10px;
+		}
+			.cpOffer > a {
+				width: 100%;
+				font-size: 16px;
+			}
+				.cpOffer > a span {
+					font-size: 12px;
+				}
+		.digitalCapabilitiesBody-1 {
+			margin: 0px;
+		}
+			.b1ContentLeft,
+			.b1ContentRight,
+			.b2ContentLeft,
+			.b2ContentRight {
+				display: block;
+				width: 100%;
+				padding: 0px;
+			}
+				.b1ContentText-1,
+				.b1ContentText-2 {
+					margin: 20px 0px 0px 0px;
+				}
+		.digitalCapabilitiesHeader,
+		.interestedInHeader,
+		.toolsHeader {
+			font-size: 16px;
+		}
+			.digitalCapabilitiesHeader span,
+			.interestedInHeader span,
+			.toolsHeader span,
+			.b2ContentText-1 {
+				font-size: 18px;
+				line-height: 18px;
+			}
+	.cpTools .shopBySection a {
+		display: block;
+		margin: 10px auto 0px auto;
+	}
+}

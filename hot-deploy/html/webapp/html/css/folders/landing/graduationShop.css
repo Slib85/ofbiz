@@ -1,0 +1,286 @@
+.foldersContainer.foldersContainerLimiter {
+	max-width: 1157px;
+}
+.gradShop .foldersHeaderBanner {
+	min-height: 219px;
+}
+.banner {
+	position: relative;
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/gradShopBackgroundBanner?wid=50&fmt=jpeg&qlt=100&ts=2') repeat-x;
+	border: 1px solid #588c22;
+}
+.banner > div {
+	width: 480px;
+	float: left;
+	padding: 45px 30px;
+}
+.banner > div h2 {
+	font-size: 35px;
+	margin-bottom: 5px;
+}
+.banner > div h1 {
+	font-size: 35px;
+	margin-bottom: 5px;
+	color: #64893e;
+}
+.banner > div p {
+	font-size: 16px;
+	color: #000000;
+	font-weight: bold;
+}
+.banner > div a{
+	font-weight: bold;
+}
+.banner img {
+	float: right;
+	position: absolute;
+	right: 0px;
+	z-index: 0;
+}
+.customButton {
+	display: block;
+	font-size: 15px;
+}
+.banner2 {
+	background-color: #64893e;
+}
+.banner2 a {
+	display: inline-block;
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 18px;
+}
+.banner2 span {
+	color: #4f6f2c;
+	font-size: 18px;
+	margin: 20px;
+}
+.banner2 h2 {
+	color: #ffffff;
+	padding: 10px;
+	font-weight: normal;
+	font-size: 22px;
+}
+.foldersWidth {
+	width: 215px;
+	background-color: #ffffff;
+}
+.customRow {
+	margin-top: 20px;
+}
+.customRow img {
+	display: block;
+	margin: 0 auto 10px;
+}
+.customRow p {
+	font-weight: bold;
+	font-size: 16px;
+}
+.customRow .prodName {
+	font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 40px;
+}
+.customRow .sku {
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    height: 18px;
+}
+.customRow ul {
+	height: 65px;
+	margin: 0 !important;
+}
+.customRow li {
+	font-size: 12px;
+	line-height: 17px;
+}
+.customRow .colorsAvailable {
+	color: #4cafff;
+}
+.customRow .minQty {
+	font-weight: normal;
+    font-size: 14px;
+	color: black;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.gradShopPrice .price {
+	position: absolute;
+	right: 10px;
+	bottom: 3px;
+}
+.gradShopPrice .ratings {
+	font-size: 16px !important;
+	position: absolute;
+	left: 20px;
+	bottom: 5px;	
+}
+.gradShopPrice .priceInfo {
+	position: absolute;
+	bottom: 3px;
+	right: 10px;
+}
+.folderDetails {
+	font-weight: normal !important;
+	color: #a9a9a9;
+	font-size: 12px !important;
+}
+.folderPrice {
+	float: right;
+	color: #4ba7f1;
+}
+.customButton {
+	text-transform: none;
+	color: #ffffff;
+	background-color: #4caf50;
+}
+.foldersRow span {
+	font-size: 16px !important;
+	width: 50%;
+}
+.foldersHeaderBanner img {
+	max-width: inherit;
+}
+.customizableRibbon {
+	width: 105px;
+	background-color: #76cf49;
+	color: #ffffff;
+	position: absolute;
+	padding: 0 10px;
+	left: 0;
+	top: 10px;
+	z-index: 10;
+}
+.customizableRibbonTop {
+	border-top: 10px solid #76cf49;
+
+}
+.customizableRibbonBottom {
+	border-bottom: 10px solid #76cf49;
+}
+.ribbonTop {
+	position: absolute;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	top: 0;
+	z-index: 10;
+	right: -10px;
+}
+.ribbonBottom {
+	position: absolute;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	top: 8px;
+	z-index: 10;
+	right: -10px;
+}
+.blankRibbon {
+	width: 50px;
+	background-color: #063b63;
+	color: #ffffff;
+	position: absolute;
+	padding: 0 10px;
+	left: 0;
+	top: 10px;
+	z-index: 10;
+}
+.blankRibbonTop {
+	border-top: 10px solid #063b63;
+}
+.blankRibbonBottom {
+	border-bottom: 10px solid #063b63;
+}
+.gradShopProducts {
+	position: relative;
+	margin: 10px 4px 0px;
+}
+.gradShopProducts:hover {
+	outline: solid 2px #64893e;
+}
+a:hover {
+	color: inherit;
+}
+ul {
+	list-style-type: circle;
+}
+.salePercentOff {
+    margin: 0 0 4px;
+    background-color: #e22323;
+    color: #ffffff;
+	padding: 0 5px;
+	width: 62px;
+	position: relative;
+	left: 120px;
+}
+.strikeThrough {
+	color: #000000;
+	display: inline-block;
+	padding-right: 4px;
+}
+.salePrice {
+	color: #e22323;
+	float: right;
+}
+@media only screen and (max-width: 1200px) {
+	.banner2Margin {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.banner2Margin {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.banner2Margin p {
+		color: #ffffff;
+		font-size: 14px;
+	}
+	.gradShop .foldersHeaderBanner {
+		min-height: inherit;
+		height: 121px;
+	}
+	.banner2 a {
+		display: block;
+		border-bottom: 1px solid #4f6f2c;
+		padding: 5px 0;
+	}
+	.banner2 span {
+		display: none;
+	}
+	.banner2 a:last-child {
+		border-bottom: none;
+	}
+	.banner > div h1 {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 435px){
+	.banner img {
+		display: none !important;
+	}
+	.foldersHeaderBanner .textLeft {
+		text-align: center !important;
+	}
+	.banner > div {
+		width: 100% !important;
+		float: none !important;
+	}
+	.banner > div h1 {
+		margin: 0;
+		width: 100%;
+		font-size: 24px;
+	}
+}

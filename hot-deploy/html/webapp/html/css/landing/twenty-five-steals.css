@@ -1,0 +1,153 @@
+#twentyFiveStealsWrap{
+
+}
+.twentyFiveStealsContent{
+    
+}
+#twenty_five_days_holiday_banner{
+    margin: 0 0 1em 0;
+}
+.twenty_five_days_holiday_description{
+    background-color:#bc2229;
+    width: 100%;
+    padding: 12px;
+}
+.twenty_five_days_holiday_description p{
+    color:#fff;
+    font-size: 1.5em;
+    text-align: center;
+}
+.twenty_five_days_holiday_description p span{
+    display: block;
+}
+.twenty_five_days_holiday_description p span:first-child{
+    font-size: 20px;
+}
+.twenty_five_days_holiday_description p span:last-child{
+    font-size: 25px;
+    font-weight: 700;
+}
+.twentyFiveStealsContent #twenty_five_days_holiday_deals > div {
+    text-align: center;
+    margin: 13px 15px;
+    width: 236px !important;
+    height: 174px !important;
+}
+.twentyFiveStealsContent #twenty_five_days_holiday_deals > div:last-child{
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 30px 12px;
+}
+.twentyFiveStealsContent div a{
+    display: block;
+}
+.twentyFiveStealsContent div a, 
+.twentyFiveStealsContent div a img{
+    width: 236px !important;
+    height: 174px !important;
+    padding: 0;
+    -webkit-box-shadow: 5px 5px 15px 0px #20448c;
+    box-shadow: 5px 5px 15px 0px #20448c;
+}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+.inner_ribbon_wrap{
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+div#twenty_five_days_holiday_deals {
+    /* Location of the image */
+  background-image: url('/html/img/landing/25Steals/holiday/holiday-lights-background.jpg');
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #0e121c;
+}
+.bnc_icon_ui{
+    font-weight:700;
+    color:#1a345f;
+    font-size:16px;
+    overflow: hidden;
+}
+.bnc_icon_ui:before,
+.bnc_icon_ui:after {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 48%;
+}
+
+.bnc_icon_ui:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.bnc_icon_ui:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+.deal_glow {
+	display: inline-block;
+	transition-duration: 0.4s;
+	transition-property: box-shadow;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transform: translateZ(0);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+}
+.deal_glow:hover {
+	-webkit-box-shadow: 0px 0px 15px 5px #FABC02; 
+    box-shadow: 0px 0px 15px 5px #FABC02;
+}
+.deal_glow:hover a, 
+.deal_glow:hover img{
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    .twenty_five_days_holiday_description p span{
+        font-size: 14px !important;
+        display: inline !important;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    
+}
+@media only screen and (max-width: 1360px) {
+    .flex_row.flex_count-5 > * {
+        max-width: 100%;
+        display: block;
+        margin: 20px auto;
+    }
+}

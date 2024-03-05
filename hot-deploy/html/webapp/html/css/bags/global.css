@@ -1,0 +1,88 @@
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/22JRxvfANxSmnAhzbFH8PgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v11/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/MgNNr5y1C_tIEuLEmicLmwLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+*, :after, :before {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0px;
+	font-family: Lato,sans-serif;
+	font-size: 14px;
+	color: #231f20;
+}
+h1, h2 {
+	font-weight: bold;
+	margin: 10px 0px;
+}
+h1 {
+	font-size: 34px;
+}
+h2 {
+	font-size: 22px;
+}
+p {
+	margin: 10px 0px;
+}
+input {
+	padding: 10px 15px;
+	border: 0px;
+	font-size: 14px;
+	width: auto;
+}
+.bagsButton {
+	padding: 10px 15px;
+	font-size: 14px;
+	color: #231f20;
+	background-color: #e3e3e3;
+	display: inline-block;
+	cursor: pointer;
+}
+.buttonBlack {
+	background-color: #231f20;
+	color: #ffce08;
+}
+.bagsRow {
+	width: 100%;
+	display: block;
+}
+.bagsRow:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.pullLeft {
+	float: left !important;
+}
+.noMargin {
+	margin: 0px !important;
+}
+.marginTop10 {
+	margin-top: 10px !important;
+}
+.marginTop20 {
+	margin-top: 20px !important;
+}
+.marginBottom10 {
+	margin-bottom: 10px !important;
+}

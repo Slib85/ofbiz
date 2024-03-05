@@ -1,0 +1,137 @@
+/*============================================*/
+/*============================================*/
+.myQuotesHeader {
+    border-bottom: 2px solid #1A345F;
+    padding: 0 0 10px 0;
+    margin: 0 0 25px 0 !important;
+}
+.myQuotesRepInfoWrap {
+    margin: 0 0 35px 0;
+}
+.myQuotesRepInfoContent {
+    background-color: #e5e5e5;
+    border: 2px solid #063b63;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.myQuotesRepInfoBox {
+    display: table-cell;
+    width: auto;
+    vertical-align: middle;
+    padding: 15px;
+}
+.myQuotesRepInfoBox span,
+.myQuotesRepInfoBox a {
+    font-size: 18px;
+}
+/*============================================*/
+/*============================================*/
+.myQuotesRepInfoBox .bigNameSelect {
+    width: 100%;
+    margin: 0;
+}
+.foldersContainerContent input[type="search"] {
+    width: auto;
+}
+#quoteList thead th,
+#quoteList thead td,
+#quoteList tbody th,
+#quoteList tbody td {
+    padding: 0px;
+}
+#quoteList .foldersTabularRow > div {
+    border-left: 1px solid #f8f8f8;
+    padding: 10px;
+}
+#quoteList td:first-child,
+#quoteList th:first-child {
+    border-left: 0px;
+}
+#quoteList .quoteNumberColumn {
+    width: 170px;
+}
+#quoteList .productDescriptionColumn {
+    width: auto;
+}
+#quoteList .quotequantitiesColumnList {
+    width: 370px;
+}
+#quoteList .printingMethodColumn {
+    width: 190px;
+}
+#quoteList .imagesColumn {
+    width: 95px;
+}
+#quoteList .productionTimeColumn {
+    width: 170px;
+}
+#quoteList .viewFullQuoteColumn {
+    width: 200px;
+}
+.hideOnDesktop{ display: none;}
+
+.showOnMobile{ 
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 2px 0;
+    padding: 2px;
+    background-color: #c5c5c5;
+}
+table.dataTable.no-footer{
+    =
+}
+@media only screen and (max-width: 1300px){
+    .showOnMobile{ display: block;}
+
+    .dataTable thead { display: none; }
+    
+    #quoteList .foldersTabularRow > div{ display: block !important; width: 100%;}
+
+    table.dataTable tbody tr{border:2px solid #063b63; margin: 0 0 3% 0;}
+
+    table.dataTable tbody tr.odd, 
+    table.dataTable tbody tr.even {
+        width: 48%;
+        margin: 0 1%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #quoteList .foldersTabularRow > div img {
+        margin: 0 auto;
+        display: block;
+    }
+    #quoteList .viewFullQuoteColumn a {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+    }
+    #quoteList .viewFullQuoteColumn a + a{ margin-top:20px; font-weight: bold;}
+}
+@media only screen and (max-width: 768px){
+    .showOnMobile{ display: block;}
+
+    .dataTable thead{ display: none; }
+
+    #quoteList .foldersTabularRow > div{ display: block !important; width: 100%;}
+
+    #quoteList .viewFullQuoteColumn{
+        width: 100%;
+    }
+    #quoteList .viewFullQuoteColumn a {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 795px) {
+    .myQuotesRepInfoBox{
+        display: block;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px){
+    table.dataTable tbody tr.odd, 
+    table.dataTable tbody tr.even{ width:100%; display: block; margin: 5% 0;}
+}

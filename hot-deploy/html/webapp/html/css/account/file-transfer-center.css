@@ -1,0 +1,23 @@
+.file-transfer-center .file-input {
+	width: 300px;
+	display: inline-block;
+}
+.file-transfer-center .other-input {
+	width: 200px;
+}
+.file-transfer-center .content-right {
+	width: 400px;
+}
+.file-transfer-center .textarea-input {
+	width: 420px;
+	height: 125px;
+	resize: none;
+}
+.file-transfer-center .upload-button {
+	width: 150px;
+}
+@media only screen and (max-width: 1023px) {
+	.file-transfer-center .content-right {
+		width: 100%;
+	}
+}

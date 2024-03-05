@@ -1,0 +1,222 @@
+.industry .folderList > * {
+	width: 220px;
+	background-color: #ffffff;
+	text-align: center;
+	margin-top: 20px;
+}
+	.industry .folderList [class*="rating-"] {
+		font-size: 13px !important;
+	}
+	.industry .folderList .folderName {
+		font-size: 16px;
+		margin-top: 10px;
+	}
+.industry .otherIndustryReviews {
+	border-bottom: 1px solid #e3e3e3;
+}
+	.industry .otherIndustryReviews [class*="rating-"] {
+		font-size: 24px !important;
+	}
+	.industry .otherIndustryReviews .reviewText {
+		font-size: 18px;
+	}
+.topSellerBackground a{
+	background-color: #f1f1f1 !important;
+}
+.topSellers img{
+	float: left;
+	margin-right: 12px;
+}
+.topSellers p{
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;	
+}
+.customButton{
+	background-color: #4caf50;
+	border-radius: 0;
+	font-size: 14px;
+	padding: 6px 20px;
+	color: white;
+	margin: 10px 0 5px;
+	float: left;
+	cursor: pointer;
+	text-transform: none !important;
+}
+.folderName .customButton {
+	font-weight: normal;
+	float: none !important;
+	padding: 6px 12px !important;
+	font-size: 15px !important;
+}
+.topSellers i{
+	-webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.topSellers i, #twentyFourHourOption {
+	color: #4caf50;	
+	display: inline-block;
+}
+.topSellers span{
+	text-align: left;
+	width: 120px;
+}
+#twentyFourHourOption {
+	margin-left: -15%;
+}
+#twentyFourHourButton {
+	margin-top: 8px;
+}
+.printStyle{
+	font-style: italic;
+	font-weight: normal !important;
+}
+.fs {
+	color: #4caf50;
+}
+.folderName p{
+	border: 1px solid #d8d8d8;
+	width: 55%;
+	margin: auto;
+}
+#customerTopExamples {
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+}
+.customerReview {
+	text-align: center;
+	background-color: #edf6fe;
+	padding: 20px 80px 10px;
+}
+.customerReview span{
+	font-size: 26px !important;
+}
+.customerReview h2{
+	font-size: 20px;
+	font-weight: normal;
+	font-style: italic;
+	margin-top: 8px;
+}
+.customerImage{
+	margin: 2% 38% 1%;
+}
+.customerImage img{
+	float: left;
+	border: solid 1px #d8d8d8;
+	border-radius: 25px;
+	width: 55px;
+	margin-right: 10px;
+}
+.customerImage	p{
+	width: 300px;
+	font-weight: bold;
+	text-align: center;
+}
+.customerImage:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.marginTop15{
+	margin-top: 15px !important;
+}
+.paddingTop40{
+	padding-top: 40px !important;
+}
+.buttonTextSize {
+	font-size: 15px !important;
+	cursor: default !important;
+}
+.productTypeExampleList {
+	width: 280px !important;
+}
+.industry .freeShippingHeader i{
+	border: solid 1px #8dc4ed;
+	border-right: solid 2px #8dc4ed;
+	padding: 5px 10px;
+	transform: scaleX(-1);
+	font-size: 26px;
+	background-color: #8dc4ed;
+	color: #2a385d;
+	display: table-cell;
+	width: 50px;
+}
+.industry .freeShippingHeader p{
+	border: solid 1px #8dc4ed;
+	padding: 10px;
+	color: #ffffff;
+	border-left: none;
+	font-weight: bold;
+	display: table-cell;
+	font-size: 16px;
+}
+.industry .freeShippingHeaderMobile p{
+	border: 1px solid #063b63;
+	width: 80%;
+	margin: 10px auto 0;
+	padding: 8px;
+	font-size: 16px;
+}
+.industry .freeShippingHeaderMobile i{
+	transform: scaleX(-1);
+	font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+	.industry h2 {
+		font-size: 24px;
+	}
+	.industry .folderList > * {
+		width: 148px;
+	}
+	.industry .folderList.singleProductLine {
+		display: block;
+	}
+		.industry .folderList.singleProductLine > * {
+			display: table;
+			width: 300px;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+			.industry .folderList.singleProductLine > * > div {
+				display: table-cell;
+				vertical-align: top;
+			}
+			.industry .folderList.singleProductLine > * > div:first-child {
+				width: 120px;
+				padding: 10px;
+			}
+			.industry .folderList.singleProductLine > * > div:last-child {
+				width: 180px;
+				padding: 10px;
+			}
+			.industry .folderList.singleProductLine .foldersRow.foldersButton {
+				display: inline-block;
+			}
+	.industry .otherIndustryReviews .reviewText {
+		font-size: 14px;
+	}
+	.freeShippingHeader {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.topSellers span{
+		width: 74%;
+	}
+	.customerImage {
+		margin: 5% 20% 1%;
+	}
+	.customerReview{
+		padding: 15px 25px 10px;
+	}
+	.freeShippingHeaderMobile p{
+		font-size: 13px;
+	}
+	.freeShippingHeaderMobile i{
+		font-size: 16px;
+	}
+}

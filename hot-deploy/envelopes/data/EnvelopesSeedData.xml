@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+	<Facility facilityId="WebStoreWarehouse" facilityTypeId="WAREHOUSE" facilityName="Web Store Warehouse" description="Warehouse exclusively for the Web Store " ownerPartyId="Company" defaultInventoryItemTypeId="NON_SERIAL_INV_ITEM" defaultWeightUomId="WT_lb" defaultDaysToShip="25" geoPointId="9000"/>
+
+	<ProductStore productStoreId="10000" storeName="Envelopes.com" companyName="Action Envelope" title="Envelopes.com"
+		subtitle="" payToPartyId="Company" daysToCancelNonPay="30" prorateShipping="Y" isImmediatelyFulfilled="Y"
+		inventoryFacilityId="WebStoreWarehouse" oneInventoryFacility="Y" checkInventory="N" reserveInventory="N" reserveOrderEnumId="INVRO_FIFO_REC" requireInventory="N"
+		defaultLocaleString="en_US" defaultCurrencyUomId="USD" allowPassword="Y" explodeOrderItems="N" retryFailedAuths="N"
+		headerApprovedStatus="ORDER_APPROVED" itemApprovedStatus="ITEM_APPROVED" digitalItemApprovedStatus="ITEM_APPROVED" headerDeclinedStatus="ORDER_REJECTED"
+		itemDeclinedStatus="ITEM_REJECTED" headerCancelStatus="ORDER_CANCELLED" itemCancelStatus="ITEM_CANCELLED" orderNumberPrefix="ENV3"
+		authDeclinedMessage="There has been a problem with your method of payment. Please try a different method or call customer service."
+		authFraudMessage="Your order has been rejected and your account has been disabled due to fraud."
+		authErrorMessage="Problem connecting to payment processor; we will continue to retry and notify you by email."
+		styleSheet="" headerLogo="" usePrimaryEmailUsername="Y" />
+
+	<!-- CC PAYMENT -->
+	<PaymentGatewayConfigType paymentGatewayConfigTypeId="MES" hasTable="N" description="Merchant e-Solutions Gateway"/>
+	<PaymentGatewayConfig paymentGatewayConfigId="MES_CONFIG" paymentGatewayConfigTypeId="MES" description="Merchant e-Solutions Config"/>
+	<!-- <PaymentGatewayMes paymentGatewayConfigId="MES_CONFIG" certsPath="${sys:getProperty('ofbiz.home')}/applications/accounting/pfcerts" hostAddress="cert.merchante-solutions.com/mes-api/tridentApi" hostPort="443" timeout="80" proxyAddress="" proxyPort="" proxyLogon="" proxyPassword="" vendor="Envelopes.com" userId="94100011811900000095" pwd="blGMSGehNOZCHESLZCFtZKvqJPUzVhbE" partner="Envelopes.com" checkAvs="N" checkCvv2="Y" preAuth="Y" enableTransmit="true" logFileName="${sys:getProperty('ofbiz.home')}/runtime/logs/mes_java.log" loggingLevel="6" maxLogFileSize="1000000" stackTraceOn="N" returnUrl="[Express Checkout Return URL]" cancelReturnUrl="[Express Checkout Cancel Return URL]" redirectUrl="[Express Checkout Customer Redirect URL]"/> -->
+
+	<!--<PaymentGatewayPayflowPro paymentGatewayConfigId="MES_CONFIG" certsPath="${sys:getProperty('ofbiz.home')}/applications/accounting/pfcerts"
+		hostAddress="pilot-payflowpro.paypal.com" hostPort="443" timeout="80" proxyAddress="" proxyPort="" proxyLogon="" proxyPassword=""
+		vendor="941000101842" userId="941000101842" pwd="Linden109" partner="merchantes" checkAvs="N" checkCvv2="Y" preAuth="Y"
+		enableTransmit="true" logFileName="${sys:getProperty('ofbiz.home')}/runtime/logs/payflow_java.log" loggingLevel="6" maxLogFileSize="1000000"
+		stackTraceOn="N" returnUrl="" cancelReturnUrl="" redirectUrl=""/>-->
+
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="CREDIT_CARD" paymentServiceTypeEnumId="PRDS_PAY_AUTH" paymentService="mesCCProcessor" paymentGatewayConfigId="MES_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="CREDIT_CARD" paymentServiceTypeEnumId="PRDS_PAY_RELEASE" paymentService="mesCCVoid" paymentGatewayConfigId="MES_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="CREDIT_CARD" paymentServiceTypeEnumId="PRDS_PAY_CAPTURE" paymentService="mesCCCapture" paymentGatewayConfigId="MES_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="CREDIT_CARD" paymentServiceTypeEnumId="PRDS_PAY_REAUTH" paymentService="mesCCProcessor" paymentGatewayConfigId="MES_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="CREDIT_CARD" paymentServiceTypeEnumId="PRDS_PAY_REFUND" paymentService="mesCCRefund" paymentGatewayConfigId="MES_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+
+	<!-- AMAZON PAYMENT -->
+	<PaymentMethodType paymentMethodTypeId="EXT_AMAZON" description="Pay By Amazon" defaultGlAccountId="122000"/>
+	<PaymentGatewayConfigType paymentGatewayConfigTypeId="AMAZON" hasTable="N" description="Amazon Payment Gateway"/>
+	<PaymentGatewayConfig paymentGatewayConfigId="AMAZON_CONFIG" paymentGatewayConfigTypeId="AMAZON" description="Amazon Payment Gateway"/>
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_AMAZON" paymentServiceTypeEnumId="PRDS_PAY_AUTH" paymentService="amazonCCProcessor" paymentGatewayConfigId="AMAZON_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_AMAZON" paymentServiceTypeEnumId="PRDS_PAY_RELEASE" paymentService="amazonCCVoid" paymentGatewayConfigId="AMAZON_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_AMAZON" paymentServiceTypeEnumId="PRDS_PAY_CAPTURE" paymentService="amazonCCCapture" paymentGatewayConfigId="AMAZON_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_AMAZON" paymentServiceTypeEnumId="PRDS_PAY_REAUTH" paymentService="amazonCCProcessor" paymentGatewayConfigId="AMAZON_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_AMAZON" paymentServiceTypeEnumId="PRDS_PAY_REFUND" paymentService="amazonCCRefund" paymentGatewayConfigId="AMAZON_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+
+	<!-- PAYPAL CHECKOUT PAYMENT -->
+	<!-- OfBiz has an antiquated paypal integration that uses EXT_PAYPAL payment type, new integration will be called EXT_PAYPAL_CHECKOUT -->
+	<PaymentMethodType paymentMethodTypeId="EXT_PAYPAL_CHECKOUT" description="PayPal Checkout" defaultGlAccountId="122000"/>
+	<PaymentGatewayConfigType paymentGatewayConfigTypeId="PAYPAL_CHECKOUT" hasTable="N" description="PayPal Payment Gateway"/>
+	<PaymentGatewayConfig paymentGatewayConfigId="PAYPAL_CHECKOUT_CONFIG" paymentGatewayConfigTypeId="PAYPAL_CHECKOUT" description="PayPal Payment Gateway"/>
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_PAYPAL_CHECKOUT" paymentServiceTypeEnumId="PRDS_PAY_AUTH" paymentService="paypalProcessor" paymentGatewayConfigId="PAYPAL_CHECKOUT_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_PAYPAL_CHECKOUT" paymentServiceTypeEnumId="PRDS_PAY_RELEASE" paymentService="paypalVoid" paymentGatewayConfigId="PAYPAL_CHECKOUT_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_PAYPAL_CHECKOUT" paymentServiceTypeEnumId="PRDS_PAY_CAPTURE" paymentService="paypalCapture" paymentGatewayConfigId="PAYPAL_CHECKOUT_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_PAYPAL_CHECKOUT" paymentServiceTypeEnumId="PRDS_PAY_REAUTH" paymentService="paypalProcessor" paymentGatewayConfigId="PAYPAL_CHECKOUT_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_PAYPAL_CHECKOUT" paymentServiceTypeEnumId="PRDS_PAY_REFUND" paymentService="paypalRefund" paymentGatewayConfigId="PAYPAL_CHECKOUT_CONFIG" paymentPropertiesPath="envelopes.properties" applyToAllProducts="Y" />
+
+	<!-- IPARCEL PAYMENT -->
+	<PaymentMethodType description="IParcel Payment" paymentMethodTypeId="EXT_IPARCEL" defaultGlAccountId="122000" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_IPARCEL" paymentServiceTypeEnumId="PRDS_PAY_EXTERNAL" paymentService="" paymentCustomMethodId=""/>
+
+	<!-- NET30 PAYMENT -->
+	<PaymentMethodType description="Net 30" paymentMethodTypeId="EXT_NET30" defaultGlAccountId="122000" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_NET30" paymentServiceTypeEnumId="PRDS_PAY_EXTERNAL" paymentService="" paymentCustomMethodId=""/>
+
+	<!-- CLOSED PAYMENT - USED WHEN IMPORTING OLD ORDERS THAT SHOULD BE MARKED CLOSED -->
+	<PaymentMethodType description="Order &amp; Payment Closed" paymentMethodTypeId="EXT_CLOSED" defaultGlAccountId="122000" />
+	<ProductStorePaymentSetting productStoreId="10000" paymentMethodTypeId="EXT_CLOSED" paymentServiceTypeEnumId="PRDS_PAY_EXTERNAL" paymentService="" paymentCustomMethodId=""/>
+
+	<ProductStoreFacility productStoreId="10000" facilityId="WebStoreWarehouse" fromDate="2001-05-13 12:00:00.0"/>
+	<ProductStoreRole partyId="admin" roleTypeId="SALES_REP" productStoreId="10000" fromDate="2001-05-13 12:00:00.0"/>
+	<ProductStoreKeywordOvrd productStoreId="10000" keyword="gizmo" fromDate="2001-05-13 12:00:00.0" target="100" targetTypeEnumId="KOTT_PRODCAT"/>
+
+	<WebSite webSiteId="envelopes" siteName="Envelopes.com Website" cookieDomain="www.envelopes.com" productStoreId="10000" standardContentPrefix="" secureContentPrefix="" />
+	<WebSite webSiteId="ae" siteName="ActionEnvelope.com Website" cookieDomain="www.actionenvelope.com" productStoreId="10000" standardContentPrefix="" secureContentPrefix="" />
+	<WebSite webSiteId="folders" siteName="Folders.com Website" cookieDomain="www.folders.com" productStoreId="10000" standardContentPrefix="" secureContentPrefix="" />
+	<WebSite webSiteId="bags" siteName="Bags.com Website" cookieDomain="www.bags.com" productStoreId="10000" standardContentPrefix="" secureContentPrefix="" />
+	<WebSite webSiteId="bigname" siteName="BigName.com Website" cookieDomain="www.bigname.com" productStoreId="10000" standardContentPrefix="" secureContentPrefix="" />
+
+	<EnumerationType description="Order Item Admin Content Purpose" enumTypeId="OIAC_PURPOSE" hasTable="N" parentTypeId=""/>
+
+	<Enumeration description="Envelopes.com Channel" enumCode="ENV_CHANNEL" enumId="ENV_SALES_CHANNEL" sequenceId="08" enumTypeId="ORDER_SALES_CHANNEL"/>
+	<Enumeration description="ActionEnvelope Channel" enumCode="AE_CHANNEL" enumId="AE_SALES_CHANNEL" sequenceId="08" enumTypeId="ORDER_SALES_CHANNEL"/>
+	<Enumeration description="Folders.com Channel" enumCode="FOLD_CHANNEL" enumId="FOLD_SALES_CHANNEL" sequenceId="09" enumTypeId="ORDER_SALES_CHANNEL"/>
+	<Enumeration description="Bags.com Channel" enumCode="BAGS_CHANNEL" enumId="BAGS_SALES_CHANNEL" sequenceId="09" enumTypeId="ORDER_SALES_CHANNEL"/>
+	<Enumeration description="BigName.com Channel" enumCode="BNAME_CHANNEL" enumId="BNAME_SALES_CHANNEL" sequenceId="09" enumTypeId="ORDER_SALES_CHANNEL"/>
+
+	<Enumeration description="Front" enumCode="FRONT" enumId="OIACPRP_FRONT" sequenceId="01" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="Back" enumCode="BACK" enumId="OIACPRP_BACK" sequenceId="02" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="PDF" enumCode="PDF" enumId="OIACPRP_PDF" sequenceId="03" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="Worker" enumCode="WORKER" enumId="OIACPRP_WORKER" sequenceId="01" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="Worker Front" enumCode="WORKER" enumId="OIACPRP_WORKER_FRONT" sequenceId="01" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="Worker Back" enumCode="WORKER" enumId="OIACPRP_WORKER_BACK" sequenceId="01" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="Uploaded File" enumCode="FILE" enumId="OIACPRP_FILE" sequenceId="04" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="Uploaded Internal File" enumCode="FILE" enumId="OIACPRP_INT_FILE" sequenceId="05" enumTypeId="OIAC_PURPOSE"/>
+
+	<EnumerationType description="Order Item Artwork Comment Types" enumTypeId="OIAC_COMMENT" hasTable="N" parentTypeId="" />
+	<Enumeration description="Artwork Instruction" enumCode="INSTRUCTION_COMMENT" enumid="OIAC_INSTRUCTION" sequenceId="01" enumTypeId="OIAC_COMMENT" />
+	<Enumeration description="Proof Rejection" enumCode="REJECT_COMMENT" enumId="OIAC_REJECTPROOF" sequenceId="02" enumTypeId="OIAC_COMMENT" />
+	<Enumeration description="Need New Artwork" enumCode="NEW_ART_COMMENT" enumId="OIAC_NEWARTWORK" sequenceId="03" enumTypeId="OIAC_COMMENT" />
+	<Enumeration description="Proof Approval" enumCode="APPROVE_COMMENT" enumId="OIAC_APPROVEPROOF" sequenceId="04" enumTypeId="OIAC_COMMENT" />
+
+	<Enumeration description="Scene 7 Print Ready Front PDF" enumCode="PDF" enumId="OIACPRP_SC7_FRNT_PDF" sequenceId="03" enumTypeId="OIAC_PURPOSE"/>
+	<Enumeration description="Scene 7 Print Ready Back PDF" enumCode="PDF" enumId="OIACPRP_SC7_BACK_PDF" sequenceId="03" enumTypeId="OIAC_PURPOSE"/>
+
+	<ProductAssocType productAssocTypeId="PRODUCT_BUNDLE" hasTable="N" description="Bundle Products"/>
+
+	<StatusItem description="Shipped" sequenceId="01" statusCode="SHIPPED" statusId="ORDER_SHIPPED" statusTypeId="ORDER_STATUS"/>
+	<StatusItem description="Pending" sequenceId="01" statusCode="PENDING" statusId="ORDER_PENDING" statusTypeId="ORDER_STATUS"/>
+	<StatusItem description="Partially Fulfilled" sequenceId="01" statusCode="PARTIALLY_FULFILLED" statusId="ORDER_PARTIALLY_FULFILLED" statusTypeId="ORDER_STATUS"/>
+	<StatusItem description="Backordered" sequenceId="01" statusCode="BACKORDERED" statusId="ITEM_BACKORDERED" statusTypeId="ORDER_ITEM_STATUS" />
+	<StatusItem description="Sent Purchase Order" sequenceId="01" statusCode="SENT_PO" statusId="SENT_PURCHASE_ORDER" statusTypeId="ORDER_ITEM_STATUS"/>
+	<StatusItem description="Shipped" sequenceId="01" statusCode="PENDING" statusId="ITEM_SHIPPED" statusTypeId="ORDER_ITEM_STATUS"/>
+
+	<StatusItem description="Waiting for Vendor" sequenceId="01" statusCode="WAITING" statusId="QUO_WAITFORVEND" statusTypeId="QUOTE_STATUS" />
+	<StatusItem description="Assigned" sequenceId="01" statusCode="ASSIGNED" statusId="QUO_ASSIGNED" statusTypeId="QUOTE_STATUS" />
+	<StatusItem description="Sent" sequenceId="01" statusCode="SENT" statusId="QUO_SENT" statusTypeId="QUOTE_STATUS" />
+	<StatusItem description="Alternate Quote" sequenceId="01" statusCode="ALTERNATE" statusId="QUO_ALTERNATE_QUO" statusTypeId="QUOTE_STATUS" />
+	<StatusItem description="Alternate Order" sequenceId="01" statusCode="ALTERNATE" statusId="QUO_ALTERNATE_ORDR" statusTypeId="QUOTE_STATUS" />
+
+	<ProdCatalog prodCatalogId="AECatalog" catalogName="AE Catalog" useQuickAdd="Y"/>
+	<ProductStoreCatalog productStoreId="10000" prodCatalogId="AECatalog" fromDate="2001-05-13 12:00:00.0"/>
+	<ProductCategory description="Action Envelope Main Category" longDescription="Action Envelope Catalog Main Category" productCategoryId="AE" productCategoryTypeId="CATALOG_CATEGORY"/>
+	<ProdCatalogCategory prodCatalogId="AECatalog" productCategoryId="AE" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2001-05-13 12:00:00.0" sequenceNum="1" />
+
+	<ProductFeatureCategory productFeatureCategoryId="10000" description="Envelopes.com Features" />
+
+	<ProductType productTypeId="ENVELOPE" parentTypeId="GOOD" isPhysical="Y" isDigital="N" hasTable="N" description="Envelope" />
+	<ProductType productTypeId="PAPER" parentTypeId="GOOD" isPhysical="Y" isDigital="N" hasTable="N" description="Paper" />
+	<ProductType productTypeId="BOX" parentTypeId="GOOD" isPhysical="Y" isDigital="N" hasTable="N" description="Box" />
+	<ProductType productTypeId="SAMPLE" parentTypeId="GOOD" isPhysical="Y" isDigital="N" hasTable="N" description="Sample" />
+
+	<ProdCatalog prodCatalogId="FoldersCatalog" catalogName="Folders Catalog" useQuickAdd="Y"/>
+	<ProductStoreCatalog productStoreId="10000" prodCatalogId="FoldersCatalog" fromDate="2001-05-13 12:00:00.0"/>
+	<ProductCategory description="Folders Main Category" longDescription="Folders Catalog Main Category" productCategoryId="FOLDERS" productCategoryTypeId="CATALOG_CATEGORY"/>
+	<ProdCatalogCategory prodCatalogId="FoldersCatalog" productCategoryId="FOLDERS" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2001-05-13 12:00:00.0" sequenceNum="1" />
+
+	<!--
+	<Product productId="A7" productTypeId="ENVELOPE" productName="A7 Envelope" internalName="A7 Envelope" isVirtual="Y" isVariant="N" />
+	<ProductFeatureAppl productId="A7" productFeatureId="8147" fromDate="2014-01-01 00:00:00.0" />
+
+	<Product productId="A7-SLI" productTypeId="ENVELOPE" productName="A7 Envelope" internalName="A7 Envelope" isVirtual="N" isVariant="Y" weight="0.02" />
+	<ProductFeatureAppl productId="A7-SLI" productFeatureId="8147" fromDate="2014-01-01 00:00:00.0" />
+	<ProductFeatureAppl productId="A7-SLI" productFeatureId="8525" fromDate="2014-01-01 00:00:00.0" />
+
+	<ProductPrice productId="A7-SLI" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2014-01-01 00:00:00.0" price="10" quantity="50" colors="0" />
+	<ProductPrice productId="A7-SLI" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2014-01-01 00:00:00.0" price="20" quantity="100" colors="0" />
+	<ProductPrice productId="A7-SLI" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2014-01-01 00:00:00.0" price="30" quantity="250" colors="0" />
+	<ProductPrice productId="A7-SLI" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2014-01-01 00:00:00.0" price="40" quantity="500" colors="0" />
+	-->
+
+	<StatusType statusTypeId="AE_ARTWORK_STTS" description="AE Artwork Status" />
+	<StatusItem statusId="ART_NA" statusTypeId="AE_ARTWORK_STTS" description="No Custom Printing" sequenceId="1" />
+	<StatusItem statusId="ART_NOT_RECEIVED" statusTypeId="AE_ARTWORK_STTS" description="No Artwork Received" sequenceId="2" />
+	<StatusItem statusId="ART_PENDING_PROOF" statusTypeId="AE_ARTWORK_STTS" description="Awaiting Proof" sequenceId="3" />
+	<StatusItem statusId="ART_READY_FOR_REVIEW" statusTypeId="AE_ARTWORK_STTS" description="Proof Ready for Review" sequenceId="4" />
+	<StatusItem statusId="ART_PENDING_CHANGES" statusTypeId="AE_ARTWORK_STTS" description="Pending Changes" sequenceId="5" />
+	<StatusItem statusId="ART_PROOF_APPROVED" statusTypeId="AE_ARTWORK_STTS" description="Proof Approved" sequenceId="6" />
+	<StatusItem statusId="ART_PROOF_REJECTED" statusTypeId="AE_ARTWORK_STTS" description="Proof Rejected" sequenceId="7" />
+	<StatusItem statusId="ART_REUSED" statusTypeId="AE_ARTWORK_STTS" description="Artwork Reused" sequenceId="8" />
+	<StatusItem statusId="ART_DESIGNED_ONLINE" statusTypeId="AE_ARTWORK_STTS" description="Online Designs Available" sequenceId="9" />
+	<StatusItem statusId="ART_WILL_BE_MAILED" statusTypeId="AE_ARTWORK_STTS" description="Artwork Will Be Mailed" sequenceId="10" />
+	<StatusItem statusId="ART_GOOD_TO_GO" statusTypeId="AE_ARTWORK_STTS" description="Good to Go" sequenceId="11" />
+	<StatusItem statusId="ART_NEED_NEW_ARTWORK" statusTypeId="AE_ARTWORK_STTS" description="Need New Artwork" sequenceId="12" />
+	<StatusItem statusId="ART_PENDING" statusTypeId="AE_ARTWORK_STTS" description="Pending" sequenceId="13" />
+	<StatusItem statusId="ART_UPLOADED_LATER" statusTypeId="AE_ARTWORK_STTS" description="Upload Later" sequenceId="14"/>
+	<StatusItem statusId="ART_UPLOADED" statusTypeId="AE_ARTWORK_STTS" description="Uploaded"  sequenceId="15"/>
+	<StatusItem statusId="ART_DESIGNED_ONLINE" statusTypeId="AE_ARTWORK_STTS" description="Online Design" sequenceId="16"/>
+	<StatusItem statusId="PP_ASSIGNED_TO_PLATE" statusTypeId="AE_ARTWORK_STTS" description="Assigned to Plate" sequenceId="17"/>
+	<StatusItem statusId="ART_PRINTED" statusTypeId="AE_ARTWORK_STTS" description="Artwork Printed" sequenceId="18"/>
+	<StatusItem statusId="ART_PROD_CHECK" statusTypeId="AE_ARTWORK_STTS" description="Production Check" sequenceId="18"/>
+	<StatusItem statusId="ART_GOOD_TO_PROOF" statusTypeId="AE_ARTWORK_STTS" description="Good to Proof" sequenceId="19"/>
+	<StatusItem statusId="ART_OUTSOURCED" statusTypeId="AE_ARTWORK_STTS" description="Outsourced" sequenceId="20"/>
+	<StatusItem statusId="ART_REORDER" statusTypeId="AE_ARTWORK_STTS" description="Reorder" sequenceId="21"/>
+	<StatusItem statusId="ART_RDY_FOR_INTRNL_REVIEW" statusTypeId="AE_ARTWORK_STTS" description="Internal Proof Review" sequenceId="22"/>
+	<StatusItem statusId="ART_SYRACUSE" statusTypeId="AE_ARTWORK_STTS" description="Syracuse" sequenceId="23"/>
+	<StatusItem statusId="ART_DIRECTMAIL" statusTypeId="AE_ARTWORK_STTS" description="Direct Mail" sequenceId="24"/>
+
+	<StatusType statusTypeId="AE_PRINT_PROD_STTS" description="AE Print Production Statuses" />
+	<StatusItem statusId="PP_ON_PRESS" statusTypeId="AE_PRINT_PROD_STTS" description="On Press" sequenceId="1" />
+	<StatusItem statusId="PP_ASSIGNED_TO_PRESS" statusTypeId="AE_PRINT_PROD_STTS" description="Assigned to Press" sequenceId="2" />
+	<StatusItem statusId="PP_APPROVED" statusTypeId="AE_PRINT_PROD_STTS" description="Production Approved" sequenceId="3" />
+	<StatusItem statusId="PP_STOPPED" statusTypeId="AE_PRINT_PROD_STTS" description="Production Stopped" sequenceId="4" />
+	<StatusItem statusId="PP_STARTED" statusTypeId="AE_PRINT_PROD_STTS" description="Production Started" sequenceId="5" />
+	<StatusItem statusId="PP_COMPLETE" statusTypeId="AE_PRINT_PROD_STTS" description="Production Complete" sequenceId="6" />
+
+	<StatusType statusTypeId="AE_PLATE_STTS" description="AE Plate Status" />
+	<StatusItem statusId="PP_CREATED" statusTypeId="AE_PLATE_STTS" description="Plates to Make" sequenceId="1" />
+	<StatusItem statusId="PP_LAYOUT_COMPLETE" statusTypeId="AE_PLATE_STTS" description="Layout Complete" sequenceId="2" />
+	<StatusItem statusId="PP_IMAGED" statusTypeId="AE_PLATE_STTS" description="Imaged" sequenceId="3" />
+	<StatusItem statusId="PP_PRINTED" statusTypeId="AE_PLATE_STTS" description="Printed" sequenceId="4" />
+	<StatusItem statusId="PP_DIGITAL" statusTypeId="AE_PLATE_STTS" description="Digital" sequenceId="5" />
+	<StatusItem statusId="PP_CANCELED" statusTypeId="AE_PLATE_STTS" description="Canceled" sequenceId="6" />
+
+	<!-- VALID CHANGES -->
+	<StatusValidChange statusId="ORDER_CREATED" statusIdTo="ORDER_PENDING" transitionName="Order Pending"/>
+	<StatusValidChange statusId="ORDER_CREATED" statusIdTo="ORDER_PARTIALLY_FULFILLED" transitionName="Partially Shipped Order"/>
+	<StatusValidChange statusId="ORDER_CREATED" statusIdTo="ORDER_SHIPPED" transitionName="Order Shipped"/>
+
+	<StatusValidChange statusId="ORDER_PENDING" statusIdTo="ORDER_CREATED" transitionName="Create Order"/>
+	<StatusValidChange statusId="ORDER_PENDING" statusIdTo="ORDER_APPROVED" transitionName="Approve Order"/>
+	<StatusValidChange statusId="ORDER_PENDING" statusIdTo="ORDER_CANCELLED" transitionName="Cancel Order"/>
+	<StatusValidChange statusId="ORDER_PENDING" statusIdTo="ORDER_PARTIALLY_FULFILLED" transitionName="Partially Shipped Order"/>
+	<StatusValidChange statusId="ORDER_PENDING" statusIdTo="ORDER_SHIPPED" transitionName="Order Shipped"/>
+
+	<StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_CREATED" transitionName="Create Order"/>
+	<StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_PENDING" transitionName="Order Pending"/>
+	<StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_PARTIALLY_FULFILLED" transitionName="Partially Shipped Order"/>
+	<StatusValidChange statusId="ORDER_APPROVED" statusIdTo="ORDER_SHIPPED" transitionName="Shipped Order"/>
+
+	<StatusValidChange statusId="ORDER_PARTIALLY_FULFILLED" statusIdTo="ORDER_SHIPPED" transitionName="Shipped Order"/>
+	<StatusValidChange statusId="ORDER_SHIPPED" statusIdTo="ORDER_COMPLETED" transitionName="Completed Order"/>
+
+	<StatusValidChange statusId="ORDER_COMPLETED" statusIdTo="ORDER_APPROVED" transitionName="Approve Order"/>
+
+	<StatusValidChange statusId="ITEM_APPROVED" statusIdTo="ITEM_COMPLETED" transitionName="Complete Item"/>
+	<StatusValidChange statusId="ITEM_APPROVED" statusIdTo="ITEM_CREATED" transitionName="Item Created"/>
+	<StatusValidChange statusId="ITEM_APPROVED" statusIdTo="ITEM_CANCELLED" transitionName="Cancel Item"/>
+
+	<StatusValidChange statusId="ITEM_COMPLETED" statusIdTo="ITEM_APPROVED" transitionName="Approve Item"/>
+
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ITEM_APPROVED" transitionName="Approve Item"/>
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ITEM_REJECTED" transitionName="Reject Item"/>
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ITEM_CANCELLED" transitionName="Cancel Item"/>
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded, Pending Proof" />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_NOT_RECEIVED" transitionName="Artwork Required, Not Uploaded" />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_NA" transitionName="Artwork Not Required" />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_REUSED" transitionName="Artwork reused from previous order." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_DESIGNED_ONLINE" transitionName="Artwork was designed online." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_WILL_BE_MAILED" transitionName="Artwork will be mailed." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Artwork reused from previous order." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_UPLOADED_LATER" transitionName="Production Check." />
+	<StatusValidChange statusId="ITEM_CREATED" statusIdTo="ART_PROOF_APPROVED" transitionName="Art proof approved." />
+
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded via File Center, Pending Proof" />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Admin uploaded a proof without user artwork." />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_NOT_RECEIVED" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded via File Center, Pending Proof" />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_NOT_RECEIVED" transitionName="User will upload more artwork." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_GOOD_TO_GO" transitionName="Printed Envelope Completed." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Admin uploaded a proof without user artwork." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_WILL_BE_MAILED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Proofs have been generated by site admins and are ready for customer approval." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_PENDING_PROOF" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded, Pending Proof" />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_NOT_RECEIVED" transitionName="Artwork Required, Not Uploaded" />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_NA" transitionName="Artwork Not Required" />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_REUSED" transitionName="Artwork reused from previous order." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_DESIGNED_ONLINE" transitionName="Artwork was designed online." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_WILL_BE_MAILED" transitionName="Artwork will be mailed." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Artwork reused from previous order." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_PENDING" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_PROOF_APPROVED" transitionName="Art proof approved." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Proofs have been generated by site admins and are ready for customer approval." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_GOOD_TO_GO" transitionName="Printed Envelope Completed." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_REUSED" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_PENDING_PROOF" transitionName="Proofs have been removed by site admins." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_PROOF_APPROVED" transitionName="Proofs have been approved by the customer." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_PROOF_REJECTED" transitionName="Proofs have been rejected by the customer." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_READY_FOR_REVIEW" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Revised proofs are now available." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_PENDING_PROOF" transitionName="Admin has deleted the rejected proof.." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_NOT_RECEIVED" transitionName="User will upload more artwork." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_PROOF_REJECTED" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Revised proofs are now available." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_NOT_RECEIVED" transitionName="User will upload more artwork." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_GOOD_TO_GO" transitionName="Printed Envelope Completed." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_PROOF_APPROVED" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_GOOD_TO_GO" transitionName="Printed Envelope Completed." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork designed via Online Designer, Pending Proof" />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Revised proofs are now available." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_DESIGNED_ONLINE" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded via File Center, Pending Proof" />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Admin uploaded a proof without user artwork." />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ART_PRINTED" transitionName="Artwork marked printed." />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_NEED_NEW_ARTWORK" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Revised proofs are now available." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ART_PRINTED" transitionName="Artwork has been Printed" />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="PP_ASSIGNED_TO_PLATE" transitionName="Art plated." />
+	<StatusValidChange statusId="ART_GOOD_TO_GO" statusIdTo="ART_PROOF_APPROVED" transitionName="Art proof approved." />
+
+	<StatusValidChange statusId="ITEM_CANCELLED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Revised proofs are now available." />
+	<StatusValidChange statusId="ITEM_CANCELLED" statusIdTo="ART_NEED_NEW_ARTWORK" transitionName="New Artwork is Required." />
+	<StatusValidChange statusId="ITEM_CANCELLED" statusIdTo="ART_GOOD_TO_GO" transitionName="Printed Envelope Completed." />
+	<StatusValidChange statusId="ITEM_CANCELLED" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ITEM_CANCELLED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ITEM_CANCELLED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ITEM_CANCELLED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="ART_PRINTED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_PRINTED" statusIdTo="ART_GOOD_TO_GO" transitionName="Artwork ready for re-print" />
+	<StatusValidChange statusId="ART_PRINTED" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_PRINTED" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_PRINTED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="ART_NA" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_NA" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="ART_NA" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="ART_NA" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PRESS" statusIdTo="ART_GOOD_TO_GO" transitionName="Item has been taken off a press." />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PRESS" statusIdTo="ART_PRINTED" transitionName="Artwork has been printed" />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PRESS" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PRESS" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PRESS" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PLATE" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PLATE" statusIdTo="ART_GOOD_TO_GO" transitionName="Item has been removed from a plate." />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PLATE" statusIdTo="ART_PRINTED" transitionName="Artwork has been printed" />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PLATE" statusIdTo="ITEM_BACKORDERED" transitionName="Item Backordered." />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PLATE" statusIdTo="ART_PROD_CHECK" transitionName="Production Check." />
+	<StatusValidChange statusId="PP_ASSIGNED_TO_PLATE" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ITEM_CREATED" transitionName="Artwork Uploaded, Pending Proof" />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded via File Center, Pending Proof" />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Proofs have been generated by site admins and are ready for customer approval." />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ART_PROOF_APPROVED" transitionName="Artwork selected to be reused" />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ART_GOOD_TO_GO" transitionName="Printed Envelope Completed." />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ITEM_BACKORDERED" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ITEM_CREATED" transitionName="Artwork Uploaded, Pending Proof" />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded via File Center, Pending Proof" />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Proofs have been generated by site admins and are ready for customer approval." />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ART_PROOF_APPROVED" transitionName="Artwork selected to be reused" />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ART_GOOD_TO_GO" transitionName="Printed Envelope Completed." />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ART_GOOD_TO_PROOF" transitionName="Art is good to proof." />
+	<StatusValidChange statusId="ART_PROD_CHECK" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ITEM_CANCELLED" transitionName="Item is Cancelled." />
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ART_GOOD_TO_GO" transitionName="Item has been taken off a press." />
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ART_PENDING_PROOF" transitionName="Artwork Uploaded via File Center, Pending Proof" />
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ART_READY_FOR_REVIEW" transitionName="Proofs have been generated by site admins and are ready for customer approval." />
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ART_PROOF_APPROVED" transitionName="Artwork selected to be reused" />
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ART_PENDING" transitionName="Change to Pending." />
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ART_PRINTED" transitionName="Artwork has been Printed" />
+	<StatusValidChange statusId="ART_GOOD_TO_PROOF" statusIdTo="ITEM_CREATED" transitionName="Item Created." />
+
+	<!-- CUSTOM PRODUCT -->
+	<Product productId="CUSTOM-P" internalName="Custom Product" productName="Custom Product" isVariant="Y" isVirtual="N" isPrintable="Y" hasRushProduction="Y" weight="0.01" />
+	<ProductPrice productId="CUSTOM-P" quantity="1" price="1" colors="0" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+	<ProductPrice productId="CUSTOM-P" quantity="1" price="1" colors="1" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+	<ProductPrice productId="CUSTOM-P" quantity="1" price="1" colors="2" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+	<ProductPrice productId="CUSTOM-P" quantity="1" price="1" colors="4" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+
+	<Product productId="SAMPLE" productTypeId="SAMPLE" internalName="Sample Product" productName="Sample Product" isVariant="Y" isVirtual="N" isPrintable="Y" hasSample="Y" hasRushProduction="Y" weight="0.01" />
+	<ProductPrice productId="SAMPLE" quantity="1" price="1" colors="0" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+	<ProductPrice productId="SAMPLE" quantity="1" price="1" colors="1" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+	<ProductPrice productId="SAMPLE" quantity="1" price="1" colors="2" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+	<ProductPrice productId="SAMPLE" quantity="1" price="1" colors="4" currencyUomId="USD" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" productStoreGroupId="_NA_" fromDate="2016-01-01 00:00:00.0" />
+
+	<!-- SECURITY GROUPS & PERMISSIONS -->
+	<SecurityGroup groupId="VENDORADMIN" description="Vendor Order manager group, all permissions."/>
+	<SecurityPermission description="View operations in the Vendor Order Manager." permissionId="VENDORORDERMGR_VIEW"/>
+	<SecurityPermission description="Create operations in the Vendor Order Manager." permissionId="VENDORORDERMGR_CREATE"/>
+	<SecurityPermission description="Update operations in the Vendor Order Manager." permissionId="VENDORORDERMGR_UPDATE"/>
+	<SecurityPermission description="Delete operations in the Vendor Order Manager." permissionId="VENDORORDERMGR_DELETE"/>
+	<SecurityPermission description="All operations in the Vendor Order Manager." permissionId="VENDORORDERMGR_ADMIN"/>
+	<SecurityGroupPermission groupId="VENDORADMIN" permissionId="VENDORORDERMGR_ADMIN"/>
+	<SecurityGroupPermission groupId="FULLADMIN" permissionId="VENDORORDERMGR_ADMIN"/>
+
+	<SecurityGroup groupId="SITESEARCHADMIN" description="Site Search manager group, all permissions."/>
+	<SecurityPermission description="View operations in the Site Search Manager." permissionId="SITESEARCHMGR_VIEW"/>
+	<SecurityPermission description="Create operations in the Site Search Manager." permissionId="SITESEARCHMGR_CREATE"/>
+	<SecurityPermission description="Update operations in the Site Search Manager." permissionId="SITESEARCHMGR_UPDATE"/>
+	<SecurityPermission description="Delete operations in the Site Search Manager." permissionId="SITESEARCHMGR_DELETE"/>
+	<SecurityPermission description="All operations in the Site Search Manager." permissionId="SITESEARCHMGR_ADMIN"/>
+	<SecurityGroupPermission groupId="SITESEARCHADMIN" permissionId="SITESEARCHMGR_ADMIN"/>
+	<SecurityGroupPermission groupId="FULLADMIN" permissionId="SITESEARCHMGR_ADMIN"/>
+
+	<SecurityGroup groupId="SEOADMIN" description="SEO manager group, all permissions."/>
+	<SecurityPermission description="View operations in the SEO Manager." permissionId="SEOMGR_VIEW"/>
+	<SecurityPermission description="Create operations in the SEO Manager." permissionId="SEOMGR_CREATE"/>
+	<SecurityPermission description="Update operations in the SEO Manager." permissionId="SEOMGR_UPDATE"/>
+	<SecurityPermission description="Delete operations in the SEO Manager." permissionId="SEOMGR_DELETE"/>
+	<SecurityPermission description="All operations in the SEO Manager." permissionId="SEOMGR_ADMIN"/>
+	<SecurityGroupPermission groupId="SEOADMIN" permissionId="SEOMGR_ADMIN"/>
+	<SecurityGroupPermission groupId="FULLADMIN" permissionId="SEOMGR_ADMIN"/>
+
+	<SecurityGroup groupId="CHANNELSADMIN" description="Channels manager group, all permissions."/>
+	<SecurityPermission description="View operations in the Channels Manager." permissionId="CHANNELS_VIEW"/>
+	<SecurityPermission description="Create operations in the Channels Manager." permissionId="CHANNELS_CREATE"/>
+	<SecurityPermission description="Update operations in the Channels Manager." permissionId="CHANNELS_UPDATE"/>
+	<SecurityPermission description="Delete operations in the Channels Manager." permissionId="CHANNELS_DELETE"/>
+	<SecurityPermission description="All operations in the Channels Manager." permissionId="CHANNELS_ADMIN"/>
+	<SecurityGroupPermission groupId="CHANNELSADMIN" permissionId="CHANNELS_ADMIN"/>
+	<SecurityGroupPermission groupId="FULLADMIN" permissionId="CHANNELS_ADMIN"/>
+
+	<SecurityGroup groupId="WAREHOUSEEMPLOYEEADMIN" description="Warehouse Employee Admin, all permissions."/>
+	<SecurityPermission description="View operations in the Warehouse Employee Manager." permissionId="WAREHOUSEEMPLOYEEADMIN_VIEW"/>
+	<SecurityPermission description="Create operations in the Warehouse Employee Manager." permissionId="WAREHOUSEEMPLOYEEADMIN_CREATE"/>
+	<SecurityPermission description="Update operations in the Warehouse Employee Manager." permissionId="WAREHOUSEEMPLOYEEADMIN_UPDATE"/>
+	<SecurityPermission description="Delete operations in the Warehouse Employee Manager." permissionId="WAREHOUSEEMPLOYEEADMIN_DELETE"/>
+	<SecurityPermission description="All operations in the Warehouse Employee Manager." permissionId="WAREHOUSEEMPLOYEEADMIN_ADMIN"/>
+	<SecurityGroupPermission groupId="WAREHOUSEEMPLOYEEADMIN" permissionId="WAREHOUSEEMPLOYEEADMIN_ADMIN"/>
+	<SecurityGroupPermission groupId="FULLADMIN" permissionId="WAREHOUSEEMPLOYEEADMIN_ADMIN"/>
+</entity-engine-xml>

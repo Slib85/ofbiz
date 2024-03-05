@@ -1,0 +1,689 @@
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+.flex-row > * {
+    display: inline-flex;
+}
+.flex-row.flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.flex-row.flex-left {
+	justify-content: left;
+	-webkit-justify-content: left;
+  }
+	  .flex-row.flexCount6 > *,
+	  .flex-row.flexCount5 > *,
+	  .flex-row.flexCount4 > *,
+	  .flex-row.flexCount3 > *,
+	  .flex-row.flexCount2 > * {
+		  width: 100%;
+	  }
+	  .flex-row.flexCount6 > * {
+		  max-width: 16.66666%;
+	  }
+	  .flex-row.flexCount5 > * {
+		  max-width: 20%;
+	  }
+	  .flex-row.flexCount4 > * {
+		  max-width: 25%;
+	  }
+	  .flex-row.flexCount3 > * {
+		  max-width: 33.33333%;
+	  }
+	  .flex-row.flexCount2 > * {
+		  max-width: 50%;
+	  }
+
+/*------ MAIN WRAPPER ------*/
+.bnc_wedding_shop_redesign * {
+    margin:0;
+    padding:0;
+}
+
+.bnc_wedding_shop_redesign{
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_wedding_shop_redesign:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+/*------ TOP BANNER ------*/
+.bnc_wedding_shop_redesign_top_banner{
+    position: relative;
+    border: 2px solid #414b43;
+}
+.bnc_weddingshop_banner_wrap{
+    
+}
+.bnc_weddingshop_banner_content{
+    background-color: transparent;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1%;
+
+    /* position the div in center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bnc_weddingshop_banner_content h1{
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size:60px;
+    text-transform: uppercase;
+    color: #64893e;
+}
+.bnc_weddingshop_banner_content p{
+    font-size: 22px;
+    color: #000;
+    font-weight: 700;
+}
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="wedding-shop-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_weddingshop_nav1 */
+nav[role="bnc_weddingshop_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_weddingshop_nav1"] a, 
+nav[role="bnc_weddingshop_nav1"] label {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'OpenSansBold';
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_weddingshop_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_weddingshop_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #1f3850;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+nav[role="bnc_weddingshop_nav1"] ul > li:hover {
+    background-color: #b89e99;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #b89e99, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_weddingshop_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_weddingshop_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_weddingshop_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_weddingshop_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_weddingshop_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_weddingshop_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: -7px;
+        content: "\2261";
+        font-size: 1.8em;
+   }
+    nav[role="bnc_weddingshop_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_weddingshop_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_weddingshop_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_weddingshop_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+/*-----------------------------------------------------------------*/
+/*-- CUSTOM PRINTING / RECIPIENT ADDRESSING / WHITE INK PRINTING --*/
+/*-----------------------------------------------------------------*/
+.bnc_weddingshop_nav2 {
+	background-color: #87646d;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.bnc_weddingshop_nav2 a{
+	color: #ffffff;
+	display: inline-block;
+	width: 33%;
+	font-size: 16px;
+}
+.bnc_weddingshop_nav2 span{
+	margin-left: 4%
+}
+.weddingshop_nav_border {
+	border-right: solid #9d8580 2px;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_wedding_shop_content_container {
+	display: table;
+	width: 100%;
+	margin-top: 20px;
+}
+.bnc_wedding_shop_content_container > * {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    padding: 20px;
+}
+.bnc_wedding_shop_content_container > *:first-child {
+    width: 320px;
+    padding: 0 0 20px 0;
+}
+.bnc_wedding_shop_content_container > *:last-child {
+    padding-right: 0px;
+    padding-top: 0px;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_section_block{
+    /* background-color: #404f60; */
+    /* padding:14px; */
+    color:#fff;
+}
+.bnc_section_content{
+    background-color: #1f3850;
+    padding: 15px 45px 15px 15px;
+}
+/*----------------*/
+.bnc_section_block div .bnc_section_header,
+.bnc_section_block div .bnc_section_header h1,
+.bnc_section_block div .bnc_section_header h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.bnc_section_block div .bnc_section_desc{
+	font-size: 12px;
+}
+/*--------------*/
+.bnc_weddingshop_product_wrap{
+    /* display: block; */
+    position: relative;
+    width: 100%;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod{
+    border: 1px solid #dddddd;
+    margin: 0 24px 24px 0;
+    /* display: inline-block; */
+    vertical-align: top;
+    width: 295px;
+}
+.WS_widthOverWrite{
+    width: 100% !important;
+    max-width: 608px;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod:last-child {
+    margin-right: 0;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod a{
+    display:block;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content{
+
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content .bnc_ws_prod_name{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    /* background-color: #fff; */
+    font-family: 'OpenSansExtraBold';
+    padding: 15px 10px;
+    text-align: center;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content .bnc_ws_prod_name h4, 
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content .bnc_ws_prod_name h5, 
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content .bnc_ws_prod_name i{
+    display: inline-block;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content .bnc_ws_prod_name h4{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content .bnc_ws_prod_name i{
+    color: #672938;
+    font-size: 1.23em;
+}
+.bnc_weddingshop_product_wrap .bnc_ws_prod .bnc_ws_prod_content .bnc_ws_prod_img {
+    background-color:#cdd5d8;
+    text-align: center;
+}
+
+.WS_defaultOverWrite,
+.WS_defaultOverWrite i {
+    background-color: #87646d !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    border-radius: 0 0 8px 8px;
+    font-family: 'OpenSansRegular' !important;
+    letter-spacing: 1px;
+}
+.WS_defaultOverWrite i{
+    font-family: FontAwesome !important;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_wedding_shop_media_wrap {
+    width: 295px;
+    height: 257px;
+    background-color: #385652;
+    margin: 0 0 30px 0;
+}
+.bnc_wedding_shop_media_content {
+    /* padding: 5px; */
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+/*-- play button --*/
+.bnc_media_button {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+.bnc_paused {
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+}
+.bnc_media_button:hover,
+.bnc_media_button:focus {
+    border-color: transparent transparent transparent #fff;
+    background-color: transparent;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_weddingshop_section {
+    /* padding: 20px; */
+}
+.bnc_weddingshop_section_hdr {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 0 14px 0;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #1f3850;
+    color: #fff;
+}
+.bnc_weddingshop_section_hdr h3{
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+}
+.bnc_weddingshop_section_hdr h3 span {
+    display: block;
+}
+.bnc_weddingshop_prod_type {
+    width: 100%;
+    margin: 0 auto;
+}
+.bnc_ws_prod_category {
+    border-bottom: 1px solid #cdd5d8;
+}
+.wedding-shop-sizes div:first-child {
+    font-weight: 700;
+}
+.bnc_ws_prod_category {
+    border-bottom: 1px solid #cdd5d8;
+    margin: 1.5em 0;
+    padding: 0 0 15px 0;
+}
+.bnc_weddingshop_prod_type .bnc_ws_prod_category:last-child{
+    border-bottom:none;
+}
+.ws_prod_cat_hdr {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #a0afb3;
+    font-family: 'OpenSansBold';
+    margin: 9px 0;
+}
+.bnc_weddingshop_prod_type a{
+    width: 154px;
+	border: 2px solid #a0afb3;
+    position: relative;
+    margin-bottom: 14px;
+    padding: 5px 10px;
+}
+.bnc_weddingshop_prod_type a span {
+    font-family: 'OpenSansBold';
+}
+.bnc_weddingshop_prod_type a span, 
+.bnc_weddingshop_prod_type a p {
+    display: block;
+    text-align: center;
+    color: #a0afb3;
+    font-weight: 700;
+}
+.bnc_weddingshop_prod_type a:hover, 
+.bnc_weddingshop_prod_type a:hover span, 
+.bnc_weddingshop_prod_type a:hover p {
+    background-color: #672938;
+    color: #fff;
+}
+.bnc_weddingshop_prod_type a.removeStyles{
+    border:none;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    width: unset;
+}
+.bnc_weddingshop_prod_type a.removeStyles:hover{
+    background-color:transparent;
+}
+.bnc_weddingshop_prod_type a p{
+    font-size: 14px;
+    margin: 0 auto;
+    width: 100%;
+}
+.bnc_weddingshop_prod_type a p span{
+	display: inline-block;
+	margin: 0 5px;
+}
+.bnc_weddingshop_prod_type a p sup {
+    font-size: 10px;
+}
+.bnc_weddingshop_prod_type a p sup.fracDigit1{
+	vertical-align: top;
+}
+.bnc_weddingshop_prod_type a p sup.fracDigit2 {
+    vertical-align: baseline;
+}
+/*---- OVERWRITE ABOVE STYLES FOR 'SIZES' ----*/
+/* .wedding-shop-sizes a, 
+.wedding-shop-sizes a span,
+.wedding-shop-sizes p{
+    text-decoration: underline;
+} */
+.wedding-shop-sizes a, 
+.wedding-shop-sizes a span,
+.wedding-shop-sizes p {
+    border: unset;
+    color: #a0afb3;
+    display: block;
+    margin: unset;
+    padding: unset;
+    width: unset;
+}
+.wedding-shop-sizes a:hover,
+.wedding-shop-sizes a:hover span, 
+.wedding-shop-sizes a:hover p {
+    background-color: transparent !important;
+    text-decoration: underline;
+    color: #a0afb3;
+}
+
+/*------------------*/
+.bnc_weddingshop_viewall {
+	margin: 0;
+    background-color: #87646d;
+    text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+.color-name{
+    color: #672938;
+    text-align: center;
+    font-family: 'OpenSansBold';
+    font-size: 16px;
+    display: block;
+    margin: 8px 0;
+}
+.bnc_weddingshop_viewall p {
+    color: #fff;
+    font-size: 17px;
+}
+.bnc_ws_prod_category.placecards{
+
+}
+.bnc_ws_prod_category.placecards a {
+    width: 100% !important;
+    display: block;
+}
+.ENV_WS_SwatchBoook {
+    position: relative;
+}
+.ENV_WS_SwatchBoook a {
+    display: block;
+}
+.ENV_WS_SwatchBoook a img {
+    width: 100%;
+    object-fit: contain;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_ws_color_wrap{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 35px;
+}
+.bnc_ws_color_content{
+    display: table-cell;
+    width: 50%;
+    padding: 0;
+    vertical-align: top;
+}
+.ws-color-icon,
+.ws-color-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ws-color-icon{
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+}
+.ws-color-text {
+    color: #b89e99;
+    font-size: 17px;
+}
+
+.ws-white{
+    background-color: #eaeaea;
+}
+.ws-natural{
+    background-color: #edead9;
+}
+.ws-pink{
+    background-color: #fcceb6;
+}
+.ws-grocery{
+    background-color: #a68d60;
+}
+.ws-green{
+    background-color: #8e9353;
+}
+.ws-gray{
+    background-color: #6d6e68;
+}
+.ws-blue{
+    background-color: #446aa8;
+}
+.ws-black{
+    background-color: #0c0c0c;
+}
+.ws-metallic{
+    
+}
+.ws-sparkle{
+    
+}
+.ws-color-icon.ws-metallic img,
+.ws-color-icon.ws-sparkle img {
+    border-radius: 50%;
+}
+.ws-clear{
+    background-color: #ebeaea;
+}
+.ws-purple{
+    background-color: #693a61;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (max-width: 1024px){
+    .bnc_wedding_shop_content_container > *:first-child {
+        display: none;
+    }
+    .bnc_wedding_shop_content_container > *:last-child {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .bnc_weddingshop_nav2{
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+    }
+    .bnc_weddingshop_nav2 a img, 
+    .bnc_weddingshop_nav2 a span {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 768px){
+    .bnc_weddingshop_nav2 a {
+        display: table-cell;
+        border: 0;
+        width: 33.33333%;
+    }
+    .bnc_wedding_shop_content_container > *:first-child {
+        display: none;
+    }
+    .bnc_wedding_shop_content_container > *:last-child {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 767px){
+    .bnc_weddingshop_nav2 a{
+        display: block;
+        width: 100%;
+        border-right: none;
+        border-bottom: solid 1px white;
+        padding: 12px 0;
+    }
+}
+@media only screen and (max-width: 425px){
+
+}
+@media only screen and (max-width: 375px){
+
+}

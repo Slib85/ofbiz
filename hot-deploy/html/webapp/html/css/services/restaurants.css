@@ -1,0 +1,49 @@
+.restaurants a {
+		color: inherit;
+	}
+	.restaurants.content > .section {
+		margin: 20px auto;
+		max-width: 887px;
+	}
+		.restaurants .section > img {
+			display: block;
+		}
+		.restaurants .section > ul {
+			padding: 15px 0px;
+			background-color: #13abe6;
+			color: #ffffff;
+			text-transform: uppercase;
+			font-size: 16px;
+		}
+			.restaurants .section > ul li.dark_text {
+				color: #3c3c3c;
+			}
+		.restaurants .section > div {
+			background-color: #fdfdfd;
+			border-bottom: 1px solid #8b8b8b;
+		}
+			.restaurants .section > div > div:last-child {
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+				.restaurants .section > div > div:last-child h2 {
+					color: #444444;
+					text-transform: uppercase;
+					font-weight: bold;
+				}
+				.restaurants .section > div > div:last-child p {
+					line-height: 18px;
+					font-size: 15px;
+				}
+				.restaurants .section > div > div:last-child a {
+					font-size: 26px;
+					color: #ffffff;
+				}
+		.restaurants .section > div:last-child {
+			border: 0px;
+		}
+@media only screen and (max-width: 1023px) {
+	.restaurants .section > ul {
+		display: none;
+	}
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+	<description>Envelopes.com Services</description>
+	<vendor>Envelopes.com</vendor>
+	<version>1.0</version>
+
+	<service name="getSocialUserLogin" engine="java" auth="false" transaction-timeout="30" max-retry="0" location="com.envelopes.janrain.SocialLoginServices" invoke="getSocialUserLogin">
+		<description>Get userLogin for social login</description>
+		<attribute name="token" type="String" mode="IN" optional="false" />
+		<attribute name="username" type="String" mode="OUT" optional="false" />
+		<attribute name="externalUserLogin" type="org.apache.ofbiz.entity.GenericValue" mode="OUT" optional="false" />
+	</service>
+
+	<service name="getAEPartyRoles" engine="java" auth="false" transaction-timeout="30" max-retry="0" location="com.envelopes.party.PartyServices" invoke="getAEPartyRoles">
+		<description>Get role types for a given partyId</description>
+		<attribute name="partyId" type="String" mode="IN" optional="false" />
+		<attribute name="isTrade" type="Boolean" mode="OUT" optional="false" />
+		<attribute name="isNonProfit" type="Boolean" mode="OUT" optional="false" />
+		<attribute name="isNonTaxable" type="Boolean" mode="OUT" optional="false" />
+		<attribute name="isTradePostNet" type="Boolean" mode="OUT" optional="false" />
+		<attribute name="isTradeAllegra" type="Boolean" mode="OUT" optional="false" />
+		<attribute name="isNet30" type="Boolean" mode="OUT" optional="false" />
+	</service>
+
+	<service name="checkPartyRole" engine="java" auth="false" transaction-timeout="30" max-retry="0" location="com.envelopes.party.PartyServices" invoke="checkPartyRole">
+		<description>Get role types for a given partyId</description>
+		<attribute name="partyId" type="String" mode="IN" optional="false" />
+		<attribute name="roleTypeId" type="String" mode="IN" optional="false" />
+	</service>
+
+	<!-- This service is overriding an existing service in OrderServices.xml -->
+	<service name="getOrderedSummaryInformation" engine="java" max-retry="0" location="com.envelopes.party.PartyServices" invoke="getOrderedSummaryInformation">
+		<description>Get Ordered Summary Information</description>
+		<attribute name="partyId" type="String" mode="IN" optional="false"/>
+		<attribute name="roleTypeId" type="String" mode="IN" optional="true"/> <!-- defaults to PLACING_CUSTOMER -->
+		<attribute name="orderTypeId" type="String" mode="IN" optional="true"/> <!-- defaults to SALES_ORDER -->
+		<attribute name="statusId" type="String" mode="IN" optional="true"/> <!-- defaults to ORDER_COMPLETED -->
+		<attribute name="webSiteId" type="String" mode="IN" optional="true"/> <!-- defaults to envelopes -->
+		<attribute name="fromDate" type="Timestamp" mode="IN" optional="true"/>
+		<attribute name="thruDate" type="Timestamp" mode="IN" optional="true"/>
+		<attribute name="monthsToInclude" type="Integer" mode="IN" optional="true"/> <!-- if monthsToInclude specified along with fromDate/thruDate, will override fromDate/thruDate -->
+		<attribute name="totalOrders" type="Long" mode="OUT" optional="false"/>
+		<attribute name="totalGrandAmount" type="BigDecimal" mode="OUT" optional="false"/>
+		<attribute name="totalSubRemainingAmount" type="BigDecimal" mode="OUT" optional="false"/>
+		<attribute name="discountRate" type="BigDecimal" mode="OUT" optional="true"/>
+	</service>
+</services>

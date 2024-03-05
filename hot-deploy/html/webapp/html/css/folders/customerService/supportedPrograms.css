@@ -1,0 +1,12 @@
+.supportedPrograms table,
+.supportedPrograms table th,
+.supportedPrograms table td {
+	border: 1px solid #000000;
+}
+.supportedPrograms table {
+	width: 100%;	
+}
+.supportedPrograms table th,
+.supportedPrograms table td {
+	padding: 5px;	
+}

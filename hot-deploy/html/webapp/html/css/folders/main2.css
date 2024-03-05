@@ -1,0 +1,376 @@
+h1 {
+    font-size: 30px;
+}
+.main .squareProductContent {
+    display: block;
+}
+.main .squareProductContent p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.main .squareProductContent i.fa-bolt {
+	color: #4caf50;
+}
+.main .homepageInfoBar .foldersTabularRow {
+    width: auto;
+    margin: auto;
+}
+.main .homepageInfoBar > * {
+    border-right: 1px solid #ffffff;
+}
+.main .homepageInfoBar > *:last-child {
+    border-right: 0px;
+}
+.main .homepageLinkList a {
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px 10px;
+}
+.main .customProductLinks a {
+    width: 22%;
+}
+.main .customProductLinks {
+    text-align: center;
+}
+.moreCustomizedProductLinks a {
+    width: 18%;
+}
+.main .moreCustomizedProductImages img {
+    margin: auto;
+    display: block;
+}
+.main .foldersGuarantee > *:first-child > * {
+    display: inline-block;
+}
+.main .foldersGuarantee > *:first-child ul {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 47px;
+}
+.main .foldersGuarantee img {
+    display: block;
+    margin: auto;
+}
+.main .bottomHelpBar {
+    margin-bottom: 50px;
+}
+.main .bottomHelpBar i {
+    display: block;
+    font-size: 36px;
+}
+.main .bottomHelpBar a {
+    display: inline-block;
+    font-size: 18px;
+}
+.moreCustomizedProductLinks {
+    text-align: center;
+}
+.bnRevealContainer.foldersMain {
+    top: 20px !important;
+    width: 750px !important;
+    margin-left: calc(50% - 375px) !important;
+}
+.hpCarouselContainer {
+    width: 100%;
+    overflow: hidden;
+    height: 568px;
+    position: relative;
+}
+.hpCarouselContainer a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0%;
+}
+.hpCarouselContainer a:first-child {
+    z-index: 2;
+}
+.mobileHomePageCustomBlankBackground {
+    background-color: #1b3855;
+    height: 45px;
+}
+.foldersHomePageCustomButton, .foldersHomePageBlankButton {
+    background-color: #006bd7;
+    color: #ffffff !important;
+    padding: 6px;
+    font-size: 15px;
+    width: 40%;
+    display: inline-block;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.foldersHomePageCustomButton {
+    margin-right: 15px;
+}
+.sliderDots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    z-index: 3;
+}
+.sliderDots i{
+    color: #76cf49;
+    cursor: pointer;
+    margin: 0 2px;
+}
+.backgroundWhite {
+    background-color: #ffffff;
+}
+[bns-openchat] {
+    font-size: 18px;
+    cursor: pointer;
+}
+.homePageCustomBlankButtonsContainer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 5px;
+}
+    .homePageCustomBlankButtonsContainer a {
+        background-color: #063b63;
+        padding: 5px;
+        font-size: 16px;
+        margin: 0px;
+        color: #ffffff;
+        display: block;
+    }
+.squareProductContent {
+    height: 285px;
+    position: relative;
+}
+.homepageTopRow {
+    height: 275px !important;
+}
+.leftHomePageButton {
+    margin: 0 10px 0 0 !important;
+}
+.leftSideHomePage {
+    padding: 0 0px 0 0 !important;
+}
+.rightSideHomePage {
+    padding: 0 0 0 10px !important;
+}
+.hpBTS {
+    background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/hp_foldersBTS?fmt=png-alpha&wid=1210&hei=80');
+    height: 80px;
+}
+.hpBTS a {
+    font-size: 36px;
+    color: #000000;
+    font-weight: bold;
+    padding-top: 20px;
+    width: 100%;
+}
+.showMobileOnly {
+    display: none;
+}
+.hpTaxShopBanner, .hpGradShopBanner {
+    background-color: #063b63;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+.hpGradShopBanner {
+    background-color: #64893e !important;
+}
+.hpTaxShopBanner a, .hpGradShopBanner a {
+    color: #ffffff;
+}
+.shopTaxButton, .shopGradButton {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #063b63;
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: text-top;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.shopGradButton {
+    color: #64893e !important;
+}
+.shopTaxButton a:hover, .shopGradButton a:hover {
+    color: #063b63;
+}
+.exclusionsApply {
+    margin-top: 20px;
+    font-size: 16px;
+}
+.exclusionsApply a {
+    color: #00a4e4;
+}
+.topCustomQuotedProductBanner {
+    text-align: center;
+    background-color: #063b63;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.topCustomQuotedProductBannerText {
+    font-size: 28px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    font-weight: 500;
+}
+.topCustomQuotedProducts {
+    display: inline-block;
+    background-color: white;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+.topCustomQuotedProducts:last-child {
+    margin-right: 0px;
+}
+.topCustomQuotedProducts p {
+    color: #063b63;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.topCustomQuotedProductButton {
+    background-color: #76cf49;
+    color: white;
+    padding: 8px 0;
+    font-size: 14px;
+    width: 80%;
+    margin: 0 auto;
+}
+/* Certona Home Page Styles */
+[bns-certonalisthp] .certonaData .slideIt-container {
+    height: 350px;
+}
+[bns-certonalisthp] .certonaData h4 {
+    font-size: 28px;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+[bns-certonalisthp] .certonaData .topProductDisplay img {
+    margin: 5px auto !important;
+}
+[bns-certonalisthp] .certonaData .topProductDisplay .tpd-itemName p {
+    -webkit-line-clamp: 2;
+    height: 46px;
+    font-size: 18px;
+    font-weight: normal;
+}
+[bns-certonalisthp] .certonaData .topProductDisplay .tpd-itemName .certonaSize {
+    -webkit-line-clamp: 1;
+    height: 22px;
+    font-size: 15px;
+}
+[bns-certonalisthp] .certonaData .topProductDisplay .tpd-itemPrice {
+    color: #00a4e4;
+}
+[bns-certonalisthp] .certonaData .slideIt-container .fa-chevron-right, [bns-certonalisthp] .certonaData .slideIt-container .fa-chevron-left {
+    color: gray;
+    font-size: 28px;
+}
+[bns-carousel] > *:last-child > *[bns-carousel-dot-active] {
+    background-color: #818181;
+}
+@media only screen and (max-width: 1200px) {
+    .main .foldersGuarantee > *:first-child ul {
+        line-height: 36px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .noPaddingRight .marginRight5 {
+        margin-right: 0 !important;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    .homepageLinkList {
+        max-width: initial;
+    }
+    .hpCarouselContainer {
+        height: 642px;
+    }
+    .rightSideHomePage .foldersRow .noPaddingRight {
+        padding: 0 5px !important;
+    }
+    .moreCustomizedProductLinks a {
+        width: initial;
+    }
+}
+@media only screen and (max-width: 920px) {
+    .main .customProductLinks a {
+        width: initial;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bnRevealContainer.foldersMain {
+        top: 150px !important;
+        width: 400px !important;
+        margin-left: calc(50% - 200px) !important;
+    }
+    .main .squareProductContent img{
+        display: block;
+        margin: 0 auto;
+    }
+    .leftSideHomePage {
+        padding: 0 !important;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .topCustomQuotedProductBannerText {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .hpCarouselContainer {
+        height: 575px;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .hpCarouselContainer {
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .main .homepageLinkList {
+        display: block;
+    }
+        .main .homepageLinkList a {
+            display: inline-block;
+            text-align: center;
+            width: 42%;
+            vertical-align: top;
+        }
+    .hideOnMobile {
+        display: none;
+    }
+    .showMobileOnly {
+        display: block;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .main .homepageInfoBar > * {
+        border-right: 0px;
+    }
+    .main .blankProductsList {
+        margin-top: 25px;
+    }
+    .hpCarouselContainer {
+        height: 446px;
+    }
+    .bnRevealContainer.foldersMain {
+        top: 150px !important;
+        width: 300px !important;
+        margin-left: calc(50% - 150px) !important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .hpCarouselContainer {
+        height: 372px;
+    }
+    .hpBTS a {
+        font-size: 30px;
+        padding-top: 28px;
+    }
+}

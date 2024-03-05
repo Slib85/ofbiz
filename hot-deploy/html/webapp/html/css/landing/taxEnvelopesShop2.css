@@ -1,0 +1,247 @@
+.pageHeader {
+	position: relative !important;
+	padding: 0 !important;
+	border: none !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	text-align: center;
+}
+
+.pageHeader h1{
+	text-transform: uppercase;
+	top: 35%;
+	color: #638c36;
+	font-size: 50px;
+}
+
+.pageHeader p{
+	top: 60%;
+	font-size: 20px;
+	color: black;
+}
+
+.pageHeader h1, .pageHeader p{
+	position: absolute;
+	z-index: 1;
+	font-weight: bold;
+	width: 98%;
+	margin-left: -49%;
+	left: 50%;
+}
+
+.pageHeader img{
+	z-index: 0;
+	height: inherit;
+}
+
+.banner {
+	text-align: center;
+	background-color: #638c36;
+	padding: 16px;
+	margin-top: 15px;
+	font-size: 16px;
+}
+
+.banner a{
+	color: #ffffff;
+	font-weight: normal;
+}
+
+.banner span{
+	color: black;
+	font-size: 20px;
+	margin: 0 5px;
+}
+
+.nav2 {
+	background-color: #404f60;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.nav2 a{
+	color: #ffffff;
+	display: inline-block;
+	width: 33%;
+	font-size: 16px;
+}
+
+.nav2 span{
+	margin-left: 4%
+}
+
+.navBorder {
+	border-right: solid #242f3b 2px;
+}
+
+.folderTypeBanner {
+	margin-top: 25px;
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/folderTypeBanner?wid=1157');
+	color: #1e4c73;
+	padding: 20px;
+}
+
+.folderTypeBanner h2 {
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.folderTypeBanner p{
+	font-size: 18px;
+}
+
+.wrapper {
+	margin: 0 0 0 -5px;
+	width: calc(100% + 10px);
+	
+}
+
+.col5 {
+	width: 238px;
+	margin: 10px 5px 0;
+	padding: 0!important;
+	text-align: left;
+	background-color: #ffffff;
+	display: inline-block;
+	height: 310px;
+	vertical-align: top;
+}
+
+.product {
+	background-color: #ffffff;
+	padding: 10px 40px;
+	text-align: left;
+	color: #1e4c73;
+}
+
+.product img{
+	margin: 0 auto;
+	display: block;
+}
+
+.product p{
+	font-weight: bold;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.folderDetails {
+	font-size: 14px !important;
+	color: #a2a9ae;
+	font-weight: normal !important;
+}
+
+.folderPrice{
+	float: right;
+	color: #4ba7f1;
+	font-weight: normal !important;
+	font-size: 14px !important;
+}
+
+.product span{
+	font-size: 13px !important;
+	width: 50%;
+}
+
+.customButton {
+	background-color: #fc7e22;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px;
+	font-size: 17px;
+	margin: 10px auto 0;
+	width: 90%;
+}
+
+#regWindow {
+	clear: both;
+}
+
+.fa-caret-right {
+	margin-left: 2px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.pageHeader h1{
+		font-size: 40px;
+	}
+	.pageHeader p{
+		font-size: 18px;
+		top: 56%;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.pageHeader h1{
+		font-size: 20px;
+	}
+	.pageHeader p{
+		font-size: 8px;
+	}
+	.banner{
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
+	}
+	.banner a{
+		display: block;
+		padding: 5px 0;
+		margin: auto;
+		border-bottom: 1px solid black;
+	}
+	.banner span{
+		display: none;
+	}
+	.folderTypeBanner p{
+		font-size: 14px;
+	}
+	.nav2 a{
+		display: block;
+		width: 100%;
+		border-right: none;
+		border-bottom: solid 1px white;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.col5 {
+		margin: 10px 20% 0 !important;
+	}
+}
+#envTaxShopBanner{
+	display: table;
+	width: 100%;
+}
+#envTaxShopBanner div.envDiv{
+	display: table-cell;
+	width: 33.333333%;
+	vertical-align: middle;
+	position: relative;
+}
+#envTaxShopBanner div.envDiv h1, 
+#envTaxShopBanner div.envDiv p{
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	left: unset;
+	top: unset;
+}
+#envTaxShopBanner div.envDiv iframe{
+	width: 60%;
+	z-index: 1;
+	position: absolute;
+	margin-right: 65px;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border: #638c36 5px solid;
+	background-color: #638c36;
+}
+@media only screen and (max-width: 768px) {
+	#envTaxShopBanner div.envDiv iframe{
+		display:none !important;
+	}
+}

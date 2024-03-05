@@ -1,0 +1,90 @@
+
+package com.bigname.cxml.fulfill;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for ServiceEntryDetailLineSpecialHandling complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ServiceEntryDetailLineSpecialHandling">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{}Description" minOccurs="0"/>
+ *         &lt;element ref="{}Money"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ServiceEntryDetailLineSpecialHandling", propOrder = {
+    "description",
+    "money"
+})
+public class ServiceEntryDetailLineSpecialHandling {
+
+    @XmlElement(name = "Description")
+    protected Description description;
+    @XmlElement(name = "Money", required = true)
+    protected Money money;
+
+    /**
+     * Gets the value of the description property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Description }
+     *     
+     */
+    public Description getDescription() {
+        return description;
+    }
+
+    /**
+     * Sets the value of the description property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Description }
+     *     
+     */
+    public void setDescription(Description value) {
+        this.description = value;
+    }
+
+    /**
+     * Gets the value of the money property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Money }
+     *     
+     */
+    public Money getMoney() {
+        return money;
+    }
+
+    /**
+     * Sets the value of the money property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Money }
+     *     
+     */
+    public void setMoney(Money value) {
+        this.money = value;
+    }
+
+}

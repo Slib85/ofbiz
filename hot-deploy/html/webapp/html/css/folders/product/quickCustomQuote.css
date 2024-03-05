@@ -1,0 +1,14 @@
+.foldersContainer.foldersContainerLimiter.quickCustomQuote {
+    max-width: 500px
+}
+    .quickCustomQuoteHeader {
+        background-color: #ffffff;
+    }
+    .quickCustomQuote textarea,
+    .quickCustomQuote .bigNameSelect,
+    .quickCustomQuote input {
+        background-color: #ffffff;
+    }
+    .quickCustomQuote form .foldersButton {
+        display: block;
+    }

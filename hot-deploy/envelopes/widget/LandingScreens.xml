@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<!-- Landing Pages -->
+	<screen name="rachaelHaleShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Rachael Hale Shop | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/rachaelHaleShop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="aboutRachaelHaleBrand">
+		<section>
+			<actions>
+				<set field="titleProperty" value="About Rachael Hale Brand | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/aboutRachaelHaleBrand.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="beOfficeReadyShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Be Office Ready Shop | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/beOfficeReadyShop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="summerShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="The Summer Shop | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/summerShop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="graduationShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="The Graduation Shop | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/graduationShop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="packagingAndMailersShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Packaging &amp; Mailers Shop | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/packagingAndMailersShop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="weddingShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="The Wedding Shop | Wedding Invitations | Save the Date | RSVP Cards"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/wedding-shop.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/wedding-shop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="productReviews">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Product Reviews"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/productReviews.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/productReviews.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="backToSchool">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Back To School Shop"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/backToSchool.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/backToSchool.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="shopByBrand">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Shop By Brand"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/shopByBrand.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="directMailing">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Direct Mailing"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/directMailing.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="luxpaper">
+		<section>
+			<actions>
+				<set field="titleProperty" value="LUXPaper"/>
+				<set field="descProperty" value="Looking for premium paper and cardstock options for your envelopes? LUXPaper features four collections of high quality, unique styles and colors. Shop our inventory today."/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/luxpaper.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="social">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/social.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="top-10">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/top-10.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="eventplanning">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/event_planning.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="twentyFiveSteals">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/twentyFiveSteals.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="backToBusinessShop">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/backToBusinessShop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="holidayShop">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/holiday_shop_redesign.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="liners">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/liners.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="peelAndPress">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Peel &amp; Press Envelopes | Peel &amp; Seal Envelopes | Self Seal Envelopes | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/peelAndPress.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/peelAndPress.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="swatchbook">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Swatchbook Giveaway | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/swatchbook.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/swatchbook.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="swatchbookThankYou">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Swatchbook Giveaway | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/swatchbook.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/swatchbookThankYou.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="photoBusiness">
+		<section>
+			<actions>
+				<set field="titleProperty" value="5 Surefire Ways to Grow Your Photography Business | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/photoBusiness.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/photoBusiness.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="photoThankYou">
+		<section>
+			<actions>
+				<set field="titleProperty" value="5 Surefire Ways to Grow Your Photography Business | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/photoBusiness.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/photoThankYou.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="whitePaper">
+		<section>
+			<actions>
+				<set field="titleProperty" value="7 Easy Steps to Increase Your Direct Mail Open Rate &amp; Conversions | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/whitePaper.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="whitePaperThankYou">
+		<section>
+			<actions>
+				<set field="titleProperty" value="7 Easy Steps to Increase Your Direct Mail Open Rate &amp; Conversions | Envelopes.com"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/whitePaperThankYou.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="year-end-swatchbook">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Year End Swatchbook Giveaway | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/year-end-swatchbook.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/year-end-swatchbook.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="year-end-swatchbookThankYou">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Year End Swatchbook Giveaway | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/year-end-swatchbook.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/year-end-swatchbookThankYou.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="accountingEnvelopes">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Accounting Envelopes | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/accountingEnvelopes.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/accountingEnvelopes.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="photographerWorkflow">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Accounting Envelopes | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/photographerWorkflow.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/photographerWorkflow.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="graphicDesigners">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Graphic Designers | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/graphicDesigners.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/graphicDesigners.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="corporatePrinters">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Corporate Printers | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/corporatePrinters.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/corporatePrinters.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="bulkEnvelopes">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Bulk Envelopes | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/bulkEnvelopes.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/bulkEnvelopes.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="taxEnvelopesShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Tax Envelopes Shop | Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/landing/taxEnvelopesShop.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/landing/taxEnvelopesShop.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

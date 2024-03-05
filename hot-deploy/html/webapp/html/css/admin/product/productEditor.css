@@ -1,0 +1,114 @@
+.table a {
+    text-decoration: none;
+}
+.table {
+    font-size: 12px;
+}
+.table td {
+    white-space: nowrap;
+}
+.assets {
+    text-align: center;
+}
+.assets .assetList {
+    position: relative;
+}
+.assets input[type="text"] {
+    padding: 2px 4px;
+}
+.assets select {
+    padding: 4.5px 4px;
+}
+
+/*    .assets > div > label {
+        text-decoration: underline;
+    }*/
+
+.assets .assetRow {
+    border: 1px solid #cccccc;
+    text-align: left;
+    padding: 5px 15px 2px;
+    position: relative;
+    background-color: #ffffff;
+    margin-top: -1px;
+}
+.assets .assetRow:first-child {
+    margin-top: 0;
+}
+.assets .assetRow:hover {
+    background-color: #99ff99;
+}
+.assets .assetRow:hover .design-asset-row {
+    background-color: #8af18a;
+    border-color: #99ff99;
+}
+.assets .design-asset-row:hover {
+    background-color: #80e680 !important;
+}
+.assets .assetRow>* {
+    margin: 0 0 3px;
+    content-box: border-box;
+}
+.assets .assetRow label {
+    display: block;
+    padding-top: 0px;
+    margin: 0;
+    font-size: 12px;
+    font-style: italic;
+    white-space: nowrap;
+}
+.assets .assetRow i.fa-times, .assets .assetRow i.fa-arrows {
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0;
+}
+.assets .assetRow i.fa-times {
+    right: 7.5px;
+}
+.assets .assetRow i.fa-arrows {
+    left: 7.5px;
+}
+
+/*        .assets .design-asset-row i.fa-times {
+            right: -22.5px;
+        }
+        .assets .assetRow i.fa-arrows {
+            left: -22.5px;
+        }*/
+
+.assets select {
+    width: 100%;
+}
+.assets .btn {
+    margin-top: 10px;
+}
+.assetList input[type='text'] {
+    width: 100%;
+}
+.assetList a.add_design-asset {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+.design-asset-row {
+    background: #efefef;
+    margin: 5px 0 0;
+    padding: 5px 15px 2px;
+    position: relative;
+}
+.design-asset-row, .design-asset-row input {
+    border: 1px solid #cecece;
+}
+.design-asset-row > * {
+    padding: 0 15px;
+    margin-bottom: 3px;
+}
+
+/* Helpers / Modifiers */
+
+.no-right-padding {
+    padding-right: 0 !important;
+}

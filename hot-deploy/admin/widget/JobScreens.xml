@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+    <screen name="jobs">
+        <section>
+            <actions>
+                <set field="screenGroup" value="jobs"/>
+                <set field="titleProperty" value="Jobs"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/jobs/jobs.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/jobs/jobs.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="jobMessages">
+        <section>
+            <actions>
+                <set field="screenGroup" value="jobMessages"/>
+                <set field="titleProperty" value="Job Messages"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/jobs/jobMessages.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/jobs/jobMessages.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+</screens>

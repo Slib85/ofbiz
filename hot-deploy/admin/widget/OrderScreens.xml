@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="orderList">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Orders"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/orderList.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/orderList.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="vendorOrderList">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Vendor Orders"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/vendorOrderList.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/vendorOrderList.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="viewOrder">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="View Order"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/viewOrder.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/viewOrder.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="viewOrderLegacy">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="View Order"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/viewOrder.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/viewOrderLegacy.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="channelSalesReport">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Channel Sales Report"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/channelSalesReport.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/channelSalesReport.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="createOrder">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Create Order"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/createOrder.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/createOrder.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="sampleOrder">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Create Sample Order"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/sampleOrder.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/sampleOrder.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="workOrder">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Manage Work Order"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/workOrder.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/workOrder.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="workOrderAdmin">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Work Order Admin"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/workOrderAdmin.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/workOrderAdmin.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="reAuth">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="ReAuthorizations"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/reAuth.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/reAuth.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="plateSchedule">
+		<section>
+			<actions>
+				<set field="screenGroup" value="prepress"/>
+				<set field="titleProperty" value="Plate Schedule"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/plateSchedule.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/plateSchedule.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="plateReceipt">
+		<section>
+			<actions>
+				<set field="screenGroup" value="prepress"/>
+				<set field="titleProperty" value="Plate Receipt"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/plateReceipt.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="empty-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/plateReceipt.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="plateEdit">
+		<section>
+			<actions>
+				<set field="screenGroup" value="prepress"/>
+				<set field="titleProperty" value="Plate Edit"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/plateEdit.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/plateEdit.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="prepress">
+		<section>
+			<actions>
+				<set field="screenGroup" value="prepress"/>
+				<set field="titleProperty" value="Prepress"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/prepress.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/prepress.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="pressMan">
+		<section>
+			<actions>
+				<set field="screenGroup" value="pressMan"/>
+				<set field="titleProperty" value="PressMan Stats"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/pressMan.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/pressMan.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="prepressOrderList">
+		<section>
+			<actions>
+				<set field="screenGroup" value="prepress"/>
+				<set field="titleProperty" value="Prepress"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/prepressOrderList.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/prepressOrderList.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="persistentCartAssist">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Persistence Cart"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/cartAssistance.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/cartAssistance.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="importOrders">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Import Orders"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/orders/importOrders.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/orders/importOrders.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="cimpressOrders">
+		<section>
+			<actions>
+				<set field="screenGroup" value="orders"/>
+				<set field="titleProperty" value="Import Orders"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/cimpress/cimpressOrders.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/cimpress/cimpressOrders.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

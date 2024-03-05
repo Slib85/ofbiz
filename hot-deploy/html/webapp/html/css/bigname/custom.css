@@ -1,0 +1,42 @@
+/*
+#header .logo-brand {
+	float: none;
+	margin: 22px 0px;
+	line-height: initial;
+	text-align: center;
+	display: block;
+}
+	#header .logo-brand img {
+		float: none;
+	}
+	*/
+.client_logo {
+	width: 33.333333333%;
+	text-align: center;
+	vertical-align: bottom;
+	display: inline-block;
+}
+	.client_logo img {
+		max-width: 90%;
+	}
+@media only screen and (max-width: 767px) {
+	#header .container {
+		padding: 0px 15px;
+	}
+	.menuzord-menu li {
+		padding: 0px;
+	}
+		.menuzord-menu li a {
+			line-height: 45px;
+			font-size: 14px;
+		}
+	.client_area {
+		padding-top: 10px;
+	}
+		.client_logo {
+			width: 100%;
+			display: block;
+			margin: 0px;
+			padding: 20px;
+		}
+}

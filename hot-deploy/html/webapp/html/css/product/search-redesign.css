@@ -1,0 +1,215 @@
+.search .results .newRibbon,
+.search .results .saleRibbon.search {
+	background-color: #f1f1f1;
+}
+
+.search .searchResponse {
+	font-size: 26px;
+	line-height: 26px;
+}
+
+.search .results {
+	margin: 20px 0 20px 0;
+}
+	.search .mobileSearchImageContainer a {
+		display: block;
+		margin-top: 6px;
+	}
+	.search .results .clearanceRibbon,
+	.search .results .saleRibbon,
+	.search .results .newRibbon {
+		color:  #ffffff;
+		text-transform: uppercase;
+		position:  absolute;
+		padding: 0px 10px;
+		width: 85px;
+		left:  0px;
+		top:  10px;
+		z-index: 10;
+	}
+	.search .results .newRibbon {
+		background-color: #00a4e4;
+	}
+	.search .results .saleRibbon {
+		background-color: #FC7E22;
+	}
+	.search .results .clearanceRibbon {
+		background-color: #ef453c;
+	}
+		.search .results .clearanceRibbon .ribbonTop,
+		.search .results .saleRibbon .ribbonTop,
+		.search .results .newRibbon .ribbonTop {
+			position:  absolute;
+			border-right: 10px solid transparent;
+			border-left: 10px solid transparent;
+			top:  0px;
+			z-index:  10;
+			right: -10px;
+		}
+		.search .results .newRibbon .ribbonTop {
+			border-top: 10px solid #00a4e4;
+		}
+		.search .results .saleRibbon .ribbonTop {
+			border-top: 10px solid #FC7E22;
+		}
+		.search .results .clearanceRibbon .ribbonTop {
+			border-top: 10px solid #ef453c;
+		}
+		.search .results .clearanceRibbon .ribbonBottom,
+		.search .results .saleRibbon .ribbonBottom,
+		.search .results .newRibbon .ribbonBottom {
+			position:  absolute;
+			border-right: 10px solid transparent;
+			border-left: 10px solid transparent;
+			top: 10px;
+			z-index:  10;
+			right: -10px;
+		}
+		.search .results .newRibbon .ribbonBottom {
+			border-bottom: 10px solid #00a4e4;
+		}
+		.search .results .saleRibbon .ribbonBottom {
+			border-bottom: 10px solid #FC7E22;
+		}
+		.search .results .clearanceRibbon .ribbonBottom {
+			border-bottom: 10px solid #ef453c;
+		}
+	.search .results .newRibbon,
+	.search .results .saleRibbon {
+		width: 85px;
+	}
+.search .results a.product-image {
+	height: 119px;
+	overflow: hidden;
+	max-height: 119px;
+	display: block;
+}
+.search .results ul {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.search .results ul li {
+	list-style: none;
+	display: inline-block;
+	background-color: #fff;
+	width: 230px;
+	margin: 15px;
+	text-align: left;
+	position: relative;
+	border: 1px solid #e0e0e0;
+}
+	.search .results ul li > a {
+		padding: 15px;
+		display: inline-block;
+	}
+
+.search .results ul li img.prodImage {
+	display: block;
+	max-width: 175px;
+	max-height: 109px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.search .results ul li h2 {
+	font-size: 20px;
+	max-height: 55px;
+	height: 55px;
+	overflow: hidden;
+	line-height: 25px;
+}
+
+.search .results ul li h3 {
+	font-size: 16px;
+    /* padding-bottom: 4px; */
+    height: 20px;
+    max-height: 20px;
+	overflow: hidden;
+	color: #1a345f;
+}
+
+.search .results ul li div.ratings {
+	float: left;
+}
+
+.search .results ul li div.price {
+    font-size: 14px;
+    color: #1a345f;
+	float: right;
+	font-weight: 700;
+}
+
+
+.search .tablet-desktop-only .top-btn, .search .tablet-desktop-only .bottom-btn {
+    display: none;
+}
+
+.search .jqs-optimizely-01 .tablet-desktop-only .ratings {
+    display: none;
+}
+
+.search .jqs-optimizely-01 .tablet-desktop-only .price{
+    position: relative;
+    float: left;
+    top: 43px;
+}
+
+.search .jqs-optimizely-01 .tablet-desktop-only .top-btn{
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: -10px;
+    right: -125px;
+    cursor: pointer;
+}
+
+.search .jqs-optimizely-01 .tablet-desktop-only .bottom-btn{
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+
+
+.search .jqs-item .mobile-only-table > div {
+	display: table-cell;
+	vertical-align: top;
+}
+	.search .jqs-item .item-size {
+		color: #000000;
+		display: inline-block;
+	}
+
+@media only screen and (max-width: 1023px) {
+	.search .searchResponse {
+		font-size: 20px;
+		line-height: 20px;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.search .results .clearanceRibbon,
+	.search .results .saleRibbon,
+	.search .results .newRibbon {
+		top: 0px;
+	}
+	.search .results ul li img.prodImage {
+		max-width: 70px;
+	}
+
+	.search .results ul li {
+		width: 300px;
+	}
+	.search .results ul li h2 {
+		width: 190px;
+	}
+}

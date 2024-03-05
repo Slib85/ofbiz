@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<!-- Top Level Screens -->
+	<screen name="madeToOrder">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Custom Envelopes | Unique Envelope Sizes, Windows, Flaps | Made to Order"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/services/custom_quote_shop.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/made-to-order.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="largeQuantityOrders">
+		<section>
+			<actions>
+				<set field="shopName" value="lqo"/>
+				<set field="titleProperty" value="Custom Envelopes | Unique Envelope Sizes, Windows, Flaps | Made to Order"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/services/custom_quote_shop.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/made-to-order.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="loyalty-discounts">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Loyalty Discounts"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/loyalty-discounts.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="nonprofitdiscount">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Non-Profit Discount Program"/>
+				<set field="trade_name" value="nonProfit"/>
+				<set field="trade_name_display" value="Non-Profit"/>
+				<set field="amount_saved" value="10"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/non-profit-discount.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="commerceConcierge">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Commerce Concierge | Envelopes.com Full-Service Concierge"/>
+				<set field="trade_name" value="trade_pro"/>
+				<set field="trade_name_display" value="Commerce Concierge"/>
+				<set field="amount_saved" value="10"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/commerceConcierge.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="bulkOrdering">
+		<section>
+			<actions>
+				<set field="trade_name" value="trade_pro"/>
+				<set field="trade_name_display" value="Bulk Ordering"/>
+				<set field="amount_saved" value="10"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/bulkOrdering.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="designoptions">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Envelope Printing at Envelopes.com - Customized Envelopes"/>
+				<set field="descProperty" value="Great new unique envelopes at Envelopes.com"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/services/design-online.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/design-online.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="white-ink">
+		<section>
+			<actions>
+				<set field="titleProperty" value="White Ink Printing | Print White Ink on Dark Papers and Envelopes"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/white-ink.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="addressing">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Recipient Addressing | Digital Calligraphy and Envelope Addressing Services"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/variable-addressing.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="extracts">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/services/extracts.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/extracts.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="restaurants">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/services/restaurants.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/restaurants.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="coupons">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/services/coupons.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/coupons.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="couponList">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/services/couponList.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="data-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/services/couponList-redesign.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

@@ -1,0 +1,747 @@
+.productContent h2{
+	font-size: 28px;
+	padding-left: 20px;
+}
+.imageDisplay .fa-search-plus{
+	top: 0 !important;
+}
+.pullRight {
+	float: right;
+}
+.width24 {
+	width: 34%;
+}
+.headerRightContent {
+	display: inline-block;
+	width: 89%;
+	text-align: right;
+}
+.headerRightContent i {
+	color: #37d378;
+}
+.headerRightContent h5 {
+	font-size: 14px;
+}
+.invisible {
+	visibility: hidden;
+}
+.headerPrice, .button{
+	display: inline-block;
+}
+.directMailingHeaderButton {
+	background-color: #858d92;
+	text-transform: none;
+	font-size: 14px;
+	padding: 10px !important;
+	vertical-align: top;
+	float: right;
+}
+.directMailingHeaderButton:hover {
+	background-color: #858d92;
+}
+.headerPrice h4{
+	font-size: 16px;
+	font-weight: bold;
+}
+.headerPrice p{
+	font-size: 12px;
+	line-height: 10px;
+}
+.inline-list {
+	border-bottom: 1px solid #b6bcb8;
+	padding: 0 20px;
+}
+.productContentRight {
+	width: 400px !important;
+	min-width: 400px !important;
+}
+.productSideBarSection {
+	background: #f8f8f8;
+	padding: 15px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.product .sidebarPanel {
+	right: -100%;
+}
+.stepBack, .stepNext {
+	display: inline-block;
+	cursor: pointer;
+	color: #009cdd !important;
+}
+.sidebarHeader {
+	font-weight: bold;
+	font-size: 24px;
+	border-bottom: 2px solid #009cdd;
+}
+.productSideBarSection h5{
+	padding: 5px 0;
+	color: #000000;
+	margin-top: 5px;
+	font-size: 16px;
+}
+.selectListParent {
+	font-size: 18px;
+	cursor: pointer;
+	border: 1px solid #dadada;
+	border-right: 86px solid #dadada;
+	margin: 5px 0;
+}
+.selectListParent:hover {
+	border: 1px solid #dadada !important;
+}
+.sidebarToggle {
+	background: #ffffff;
+	height: auto;
+	padding: 10px 42px 10px 10px;
+	border-width: 1px;
+	position: relative;
+}
+.sidebarToggle:after {
+	content: '\f0da';
+    font-family: FontAwesome;
+    font-size: 22px;
+    color: #009cdd;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .25s ease;
+}
+.sidebarPanel {
+	width: 420px !important;
+	border: 1px solid #fc7e22;
+}
+.noSlideOut {
+	cursor: default;
+}
+.noSlideOut:after {
+	content: none !important;
+}
+.placeholder {
+	font-size: 14px;
+}
+.numberOfPages i, .numberOfPages div{
+	display: inline-block;
+}
+.numberOfPages {
+	background-color: #ffffff;
+	width: 42.5%;
+	border: 1px solid #dadada;
+}
+.numberBackground {
+	background-color: #858d92;
+	padding: 10px;
+}
+.numberBackground i{
+	color: #ffffff;
+	font-size: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.numberOfPages .placeholder{
+	padding: 10px;
+}
+.dmQuantity .placeholder {
+	color: #f2802a;
+	font-weight: bold;
+	vertical-align: top;
+}
+.dmQuantity .placeholder, .quantityPrice {
+	display: inline-block;
+}
+.dmQuantity > div:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+.jqs-addressing-service-charge {
+	display: none;
+}
+.quantityPrice {
+	vertical-align: top;
+	text-align: right;
+	float: right;
+}
+.quantityPrice h4{
+	font-size: 14px;
+	font-weight: bold;
+}
+.quantityPrice p{
+	font-size: 11px;
+	line-height: 10px;
+}
+.displayTable {
+	display: table;
+}
+.productSideBarSection .displayTable h3{
+	color: #009cdd;
+}
+.finalPrice {
+	display: table-cell;
+	text-align: right;
+	width: 83%;
+	vertical-align: middle;
+}
+.finalPrice h4 {
+	font-size: 15px;
+	font-weight: bold;
+}
+.finalPrice p{
+	font-size: 11px;
+	line-height: 10px;
+}
+.saveExitButton {
+	background-color: #858d92;
+	margin-right: 10px;
+}
+.saveExitButton:hover {
+	background-color: #858d92;
+}
+.saveExitButton, .nextButton {
+	text-transform: none;
+	font-size: 15px;
+	vertical-align: top;
+	display: inline-block;
+	padding: 10px !important;
+	width: 48%;
+	cursor: pointer;
+}
+.nextButton {
+	background-color: #f2802a;
+}
+.nextButton:hover {
+	background-color: #f2802a;
+}
+.width100Percent {
+	width: 100%;
+}
+/*.sidebarPanel {
+	position: fixed;
+	height: 100% !important;
+	overflow: hidden !important;
+	top: 0;
+	z-index: 9999;
+	box-shadow: 0 0 25px rgba(0, 0, 0, .25);
+	overflow-y: scroll;
+	left: 100%;
+	opacity: 0;
+	display: block;
+	width: 35%;
+}*/
+.stickyTextureHeading h4{
+	background: #009cdd;
+	color: #ffffff !important;
+	text-align: center;
+	font-weight: bold;
+	padding: 8px;
+	border: none !important;
+	margin: 0 !important;
+}
+.stickyTextureHeading h4 .fa{
+	display: inline-block;
+	padding: 5px 16px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+.stickyTextureHeading {
+	position: relative;
+	z-index: 9999;
+	border-bottom: 1px solid #e1e1e1;
+	width: 100%;
+}
+.colorTextureBody {
+	padding: 0 15px 15px;
+	font-size: 18px;
+	background: #ffffff;
+	height: 100%;
+	overflow-y: scroll;
+}
+.colorTextureBodyInner {
+	height: auto;
+	overflow-x: hidden;
+	border-bottom: 1px solid #e1e1e1;
+}
+.sidebarPanel .selectListItem {
+	margin: 10px 0;
+	background: rgba(255, 255, 255, 0);
+	padding: 10px 42px 10px 10px;
+	border-width: 1px;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid #c8c8c8;
+}
+.selectListItem:nth-child(even) {
+    background-color: #f6f6f6;
+}
+.sidebarPanel .selectListItem:hover{
+	border: solid 1px #fc7e22;
+}
+.selectCheckbox {
+	display: inline-block;
+	position: relative;
+	height: 20px;
+	width: 20px;
+	border: 1px solid #6c6c6c;
+	border-radius: 4px;
+	margin-bottom: -4px;
+	background: #ffffff;
+	cursor: pointer;
+}
+.displayTable .width30 {
+	vertical-align: middle;
+	display: table-cell;
+}
+.width30 {
+	width: 30px;
+}
+.directMailingUploadBox i{
+	font-size: 36px;
+	color: #00a4e4;
+}
+.directMailingUploadBox {
+	background-color: #ffffff;
+	padding: 20px;
+}
+.loggedInUploadedFiles {
+	width: 100%;
+}
+.uploadHeader p{
+	width: 32%;
+	display: inline-block;
+	font-size: 14px;
+}
+.uploadHeader p:last-child{
+	text-align: right;
+}
+.filesAfterUpload p{
+	font-size: 12px;
+	width: 27%;
+	vertical-align: middle;
+}
+.filesAfterUpload p, .filesAfterUpload i {
+	display: inline-block;
+}
+.filesAfterUpload input{
+	margin: 5px 5px;
+}
+.filesAfterUpload p:last-child {
+	text-align: right;
+	width: 35% !important;
+}
+.filesAfterUpload:nth-child(even){
+	background-color: #ffffff;
+}
+.notLoggedIn {
+	padding: 20px 20px 5px 20px;
+}
+.notLoggedIn a{
+	text-decoration: underline;
+}
+.directMailingAddress textarea,
+#sidebar-returnAddress textarea {
+	width: 100%;
+	height: 116px;
+	border: 2px solid #f1f1f1;
+	padding: 5px 10px;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+	resize: none;
+}
+.returnAddressInstructions {
+	font-size: 14px;
+	color: #000000;
+	margin-bottom: 5px;
+}
+.returnAddressButton {
+	text-transform: none;
+	font-size: 15px;
+	display: inline-block;
+	padding: 10px;
+	width: 50%;
+	cursor: pointer;
+	background-color: #f2802a;
+}
+.returnAddressButton:hover {
+	background-color: #f2802a;
+}
+.directMailingAddress a {
+	margin: 0 0 0 66%;
+}
+.mailingAddressTemplate, .mailingAddressTemplate2 {
+	margin: 0 12%;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.mailingAddressTemplate i{
+	font-size: 16px;
+}
+.directMailingAddress h4, [bns-addressing] h5, .directMailingProof h5 {
+	font-weight: bold;
+	font-size: 14px;
+}
+[bns-proofproduct] h5 {
+	font-size: 14px;
+}
+.downloadProofButton {
+	text-transform: none;
+	width: 100%;
+	background-color: #858d92;
+	font-size: 15px;
+	font-weight: 400;
+	padding: 10px !important;
+	margin-bottom: 5px !important;
+}
+.downloadProofButton:hover {
+	background-color: #858d92;
+}
+.directMailingProof a{
+	margin: 0 0 0 35%;
+	text-decoration: underline;
+}
+.proofApproval input, .proofApproval p, .proofInitials input, .proofInitials p {
+	display: inline-block;
+}
+.directMailingProofSubmission {
+	padding: 20px;
+	background-color: #ffffff;
+}
+.proofApproval input{
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+}
+.proofApproval p {
+	font-size: 14px;
+	color: #000000;
+	font-weight: bold;
+	width: 80%;
+	margin-left: 10px;
+	line-height: 16px;;
+}
+.proofInitials p {
+	font-size: 12px;
+	color: #000000;
+	font-weight: bold;
+}
+.proofInitials input{
+	height: 30px;
+	width: 80px;
+}
+.directMailingProductSummary {
+	width: 100%;
+}
+.productSummaryLeft, .productSummaryRight {
+	width: 49%;
+	display: inline-block;
+}
+.productSummaryLeft {
+	vertical-align: top;
+}
+.productSummaryLeft p, .productSummaryRight p {
+	font-size: 14px;
+}
+.productSummaryLeft i, .productSummaryRight i {
+	color: #009cdd;
+}
+.productSummaryLeft h5, .productSummaryRight h5 {
+	font-weight: bold;
+}
+.selectListItem[selection-selected="true"] .selectCheckbox:before {
+	content: '\f00c';
+    font-family: FontAwesome;
+    display: inline-block;
+    color: #113e60;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.closePanel {
+	opacity: '0';
+    left: 100%;
+}
+.design-file span i{
+	font-size: 18px !important;
+	padding: 5px 10px;
+}
+.absolute.remove {
+	right: 0;
+}
+.mailingListButton {
+	text-transform: none;
+    width: 47%;
+    padding: 14px 0 !important;
+    font-size: 18px;
+    background-color: #737373;
+}
+.mailingListButton:hover {
+	background-color: #737373;
+}
+.mailingListButton:first-child{
+	margin-right: 8px;
+}
+.mailingAddressTemplate2 {
+	margin: 0 22% !important;
+}
+.uploadListHeader p{
+	width: 49%;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+}
+.filesAfterUpload p, .listUpload p{
+	font-size: 12px;
+	width: 27%;
+	vertical-align: middle;
+}
+.filesAfterUpload p, .filesAfterUpload i, .listUpload p, .listUpload i {
+	display: inline-block;
+}
+.listUpload input {
+	margin: 5px 15px 5px 5px;
+}
+.filesAfterUpload p:last-child, .listUpload p:last-child {
+	text-align: right;
+	width: 35% !important;
+}
+.filesAfterUpload:nth-child(even), .listUpload:nth-child(even) {
+	background-color: #ffffff;
+}
+.listUpload:nth-child(even) {
+	background-color: #f1f1f1;
+}
+.uploadListHeader p:first-child {
+	padding-left: 35px;
+}
+.uploadListHeader p:last-child {
+	padding-left: 15px;
+}
+
+
+/* The Modal (background) */
+.documentModal, .addressListModal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+/* The Close Button */
+.documentClose {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+/* The Modal (background) */
+.documentModal, .addressListModal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+/* The Close Button */
+.documentClose {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.documentClose:hover,
+.documentClose:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#documentProgressDiv, #addressProgressDiv {
+	width: 100%;
+	background-color: #ddd;
+}
+
+.documentClose:hover,
+.documentClose:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#documentProgressDiv, #addressProgressDiv {
+	width: 100%;
+	background-color: #ddd;
+}
+
+#documentProgressBar, #addressProgressBar {
+	width: 1%;
+	height: 30px;
+	background-color: #4CAF50;
+	color: #d1edff;
+}
+.downloadTemplate {
+	text-align: center;
+    color: #509bd2;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.downloadTemplate a {
+	font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+}
+.downloadTemplate i {
+	font-size: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.enhancedImageBody {
+	overflow-y: scroll;
+    height: 530px;
+}
+[bns-pricelist] {
+	display table;
+	width: 100%;
+}
+#sidebar-quantity .selectListItem > div{
+	display: table-cell;
+}
+#sidebar-quantity .selectListItem:after{
+	float: none;
+	content: '';
+	clear: both;
+}
+.quantityDisplay {
+	width: 88px;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.checkbox {
+	width: 20px;
+}
+.priceDisplay {
+	width: 110px;
+    text-align: center;
+    font-size: 15px;
+    color: #fc7e22;
+}
+.pricePerUnitDisplay {
+	width: 110px;
+    text-align: center;
+    font-size: 12px;
+}
+#sidebar-quantity .productCaretSidebar {
+	display: table-cell;
+    width: 18px;
+    text-align: center;
+}
+.dmButton {
+	background-color: #f2802a;
+	width: 100%;
+	text-transform: none;
+}
+.dmButton:hover {
+	background-color: #f2802a;
+}
+.productSideBarSection[bns-dmgetquote] p {
+	color: #000000;
+	margin-top: 5px;
+	font-size: 16px;
+}
+[bns-dmgetquote] .row input {
+	background-color: #ffffff;
+}
+.productSideBarSection[bns-dmgetquote] textarea{
+	background-color: #ffffff;
+}
+@media only screen and (max-width: 1024px) {
+	.headerRightContent {
+		width: 85%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.productContent .productContentRight {
+		display:  block !important;
+		width: 100% !important;
+		padding-left: 0 !important;
+		min-width: fit-content !important;
+	}
+	.inline-list .width24 {
+		width: 100% !important;
+	}
+	.productContent .productContentLeft {
+		display: block !important;
+		min-width: fit-content !important;
+	}
+	.finalPrice {
+		text-align: initial;
+		width: 100%;
+		padding-left: 20px;
+	}
+	.finalPrice h4 {
+		display: inline-block;
+		vertical-align: sub;
+	}
+	.finalPrice p {
+		display: inline-block;
+		margin-left: 10px;
+		vertical-align: sub;
+	}
+	.headerRightContent {
+		width: 100%;
+		text-align: left;
+	}
+	.directMailingHeaderButton {
+		float: none;
+		display: block;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.saveExitButton, .nextButton {
+		display: block;
+		width: 100%;
+	}
+	.productContent h2 {
+		font-size: 26px;
+	}
+}
+

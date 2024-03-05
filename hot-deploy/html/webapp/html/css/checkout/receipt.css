@@ -1,0 +1,122 @@
+/* BEGIN RECEIPT */
+.receipt .certonaData.certonaCart.matchingProducts {
+    display: none;
+}
+.receipt {
+	padding: 30px 50px;
+	background-color: #f1f1f1;
+	max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px 10px !important;
+}
+	.generic-container {
+		border: 1px solid #dee0e3;
+		background-color: #ffffff;
+	}
+
+	.receipt .createdAccountText {
+		color: #00a4e4;
+	}
+	.receipt h3 {
+		color: #000000;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	/* BEGIN BILLING AND SHIPPING INFORMATION */
+	.receipt .billing-shipping-information span {
+		display: block;
+	}
+		.receipt .billing-shipping-information .shipping-information > div {
+			margin: 20px 10px 0px 0px;
+		}
+
+		.receipt .billing-shipping-information .billing-information > div {
+			margin: 20px 0px 0px 10px;
+		}
+	/* BEGIN DOUBLE CONTAINER */
+	.receipt .double-container {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+		.receipt .double-container > div {
+			display: table-cell;
+			vertical-align: top;
+			width: auto;
+			height: 100%;
+		}
+	/* END DOUBLE CONTAINER */
+	.receipt .proofSteps {
+		display: table-cell;
+		width: 310px !important;
+		height: 100%;
+	}
+		.receipt .proofSteps > div {
+			border: 1px solid #dee0e3;
+			width: 310px;
+			background-color: #ffffff;
+			height: 100%;
+		}
+		.receipt .proofSteps ol {
+			margin: 0px 0px 0px 15px;
+			color: #fc7e22;
+			font-size: 16px;
+		}
+			.receipt .proofSteps ol span {
+				color: #858d93;
+				font-size: 14px;
+			}
+			.receipt .proofSteps ol span div {
+				font-style: italic;
+				color: #333333;
+			}
+	.paddingRight {
+		padding: 0 20px 0 0 !important;
+	}
+	.tableRow {
+		display: table;
+		width: 100%;
+	}
+	.tableCell {
+		display: table-cell;
+	}
+	.imgBlock {
+		width: 618px;
+		vertical-align: top;
+		padding-top: 20px;
+	}
+	.widthAuto {
+		width: auto;
+		vertical-align: top;
+	}
+	@media only screen and (max-width: 767px) {
+		.receipt .billing-shipping-information .shipping-information > div,
+		.receipt .billing-shipping-information .billing-information > div {
+			margin: 20px 0px 0px 0px;
+		}
+	}
+	/* END BILLING AND SHIPPING INFORMATION */
+@media only screen and (max-width: 767px) {
+	.receipt {
+		padding: 30px 15px;
+		background-color: #f1f1f1;
+	}
+	.paddingRight {
+		padding: 0 !important;
+	}
+}
+/* END RECEIPT */
+@media only screen and (max-width: 880px) {
+	.widthAuto {
+		width: 100%;
+	}
+	.imgBlock {
+		width: 100%;
+		text-align: center;
+		padding-top: 0;
+	}
+	.tableCell {
+		display: block;
+	}
+}

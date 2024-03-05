@@ -1,0 +1,63 @@
+.search .searchHeader {
+	background-color: #4ba7f1;
+}
+.search .searchHeader .searchHeaderContainer {
+	position: relative;
+	height: 213px;
+	border: 1px solid #e7d6c7;
+}
+	.search .searchHeader .searchHeaderContainer .pageHeaderText {
+		position: absolute; 
+		left: 0px;
+	}
+	.search .searchHeader .searchHeaderContainer .pageHeaderImage {
+		overflow: hidden;
+	}
+		.search .searchHeader .searchHeaderContainer .pageHeaderImage img {
+			display: inline-block;
+			max-width: none;
+		}
+.search .searchHeader .searchResult {
+	color: #000000;
+	padding: 25px 25px;
+}
+	.search .searchHeader .searchResult h1 {
+		font-size: 35px;
+		font-weight: 600;
+		color: #063b63;
+	}
+.search .searchHeader h2 {
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 400;
+}
+.search .searchHeader .searchDescription {
+	font-size: 13px;
+    color: #160606;
+    font-weight: 200;
+    padding: 10px;
+}
+.seoH1Text {
+	top: 25%;
+	left: 40px !important;
+}
+.seoH1Mobile {
+	background-color: #56A5E6;
+    height: 100px;
+    padding: 28px 0;
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+	.search .searchHeader .searchResult h1 {
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.search .searchHeader .searchResult h1 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.seoH1Mobile {
+	    height: 85px;
+	}
+}

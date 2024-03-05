@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Envelopes.com Services</description>
+    <vendor>Envelopes.com</vendor>
+    <version>1.0</version>
+
+    <service name="getNewOrdersFromCimpress" engine="java" auth="false" transaction-timeout="300" max-retry="2" location="com.bigname.integration.cimpress.CimpressService" invoke="getNewOrdersFromCimpress">
+        <description>Get New Orders from Cimpress</description>
+    </service>
+
+    <service name="getAddressChangesFromCimpress" engine="java" auth="false" transaction-timeout="300" max-retry="2" location="com.bigname.integration.cimpress.CimpressService" invoke="getAddressChangesFromCimpress">
+        <description>Get Address Changes from Cimpress</description>
+    </service>
+
+    <service name="getCancelledOrdersFromCimpress" engine="java" auth="false" transaction-timeout="300" max-retry="2" location="com.bigname.integration.cimpress.CimpressService" invoke="getCancelledOrdersFromCimpress">
+        <description>Get all Cancelled Cimpress Orders</description>
+    </service>
+
+    <service name="getShippingCarrierChangesFromCimpress" engine="java" auth="false" transaction-timeout="300" max-retry="2" location="com.bigname.integration.cimpress.CimpressService" invoke="getShippingCarrierChangesFromCimpress">
+        <description>Get Shipping Carrier Changes from Cimpress</description>
+    </service>
+
+    <service name="setCimpressProductionStarted" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.bigname.integration.cimpress.CimpressService" invoke="setProductionStarted">
+        <description>Set Production Started</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+    </service>
+
+    <service name="createCimpressShipment" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.bigname.integration.cimpress.CimpressService" invoke="createShipment">
+        <description>Create Shipment</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+    </service>
+</services>

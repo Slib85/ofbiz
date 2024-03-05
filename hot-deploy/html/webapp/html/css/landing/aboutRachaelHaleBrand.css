@@ -1,0 +1,101 @@
+/* ENVELOPES - About Rachael Hale Brand */
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*------ MAIN WRAPPER ------*/
+.bnc_rh_wrapper * {
+    margin:0;
+    padding:0;
+}
+.bnc_rh_wrapper {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_rh_wrapper:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+/*----------------------------------------*/
+/*-------------- TOP BANNER --------------*/
+/*----------------------------------------*/
+.bnc_rhs_top_banner {
+
+}
+.rhs_banner_wrap {
+    position: relative;
+}
+
+.bnc_rh_wrapper h1,
+.bnc_rh_wrapper h2{
+    color: #647687;
+    font-family: 'OpenSansBold';
+}
+
+.bnc_rh_wrapper p{
+    color: #4d4d4d;
+    font-family: 'OpenSansRegular';
+}
+
+.rh-description{
+    margin: 2em 0;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.about-rh.section1.tabular_row{
+    margin-top: 2em;
+}
+.about-rh.section1.tabular_row div{ }
+
+.about-rh.section1.tabular_row div.rh-logo{
+    width: 30%;
+}
+.about-rh.section1.tabular_row div.rh-logo img {
+    float: right;
+}
+.about-rh div.rh-description p{
+    margin:1em 0;
+    display: block;
+}
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    .about-rh.section1.tabular_row div.rh-logo,
+    .about-rh.section1.tabular_row div.rh-description{
+        width: 100%;
+        display: block;
+    }
+    .about-rh.section1.tabular_row div.rh-logo img{
+        float: unset;
+        display: block;
+        margin: 0 auto;
+    }
+
+}

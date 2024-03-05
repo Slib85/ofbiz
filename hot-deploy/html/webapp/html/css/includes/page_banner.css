@@ -1,0 +1,37 @@
+.page_banner {
+	overflow: hidden;
+}
+	.page_banner [class*="tablet-desktop"] {
+		background-color: #f7f8fa;
+		height: 86px;
+	}
+		.page_banner [class*="tablet-desktop"] .banner_text {
+			height: 86px;
+			min-width: 600px;
+			padding: 10px;
+			position: absolute;
+			text-align: left;
+			font-weight: 300;
+			font-size: 50px;
+			line-height: 50px;
+			display: table;
+		}
+			.page_banner [class*="tablet-desktop"] .banner_text span {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		.page_banner [class*="tablet-desktop"] .banner_image {
+			text-align: right;
+		}
+			.page_banner [class*="tablet-desktop"] .banner_image img {
+				max-width: none;
+			}
+	.page_banner [class*="mobile"] {
+		text-align: center;
+	}
+@media only screen and (max-width: 767px) {
+	.page_banner {
+		background: transparent !important;
+		border: none !important;
+	}
+}

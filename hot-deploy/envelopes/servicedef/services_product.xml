@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+	<description>Envelopes.com Services</description>
+	<vendor>Envelopes.com</vendor>
+	<version>1.0</version>
+
+	<!-- This method is an existing OfBiz method, overloaded here -->
+	<service name="calculateProductPrice" engine="java" location="com.envelopes.product.ProductServices" invoke="calculateProductPrice" auth="false" use-transaction="false">
+		<description>Calculate a Product's Price from ProductPriceRules</description>
+		<attribute name="cart" type="org.apache.ofbiz.order.shoppingcart.ShoppingCart" mode="IN" optional="true" />
+		<attribute name="product" type="org.apache.ofbiz.entity.GenericValue" mode="IN" optional="false" />
+        <attribute name="id" type="String" mode="IN" optional="true"/>
+		<attribute name="quantity" type="BigDecimal" mode="IN" optional="true" />
+		<attribute name="partyId" type="String" mode="IN" optional="true" />
+		<attribute name="colorsFront" type="Integer" mode="IN" optional="true" />
+		<attribute name="colorsBack" type="Integer" mode="IN" optional="true" />
+		<attribute name="isRush" type="Boolean" mode="IN" optional="true" />
+		<attribute name="whiteInkFront" type="Boolean" mode="IN" optional="true" />
+		<attribute name="whiteInkBack" type="Boolean" mode="IN" optional="true" />
+		<attribute name="cuts" type="Integer" mode="IN" optional="true" />
+		<attribute name="isFolded" type="Boolean" mode="IN" optional="true" />
+		<attribute name="isFullBleed" type="Boolean" mode="IN" optional="true" />
+		<attribute name="addresses" type="Integer" mode="IN" optional="true" />
+		<attribute name="price" type="BigDecimal" mode="IN" optional="true" />
+		<attribute name="name" type="String" mode="IN" optional="true" />
+		<attribute name="weight" type="BigDecimal" mode="IN" optional="true" />
+		<attribute name="templateId" type="String" mode="IN" optional="true" />
+
+		<attribute name="productPricePurposeId" type="String" mode="IN" optional="true"><!-- defaults to PURCHASE --></attribute>
+		<attribute name="productStoreId" type="String" mode="IN" optional="true"/>
+		<attribute name="checkIncludeVat" type="String" mode="IN" optional="true"><!-- can be Y or N, defaults to N --></attribute>
+		<attribute name="currencyUomId" type="String" mode="IN" optional="true"/>
+		<attribute name="currencyUomIdTo" type="String" mode="IN" optional="true"/>
+		<attribute name="agreementId" type="String" mode="IN" optional="true"/>
+		<attribute name="amount" type="BigDecimal" mode="IN" optional="true"/>
+		<attribute name="prodCatalogId" type="String" mode="IN" optional="true"/>
+		<attribute name="webSiteId" type="String" mode="IN" optional="true"/>
+		<attribute name="pricingRequest" type="String" mode="IN" optional="true"/>
+		<attribute name="basePrice" type="BigDecimal" mode="OUT" optional="false"><!-- will only be different from price if there is a display price adjustment, for example: checkIncludeVat=Y and a VAT amount was found --></attribute>
+		<attribute name="price" type="BigDecimal" mode="OUT" optional="false"/>
+		<attribute name="listPrice" type="BigDecimal" mode="OUT" optional="true"/>
+		<attribute name="defaultPrice" type="BigDecimal" mode="OUT" optional="true"/>
+		<attribute name="competitivePrice" type="BigDecimal" mode="OUT" optional="true"/>
+		<attribute name="averageCost" type="BigDecimal" mode="OUT" optional="true"/>
+		<attribute name="promoPrice" type="BigDecimal" mode="OUT" optional="true"/>
+		<attribute name="specialPromoPrice" type="BigDecimal" mode="OUT" optional="true"><!-- used for the Product [Special Promo] Type ProductPromo Action --></attribute>
+		<attribute name="isSale" type="Boolean" mode="OUT" optional="false"/>
+		<attribute name="validPriceFound" type="Boolean" mode="OUT" optional="false"/>
+		<attribute name="currencyUsed" type="String" mode="OUT" optional="false"/>
+		<attribute name="orderItemPriceInfos" type="java.util.List" mode="OUT" optional="false"/>
+		<attribute name="allQuantityPrices" type="java.util.List" mode="OUT" optional="true"/>
+
+		<attribute name="envPriceResultAttributes" type="java.util.Map" mode="OUT" optional="true"/>
+	</service>
+
+	<service name="importProductData" engine="java" location="com.envelopes.product.ProductImportServices" invoke="importProductData" auth="true" use-transaction="false">
+		<description>Import product data from given file location</description>
+		<attribute name="fileLocation" type="String" mode="IN" optional="false" />
+		<attribute name="testRun" type="Boolean" mode="IN" optional="true" />
+	</service>
+</services>

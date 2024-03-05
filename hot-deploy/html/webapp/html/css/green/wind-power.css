@@ -1,0 +1,143 @@
+.wind-power .head {
+	height: 202px;
+}
+
+.wind-power .head .dark-color-container {
+	position: relative;
+}
+
+.wind-power .head .dark-green-fade {
+	background: rgba(211,246,211,1);
+	background: -moz-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,246,211,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3f6d3', endColorstr='#ffffff', GradientType=0 );
+	height: 202px;
+	width: 100%;
+	margin: auto;
+	border-radius: 4px;
+	position: absolute;
+}
+
+.wind-power .head .light-color-container {
+	padding: 2px 2px 0px 2px;
+}
+
+.wind-power .head .light-color-container > div {
+	position: relative;
+}
+
+.wind-power .head .light-green-fade {
+	background: rgba(232,250,232,1);
+	background: -moz-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232,250,232,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8fae8', endColorstr='#ffffff', GradientType=0 );
+	height: 200px;
+	width: 100%;
+	margin: auto;
+	border-radius: 4px;
+	position: absolute;
+	top: 0px;
+}
+
+.wind-power .head .text-area > div {
+	padding: 20px;
+	width: 100%;
+	position: absolute;
+}
+
+.wind-power .head .text-area h2 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #318923;
+}
+
+.wind-power .head .text-area span {
+	display: block;
+}
+
+.wind-power .head .text-area img {
+	padding: 0px 0px 10px 30px;
+}
+
+.wind-power .envelopes-is {
+	border: 2px solid #F4F4F4;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.wind-power .envelopes-is h3 {
+	margin: 0px;
+	font-size: 16px;
+	color: #016DB8;
+	font-weight: bold;
+}
+
+.wind-power .envelopes-is img {
+	display: block;
+	margin-left: 30px;
+}
+
+.wind-power .why, .wind-power .green-power {
+	-webkit-box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	border: 1px solid #d7d7d7;
+	border-radius: 6px;
+	padding: 15px;
+}
+
+.wind-power .why h3 {
+	color: #69A43E;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 0px;
+}
+
+.wind-power .why h3 span {
+	color: #166B01;
+}
+
+.wind-power .why ul > li {
+	margin: 10px 0px 0px 15px;
+	color: #69a43e;
+}
+
+.wind-power .why li span {
+	color: #595959;
+}
+
+.wind-power .green-power img {
+	padding: 0px 15px 15px 0px;
+}
+
+.wind-power .green-power span {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #166B01;
+	text-transform: uppercase;
+}
+
+.wind-power .promo-bottom {
+	text-align: center;
+}
+
+@media (max-width: 1000px) {
+	.wind-power .head .text-area {
+		font-size: 10px;
+	}
+
+	.wind-power .head .text-area h2 {
+		font-size: 14px;
+	}
+}

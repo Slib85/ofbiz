@@ -1,0 +1,25 @@
+/* FOLDERS.com - PRIVACY POLICY - REDESIGN*/
+/*========================================*/
+/*========================================*/
+.privacyPolicy .privacyPolicyHeader {
+    border-bottom: 2px solid #1A345F;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.privacyPolicy .privacyPolicyHeader div {
+    padding: 0 0 10px 0;
+    vertical-align: baseline;
+    display: table-cell;
+    width: 49%;
+}
+.privacyPolicy .privacyPolicyHeader .privacyPolicyHeaderContent {
+    /* padding: 12px 0; */
+}
+.privacyPolicy .privacyPolicyContent .privacyPolicyInfoHeader {
+    border-bottom: 2px dotted #dcdcdc;
+    padding: 0 0 15px 0;
+}
+.privacyPolicyContent {
+    margin: 50px 0;
+}

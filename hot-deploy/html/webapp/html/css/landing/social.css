@@ -1,0 +1,95 @@
+.social-circle .social-container.section {
+	background-color: #33476A;
+	text-align: center;
+}
+	.social-circle .social-container > img {
+		width: 100%;
+		max-width: 526px;
+		margin: auto;
+		padding-top: 20px;
+		border: 0px;
+	}
+	.social-circle .social-container > span {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 78px;
+		line-height: 78px;
+		font-weight: bold;
+		color: #ffffff;
+		padding-bottom: 30px;
+	}
+	.social-circle .social-container > a {
+		text-decoration: none;
+		display: block;
+		width: 610px;
+		margin: auto;
+	}
+		.social-circle .social-container .sc-facebook {
+			background: url('/html/img/landing/social/facebook_block.png') no-repeat;
+			padding-top: 30px;
+		}
+			.social-circle .social-container .sc-facebook h2 {
+				padding: 0px 10px 0px 180px;
+			}
+		.social-circle .social-container .sc-instagram {
+			top: -30px;
+			background: url('/html/img/landing/social/instagram_block.png') no-repeat;
+		}
+		.social-circle .social-container .sc-google {
+			top: -60px;
+			background: url('/html/img/landing/social/google_plus_block.png') no-repeat;
+		}
+		.social-circle .social-container .sc-twitter {
+			top: -90px;
+			background: url('/html/img/landing/social/twitter_block.png') no-repeat;
+		}
+		.social-circle .social-container .sc-pinterest {
+			top: -120px;
+			background: url('/html/img/landing/social/pinterest_block.png') no-repeat;
+		}
+		.social-circle .social-container .sc-linkedin {
+			top: -150px;
+			background: url('/html/img/landing/social/linkedin_block.png') no-repeat;
+		}
+		.social-circle .social-container div[class*="sc-"] {
+			height: 174px;
+			width: 610px;
+			margin: auto;
+			text-align: left;
+		}
+			.social-circle .social-container .sc-instagram h2,
+			.social-circle .social-container .sc-google h2,
+			.social-circle .social-container .sc-twitter h2,
+			.social-circle .social-container .sc-pinterest h2,
+			.social-circle .social-container .sc-linkedin h2 {
+				padding: 30px 10px 0px 180px;
+			}
+			.social-circle .social-container div[class*="sc-"] h2 {
+				color: #ffffff;
+				font-size: 30px;
+				font-weight: bold;
+				display: block;
+			}
+			.social-circle .social-container div[class*="sc-"] span.sc-description {
+				color: #ffffff;
+				font-size: 11px;
+				line-height: 16px;
+				padding: 5px 10px 0px 180px;
+				display: block;
+			}
+
+			.social-circle .social-container div[class*="sc-"] span.sc-follow {
+				color: #ffffff;
+				font-size: 13px;
+				line-height: 16px;
+				padding: 5px 10px 0px 180px;
+				font-weight: bold;
+				display: block;
+			}
+				.social-circle .social-container div[class*="sc-"] span.sc-follow img {
+					display: inline-block;
+					width: 100%;
+					max-width: 8px;
+					border: 0px;
+				}

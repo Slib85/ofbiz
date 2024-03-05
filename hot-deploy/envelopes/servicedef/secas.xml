@@ -1,0 +1,109 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<service-eca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/service-eca.xsd">
+	<eca service="updateDueDate" event="return">
+		<action service="updateNetsuiteOrder" mode="async" run-as-user="delayService"/>
+	</eca>
+	<eca service="changeOrderStatus" event="commit" run-on-error="false">
+		<condition field-name="oldStatusId" operator="equals" value="ORDER_PENDING"/>
+		<condition field-name="statusId" operator="equals" value="ORDER_CREATED"/>
+		<action service="updateDueDate" mode="sync"/>
+	</eca>
+	<eca service="changeOrderStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ORDER_SHIPPED"/>
+		<!--<action service="sendOrderShippedEmail" mode="async"/>
+		<action service="sendOrderShippedSMS" mode="async"/>-->
+		<action service="createCimpressShipment" mode="async"/>
+		<action service="resetCreditCard" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ITEM_SHIPPED"/>
+		<action service="changeOrderShippedStatus" mode="sync"/>
+		<action service="sendItemShippedEmail" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_PROOF_APPROVED"/>
+		<action service="updateDueDate" mode="sync"/>
+		<action service="sendProductionEmail" mode="sync"/>
+		<action service="updateContactProofStatus" mode="async"/>
+		<action service="autoOutsource" mode="async"/>
+		<action service="createPurchaseOrder" mode="async"/>
+		<action service="printableSyracuse" mode="async"/>
+		<!--<action service="updateNetsuiteOrder" mode="async" run-as-user="delayService"/>--> <!-- The 'updateDueDate' service will call this anyway -->
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_PRINTED"/>
+		<action service="updateNetsuiteOrder" mode="async" run-as-user="delayService"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_PROOF_REJECTED"/>
+		<action service="updateContactProofStatus" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_READY_FOR_REVIEW"/>
+		<action service="updateDueDate" mode="sync"/>
+		<action service="sendProofReadyEmail" mode="async"/>
+		<!--<action service="sendProofReadySMS" mode="async"/>-->
+		<action service="updateContactProofStatus" mode="async"/>
+		<!--<action service="updateNetsuiteOrder" mode="async" run-as-user="delayService"/>--> <!-- The 'updateDueDate' service will call this anyway -->
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_NEED_NEW_ARTWORK"/>
+		<action service="sendNeedNewArtworkEmail" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="PP_ASSIGNED_TO_PLATE"/>
+		<action service="updateNetsuiteOrder" mode="async" run-as-user="delayService"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="return" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_GOOD_TO_PROOF"/>
+		<action service="exportOrderXML" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="return" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_PROOF_APPROVED"/>
+		<action service="exportOrderXML" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="return" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_OUTSOURCED"/>
+		<action service="exportOrderXML" mode="async"/>
+		<action service="updateNetsuiteOrder" mode="async" run-as-user="delayService"/>
+		<action service="setCimpressProductionStarted" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="return" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_SYRACUSE"/>
+		<action service="exportOrderXML" mode="async"/>
+		<action service="setPlateId" mode="sync"/>
+		<action service="updateNetsuiteOrder" mode="async" run-as-user="delayService"/>
+		<action service="setCimpressProductionStarted" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="return" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_DIRECTMAIL"/>
+		<action service="submitClick2MailJob" mode="async" run-as-user="delayService"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="return" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ART_GOOD_TO_GO"/>
+		<action service="exportOrderXML" mode="async"/>
+		<action service="setCimpressProductionStarted" mode="async"/>
+	</eca>
+	<eca service="changeOrderItemStatus" event="commit" run-on-error="false">
+		<condition field-name="statusId" operator="equals" value="ITEM_BACKORDERED"/>
+		<action service="sendBackorderEmail" mode="async" />
+	</eca>
+</service-eca>

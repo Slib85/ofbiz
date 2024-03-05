@@ -1,0 +1,58 @@
+upstream adminfarm {
+    zone adminfarm 64k;
+    server 172.31.7.29:8080 route=jvm1 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}
+upstream adminfarmSecure {
+    zone adminfarmSecure 64k;
+    server 172.31.7.29:8443 route=jvm1 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}
+
+upstream serverfarm {
+    zone serverfarm 64k;
+    server 172.31.14.144:8080 route=jvm2 max_fails=2 fail_timeout=60 slow_start=30s;
+    server 172.31.4.169:8080 route=jvm3 max_fails=2 fail_timeout=60 slow_start=30s;
+    server 172.31.14.101:8080 route=jvm4 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}
+upstream serverfarmSecure {
+    zone serverfarmSecure 64k;
+    server 172.31.14.144:8443 route=jvm2 max_fails=2 fail_timeout=60 slow_start=30s;
+    server 172.31.4.169:8443 route=jvm3 max_fails=2 fail_timeout=60 slow_start=30s;
+    server 172.31.14.101:8443 route=jvm4 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}
+
+upstream texelfarm {
+    zone texelfarm 64k;
+    least_conn;
+    server 172.31.7.29:3001 route=jvm1 max_fails=5 fail_timeout=30 slow_start=30s;
+    server 172.31.14.144:3001 route=jvm2 max_fails=5 fail_timeout=30 slow_start=30s;
+    server 172.31.4.169:3001 route=jvm3 max_fails=5 fail_timeout=30 slow_start=30s;
+    server 172.31.14.101:3001 route=jvm4 max_fails=5 fail_timeout=30 slow_start=30s;
+}
+
+upstream jvm1 {
+    zone jvm1 64k;
+    server 172.31.7.29:8443 route=jvm1 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}
+
+upstream jvm2 {
+    zone jvm2 64k;
+    server 172.31.14.144:8443 route=jvm2 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}
+
+upstream jvm3 {
+    zone jvm3 64k;
+    server 172.31.4.169:8443 route=jvm3 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}
+
+upstream jvm4 {
+    zone jvm4 64k;
+    server 172.31.14.101:8443 route=jvm4 max_fails=2 fail_timeout=60 slow_start=30s;
+    sticky route $route_cookie $route_uri;
+}

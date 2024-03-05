@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<!--<screen name="checkout-decorator">
+		<section>
+			<actions>
+				&lt;!&ndash; base/top/specific map first, then more common map added for shared labels &ndash;&gt;
+				<script location="component://envelopes/widget/ecommerce.setup.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/template/checkoutHeader.ftl"/></html></platform-specific>
+				<decorator-section-include name="body"/>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/template/checkoutFooter.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>-->
+	<screen name="checkout-decorator">
+		<section>
+			<actions>
+				<!-- base/top/specific map first, then more common map added for shared labels -->
+				<script location="component://envelopes/widget/ecommerce.setup.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/template/open.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/template/checkoutHeader.ftl"/></html></platform-specific>
+				<decorator-section-include name="body"/>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/template/checkoutFooter.ftl"/></html></platform-specific>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/template/close.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="payByAmazonButton">
+		<section>
+			<actions>
+				<set field="pageType" value="amazonmws"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/checkout/payByAmazonButton.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="cart">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/checkout/cart.groovy"/>
+				<!-- <script location="component://folders/webapp/folders/WEB-INF/actions/checkout/checkout.groovy"/> -->
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/checkout/cart.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="getCartData">
+		<section>
+			<actions>
+				<set field="pageType" value="cart"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/checkout/getCartData.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/checkout/getCartData.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="checkout">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/checkout/checkout.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="checkout-decorator">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/checkout/checkout.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="checkout2">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/checkout/checkout.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="checkout-decorator">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/checkout/checkout2.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="orderSummary">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/includes/checkout/orderSummary.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/includes/checkout/orderSummary.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="receipt">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Order Confirmation"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/checkout/receipt.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/checkout/receipt.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="cart-shipping-options">
+		<section>
+			<actions>
+				<set field="pageType" value="cart"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/includes/checkout/shipping-options.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/includes/checkout/shipping-options.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="checkout-shipping-options">
+		<section>
+			<actions>
+				<set field="pageType" value="checkout"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/includes/checkout/shipping-options.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/includes/checkout/shipping-options.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="order-items">
+		<section>
+			<actions>
+				<set field="pageType" value="order"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/includes/checkout/order-details.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/includes/checkout/order-details.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="vertical-checkout-items">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/includes/checkout/vertical-order-details.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/includes/checkout/vertical-order-details.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+</screens>

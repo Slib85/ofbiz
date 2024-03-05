@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /envelopes/control/downloadFile
+Disallow: /ae/control/downloadFile
+
+Sitemap:  https://www.actionenvelope.com/sitemap.xml

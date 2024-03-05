@@ -1,0 +1,109 @@
+.content div.swatchbook {
+    border: none;
+    max-width: 1170px;
+    margin: 40px auto;
+}
+    .swatchbook .ribbon {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 45px!important;
+        background: url('/html/img/landing/swatchbook/headlineBg.jpg') repeat;
+    }
+        .swatchbook .ribbon h1 {
+            font-size: 35px!important;
+            color: #000;
+        }
+        .swatchbook .ribbon span.free {
+            color: #f00000;
+            position: relative;
+        }
+            .swatchbook .ribbon span.free:after {
+                content: url('/html/img/landing/swatchbook/freeUnderline.png');
+                position: absolute;
+                bottom: -13px;
+                left: 5px;
+                right: 0;
+            }
+    .swatchbook .headline {
+        text-align: center;
+        color: #000;
+        padding: 10px;
+    }
+    .swatchbook .swatchbookImg {
+        text-align: center;
+    }
+    .swatchbook .swatchbookForm {
+        text-align: center;
+    }
+        .swatchbook .swatchbookForm .formContainer {
+            padding: 0 40px;
+            max-width: 625px;
+        }
+            .swatchbook .swatchbookForm .formContainer p {
+                color: #000;
+                padding: 20px;
+            }
+            .swatchbook .swatchbookForm .formContainer .swatchButton {
+                padding: 0 15px 20px;
+            }
+                .swatchbook .swatchbookForm .formContainer .swatchButton .btnOrange {
+                    padding: 10px;
+                    font-size: 18px;
+                    background-color: #f17121;
+                    color: #ffffff;
+                    text-align: center;
+                    width: 100%;
+                    font-weight: bold;
+                }
+.disclaimer {
+    font-size: 16px;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+
+[data-abide] .error small.error {
+    background-color: #F7F8FA;
+}
+@media only screen and (max-width: 1023px) {
+    .swatchbook .ribbon h1 {
+        font-size: 33px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .swatchbook .ribbon {
+        padding: 10px 0;
+    }
+        .swatchbook .ribbon h1 {
+        font-size: 20px !important;
+    }
+        .swatchbook .ribbon span.free::after {
+            display: none;
+        }
+    .swatchbook .headline {
+        text-align: left;
+    }
+        .swatchbook .headline h4 {
+            font-size: 14px;
+            padding: 20px 0;
+        }
+    .swatchbook .swatchbookForm .formContainer {
+        padding: 0;
+        max-width: 100%;
+    }
+        .swatchbook .swatchbookForm .formContainer p {
+            color: #000;
+            padding: 20px;
+            text-align: left !important;
+            font-size: 12px;
+        }
+        .swatchbook .swatchbookForm .formContainer.thankyou p {
+            color: #000;
+            padding: 20px;
+            text-align: center !important;
+            font-size: 16px;
+        }
+            .swatchbook .swatchbookForm .formContainer.thankyou .swatchButton .btnOrange {
+                font-size: 12px;
+            }
+}

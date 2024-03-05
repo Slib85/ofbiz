@@ -1,0 +1,65 @@
+/* BEGIN ACCOUNT */
+body > .account {
+	background-color: #F1F1F1;
+	padding: 20px 5px;
+	max-width: 1360px;
+    margin: 0 auto;
+}
+	body > .account > div {
+		margin: auto;
+	}
+	body > .account > .container {
+		background-color: #ffffff;
+		border: 1px solid #d2d2d2;
+	}
+
+	body > .account .page-header h2 {
+		font-size: 24px;
+		color: #000000;
+		font-weight: bold;
+	}
+	body > .account .page-header .logout_container {
+			text-align: right;
+	}
+
+	body > .account .not-user span {
+		display: block;
+		position: relative;
+		top: 7px;
+		text-align: right;
+	}
+
+#jqs-forget-password #reset-password-error, #jqs-forget-password .error-message, #jqs-forget-password.error .message {
+    display: none;
+}
+
+#jqs-forget-password.error #reset-password-error, #jqs-forget-password.error .error-message, #jqs-forget-password .message {
+    display: block;
+}
+#change-email-password [bns-validationerrorheader] {
+	margin: 20px 0 0;
+}
+
+@media only screen and (max-width: 1023px) {
+	body > .account {
+		padding: 20px 10px;
+	}
+
+
+	body > .account .not-user span {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	body > .account .page-header h2,
+	body > .account .page-header .logout_container {
+		font-size: 16px;
+		text-align: center;
+	}
+
+	body > .account > .container {
+		padding: 10px !important;
+	}
+}
+/* END ACCOUNT */

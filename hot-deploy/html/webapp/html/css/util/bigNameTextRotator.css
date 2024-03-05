@@ -1,0 +1,19 @@
+.bncRotator{ display:none;}
+.envMessage {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: .5em;
+    background-color:#fc7e22;
+    color:white;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+}
+a.bncRotator,
+a.bncRotator:hover,
+a.bncRotator:visited {
+    color: white;
+    text-decoration:none;
+    letter-spacing: 1px;
+}

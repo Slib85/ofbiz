@@ -1,0 +1,20 @@
+.jqs-pricing .input-group-addon {
+    width: 75px;
+    text-align: right;
+    padding-right: 17px;
+}
+
+.jqs-pricing  {
+    margin: 5px 0;
+}
+
+.jqs-pricing  input {
+    font-family: monospace;
+    text-align: right;
+    padding-right:17px;
+}
+
+.jqs-changed {
+    color: green;
+    background-color: #c1e2b3;
+}

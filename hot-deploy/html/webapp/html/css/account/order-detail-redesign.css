@@ -1,0 +1,63 @@
+.order-detail h3 {
+	font-size: 18px;
+	color: #000000;
+	font-weight: bold;
+}
+.billing-shipping-information span {
+	display: block;
+}
+.order-detail .proof_approval_link,
+.order-detail .proof_approval_link:visited {
+	color: #ffffff;
+}
+.order-detail .proof_approval_link {
+    float: left;
+    width: 245px;
+}
+.order-detail .reorder-button {
+    float: right;
+    width: 245px;
+}
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+.order-shipping-billing-wrap {
+    border: 2px solid #e0e0e0;
+    margin: 0 0 20px 0;
+}
+.order-number-information {
+    background-color: #1a345f;
+    color: #fff;
+}
+.order-number-information h3 {
+    color: #fff;
+    text-align: center;
+}
+.order-number-information h3 span{
+    display: block;
+}
+.order-number-information h3 span:first-child{
+    font-weight: normal;
+}
+.shipping-information >div {
+    border-right: 2px solid #e0e0e0;
+}
+.shipping-information >div .ship-info-address span,
+.billing-information >div .bill-info-address span {
+    display: block;
+}
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+	.order-detail .quick_links {
+		display: block;
+	}
+	.order-detail .proof_approval_link,
+	.order-detail .reorder-button {
+		float: none;
+		display: block;
+        width: 100%;
+        margin: 20px 0;
+	}
+}

@@ -1,0 +1,10 @@
+.profile-env header {
+	z-index: 0;
+	margin-bottom: 20px;
+}
+.profile-env .product_image img {
+	width: 100%;
+	max-width: 70px;
+	display: inline-block;
+	float: none !important;
+}

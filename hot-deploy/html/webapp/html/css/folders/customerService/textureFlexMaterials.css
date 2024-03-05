@@ -1,0 +1,12 @@
+.textureFlexMaterials .pageDescriptionRow > * {
+	vertical-align: top;
+}
+.textureFlexMaterials .pageDescriptionRow > *:first-child {
+	width: 230px;
+}
+@media only screen and (max-width: 767px) {
+	.textureFlexMaterials .pageDescriptionRow > * {
+		width: 100%;
+		display: block;
+	}
+}

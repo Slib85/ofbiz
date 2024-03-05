@@ -1,0 +1,64 @@
+.contactUs .contactList > * {
+	max-width: 330px;
+}
+.contactUs .contactList i {
+	font-size: 50px;
+}
+.contactUs .extensionList > * > h4 {
+	line-height: 20px;
+	width: 150px;
+}
+.contactUs .extensionList > * > div {
+	font-size: 18px;
+}
+.foldersContainerHeader{
+	padding: 20px !important;
+}
+.foldersContainerHeader h1{
+	margin-bottom: 20px;
+}
+.foldersContainerHeader p{
+	font-weight: normal;
+	font-size: 16px;
+}
+.contactRow i, .contactRow h4, .contactRow p{
+	display: block;
+}
+.contactRow {
+	text-align: center;
+}
+.contactRow h4, .contactRow p{
+	padding: 4px 0;
+}
+.contactRow p{
+	font-size: 18px;
+}
+.contactRow i{
+	padding-bottom: 10px;
+}
+.contactRow a{
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+	.contactUs .extensionList > * > div {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.foldersContainerBody .contactList .margin10{
+		margin: 10px auto !important;
+	}
+	.contactRow h4{
+		font-size: 16px;
+	}
+	.contactRow p{
+		font-size: 15px;
+	}
+	.contactRow a{
+		font-size: 17px;
+	}
+}
+
+

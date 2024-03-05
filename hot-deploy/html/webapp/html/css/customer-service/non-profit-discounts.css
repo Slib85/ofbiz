@@ -1,0 +1,161 @@
+.non-profit-discounts input, select, textarea {
+	margin: 5px 2px;
+}
+
+.non-profit-discounts label {
+	display: block;
+}
+
+.non-profit-discounts a {
+	color: #0F8AEB;
+}
+
+.non-profit-discounts .head {
+	background: #e4f2fd; /* Old browsers */
+	background: -moz-linear-gradient(top, #e4f2fd 0%, #ffffff 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(top, #e4f2fd 0%,#ffffff 100%); /* IE10+ */
+	background: -o-linear-gradient(top, #e4f2fd 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4f2fd), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e4f2fd 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, #e4f2fd 0%,#ffffff 100%); /* W3C */
+	border-radius: 4px;
+	border: 1px solid #d8d7d5;
+	color: #FF6600;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f2fd', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	font-size: 18px;
+	font-weight: bold;
+	margin: 5px auto;
+	padding: 20px;
+	text-align: center;
+	width: 90%;
+}
+
+.non-profit-discounts .content-left > div {
+	max-width: 650px;
+}
+
+.non-profit-discounts .content-left .panel-heading {
+	color: #0A86E5;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.non-profit-discounts .content-left ul {
+	list-style: none;
+}
+
+.non-profit-discounts .content-left li:before {
+	color: #0A86E5;
+	content: "\02022  ";
+	font-size: 10px;
+}
+
+.non-profit-discounts .nda-form > div {
+	margin-bottom: 10px;
+}
+
+.non-profit-discounts button {
+	background-color: #00A1E7;
+	color: #ffffff;
+}
+
+.non-profit-discounts button > .fa-chevron-right {
+	font-weight: bold;
+}
+
+.non-profit-discounts .content-right > div {
+	background: -moz-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: -ms-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: -o-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232,245,253,1)), color-stop(100%, rgba(232,245,253,0)));
+	background: -webkit-linear-gradient(top, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: linear-gradient(to bottom, rgba(232,245,253,1) 0%, rgba(232,245,253,0) 100%);
+	background: rgba(232,245,253,1);
+	border-radius: 4px;
+	border: 4px solid #CAE0F1;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8f5fd', endColorstr='#e8f5fd', GradientType=0 );
+	margin-right: 15px;
+	padding: 15px;
+	position: relative;
+}
+
+.non-profit-discounts .content-right .compare {
+	color: #0A86E5;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.non-profit-discounts .content-right .point-conversion {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.non-profit-discounts .content-right .row {
+	margin: 0px 5px 0px 25px;
+}
+
+.non-profit-discounts .content-right .row > div {
+	background-color: #ffffff;
+	border: 1px solid #D7D7D7;
+	color: #0A86E5;
+	display: table;
+	font-size: 11px;
+	height: 115px;
+	padding: 10px;
+	text-align: center;
+}
+
+.non-profit-discounts .content-right .dark {
+	color: #074679 !important;
+	font-size: 10px !important;
+	font-weight: bold;
+}
+
+.non-profit-discounts .content-right .gradient {
+	background: rgba(249,249,249,1);
+	background: -moz-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: -ms-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: -o-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,249,249,1)), color-stop(100%, rgba(237,237,237,1)));
+	background: -webkit-linear-gradient(left, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	background: linear-gradient(to right, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ededed', GradientType=1 );
+}
+
+.non-profit-discounts .content-right .row > div > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.non-profit-discounts .content-right .row > div span.percent {
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.non-profit-discounts .content-right .row > div span.account-mgr {
+	font-style: italic;
+}
+
+.non-profit-discounts .content-right .row > div.no-display {
+	display: none;
+}
+
+.non-profit-discounts .content-right span.note {
+	display: block;
+	margin-top: 10px;
+}
+
+.non-profit-discounts .content-right span.box-head {
+	color: #0A86E5;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+
+}

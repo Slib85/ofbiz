@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="texel.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../js/global.js"></script>
+		<script src="../lib/envelopes-widget-util.js"></script>
+		<script src="jquery.env.queue.js"></script>
+		<script src="jquery.texel.widget.js"></script>
+
+	</head>
+	<body>
+		<div class="designer_container"></div>
+		<div style="text-align: center;">
+			<span class="toolset" onclick="designer.texel('undo', null, true)">Original</span>
+			<span class="toolset" onclick="designer.texel('undo', null, false)">Undo</span>
+			<span class="toolset" onclick="designer.texel('redo', null)">Redo</span>
+			<span class="toolset" onclick="designer.texel('createCustomElement', 'RichText')">Add Text</span>
+			<span class="toolset" onclick="designer.texel('zoom', 100)">Zoom In</span>
+			<span class="toolset" onclick="designer.texel('zoom', -100)">Zoom Out</span>
+			<span class="toolset" onclick="designer.texel('option', 'activeDesign', '0')">Front</span>
+			<span class="toolset" onclick="designer.texel('option', 'activeDesign', '1')">Back</span>
+			<span class="toolset" onclick="designer.texel('option', 'showElements', true)">Show Elements</span>
+			<span class="toolset" onclick="designer.texel('option', 'showElements', false)">Hide Elements</span>
+			<span class="toolset" onclick="designer.texel('preview', null)">Preview</span>
+		</div>
+		<div id="preview" >
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" />
+		</div>
+
+		<!--
+		<form id="myForm" action="http://localhost/envelopes/control/uploadScene7Files" method="post" enctype="multipart/form-data"  target="uploadTrg">
+			File: <input type="file" name="file">
+			<input type="submit" value="Submit" id="submitBtn"/>
+		</form>
+		<script>
+			$('#myForm').envIframeUpload();
+		</script>
+		-->
+
+		<script>
+			$('#myForm').envIframeUpload();
+			var designer = $('.designer_container').texel({
+				designs: {
+					'0': {
+							templateId: '10103a'
+					},
+					'1': {
+						templateId: '10103a_back'
+					}
+				},
+				staticWidth: 800,
+				backgroundColor: '#FFFFFF'
+			});
+		</script>
+	</body>
+</html>

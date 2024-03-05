@@ -1,0 +1,529 @@
+/* Envelopes.com - The Tax Shop CSS */
+/*----------------------------------------*/
+/*----------------------------------------*/
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+.flex-row > * {
+    display: inline-flex;
+}
+.flex-row.flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.flex-row.flex-left {
+	justify-content: left;
+	-webkit-justify-content: left;
+  }
+	  .flex-row.flexCount6 > *,
+	  .flex-row.flexCount5 > *,
+	  .flex-row.flexCount4 > *,
+	  .flex-row.flexCount3 > *,
+	  .flex-row.flexCount2 > * {
+		  width: 100%;
+	  }
+	  .flex-row.flexCount6 > * {
+		  max-width: 16.66666%;
+	  }
+	  .flex-row.flexCount5 > * {
+		  max-width: 20%;
+	  }
+	  .flex-row.flexCount4 > * {
+		  max-width: 25%;
+	  }
+	  .flex-row.flexCount3 > * {
+		  max-width: 33.33333%;
+	  }
+	  .flex-row.flexCount2 > * {
+		  max-width: 50%;
+	  }
+/*----------------------------------------*/
+/*----------------------------------------*/
+.glow {
+    display: inline-block;
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.glow:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+@font-face {
+	font-family: 'Futura Std Extra Bold';
+    src: url('/html/fonts/FuturaStdExtraBold.otf');
+    font-weight: 700;
+}
+/*----------------------------------------*/
+/*-- TAX SHOP MAIN WRAPPER / CONTAINER ---*/
+/*----------------------------------------*/
+.bnc_tax_shop_redesign *{
+    margin: 0;
+    padding: 0;
+}
+.bnc_tax_shop_redesign {
+    width: 100%;
+    max-width: 1335px;
+    margin: 2em auto;
+    padding: 0 15px;
+    position: relative;
+}
+.bnc_tax_shop_redesign:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+/*----------------------------------------*/
+/*-- TAX SHOP TOP BANNER IMG, H1, & Copy -*/
+/*----------------------------------------*/
+.bnc_tax_shop_redesign_top_banner {
+    border: 2px solid #64893e;
+    position: relative;
+}
+
+.bnc_taxshop_banner_content{
+    background-color: transparent;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* position the div in center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bnc_taxshop_banner_content h1{
+    font-family: 'Futura Std Extra Bold';
+    font-size:60px;
+    text-transform: uppercase;
+    color: #64893e;
+}
+.bnc_taxshop_banner_content p{
+    font-size: 22px;
+    color: #000;
+    font-weight: 700;
+}
+
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="tax-shop-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_taxshop_nav1 */
+nav[role="bnc_taxshop_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_taxshop_nav1"] a, 
+nav[role="bnc_taxshop_nav1"] label {
+    color: #fff;
+    text-decoration: none;
+    font: 12px sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_taxshop_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_taxshop_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #64893e;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+nav[role="bnc_taxshop_nav1"] ul > li:hover {
+    background-color: #3f4f5f;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #3f4f5f, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_taxshop_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_taxshop_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_taxshop_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_taxshop_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_taxshop_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_taxshop_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: 0;
+        content: "\2261";
+        font-size: 1.8em;
+   }
+    nav[role="bnc_taxshop_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_taxshop_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_taxshop_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_taxshop_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+
+/*-----------------------------------------------------------------*/
+/*-- CUSTOM PRINTING / RECIPIENT ADDRESSING / WHITE INK PRINTING --*/
+/*-----------------------------------------------------------------*/
+.bnc_taxshop_nav2 {
+	background-color: #404f60;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.bnc_taxshop_nav2 a{
+	color: #ffffff;
+	display: inline-block;
+	width: 33%;
+	font-size: 16px;
+}
+.bnc_taxshop_nav2 span{
+	margin-left: 4%
+}
+.taxshop_nav_border {
+	border-right: solid #242f3b 2px;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_tax_shop_content_container {
+	display: table;
+	width: 100%;
+	margin-top: 20px;
+}
+.bnc_tax_shop_content_container > * {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    padding: 20px;
+}
+.bnc_tax_shop_content_container > *:first-child {
+    width: 290px;
+    padding: 0 0 20px 0;
+}
+.bnc_tax_shop_content_container > *:last-child {
+    padding-right: 0px;
+    padding-top: 0px;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_section_block{
+    /* background-color: #404f60; */
+    /* padding:14px; */
+    color:#fff;
+}
+.bnc_section_content{
+    background-color: #404f60;
+    padding: 15px 45px 15px 15px;
+}
+/*----------------*/
+.bnc_section_block div .bnc_section_header {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.bnc_section_block div .bnc_section_desc{
+	font-size: 12px;
+}
+/*--------------*/
+.bnc_tax_shop_product_wrap{
+    /* display: block; */
+    position: relative;
+    width: 100%;
+}
+.bnc_tax_shop_product_wrap .bnc_ts_prod{
+    border: 1px solid #dddddd;
+    margin: 0 24px 24px 0;
+    /* display: inline-block; */
+    vertical-align: top;
+    width: 225px;
+}
+.bnc_tax_shop_product_wrap .bnc_ts_prod:last-child {
+    margin-right: 0;
+}
+.bnc_tax_shop_product_wrap .bnc_ts_prod a{
+    display:block;
+}
+.bnc_tax_shop_product_wrap .bnc_ts_prod .bnc_ts_prod_content{
+
+}
+.bnc_tax_shop_product_wrap .bnc_ts_prod .bnc_ts_prod_content .bnc_ts_prod_name{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+}
+.bnc_tax_shop_product_wrap .bnc_ts_prod .bnc_ts_prod_content .bnc_ts_prod_name i{
+    color:#338428;
+}
+.bnc_tax_shop_product_wrap .bnc_ts_prod .bnc_ts_prod_content .bnc_ts_prod_img {
+    background-color:#dcdcdc;
+    text-align: center;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_tax_shop_media_wrap {
+    width: 295px;
+    height: 257px;
+    background-color: #385652;
+    margin: 0 0 30px 0;
+}
+.bnc_tax_shop_media_content {
+    /* padding: 5px; */
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+/*-- play button --*/
+.bnc_media_button {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+.bnc_paused {
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+}
+.bnc_media_button:hover,
+.bnc_media_button:focus {
+    border-color: transparent transparent transparent #fff;
+    background-color: transparent;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_tax_shop_section {
+    /* padding: 20px; */
+}
+.bnc_tax_shop_section_header {
+    font-size: 24px;
+    color: #404f60;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 0 25px 0;
+}
+
+.bnc_tax_shop_product_type {
+    width: 100%;
+    margin: 0 auto;
+}
+.bnc_tax_shop_product_type a{
+	width: 138px;
+    height: 28px;
+    border: 2px solid #64893e;
+    position: relative;
+    margin-bottom: 14px;
+}
+.bnc_tax_shop_product_type a:hover,
+.bnc_tax_shop_product_type a:hover p {
+    background-color: #64893e;
+    color: #fff;
+}
+.bnc_tax_shop_product_type a p{
+	color: #338428;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bnc_tax_shop_product_type a p span{
+	display: inline-block;
+	margin: 0 5px;
+}
+.bnc_tax_shop_product_type a p sup {
+    font-size: 10px;
+}
+.bnc_tax_shop_product_type a p sup.fracDigit1{
+	vertical-align: top;
+}
+.bnc_tax_shop_product_type a p sup.fracDigit2 {
+    vertical-align: baseline;
+}
+.bnc_tax_shop_product_type_cta {
+	margin: 0;
+    background-color: #404f60;
+    text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+.bnc_tax_shop_product_type_cta p {
+    color: #fff;
+    font-size: 17px;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (max-width: 1360px){
+    .bnc_tax_shop_product_type a {
+        height: 28px;
+}
+@media only screen and (max-width: 1311px){
+    .bnc_tax_shop_product_type a {
+        height: 72px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    nav[role="bnc_taxshop_nav1"] ul > li{
+        /* display: table-cell;
+        vertical-align: middle; */
+    }
+    nav[role="bnc_taxshop_nav1"] a, 
+    nav[role="bnc_taxshop_nav1"] label{
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 1023px){
+    nav[role="bnc_taxshop_nav1"] a, 
+    nav[role="bnc_taxshop_nav1"] label{
+        font-size: 12px;
+    }
+    .bnc_taxshop_nav2{
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+    }
+    .bnc_taxshop_nav2 a img, .bnc_taxshop_nav2 a span {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .bnc_tax_shop_content_container > *:first-child{
+        display: none;
+    }
+    .bnc_tax_shop_content_container > *:last-child{
+        padding: 15px;
+    }
+
+}
+@media only screen and (max-width: 768px){
+    .bnc_taxshop_banner_content h1{
+        line-height: 1;
+    }
+    .bnc_taxshop_nav2 a {
+        display: table-cell;
+        border: 0;
+        width: 33.33333%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .bnc_taxshop_banner_content h1{
+        font-size: 3em;
+        line-height: 1;
+    }
+    .bnc_taxshop_banner_content p{
+        font-size: 1em;
+    }
+    nav[role="bnc_taxshop_nav1"] {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    .bnc_taxshop_nav2 a{
+        display: block;
+        width: 100%;
+        border-right: none;
+        border-bottom: solid 1px white;
+        padding: 12px 0;
+    }
+    .bnc_tax_shop_product_wrap .bnc_ts_prod{
+        width: 47%;
+        margin: 10px;
+    }
+}
+@media only screen and (max-width: 425px){
+    .bnc_tax_shop_product_wrap .bnc_ts_prod{
+        width: 44%;
+        margin: 10px;
+    }
+}
+@media only screen and (max-width: 375px){
+    .bnc_section_block div .bnc_section_header{
+        text-align: center;
+    }
+    .bnc_section_block div .bnc_section_desc{
+        display: none;
+    }
+    .bnc_tax_shop_product_wrap .bnc_ts_prod{
+        width: 100%;
+        margin: 10px 0;
+    }
+}

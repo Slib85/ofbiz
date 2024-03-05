@@ -1,0 +1,60 @@
+.category .categoryHeader {
+	text-align: center;
+	color: #030303;
+	border: 1px solid #e7d6c7;
+	background-color: #f7f8fa;
+	padding: 10px;
+}
+	.category .categoryHeader h1 {
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: 600;
+	}
+.category .categoryResults {
+	text-align: center;
+}
+	.category .categoryResults a {
+		list-style: none;
+		display: inline-block;
+		background-color: #fff;
+		width: 325px;
+		height: 370px;
+		margin: 5px;
+		padding: 15px;
+		position: relative;
+		line-height: 20px;
+		vertical-align: top;
+	}
+	.category .categoryResults a:hover {
+		outline: 2px solid #38a900;
+		-webkit-transition: border-color 0.5s linear; /* Saf3.2+, Chrome */
+		-moz-transition: border-color 0.5s linear; /* FF3.7+ */
+		-o-transition: border-color 0.5s linear; /* Opera 10.5 */
+		transition: border-color 0.5s linear;
+	}
+		.category .categoryResults h2 {
+			font-size: 18px;
+		}
+		.category .categoryResults p,
+		.category .categoryResults h4 {
+			font-weight: 400;
+		}
+		.category .categoryResults a div {
+			height: 200px;
+			margin-top: 10px;
+		}
+			.category .categoryResults a img {
+				max-height: 200px;
+			}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+	.category .categoryHeader h1 {
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.category .categoryHeader h1 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}

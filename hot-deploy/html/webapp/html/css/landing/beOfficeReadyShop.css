@@ -1,0 +1,304 @@
+/* ENVELOPES - Be Office Ready Styles */
+@font-face {
+	font-family: 'AmericanTypewriterBold';
+    src: url('../../fonts/AmericanTypewriterBold.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'ArturoExtraLightTrial';
+    src: url('../../fonts/ArturoExtraLightTrial.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*------ MAIN WRAPPER ------*/
+.bnc_bors_shop * {
+    margin:0;
+    padding:0;
+}
+.bnc_bors_shop {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_bors_shop:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+/*----------------------------------------*/
+/*-------------- TOP BANNER --------------*/
+/*----------------------------------------*/
+.bnc_bors_top_banner {
+
+}
+.bors_banner_wrap {
+    position: relative;
+}
+.bors_banner_content {
+    text-align: center;
+    color: #fff;
+
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bors_banner_content h1, 
+.bors_banner_content p {
+    font-family: 'ArturoExtraLightTrial';
+    font-size: 3em;
+    color:#193768;
+}
+
+.bors_banner_content h1 {
+    text-transform: uppercase;
+    font-size: 4.563em;
+    line-height: 1;
+}
+.bors_banner_content h1 span{
+    color:#ee5a2f;
+    font-family: 'AmericanTypewriterBold';
+}
+.bors_banner_content p {
+    font-size: 1.875em;
+    line-height: 1;
+}
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="bors-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_bors_nav1 */
+nav[role="bnc_bors_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_bors_nav1"] a, 
+nav[role="bnc_bors_nav1"] label {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'OpenSansRegular';
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_bors_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_bors_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #000;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+nav[role="bnc_bors_nav1"] ul > li:hover {
+    background-color: #1c3122;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #b89e99, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_bors_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_bors_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_bors_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_bors_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_bors_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_bors_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: -7px;
+        content: "\2261";
+        font-size: 1.8em;
+        color: #fff;
+   }
+    nav[role="bnc_bors_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_bors_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_bors_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_bors_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_section_block{
+    /* background-color: #404f60; */
+    /* padding:14px; */
+    color:#fff;
+}
+.bnc_section_content{
+    background-color: #193768;
+    padding: 15px 45px 15px 15px;
+}
+/*----------------*/
+.bnc_section_block div .bnc_section_header,
+.bnc_section_block div .bnc_section_header h1,
+.bnc_section_block div .bnc_section_header h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.bnc_section_block div .bnc_section_desc{
+	font-size: 14px;
+}
+/*--------------*/
+.bnc_bors_product_wrap{
+    /* display: block; */
+    position: relative;
+    width: 100%;
+}
+.bnc_bors_product_wrap .bnc_bors_prod{
+    /* border: 1px solid #dddddd; */
+    margin: 0 24px 24px 0;
+    /* display: inline-block; */
+    vertical-align: top;
+    width: 295px;
+}
+.bnc_bors_product_wrap .bnc_bors_prod:last-child {
+    margin-right: 0;
+}
+.bnc_bors_product_wrap .bnc_bors_prod a{
+    display:block;
+}
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content{
+
+}
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content .bnc_bors_prod_name{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    /* background-color: #fff; */
+    font-family: 'OpenSansExtraBold';
+    padding: 15px 10px;
+    text-align: center;
+}
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content .bnc_bors_prod_name h4, 
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content .bnc_bors_prod_name h5, 
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content .bnc_bors_prod_name i{
+    display: inline-block;
+}
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content .bnc_bors_prod_name h4{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content .bnc_bors_prod_name i{
+    color: #000;
+    font-size: 1.23em;
+}
+.bnc_bors_product_wrap .bnc_bors_prod .bnc_bors_prod_content .bnc_bors_prod_img {
+    background-color:#cdd5d8;
+    text-align: center;
+    border-radius: 8px;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+
+@media only screen and (max-width: 767px){
+    
+}
+@media only screen and (max-width: 1139px){
+    .bors_banner_content h1{
+        font-size: 4.563em;
+    }
+}
+@media only screen and (max-width: 768px){
+    .bors_banner_content h1{
+        font-size: 4em;
+    }
+}
+@media only screen and (max-width: 425px){
+    .bors_banner_content{
+        width: 80%;
+    }
+    .bors_banner_content h1{
+        font-size: 2.5em;
+    }
+    .bors_banner_content p{
+        font-size: 1.3em;
+    }
+}

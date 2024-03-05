@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<!-- Top Level Screens -->
+	<screen name="product">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/product.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="selectPrintMethod">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/selectPrintMethod.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/selectPrintMethod.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="printing">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/foilStamping.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/printing.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="foilStamping">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/foilStamping.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/foilStamping.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="foilColorList">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/foilStamping.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/includes/product/productAssets/foilColors.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="embossing">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/embossing.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/embossing.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="plain">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/folderDesign.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/plain.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="folderDesign">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/foilStamping.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/folderDesign.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/folderDesign.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="getQuote">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/getQuote.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/getQuote.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="getQuoteForm">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/foilStamping.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/getQuoteForm.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/getQuoteForm.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="quoteContactForm">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/quoteContactForm.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/quoteContactForm.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="pockets">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/pockets.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/pockets.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="attachments">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/attachments.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/product/productAssets/attachments.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="cardSlits">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+				<!--
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/productAssets/cardSlits.groovy"/>
+				-->
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://folders/webapp/folders/includes/product/productAssets/cardSlits.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="blankProduct">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/product.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/blankProduct.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="search">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/search.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/search.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="reviews">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/reviews.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/product/reviews.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="specialtyProducts">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Specialty Products"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/specialtyProducts.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/specialtyProducts.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="specialtyProductsPopUp">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/specialtyProductsPopUp.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific><html><html-template location="component://folders/webapp/folders/product/specialtyProductsPopUp.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="new-arrivals">
+		<section>
+			<actions>
+				<set field="titleProperty" value="New Arrivals"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/new-arrivals.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/new-arrivals.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="clearance">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Clearance"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/clearance.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/clearance.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="quickCustomQuote">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/quickCustomQuote.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="industry">
+		<section>
+			<actions>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/product/industry.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/product/industry.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

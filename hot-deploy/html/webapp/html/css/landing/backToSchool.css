@@ -1,0 +1,205 @@
+.btsHeaderImage {
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/envelopesBTSBackground?fmt=png-alpha&width=2500');
+	width: 100%;
+	display: table;
+	margin: 0 10px 20px 10px;
+}
+.backToSchool .section {
+	margin: 20px 0px 10px 10px !important;
+}
+.btsHeaderCellLeft {
+	display: table-cell;
+	width: 192px;
+}
+.btsHeaderCellMiddle {
+	display: table-cell;
+	width: auto;
+	text-align: center;
+	vertical-align: top;
+}
+.btsHeaderCellRight {
+	display: table-cell;
+	width: 174px;
+}
+.btsHeaderImage p {
+	color: #ffffff;
+	font-size: 15px;
+	width: 92%;
+	margin: 0 auto;
+}
+.backgroundLeft {
+	float: left;
+}
+.backgroundRight {
+	float: right;
+}
+.btsForeground {
+	padding-top: 40px;
+}
+.btsNav2 {
+	margin-top: 0 !important;
+    text-align: center;
+    background-color: #df9f15 !important;
+}
+.btsNav2 a {
+	color: #ffffff;
+	font-size: 20px;
+	cursor: pointer;
+}
+.btsNav2 span {
+	color: #ffffff;
+	margin: 0 10px;
+	font-size: 20px;
+}
+.btsNav2 div {
+	margin: 15px 0 !important;
+}
+.btsProductHeader {
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/envelopesBTSBackground?fmt=png-alpha&width=2500&hei=250');
+	height: 134px !important;
+}
+.btsProductHeader img {
+	padding-top: 10px;
+	vertical-align: initial;
+}
+.btsProductHeader p {
+	color: #ffffff;
+}
+.btsProductHeader a {
+	padding-top: 10px;
+    font-size: 16px;
+    color: #df9f15;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.btsContent {
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+	.btsContent a {
+		background-color: #ffffff;
+		margin: 5px;
+		padding: 10px 20px;
+		width: 240px;
+		vertical-align: top;
+	}
+.productName {
+	font-size: 17px;
+    color: #009cdd;
+    font-weight: bold;
+}
+.productSize {
+	font-size: 17px;
+    color: #000000;
+}
+.productColor, .productSKU {
+	color: #848d93;
+    font-size: 15px;
+}
+.btsProductRow .ratings {
+	float: left;
+}
+.btsProductRow .price {
+	float: right;
+}
+.foldersBackToSchoolButtonLink, .envelopesBackToSchoolButtonLink {
+    display: inline-block;
+    padding: 8px 15px 0px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 12px;
+    position: relative;
+}
+.foldersBackToSchoolButtonLink {
+    background-color: #063b63;
+    z-index: 0;
+    cursor: pointer;
+    margin-left: -12px;
+}
+.envelopesBackToSchoolButtonLink {
+    background-color: #00a4e4;
+    z-index: 1;
+    margin-left: 20px;
+    color: #ffffff;
+}
+.foldersBackToSchoolButtonLink a {
+    color: #ffffff;
+}
+.foldersBackToSchoolButtonLink img {
+    position: relative;
+    bottom: 3px;
+    margin-right: 3px;
+}
+.envelopesBackToSchoolButtonLink img {
+    margin-right: 2px;
+}
+.foldersBackToSchoolButtonLink img, .envelopesBackToSchoolButtonLink img {
+    vertical-align: text-bottom;
+}
+.noBorderTop {
+	border-top: none !important;
+}
+
+@media only screen and (max-width: 900px){
+	.btsHeaderImage p {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.btsNav2 div {
+		margin: 5px 0 !important;
+	}
+	.btsNav2 a {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid #ffffff;
+		padding: 5px 0;
+	}
+	.btsNav2 a:last-child {
+		border-bottom: none;
+	}
+	.btsNav2 span {
+		display: none;
+	}
+	.btsHeaderCellLeft {
+		display: none;
+	}
+	.btsHeaderImage p {
+		font-size: 14px;
+		padding-top: 15px;
+	}
+	.btsHeaderCellMiddle {
+		padding-left: 10px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.btsProductHeader p {
+		display: none;
+	}
+	.btsProductHeader {
+		height: 70px !important;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.btsHeaderCellRight {
+		display: none;
+	}
+	.btsHeaderCellMiddle {
+		padding-right: 10px;
+	}
+	.btsHeaderImage {
+		height: 200px;
+	}
+}
+
+

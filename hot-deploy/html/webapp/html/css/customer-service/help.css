@@ -1,0 +1,15 @@
+.help a:hover {
+	text-decoration: underline;
+}
+.help .bold {
+	font-weight: bold;
+}
+.help .blue {
+	color: #00a4e4;
+}
+.help h6 {
+	font-size: 20px;
+}
+.help .faq {
+	display: inline-block;
+}

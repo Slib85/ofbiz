@@ -1,0 +1,87 @@
+body > .content {
+	min-height: 0px;
+}
+.bulkEnvelopes {
+	margin: auto;
+	width: 912px;
+	position: relative;
+}
+	.bulkEnvelopesBody {
+		margin: 29px;
+		width: calc(100% - 58px);
+		background-color: #ffffff;
+		position: absolute;
+		top: 0px;
+		z-index: 10;
+	}
+	.bulkEnvelopesBody:after {
+		display: table;
+		content: " ";
+		clear: both;
+	}
+		.bulkEnvelopesLeft {
+			display: inline-block;
+			width: 582px;
+			float: left;
+			padding: 20px;
+		}
+			.bulkEnvelopesLeft h1 {
+				font-size: 31px;
+				color: #1ba4e1;
+			}
+				.bulkEnvelopesLeft .info1 {
+					margin-top: 15px;
+					font-size: 18px;
+					font-style: italic;
+				}
+				.bulkEnvelopesLeft .info2 {
+					font-size: 14px;
+					margin-top: 15px;
+				}
+				.bulkEnvelopesLeft .info3 {
+					text-transform: uppercase;
+					border: 3px solid #3dbeef;
+					color: #1ba4e1;
+					font-size: 20px;
+					font-weight: bold;
+					padding: 15px;
+					margin-top: 15px;
+					text-align: center;
+				}
+				.bulkEnvelopesLeft .info4 {
+					font-size: 14px;
+					text-decoration: underline;
+					margin-top: 15px;
+				}
+				.bulkEnvelopesLeft .info5 {
+					font-size: 14px;
+					margin-top: 15px;
+				}
+					.bulkEnvelopesLeft .info5 a {
+						text-decoration: underline;
+					}
+		.bulkEnvelopesRight {
+			display: inline-block;
+			width: 272px;
+			float: right;
+		}
+@media only screen and (max-width: 1023px) {
+	.bulkEnvelopes {
+		width: 100%;
+	}
+		.bulkEnvelopesBackground {
+			display: none;
+		}
+		.bulkEnvelopesBody {
+			position: static;
+		}
+			.bulkEnvelopesRight {
+				display: none;
+			}
+			.bulkEnvelopesLeft {
+				width: 100%;
+			}
+				.bulkEnvelopesLeft h1 {
+					font-size: 24px;
+				}
+}

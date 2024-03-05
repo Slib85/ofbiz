@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+	<!-- NEW TYPE OF PROMOS -->
+	<Enumeration description="Scene7 % Discount" enumCode="SCENE7_COUPON" enumId="PROMO_SCENE7_COUPON" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+	<Enumeration description="Printed % Discount" enumCode="PRINTED_COUPON" enumId="PROMO_PRINTED_COUPON" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+	<Enumeration description="Scene7 Flat Discount" enumCode="SCENE7_COUPON" enumId="PROMO_SCENE7_COUPON_FLAT" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+	<Enumeration description="Printed Flat Discount" enumCode="PRINTED_COUPON" enumId="PROMO_PRINTED_COUPON_FLAT" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+	<Enumeration description="Plain % Discount" enumCode="PLAIN_COUPON" enumId="PROMO_PLAIN_COUPON" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+	<Enumeration description="Addressing % Discount" enumCode="ADDRESSING_COUPON" enumId="PROMO_ADDRESSING_COUPON" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+	<Enumeration description="Addressing Flat Discount" enumCode="ADDRESSING_COUPON" enumId="PROMO_ADDRESSING_COUPON_FLAT" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+	<Enumeration description="Free Samples" enumCode="FREE_SAMPLES" enumId="PROMO_FREE_SAMPLES" sequenceId="12" enumTypeId="PROD_PROMO_ACTION"/>
+
+	<!-- LOYALTY PROMO -->
+	<ProductPromo productPromoId="10000" promoName="Loyalty Discount" promoText="Loyalty Points Promotion for customers. Customers get discount based on Bronze, Silver, Gold and Platinum rules ." userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="1235" />
+	<!-- bronze: 2500-5000 points receives 5% discount -->
+	<ProductPromoRule productPromoId="10000" productPromoRuleId="1" ruleName="1-Bronze Loyalty Discount Rule" />
+	<ProductPromoCond productPromoId="10000" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ORST_HIST" operatorEnumId="PPC_GTE" condValue="5001" otherValue="12" />
+	<ProductPromoCond productPromoId="10000" productPromoRuleId="1" productPromoCondSeqId="2" inputParamEnumId="PPIP_ORST_HIST" operatorEnumId="PPC_LTE" condValue="7500" otherValue="12" />
+	<ProductPromoAction productPromoId="10000" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="5.0" />
+	<!-- silver: 5001-7500 points receives 7% discount -->
+	<ProductPromoRule productPromoId="10000" productPromoRuleId="2" ruleName="2-Silver Loyalty Discount Rule" />
+	<ProductPromoCond productPromoId="10000" productPromoRuleId="2" productPromoCondSeqId="1" inputParamEnumId="PPIP_ORST_HIST" operatorEnumId="PPC_GTE" condValue="7501" otherValue="12" />
+	<ProductPromoCond productPromoId="10000" productPromoRuleId="2" productPromoCondSeqId="2" inputParamEnumId="PPIP_ORST_HIST" operatorEnumId="PPC_LTE" condValue="10000" otherValue="12" />
+	<ProductPromoAction productPromoId="10000" productPromoRuleId="2" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="7.0" />
+	<!-- gold: 7501-10000 points receives 10% discount -->
+	<ProductPromoRule productPromoId="10000" productPromoRuleId="3" ruleName="3-Gold Loyalty Discount Rule" />
+	<ProductPromoCond productPromoId="10000" productPromoRuleId="3" productPromoCondSeqId="1" inputParamEnumId="PPIP_ORST_HIST" operatorEnumId="PPC_GTE" condValue="10001" otherValue="12" />
+	<ProductPromoCond productPromoId="10000" productPromoRuleId="3" productPromoCondSeqId="2" inputParamEnumId="PPIP_ORST_HIST" operatorEnumId="PPC_LTE" condValue="32000" otherValue="12" />
+	<ProductPromoAction productPromoId="10000" productPromoRuleId="3" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="10.0" />
+	<!-- platinum: 10001-32000 points receives 10% discount + secret benefits -->
+	<ProductPromoRule productPromoId="10000" productPromoRuleId="4" ruleName="4-Platinum Loyalty Discount Rule" />
+	<ProductPromoCond productPromoId="10000" productPromoRuleId="4" productPromoCondSeqId="1" inputParamEnumId="PPIP_ORST_HIST" operatorEnumId="PPC_GTE" condValue="32001" otherValue="12" />
+	<ProductPromoAction productPromoId="10000" productPromoRuleId="4" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="15.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10000" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- non taxable promo -->
+	<ProductPromo productPromoId="10001" promoName="Nontaxable Discount" promoText="" userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="2072" />
+	<ProductPromoRule productPromoId="10001" productPromoRuleId="1" ruleName="Nontaxable Discount Rule" />
+	<ProductPromoCond productPromoId="10001" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ROLE_TYPE" operatorEnumId="PPC_EQ" condValue="NON_TAXABLE" />
+	<ProductPromoAction productPromoId="10001" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_TAX_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="100.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10001" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- non profit -->
+	<ProductPromo productPromoId="10002" promoName="Non Profit Discount Promotion" promoText="" userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="14487" />
+	<ProductPromoRule productPromoId="10002" productPromoRuleId="1" ruleName="Trade Discount Rule" />
+	<ProductPromoCond productPromoId="10002" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ROLE_TYPE" operatorEnumId="PPC_EQ" condValue="NON_PROFIT" />
+	<ProductPromoAction productPromoId="10002" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="10.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10002" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- trade -->
+	<ProductPromo productPromoId="10003" promoName="Trade Discount Promotion" promoText="" userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="1324" />
+	<ProductPromoRule productPromoId="10003" productPromoRuleId="1" ruleName="Trade Discount Rule" />
+	<ProductPromoCond productPromoId="10003" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ROLE_TYPE" operatorEnumId="PPC_EQ" condValue="WHOLESALER" />
+	<ProductPromoAction productPromoId="10003" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="10.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10003" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- trade post net-->
+	<ProductPromo productPromoId="10004" promoName="Postnet Discount" promoText="" userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="18086" />
+	<ProductPromoRule productPromoId="10004" productPromoRuleId="1" ruleName="Trade Discount Rule" />
+	<ProductPromoCond productPromoId="10004" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ROLE_TYPE" operatorEnumId="PPC_EQ" condValue="WHOLESALER_PN" />
+	<ProductPromoAction productPromoId="10004" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="20.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10004" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- trade allegra net-->
+	<ProductPromo productPromoId="10005" promoName="Allegra Discount" promoText="" userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="18380" />
+	<ProductPromoRule productPromoId="10005" productPromoRuleId="1" ruleName="Trade Discount Rule" />
+	<ProductPromoCond productPromoId="10005" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ROLE_TYPE" operatorEnumId="PPC_EQ" condValue="WHOLESALER_ALGRA" />
+	<ProductPromoAction productPromoId="10005" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="20.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10005" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- facebook promo -->
+	<ProductPromo productPromoId="10006" promoName="Facebook Like Discount" promoText="" userEntered="Y" showToCustomer="Y" requireCode="Y" useLimitPerOrder="1" netsuiteId="16256" />
+	<ProductPromoRule productPromoId="10006" productPromoRuleId="1" ruleName="Facebook Discount Rule" />
+	<ProductPromoCond productPromoId="10006" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="20.0" />
+	<ProductPromoAction productPromoId="10006" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_AMOUNT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="1.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10006" fromDate="2006-03-04 11:28:59.0"/>
+	<ProductPromoCode productPromoCodeId="FBLSAVE1" productPromoId="10006" userEntered="Y" requireEmailOrParty="N" fromDate="2001-01-01 12:00:00.0" />
+
+	<!-- trade envelopes private -->
+	<ProductPromo productPromoId="10007" promoName="Private Trade Discount Promotion" promoText="" userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="19131" />
+	<ProductPromoRule productPromoId="10007" productPromoRuleId="1" ruleName="Trade Discount Rule" />
+	<ProductPromoCond productPromoId="10007" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ROLE_TYPE" operatorEnumId="PPC_EQ" condValue="WHOLESALER_EP" />
+	<ProductPromoAction productPromoId="10007" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="15.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10007" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- free sample promo -->
+	<ProductPromo productPromoId="10008" promoName="Trade Sample Discount" promoText="" userEntered="Y" showToCustomer="Y" requireCode="N" useLimitPerOrder="1" netsuiteId="19131" />
+	<ProductPromoRule productPromoId="10008" productPromoRuleId="1" ruleName="Trade Sample Rule" />
+	<ProductPromoCond productPromoId="10008" productPromoRuleId="1" productPromoCondSeqId="1" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="0" />
+	<ProductPromoAction productPromoId="10008" productPromoRuleId="1" productPromoActionSeqId="1" productPromoActionEnumId="PROMO_FREE_SAMPLES" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" quantity="5.0" amount="1.0" />
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="10008" fromDate="2006-03-04 11:28:59.0"/>
+
+	<!-- SAMPLE PROMOS -->
+	<ProductPromo productPromoId="9500" promoName="Samples Coupon" promoText="$1 Off" userEntered="Y" showToCustomer="Y" requireCode="Y" useLimitPerOrder="1" netsuiteId="1973" isSample="Y" />
+	<ProductPromoRule productPromoId="9500" productPromoRuleId="01" ruleName="Sample Discount $1"/>
+	<ProductPromoCond productPromoId="9500" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="20"/>
+	<ProductPromoAction productPromoId="9500" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_ORDER_AMOUNT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="1.0"/>
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="9500" fromDate="2001-01-01 12:00:00.0" sequenceNum="1"/>
+	<ProductPromoCode productPromoCodeId="SAMPLEDISC1" productPromoId="9500" userEntered="Y" requireEmailOrParty="N" fromDate="2001-01-01 12:00:00.0" />
+
+	<ProductPromo productPromoId="9501" promoName="Samples Coupon" promoText="$2 Off" userEntered="Y" showToCustomer="Y" requireCode="Y" useLimitPerOrder="1"  netsuiteId="1973" isSample="Y" />
+	<ProductPromoRule productPromoId="9501" productPromoRuleId="01" ruleName="Sample Discount $2"/>
+	<ProductPromoCond productPromoId="9501" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="20"/>
+	<ProductPromoAction productPromoId="9501" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_ORDER_AMOUNT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="2.0"/>
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="9501" fromDate="2001-01-01 12:00:00.0" sequenceNum="1"/>
+	<ProductPromoCode productPromoCodeId="SAMPLEDISC2" productPromoId="9501" userEntered="Y" requireEmailOrParty="N" fromDate="2001-01-01 12:00:00.0" />
+
+	<ProductPromo productPromoId="9502" promoName="Samples Coupon" promoText="$3 Off" userEntered="Y" showToCustomer="Y" requireCode="Y" useLimitPerOrder="1"  netsuiteId="1973" isSample="Y" />
+	<ProductPromoRule productPromoId="9502" productPromoRuleId="01" ruleName="Sample Discount $3"/>
+	<ProductPromoCond productPromoId="9502" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="20"/>
+	<ProductPromoAction productPromoId="9502" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_ORDER_AMOUNT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="3.0"/>
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="9502" fromDate="2001-01-01 12:00:00.0" sequenceNum="1"/>
+	<ProductPromoCode productPromoCodeId="SAMPLEDISC3" productPromoId="9502" userEntered="Y" requireEmailOrParty="N" fromDate="2001-01-01 12:00:00.0" />
+
+	<ProductPromo productPromoId="9503" promoName="Samples Coupon" promoText="$4 Off" userEntered="Y" showToCustomer="Y" requireCode="Y" useLimitPerOrder="1"  netsuiteId="1973" isSample="Y" />
+	<ProductPromoRule productPromoId="9503" productPromoRuleId="01" ruleName="Sample Discount $4"/>
+	<ProductPromoCond productPromoId="9503" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="20"/>
+	<ProductPromoAction productPromoId="9503" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_ORDER_AMOUNT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="4.0"/>
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="9503" fromDate="2001-01-01 12:00:00.0" sequenceNum="1"/>
+	<ProductPromoCode productPromoCodeId="SAMPLEDISC4" productPromoId="9503" userEntered="Y" requireEmailOrParty="N" fromDate="2001-01-01 12:00:00.0" />
+
+	<ProductPromo productPromoId="9504" promoName="Samples Coupon" promoText="$5 Off" userEntered="Y" showToCustomer="Y" requireCode="Y" useLimitPerOrder="1"  netsuiteId="1973" isSample="Y" />
+	<ProductPromoRule productPromoId="9504" productPromoRuleId="01" ruleName="Sample Discount $5"/>
+	<ProductPromoCond productPromoId="9504" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="20"/>
+	<ProductPromoAction productPromoId="9504" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_ORDER_AMOUNT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="5.0"/>
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="9504" fromDate="2001-01-01 12:00:00.0" sequenceNum="1"/>
+	<ProductPromoCode productPromoCodeId="SAMPLEDISC5" productPromoId="9504" userEntered="Y" requireEmailOrParty="N" fromDate="2001-01-01 12:00:00.0" />
+
+	<ProductPromo productPromoId="9505" promoName="Trade Black Friday Discount" promoText="10% Off" userEntered="Y" showToCustomer="Y" requireCode="Y" useLimitPerOrder="1" />
+	<ProductPromoRule productPromoId="9505" productPromoRuleId="01" ruleName="Sample Discount $5"/>
+	<ProductPromoCond productPromoId="9505" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_ORDER_TOTAL" operatorEnumId="PPC_GTE" condValue="0"/>
+	<ProductPromoAction productPromoId="9505" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_ORDER_PERCENT" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" amount="5.0"/>
+	<ProductStorePromoAppl productStoreId="10000" productPromoId="9505" fromDate="2001-01-01 12:00:00.0" sequenceNum="1"/>
+	<!-- Promo Codes for this promo will be imported via scripts -->
+
+</entity-engine-xml>

@@ -1,0 +1,144 @@
+/* BEGIN ORDER SUMMARY */
+.order-summary .summary-header {
+	border-bottom: 1px solid #cacaca;
+}
+	.order-summary .summary-header span {
+		font-weight: bold;
+	}
+
+.order-summary .summary-body {
+	font-size: 14px;
+}
+	.order-summary .summary-body > div.odd {
+		background-color: #ececec;
+	}
+		.order-summary .summary-body > div.odd .reorder_options textarea {
+			background-color: #fefefe;
+		}
+    .order-summary .order-number {
+        color: #fc7e22;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 26px;
+    }
+	.order-summary .summary-body .cart-item > div {
+		display: table;
+		width: 100%;
+	}
+		.order-summary .summary-body .cart-item .item-image {
+			display: table-cell;
+			width: 75px;
+			vertical-align: top;
+		}
+			.order-summary .summary-body .cart-item .item-image img {
+				margin-top: 5px;
+				display: block;
+				max-width: 75px;
+			}
+
+			.order-summary .summary-body .cart-item .item-image span {
+				display: block;
+				color: #37d378;
+			}
+
+		.order-summary .summary-body .cart-item .item-info {
+			display: table-cell;
+			vertical-align: top;
+		}
+			.order-summary .summary-body .cart-item .item-info span {
+				display: block;
+			}
+
+			.order-summary .summary-body .cart-item .item-info .item-title {
+				font-weight: bold;
+				color: #000000;
+				font-size: 14px;
+			}
+
+			.order-summary .summary-body .cart-item .item-info .alternate-price {
+				display: none;
+			}
+
+		.order-summary .summary-body .customization > span,
+		.order-summary .summary-body .production > span,
+		.order-summary .summary-body .price > span {
+			display: block;
+		}
+
+	.order-summary .summary-body .price-list {
+		border-bottom: 1px solid #cacaca;
+	}
+
+	.order-summary .summary-body .price-list span {
+		display: block;
+	}
+
+	/* BEGIN TOTAL COST AND COUPON */
+	.order-summary .summary-body .total-cost-and-coupon {
+		display: table;
+	}
+		.order-summary .summary-body .total-cost-and-coupon > div {
+			display: table-cell;
+			vertical-align: top;
+		}
+			.order-summary .summary-body .total-cost-and-coupon .coupon input {
+				display: inline-block;
+				max-width: 200px;
+			}
+
+			.order-summary .summary-body .total-cost-and-coupon .coupon .button-regular {
+				display: inline-block;
+				padding: 9px 0 8px;
+				width: 100px;
+				margin-left: 10px;
+			}
+
+			.order-summary .summary-body .total-cost-and-coupon .total-cost > span {
+				display: block;
+				font-size: 24px;
+				font-weight: bold;
+				line-height: 26px;
+				text-align: right;
+			}
+				.order-summary .summary-body .total-cost-and-coupon .total-cost > span > span {
+					color: #fc7e22;
+				}
+	@media only screen and (max-width: 1023px) {
+		.order-summary .production-header,
+		.order-summary .production {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		.order-summary .summary-body .total-cost-and-coupon .coupon input {
+			display: block;
+			max-width: 100px;
+		}
+
+		.order-summary .summary-body .total-cost-and-coupon .coupon .button-regular {
+			display: block;
+			margin-left: 0px;
+		}
+
+		.order-summary .summary-body .total-cost-and-coupon .total-cost > span {
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 20px;
+		}
+
+		.order-summary .customization-header,
+		.order-summary .customization,
+		.order-summary .price-header,
+		.order-summary .price,
+		.order-summary .reorder-header {
+			display: none;
+		}
+
+		.order-summary .summary-body .cart-item .item-info .alternate-price {
+			display: block;
+		}
+	}
+	/* END TOTAL COST AND COUPON */
+/* END ORDER SUMMARY */

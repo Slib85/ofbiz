@@ -1,0 +1,166 @@
+.printingMethodBanner {
+	background-color: #4f9bd5;
+	height: 200px;
+	color: #ffffff;
+	position: relative;
+}
+.printingMethodBanner h1 {
+	font-size: 30px;
+	padding: 20px 0 10px 30px;
+	width: 290px;
+}
+.printingMethodBanner p {
+	font-size: 16px;
+	padding: 0px 0 10px 30px;
+	width: 55%;
+}
+.printingMethodBanner img {
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
+.printingMethodContainer {
+	display: table;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.leftContent {
+	display: table-cell;
+    width: auto;
+    vertical-align: top;
+    padding-left: 20px;
+}
+.rightContent {
+	display: table-cell;
+    width: 420px;
+    vertical-align: top;
+    padding-right: 20px
+}
+.printingMethodContainer .leftContent a {
+	background-color: #ffffff;
+	display: inline-block;
+	width: 47%;
+	height: 365px;
+	margin: 0 5px 5px;
+	padding: 30px;
+	text-align: center;
+	vertical-align: top;
+}
+.printingMethodContainer .leftContent p {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.colorTypeDescription {
+	padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+.colorTypeDescription h4 {
+	font-size: 18px;
+    border-bottom: #40a82b 1px solid;
+    padding-bottom: 5px;
+}
+.colorTypeDescription p {
+    padding-top: 5px;
+}
+.foilColorList {
+	display: inline-block;
+    background-color: white;
+    margin-top: 10px;
+    width: 195px;
+    vertical-align: top;
+    text-align: center;
+    padding: 15px;
+    height: 580px;
+}
+.foilColorList h4 {
+	font-size: 18px;
+	border-bottom: #40a82b 1px solid;
+}
+.foilColorList .slideIt-container {
+	height: 500px;
+}
+.materialImage a {
+	display: block;
+}
+.printMethodColorList .slideIt-container {
+	height: 510px;
+}
+.printMethodColorList {
+	padding: 0 20px 20px 20px;
+    background-color: white;
+    text-align: center;
+    height: 580px;
+    position: relative;
+}
+.printMethodList {
+	padding: 0 20px 20px 20px;
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+}
+.printMethodList p {
+	white-space: inherit;
+}
+.printMethodList img {
+	border: 1px solid #000000;
+}
+.viewAllLink {
+	position: absolute;
+    bottom: 8px;
+    right: 20px;
+    text-decoration: underline;
+}
+.slideIt-down .fa, .slideIt-up .fa {
+	font-size: 20px;
+}
+.embossingImgMargin {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+@media only screen and (max-width: 1024px) {
+	.leftContent, .rightContent {
+		display: block;
+		width: 100%;
+	}
+	.leftContent {
+		padding: 20px;
+		text-align: center;
+	}
+	.rightContent {
+		padding: 0 20px;
+	}
+	.foilColorList {
+		width: 49.4%;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.printingMethodBanner img {
+		display: none;
+	}
+	.printingMethodBanner {
+		text-align: center;
+	}
+	.printingMethodBanner h1 {
+		width: 100%;
+	}
+	.printingMethodBanner p {
+		width: 100%;
+		padding: 0 20px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.foilColorList {
+		width: 100%;
+	}
+	.printingMethodContainer .leftContent a {
+		width: 100%;
+	}
+	.printingMethodBanner h1 {
+		font-size: 26px;
+	}
+	.printingMethodBanner p {
+		font-size: 15px;
+	}
+}

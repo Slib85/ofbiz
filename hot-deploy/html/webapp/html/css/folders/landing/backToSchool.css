@@ -1,0 +1,291 @@
+body {
+	overflow-x: hidden;
+}
+.foldersBackToSchoolButtonLink {
+	background-color: #063b63;
+	z-index: 1;
+	margin-left: 10px;
+	color: #ffffff;
+}
+.envelopesBackToSchoolButtonLink {
+	background-color: #00a4e4;
+	z-index: 0;
+	margin-left: -12px;
+	cursor: pointer;
+}
+.envelopesBackToSchoolButtonLink img {
+	position: relative;
+	bottom: -3px;
+	margin-right: 3px;
+}
+.envelopesBackToSchoolButtonLink a {
+	color: #ffffff;
+}
+.foldersBackToSchoolButtonLink, .envelopesBackToSchoolButtonLink {
+    display: inline-block;
+    padding: 5px 15px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 12px;
+    position: relative;
+}
+.banner {
+	position: relative;
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/foldersBackToSchoolBackground?wid=2292&hei=227&fmt=png-alpha') repeat-x;
+}
+.foldersContainer.foldersContainerLimiter {
+	max-width: 1157px !important;
+}
+.banner > div{
+	position: relative;
+	width: 500px;
+	float: left;
+	z-index: 1;
+	color: #ffffff;
+}
+.banner > div h2{
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+.banner > div p{
+	font-size: 13px;
+}
+.banner > div a{
+	font-weight: bold;
+}
+.banner img{
+	float: none !important;
+	position: absolute;
+	right: 0px;
+	z-index: 0;
+}
+.backToSchoolHeaderButton {
+	font-size: 18px !important;
+	padding: 10px 20px;
+	background-color: #4caf50;
+    color: #ffffff;
+}
+.banner2{
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/taxShopBackgroundBanner1');
+}
+.banner2 a{
+	display: inline-block;
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 16px;
+	cursor: pointer;
+}
+.banner2 span{
+	color: #ffd16e;
+	font-size: 18px;
+	margin: 0 10px;
+}
+.banner2 h2{
+	color: #ffffff;
+	padding: 10px;
+	font-weight: normal;
+	font-size: 22px;
+}
+.backToSchoolProductHeader {
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/foldersBackToSchoolProductHeader?wid=1157&hei=80&fmt=png-alpha');
+	margin-top: 20px;
+	height: 80px;
+	text-align: center;
+}
+.foldersWidth {
+	width: 215px;
+	background-color: #ffffff;
+}
+.customRow img{
+	display: block;
+	margin: 20px auto 10px;
+}
+.productName {
+	font-size: 16px;
+	font-weight: bold;
+	color: #063b63;
+}
+.productSKU {
+	font-size: 13px;
+    color: #000000;
+    font-weight: bold;
+    margin: 3px 0;
+}
+.btsProductInfo {
+	margin: 5px 0;
+}
+.btsProductInfo li {
+	font-size: 13px;
+    color: #000000;
+}
+.folderPrice {
+	float: right;
+	color: #4ba7f1;
+}
+.customButton{
+	text-transform: none;
+	color: #ffffff;
+	background-color: #4caf50;
+}
+.foldersRow span {
+	font-size: 16px !important;
+	width: 50%;
+}
+.foldersHeaderBanner img {
+	max-width: inherit;
+}
+.minimumQuantity {
+	position: absolute;
+	bottom: 0px;
+}
+.customRow {
+	position: relative;
+	height: 365px;
+}
+.blankRibbon {
+    width: 50px;
+    background-color: #063b63;
+    color: #ffffff;
+    position: absolute;
+    padding: 0 10px;
+    left: 0;
+    top: 10px;
+    z-index: 10;
+}
+.blankRibbonTop {
+    border-top: 10px solid #063b63;
+}
+.ribbonTop {
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    top: 0;
+    z-index: 10;
+    right: -10px;
+}
+.blankRibbonBottom {
+    border-bottom: 10px solid #063b63;
+}
+.ribbonBottom {
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    top: 10px;
+    z-index: 10;
+    right: -10px;
+}
+.customizableRibbon {
+    width: 105px;
+    background-color: #76cf49;
+    color: #ffffff;
+    position: absolute;
+    padding: 0 10px;
+    left: 0;
+    top: 10px;
+    z-index: 10;
+}
+.ribbonTop {
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    top: 0;
+    z-index: 10;
+    right: -10px;
+}
+.customizableRibbonTop {
+    border-top: 10px solid #76cf49;
+}
+.customizableRibbonBottom {
+    border-bottom: 10px solid #76cf49;
+}
+.ribbonBottom {
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    top: 7px;
+    z-index: 10;
+    right: -10px;
+}
+.singleProductLine a {
+	position: relative;
+}
+.customRow .ratings {
+	float: left;
+}
+.customRow .price {
+	float: right;
+	color: #4ba7f1;
+}
+.customRow .availability {
+	color: #000000;
+}
+[bns-hitname] {
+	text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 38px;
+    overflow: hidden;
+}
+[bns-hitsku] {
+	text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    height: 18px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+	.banner > div h2{
+		font-size: 30px;
+	}
+	.foldersHeaderBanner .textLeft.padding20 {
+		width: 48%;
+	}
+	.foldersHeaderBanner p {
+		width: 90%;
+	}
+	.banner > div h2 {
+	    margin-bottom: 5px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.foldersHeaderBanner {
+		text-align: center !important;
+	}
+	.foldersHeaderBanner img{
+		display: none;
+	}
+	.foldersHeaderBanner .textLeft.padding20 {
+		width: 100%;
+	}
+	.foldersHeaderBanner p {
+		width: 100%;
+	}
+	.banner2 span {
+		display: none;
+	}
+	.banner2 a {
+		width: 100%;
+	    padding: 5px 0;
+	    border-bottom: 1px solid #ffd16e;
+	    display: block;
+	    margin: 0 auto;
+	}
+	.banner2 a:last-child {
+	    border-bottom: none;
+	}
+	.backToSchoolProductHeader h2 {
+		padding-top: 15px !important;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.foldersHeaderBanner p {
+		font-size: 12px !important;
+	}
+	.ribbonBottom {
+		top: 5px;
+	}
+}

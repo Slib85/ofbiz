@@ -1,0 +1,248 @@
+#slider > article {
+	width:100%;
+	float:none;
+	margin:0
+}
+#slider {
+	margin:0
+}
+#flexslider .slides > li {
+	display: none;
+	position:relative
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .slides {
+	display: block;
+}
+* html .slides {
+	height: 1%;
+}
+#flexslider {
+	position:relative;
+	overflow:hidden;
+	/*height:392px*/
+}
+.slides {
+	list-style: none outside none;
+	margin:0;
+}
+.slides img {
+	width:100%
+}
+/* Control Nav */
+#flexslider .flex-direction-nav {
+	display:none;
+	position:absolute;
+	top:50%;
+	left:0;
+	overflow:hidden;
+	width:100%;
+	margin:-12px 0 0;
+	z-index:1000;
+	list-style:none;
+}
+.flex-direction-nav li {
+	float:right;
+	text-align:right;
+	height:25px;
+	width:15px;
+}
+.flex-direction-nav li:first-child {
+	float:left;
+	text-align:left
+}
+#flexslider .flex-direction-nav li a {
+	width:15px;
+	height:25px;
+	display:block;
+}
+#flexslider .flex-direction-nav li a.flex-prev {
+	background:url(../img/prev-1.png) no-repeat 0 0;
+	margin-left:18px;
+	float:left
+}
+#flexslider .flex-direction-nav li a.flex-next {
+	background:url(../img/next-1.png) no-repeat 0 0;
+	float:right;
+	margin-right:18px
+}
+#flexslider .flex-direction-nav li a:hover {
+	background-position:0 bottom;
+}
+.flex-direction-nav {
+	display:none
+}
+.flex-control-nav {
+	display:none;
+	z-index:2;
+	overflow:hidden;
+	margin:0;
+	list-style:none;
+}
+.flex-control-nav li {
+	float:left;
+	width:253px;
+	height:134px;
+	margin-left:1px
+}
+.flex-control-nav li:first-child {
+	margin:0;
+}
+.flex-control-nav li a {
+	display:block;
+	cursor:pointer
+}
+.flex-control-nav li a:hover, .flex-control-nav li .flex-active {
+
+}
+.flex-control-nav li .flex-active {
+	cursor:default;
+	pointer-events: none;
+
+}
+/* #slides-pagination */
+
+#slides-pagination {
+	position: relative;
+	overflow: visible;
+	display: block;
+	padding-bottom: 1px;
+	margin-bottom: 1px;
+	background: url(../img/pad_border.png) 0 bottom repeat-x;
+}
+#slides-pagination .flex-viewport {
+    overflow:visible !important;
+}
+#slides-pagination ul {
+	width:100% !important;
+	position:relative;
+	list-style:none;
+	transform:none !important;
+	margin:0;
+    padding:0
+}
+#slides-pagination ul li {
+	float: left;
+	width: 215px;
+	height: .125px;
+	padding-top: 15px;
+	padding-left: 18px;
+	cursor: pointer;
+	margin-right: 1px;
+	margin-top: 0;
+	background-color: #000000;
+}
+#slides-pagination ul li:last-child {
+    width:216px !important;
+    margin-right:0;
+}
+#slides-pagination ul li p {
+	color: #fff;
+	font: 20px/19px 'Trebuchet MS', sans-serif;
+	text-align: left;
+}
+#slides-pagination ul li:hover, #slides-pagination ul .flex-active-slide {
+	background-color: #c70e0e;
+	height: .125px;
+	margin-top: 0px;
+}
+#slides-pagination .flex-direction-nav {
+	top:0;
+	left:0;
+	position:absolute;
+	margin:0;
+	width:100%;
+	list-style:none;
+	height:0;
+	display:none
+}
+.flex-caption {
+	position: absolute;
+	left:0;
+	top: 0;
+    margin-top:62px;
+    margin-left:60px;
+}
+.flex-caption .title1 {
+	font: 59px/51px 'Orbit-B BT';
+	color: #fff;
+	text-shadow: 1px 1px 3px  rgba(0, 0, 0, 1);
+	margin-bottom: -20px;
+}
+.flex-caption .title2 {
+	font: 17px/24px 'Arial';
+	color: #fff;
+	width: 500px;
+	margin-bottom: 5px;
+	/* [disabled]text-shadow: 5px 5px 5px #000000; */
+	text-outline: 5px 5px #000000;
+}
+
+.flex-caption .group1 {
+	position: relative;
+	left:0;
+	top: 0;
+    margin-top:0px;
+    margin-left:-63px;
+	font: 45px/43px 'Orbit-B BT';
+	color: #fff;
+	text-shadow: 1px 1px 3px  rgba(0, 0, 0, 1);
+	margin-bottom: 58px;
+}
+
+.flex-caption a {
+	color: #FFFFFF;
+	font-family: "Trebuchet MS";
+	font-size: 24px;
+	text-shadow: 0px -1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000;
+	;
+	/* [disabled]text-outline: 2px 2px #000000; */
+}
+.flex-caption a:hover {
+    color:#fff;
+}
+/*---------------------------------------------------------------------*/
+@media (min-width: 980px) and (max-width: 1199px){
+    #slides-pagination ul li {width:169px !important;}
+    #slides-pagination ul li:last-child {width:170px !important; margin-right:0;}
+    #slides-pagination ul li p {font-size:17px; line-height:17px;}
+}
+/*---------------------------------------------------------------------*/
+@media (max-width: 979px){
+    .flex-caption .title2 {display:none;}
+    .flex-caption a {display:none;}
+    #slides-pagination ul li {width:126px !important;}
+    #slides-pagination ul li:last-child {width:126px !important; margin-right:0;}
+    #slides-pagination ul li p {font-size:15px; line-height:15px;}
+}
+/*---------------------------------------------------------------------*/
+@media (max-width: 767px) {
+    .flex-caption .title1 {display:none;}
+    .flex-caption .title2 {display:none;}
+    .flex-caption a {display:none;}
+    #slides-pagination {position:absolute; height:0; overflow:hidden; padding:0;}
+    #flexslider .flex-direction-nav {display:block;}
+}
+/*---------------------------------------------------------------------*/
+@media (min-width: 626px) and (max-width: 767px) {
+    #slides-pagination ul li {width:123px !important;}
+}
+/*---------------------------------------------------------------------*/
+@media (max-width: 626px) {
+    #slides-pagination ul li {width:123px !important;}
+}
+/*---------------------------------------------------------------------*/
+@media (max-width: 320px) {
+    /*#flexslider .flex-direction-nav {display:none;}*/
+}

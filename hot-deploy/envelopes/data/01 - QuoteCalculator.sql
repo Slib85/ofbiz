@@ -1,0 +1,11 @@
+drop table qc_quote;
+drop table qc_style_attribute_value;
+drop table qc_attribute_value;
+drop table qc_attribute;
+drop table qc_attribute_type;
+drop table qc_stock;
+drop table qc_stock_type;
+drop table qc_material_type;
+drop table qc_style;
+drop table qc_style_group;
+drop table qc_vendor;

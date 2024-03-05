@@ -1,0 +1,24 @@
+/* BEGIN DESIGNS */
+	/* BEGIN DESIGN LIST */
+		.designs .design-list {
+			display: table;
+		}
+			.designs .design-list > div {
+				border: 1px solid #d7d7d7;
+				min-width: 170px;
+				max-width: 340px;
+				width: auto;
+				display: table-cell;
+				background-color: #ffffff;
+				line-height: 22px;
+				text-align: center;
+			}
+				.designs .design-list span {
+					display: block;
+				}
+				.designs .design-list > div .defaults {
+					color: #FC7E22;
+					font-weight: bold;
+				}
+	/* END DESIGN LIST */
+/* END DESIGNS */

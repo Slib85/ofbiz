@@ -1,0 +1,307 @@
+/*.fa-circle {
+	color: #000000 !important;
+	margin-left: 0 !important;
+	font-size: 8px;
+}
+.commerceConciergeContent .columns {
+	padding-left: 0;
+}
+.commerceConciergeContent .section {
+	margin-left: 0 !important;
+}
+.commerceConciergeForm {
+	padding: 60px !important;
+}
+form p{
+	font-size: 16px;
+}
+form h5{
+	padding-bottom: 5px !important;
+}
+
+strong {
+	color: #404040;
+}*/
+.commerceConciergeHeader {
+	position: relative;
+	min-height: 132px;
+	margin-left: 0 !important;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/saveOnBulkOrdersBanner?fmt=png-alpha&wid=3000);
+}
+.commerceConciergeHeader h1{
+	color: #000000;
+	position: absolute;
+	top: 25%;
+	left: 20px;
+	font-size: 38px;
+}
+.commerceConciergeHeader img{
+	position: absolute;
+	top: 20%;
+	right: 20px;
+}
+.commerceConciergeContentHeader h4{
+	color: #009cdd;
+	font-size: 30px;
+}
+/*.jqs-shipping .row{
+	padding-left: 15px;
+}
+.bulkOrdersBanner {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/saveOnBulkOrdersBanner?fmt=png-alpha&wid=3000) repeat-x;
+    margin: 0 auto;
+    min-height: 180px;
+    position: relative;
+}
+.bulkOrdersBanner h3, .bulkOrdersBanner p {
+	color: #000000;
+}
+.bulkOrdersBanner p {
+	padding-left: 20px;
+}
+.bulkOrdersBanner h3 {
+	padding: 20px 20px 0;
+	font-weight: bold;
+}
+.bulkOrdersBanner img {
+	position: absolute;
+	right: 0;
+	top: 12px;
+}
+body>.content .section {
+	border: 1px solid #d2d2d2 !important;
+}*/
+.conciergeBorderBottom {
+	border-bottom: 1px #e3e3e3 solid;
+}
+.conciergeMailUsBorder {
+	border: 1px solid #00a4e4;
+}
+.commerceConciergeContent h3 {
+	color: #00a4e4;
+	font-weight: bold;
+	font-size: 26px;
+}
+.commerceConciergeContent h4 {
+	text-decoration: underline;
+	color: #000000;
+	font-size: 20px;
+	font-style: italic;
+}
+.commerceConciergeContent h5 {
+	font-weight: bold;
+}
+.commerceConciergeContent .section {
+	margin: 20px 10px 0 0 !important;
+}
+.conciergeMain1Text {
+	color: #000000;
+	font-size: 17px;
+}
+span {
+	font-weight: bold;
+}
+.padding30 {
+	padding: 30px;
+}
+.conciergeList p {
+	color: #000000;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.conciergeList i {
+	color: #00a4e4;
+	margin-right: 10px;
+}
+.conciergeGetStarted {
+	margin-top: 10px;
+	color: #000000;
+	font-size: 17px;
+}
+.conciergeMailUs {
+	color: #000000;
+}
+.conciergeContact p {
+	display: inline-block;
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+.conciergeContact i {
+	font-size: 85px;
+	margin-right: 10px;
+}
+/*.conciergeRow {
+	display: table;
+}
+.conciergeTableCell {
+	display: table-cell;
+}
+.conciergeMainImg1 {
+	width: 572px;
+}
+.conciergeRowText {
+	width: auto;
+	vertical-align: middle;
+}*/
+.commerceConciergeForm span {
+	color: #00a4e4;
+	font-weight: bold;
+}
+.commerceConciergeForm h5 {
+	font-weight: normal;
+}
+.commerceConciergeForm {
+	padding: 0 30px;
+}
+.commerceConciergeButton {
+	text-transform: none;
+	font-size: 16px;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #fc7e22;
+	color: #ffffff;
+	margin: 0 auto;
+	width: 50%;
+}
+.commerceConciergeButton i {
+	margin-left: 10px;
+}
+.pullLeft {
+	float: left !important;
+}
+.commerceConciergeForm p {
+	color: #000000;
+	font-size: 14px;
+	font-style: italic;
+}
+.smallerFontForm {
+	font-size: 12px;
+	color: #000000;
+}
+.conciergeUploadButton {
+	cursor: pointer;
+	font-size: 16px;
+	background-color: #f1f1f1;
+	color: #00a4e4;
+	text-align: center;
+	display: block;
+	padding: 7px;
+	border: solid 1px #e3e3e3;
+}
+.uploadContainer .historyHeader {
+	padding: 5px 20px;
+	background-color: #eeeeee;
+	border: 1px solid #dadada;
+}
+.uploadContainer .not-logged-in {
+	border: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+}
+	.not-logged-in span {
+		color: #009cdd;
+		cursor: pointer;
+	}
+.uploadContainer .historyBody {
+	margin: 0px;
+	max-height: 150px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.uploadContainer .fileContainer {
+	border: 3px dotted #fc7e22;
+	height: 50px;
+	margin: auto;
+}
+.fileContainer:hover {
+	background-color: #eeeeee;
+}
+.fileContainer .dropzone{
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	cursor: pointer;
+}
+.fileContainer .placeholder {
+	text-align: center;
+	font-size: 20px;
+}
+.fileContainer .placeholder:after {
+	content: "Click Here to Upload or Drag Files Here";
+	top: 10px;
+	position: relative;
+	color: #00a4e4;
+}
+.fileContainer .filename {
+	margin: 0px 5px;
+}
+.fileContainer .remove {
+	right: 5px;
+}
+.uploadContainer textarea {
+	width: 100%;
+	resize: none;
+	height: 50px;
+	margin-bottom: 0px;
+}
+.uploadContainer input[name="fileUpload"] {
+	position: absolute;
+	top: -100000px;
+	display: block
+}
+.conciergeBorderBottom .uploadedFiles {
+	border: 1px solid #00a4e4;
+	background-color: #f7f8fa;
+	border-top: 0px;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.conciergeBorderBottom .uploadedFiles i {
+	margin-left: 5px;
+	cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+	.commerceConciergeHeader h1 {
+		top: 12% !important;
+		font-size: 32px;
+	}
+	.commerceConciergeButton {
+		margin: 15px auto !important;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.commerceConciergeHeader img {
+		display: none;
+	}
+	.commerceConciergeHeader h1 {
+		position: relative;
+		display: block;
+		margin: 20px auto;
+		font-size: 26px;
+	}
+	.commerceConciergeContent h3 {
+		font-size: 22px;
+	}
+	.conciergeMain1Text {
+		font-size: 16px;
+	}
+	body>.content .section h5 {
+		font-size: 20px;
+	}
+	.conciergeList p {
+		font-size: 16px;
+	}
+	.commerceConciergeButton {
+		width: 100% !important;
+	}
+	.conciergeContact p {
+		font-size: 14px;
+	}
+	.conciergeContact i {
+		font-size: 65px;
+	}
+}

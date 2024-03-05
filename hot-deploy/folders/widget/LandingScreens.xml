@@ -1,0 +1,124 @@
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="taxShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Tax Folders and Report Covers"/>
+				<set field="descProperty" value="Want to project a professional image and impress clients? Shop from our selection of income tax return folders and report covers to stay on brand this season."/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/landing/taxShop.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/landing/taxShop.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="backToSchool">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Back To School Shop"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/landing/backToSchool.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/landing/backToSchool.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="coupons">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Coupons Page"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/landing/coupons.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/landing/coupons.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="couponList">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Coupon List"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/landing/couponsList.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="data-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/landing/couponList.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="printMethod">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Print Methods"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/customerService/foilGuide.groovy"/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/landing/printMethod.groovy"/>
+   			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/landing/printMethod.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="graduationShop">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Graduation Diploma Covers"/>
+				<set field="descProperty" value="Get the best diploma displays for your graduates this season with our Graduation Shop. Find certificate holders, diploma covers, foil seals, and folders right here."/>
+				<script location="component://folders/webapp/folders/WEB-INF/actions/landing/graduationShop.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/landing/graduationShop.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="custom9x12Folders">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Custom 9x12 Folders"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://folders/webapp/folders/landing/custom9x12Folders.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

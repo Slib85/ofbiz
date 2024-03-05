@@ -1,0 +1,155 @@
+.custom9x12Header {
+    background-color: #4f9bd5;
+    display: inline-block;
+    position: relative;
+    min-height: 203px;
+    width: 100%;
+    color: #ffffff;
+}
+.custom9x12Header img {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.custom9x12Header h1 {
+    padding: 30px 0px 10px 20px;
+    font-size: 34px;
+    width: 60%;
+}
+.custom9x12Header p {
+    width: 58%;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.customFolderContainerContent {
+    margin-top: 40px;
+}
+.specialty9x12Container {
+    display: table;
+    width: 100%;
+}
+.standardFolderCell {
+    display: table-cell;
+    width: auto;
+    position: relative;
+}
+.standardFolderList {
+    background-color: #e5e5e5;
+    height: 275px;
+    width: 100%;
+    display: table;
+}
+.standardFolderImg {
+    display: table-cell;
+    width: 180px;
+    padding: 20px 0 0 20px;
+}
+.standardFolderInfo {
+    display: table-cell;
+    width: 280px;
+    vertical-align: top;
+    padding: 30px 0 0 20px;
+}
+.standardFolderInfo ul {
+    margin: 0;
+}
+.categorySlideContainer {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+}
+.standardFolderList .slideIt-container {
+    height: 250px;
+}
+.minQuantity {
+    color: #3da6ff;
+}
+.customFolderStartingPrice {
+    color: #3da6ff;
+    border: 1px solid #3da6ff;
+    text-align: center;
+    width: 140px;
+    padding: 2px 0;
+    margin: 5px 0;
+}
+.standardFolderButton {
+    background-color: #4eac52;
+    text-transform: none;
+    width: 170px;
+}
+.standardFolderButton {
+    color: #ffffff;
+    font-weight: bold;
+}
+.buyOnlineRibbon {
+    position: absolute;
+    top: -12px;
+    right: 15px;
+}
+.topRowButton {
+    background-color: #063b63;
+    width: 225px;
+    font-size: 20px;
+    padding: 10px 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.topRowButton a {
+    color: #ffffff;
+}
+.topRowButton a:hover {
+    color: #ffffff !important;
+}
+.topRowButton i {
+    font-size: 24px;
+    margin-right: 2px;
+}
+.checkoutIcon {
+    color: #4eac52;
+}
+.marginTop40 {
+    margin-top: 40px;
+}
+.getQuoteIcon {
+    color: #f58549;
+}
+.quickShipIcon {
+    color: #ffd200;
+}
+.productTextDetails {
+    display: inline-block;
+    font-weight: bold;
+    padding-left: 2px;
+}
+#getQuote .standardFolderList {
+    height: 240px;
+}
+#getQuote .standardFolderList .slideIt-container {
+    height: 220px;
+}
+a:hover {
+    color: inherit !important;
+}
+@media only screen and (max-width:767px) {
+    .standardFolderImg {
+        display: inline-block;
+    }
+    .standardFolderInfo {
+        display: inline-block;
+    }
+    .categorySlideContainer {
+        display: block;
+        width: 100%:
+    }
+    .custom9x12Header img {
+        display: none;
+    }
+    .custom9x12Header h1 {
+        width: 100%;
+    }
+    .custom9x12Header p {
+        width: 100%;
+    }
+}

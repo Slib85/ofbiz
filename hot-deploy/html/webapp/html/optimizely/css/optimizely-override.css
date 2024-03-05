@@ -1,0 +1,25 @@
+/*
+The block of code to support adding icons to selectable ui elements.
+Do not change the order in which the classes are defined.
+*/
+/*BEGIN*/
+.jqs-ocs-selected, .jqs-ocs-not-selected {
+    display: none;
+}
+
+.jqs-optimizely [data-type=selectable-ui] .jqs-ocs-not-selected {
+    display: inline-block;
+}
+
+.jqs-optimizely [data-type=selectable-ui] .jqs-ocs-selected {
+    display: none;
+}
+
+.jqs-optimizely [data-type=selectable-ui].selected .jqs-ocs-selected {
+    display: inline-block;
+}
+
+.jqs-optimizely [data-type=selectable-ui].selected .jqs-ocs-not-selected {
+    display: none;
+}
+/*END*/

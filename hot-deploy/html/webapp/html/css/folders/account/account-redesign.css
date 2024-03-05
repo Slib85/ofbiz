@@ -1,0 +1,142 @@
+/* FOLDERS.com - ACCOUNT - REDESIGN*/
+/*=====================================*/
+/*=====================================*/
+.account .FOL_Grid_Wrap {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 50px;
+    padding: 30px 0;
+}
+.account .FOL_Grid_Box {
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    border: 2px solid #dadada;
+}
+.account .FOL_Grid_Box:nth-child(1),
+.account .FOL_Grid_Box:nth-child(2),
+.account .FOL_Grid_Box:nth-child(3) {
+    grid-column: span 4;
+}
+.account .FOL_Grid_Box:nth-child(4) {
+    grid-column: span 12;
+}
+@media screen and (max-width: 767px) {
+    .account .FOL_Grid_Wrap {
+        display: block;
+    }
+    .account .FOL_Grid_Box {
+        margin: 0 0 25px 0;
+    }
+    .account .FOL_Grid_Box .accountInfoBody div {
+        margin: 22px 0;
+    }
+}
+/*=====================================*/
+/*=====================================*/
+.account .accountHeader .FOL_UI_LogOut_CTA {
+    text-align: right;
+}
+.account .accountHeader {
+    border-bottom: 2px solid #1A345F;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.account .accountHeader div {
+    padding: 0 0 10px 0;
+    vertical-align: baseline;
+    display: table-cell;
+    width: 49%;
+}
+.account .accountHeader .accountHeaderContent {
+    /* padding: 12px 0; */
+}
+.account .accountContent .accountInfoHeader {
+    border-bottom: 2px dotted #dcdcdc;
+    padding: 0 0 15px 0;
+}
+.account .accountContent .accountInfoHeader h2 {
+    font-size: 30px;
+    color: #1A345F;
+}
+.account .accountContent .accountInfoHeader i {
+    font-size: 65px;
+    color: #1A345F;
+}
+.account .accountContent .accountInfoBody a {
+    font-size: 20px;
+}
+.account .accountContent .accountInfoBody a:hover{
+    font-weight: 700;
+    text-decoration: underline;
+}
+.account .accountContent .accountContentRight .contactUs h2 {
+    font-size: 26px;
+}
+.account .accountContent .accountContentRight .contactUs a {
+    font-size: 18px;
+    width: 160px;
+    margin: auto;
+    display: block;
+}
+.account .accountContent .accountContentRight .contactUs a i.fa-phone {
+    font-size: 22px;
+}
+/*=====================================*/
+/*=====================================*/
+.account .FOL_Grid_Box:nth-child(4) .accountInfoHeader {
+    padding: 11px 0 20px 0;
+    line-height: 1;
+    /* background-color: #31476f; */
+    /* border: none; */
+}
+.account .FOL_Grid_Box:nth-child(4) h2 {
+    /* color: #fff !important; */
+}
+.account .FOL_Grid_Box:nth-child(4) .accountInfoBody {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.account .FOL_Grid_Box:nth-child(4) .accountInfoBody div {
+    display: table-cell;
+}
+.account .FOL_Grid_Box:nth-child(4) .accountInfoBody div:first-child {
+    border-right: 1px solid #dcdcdc;
+}
+/*=====================================*/
+/*=====================================*/
+@media only screen and (max-width: 767px) {
+    .account .FOL_Grid_Box:nth-child(4) .accountInfoBody div {
+        display: block;
+    }
+    /* .account .accountHeader > * {
+      display: block;
+    }
+    .account .accountContent .accountInfoHeader {
+      border-right: inherit;
+      width: 95px;
+    }
+    .account .accountContent .accountInfoHeader h2 {
+      font-size: 20px;
+    }
+    .account .accountContent .accountInfoHeader i {
+      font-size: 32px;
+      margin: 15px 0px;
+    }
+    .account .accountContent .accountInfoBody a {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .account .accountHeader > div:first-child > *,
+    .account .accountHeader > div:last-child > * {
+      float: none;
+    } */
+}
+
+/*=====================================*/
+/*=====================================*/

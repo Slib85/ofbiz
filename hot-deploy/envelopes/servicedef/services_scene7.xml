@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+	<description>Envelopes.com Services</description>
+	<vendor>Envelopes.com</vendor>
+	<version>1.0</version>
+
+	<service name="getScene7DOMFXGs" engine="java" max-retry="0" transaction-timeout="600" auth="false" location="com.envelopes.scene7.Scene7Services" invoke="getScene7DOMFXGs">
+		<description>Get DOM FXGs</description>
+	</service>
+
+	<service name="extractScene7Params" engine="java" max-retry="0" transaction-timeout="1200" location="com.envelopes.scene7.Scene7Services" invoke="extractScene7Params">
+		<description>Get parameters for scene7 templates like width, height and colors</description>
+		<attribute name="scene7TemplateId" type="String" mode="IN" optional="true"/>
+	</service>
+
+	<service name="getScene7DefaultImages" engine="java" max-retry="0" transaction-timeout="300" location="com.envelopes.scene7.Scene7Services" invoke="getScene7DefaultImages">
+		<description>Get default images to use in the online designer</description>
+	</service>
+
+	<service name="getTemplateProdAssoc" engine="java" max-retry="0" transaction-timeout="300" location="com.envelopes.scene7.Scene7Services" invoke="getTemplateProdAssoc">
+		<description>Get the products that the designs were made for</description>
+		<attribute name="scene7TemplateId" type="String" mode="IN" optional="true"/>
+	</service>
+
+	<service name="getTemplateBasePrices" engine="java" max-retry="0" transaction-timeout="300" location="com.envelopes.scene7.Scene7Services" invoke="getTemplateBasePrices">
+			<description>Get the price for the templates based on the first product listed</description>
+			<attribute name="scene7TemplateId" type="String" mode="IN" optional="true"/>
+	</service>
+
+	<service name="generateScene7Files" engine="java" max-retry="0" transaction-timeout="1200" location="com.envelopes.scene7.Scene7Services" invoke="generateScene7Files">
+			<description>Get the price for the templates based on the first product listed</description>
+			<attribute name="scene7DesignId" type="String" mode="IN" optional="false"/>
+			<attribute name="orderId" type="String" mode="IN" optional="false"/>
+			<attribute name="orderItemSeqId" type="String" mode="IN" optional="false"/>
+			<attribute name="previewFiles" type="Boolean" mode="IN" optional="true"/>
+			<attribute name="proofFile" type="Boolean" mode="IN" optional="true"/>
+			<attribute name="printFiles" type="Boolean" mode="IN" optional="true"/>
+			<attribute name="statusId" type="String" mode="IN" optional="true"/>
+	</service>
+</services>

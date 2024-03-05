@@ -1,0 +1,454 @@
+
+package com.bigname.cxml.invoice;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for InvoiceDetailSummary complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="InvoiceDetailSummary">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{}SubtotalAmount"/>
+ *         &lt;element ref="{}Tax"/>
+ *         &lt;element ref="{}SpecialHandlingAmount" minOccurs="0"/>
+ *         &lt;element ref="{}ShippingAmount" minOccurs="0"/>
+ *         &lt;element ref="{}GrossAmount" minOccurs="0"/>
+ *         &lt;element ref="{}InvoiceDetailDiscount" minOccurs="0"/>
+ *         &lt;element ref="{}InvoiceHeaderModifications" minOccurs="0"/>
+ *         &lt;element ref="{}InvoiceDetailSummaryLineItemModifications" minOccurs="0"/>
+ *         &lt;element ref="{}TotalCharges" minOccurs="0"/>
+ *         &lt;element ref="{}TotalAllowances" minOccurs="0"/>
+ *         &lt;element ref="{}TotalAmountWithoutTax" minOccurs="0"/>
+ *         &lt;element ref="{}NetAmount"/>
+ *         &lt;element ref="{}DepositAmount" minOccurs="0"/>
+ *         &lt;element ref="{}DueAmount" minOccurs="0"/>
+ *         &lt;element ref="{}InvoiceDetailSummaryIndustry" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "InvoiceDetailSummary", propOrder = {
+    "subtotalAmount",
+    "tax",
+    "specialHandlingAmount",
+    "shippingAmount",
+    "grossAmount",
+    "invoiceDetailDiscount",
+    "invoiceHeaderModifications",
+    "invoiceDetailSummaryLineItemModifications",
+    "totalCharges",
+    "totalAllowances",
+    "totalAmountWithoutTax",
+    "netAmount",
+    "depositAmount",
+    "dueAmount",
+    "invoiceDetailSummaryIndustry"
+})
+public class InvoiceDetailSummary {
+
+    @XmlElement(name = "SubtotalAmount", required = true)
+    protected SubtotalAmount subtotalAmount;
+    @XmlElement(name = "Tax", required = true)
+    protected Tax tax;
+    @XmlElement(name = "SpecialHandlingAmount")
+    protected SpecialHandlingAmount specialHandlingAmount;
+    @XmlElement(name = "ShippingAmount")
+    protected ShippingAmount shippingAmount;
+    @XmlElement(name = "GrossAmount")
+    protected GrossAmount grossAmount;
+    @XmlElement(name = "InvoiceDetailDiscount")
+    protected InvoiceDetailDiscount invoiceDetailDiscount;
+    @XmlElement(name = "InvoiceHeaderModifications")
+    protected InvoiceHeaderModifications invoiceHeaderModifications;
+    @XmlElement(name = "InvoiceDetailSummaryLineItemModifications")
+    protected InvoiceDetailSummaryLineItemModifications invoiceDetailSummaryLineItemModifications;
+    @XmlElement(name = "TotalCharges")
+    protected TotalCharges totalCharges;
+    @XmlElement(name = "TotalAllowances")
+    protected TotalAllowances totalAllowances;
+    @XmlElement(name = "TotalAmountWithoutTax")
+    protected TotalAmountWithoutTax totalAmountWithoutTax;
+    @XmlElement(name = "NetAmount", required = true)
+    protected NetAmount netAmount;
+    @XmlElement(name = "DepositAmount")
+    protected DepositAmount depositAmount;
+    @XmlElement(name = "DueAmount")
+    protected DueAmount dueAmount;
+    @XmlElement(name = "InvoiceDetailSummaryIndustry")
+    protected InvoiceDetailSummaryIndustry invoiceDetailSummaryIndustry;
+
+    /**
+     * Gets the value of the subtotalAmount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SubtotalAmount }
+     *     
+     */
+    public SubtotalAmount getSubtotalAmount() {
+        return subtotalAmount;
+    }
+
+    /**
+     * Sets the value of the subtotalAmount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SubtotalAmount }
+     *     
+     */
+    public void setSubtotalAmount(SubtotalAmount value) {
+        this.subtotalAmount = value;
+    }
+
+    /**
+     * Gets the value of the tax property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Tax }
+     *     
+     */
+    public Tax getTax() {
+        return tax;
+    }
+
+    /**
+     * Sets the value of the tax property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Tax }
+     *     
+     */
+    public void setTax(Tax value) {
+        this.tax = value;
+    }
+
+    /**
+     * Gets the value of the specialHandlingAmount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SpecialHandlingAmount }
+     *     
+     */
+    public SpecialHandlingAmount getSpecialHandlingAmount() {
+        return specialHandlingAmount;
+    }
+
+    /**
+     * Sets the value of the specialHandlingAmount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SpecialHandlingAmount }
+     *     
+     */
+    public void setSpecialHandlingAmount(SpecialHandlingAmount value) {
+        this.specialHandlingAmount = value;
+    }
+
+    /**
+     * Gets the value of the shippingAmount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ShippingAmount }
+     *     
+     */
+    public ShippingAmount getShippingAmount() {
+        return shippingAmount;
+    }
+
+    /**
+     * Sets the value of the shippingAmount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ShippingAmount }
+     *     
+     */
+    public void setShippingAmount(ShippingAmount value) {
+        this.shippingAmount = value;
+    }
+
+    /**
+     * Gets the value of the grossAmount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link GrossAmount }
+     *     
+     */
+    public GrossAmount getGrossAmount() {
+        return grossAmount;
+    }
+
+    /**
+     * Sets the value of the grossAmount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link GrossAmount }
+     *     
+     */
+    public void setGrossAmount(GrossAmount value) {
+        this.grossAmount = value;
+    }
+
+    /**
+     * Gets the value of the invoiceDetailDiscount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link InvoiceDetailDiscount }
+     *     
+     */
+    public InvoiceDetailDiscount getInvoiceDetailDiscount() {
+        return invoiceDetailDiscount;
+    }
+
+    /**
+     * Sets the value of the invoiceDetailDiscount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InvoiceDetailDiscount }
+     *     
+     */
+    public void setInvoiceDetailDiscount(InvoiceDetailDiscount value) {
+        this.invoiceDetailDiscount = value;
+    }
+
+    /**
+     * Gets the value of the invoiceHeaderModifications property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link InvoiceHeaderModifications }
+     *     
+     */
+    public InvoiceHeaderModifications getInvoiceHeaderModifications() {
+        return invoiceHeaderModifications;
+    }
+
+    /**
+     * Sets the value of the invoiceHeaderModifications property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InvoiceHeaderModifications }
+     *     
+     */
+    public void setInvoiceHeaderModifications(InvoiceHeaderModifications value) {
+        this.invoiceHeaderModifications = value;
+    }
+
+    /**
+     * Gets the value of the invoiceDetailSummaryLineItemModifications property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link InvoiceDetailSummaryLineItemModifications }
+     *     
+     */
+    public InvoiceDetailSummaryLineItemModifications getInvoiceDetailSummaryLineItemModifications() {
+        return invoiceDetailSummaryLineItemModifications;
+    }
+
+    /**
+     * Sets the value of the invoiceDetailSummaryLineItemModifications property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InvoiceDetailSummaryLineItemModifications }
+     *     
+     */
+    public void setInvoiceDetailSummaryLineItemModifications(InvoiceDetailSummaryLineItemModifications value) {
+        this.invoiceDetailSummaryLineItemModifications = value;
+    }
+
+    /**
+     * Gets the value of the totalCharges property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TotalCharges }
+     *     
+     */
+    public TotalCharges getTotalCharges() {
+        return totalCharges;
+    }
+
+    /**
+     * Sets the value of the totalCharges property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TotalCharges }
+     *     
+     */
+    public void setTotalCharges(TotalCharges value) {
+        this.totalCharges = value;
+    }
+
+    /**
+     * Gets the value of the totalAllowances property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TotalAllowances }
+     *     
+     */
+    public TotalAllowances getTotalAllowances() {
+        return totalAllowances;
+    }
+
+    /**
+     * Sets the value of the totalAllowances property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TotalAllowances }
+     *     
+     */
+    public void setTotalAllowances(TotalAllowances value) {
+        this.totalAllowances = value;
+    }
+
+    /**
+     * Gets the value of the totalAmountWithoutTax property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TotalAmountWithoutTax }
+     *     
+     */
+    public TotalAmountWithoutTax getTotalAmountWithoutTax() {
+        return totalAmountWithoutTax;
+    }
+
+    /**
+     * Sets the value of the totalAmountWithoutTax property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TotalAmountWithoutTax }
+     *     
+     */
+    public void setTotalAmountWithoutTax(TotalAmountWithoutTax value) {
+        this.totalAmountWithoutTax = value;
+    }
+
+    /**
+     * Gets the value of the netAmount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link NetAmount }
+     *     
+     */
+    public NetAmount getNetAmount() {
+        return netAmount;
+    }
+
+    /**
+     * Sets the value of the netAmount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NetAmount }
+     *     
+     */
+    public void setNetAmount(NetAmount value) {
+        this.netAmount = value;
+    }
+
+    /**
+     * Gets the value of the depositAmount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link DepositAmount }
+     *     
+     */
+    public DepositAmount getDepositAmount() {
+        return depositAmount;
+    }
+
+    /**
+     * Sets the value of the depositAmount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DepositAmount }
+     *     
+     */
+    public void setDepositAmount(DepositAmount value) {
+        this.depositAmount = value;
+    }
+
+    /**
+     * Gets the value of the dueAmount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link DueAmount }
+     *     
+     */
+    public DueAmount getDueAmount() {
+        return dueAmount;
+    }
+
+    /**
+     * Sets the value of the dueAmount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DueAmount }
+     *     
+     */
+    public void setDueAmount(DueAmount value) {
+        this.dueAmount = value;
+    }
+
+    /**
+     * Gets the value of the invoiceDetailSummaryIndustry property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link InvoiceDetailSummaryIndustry }
+     *     
+     */
+    public InvoiceDetailSummaryIndustry getInvoiceDetailSummaryIndustry() {
+        return invoiceDetailSummaryIndustry;
+    }
+
+    /**
+     * Sets the value of the invoiceDetailSummaryIndustry property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link InvoiceDetailSummaryIndustry }
+     *     
+     */
+    public void setInvoiceDetailSummaryIndustry(InvoiceDetailSummaryIndustry value) {
+        this.invoiceDetailSummaryIndustry = value;
+    }
+
+}

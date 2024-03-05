@@ -1,0 +1,13 @@
+import com.bigname.marketplace.*;
+import org.apache.ofbiz.base.util.*;
+MarketplaceHelper.checkNewSellerUploads(delegator);
+context.uploads = MarketplaceHelper.getAllSellerUploads(delegator);
+context.uploadedFilesCount = context.uploads.size > 1 ? context.uploads.size + " Files" : context.uploads.size + " File";
+context.newProducts = MarketplaceHelper.getSellerProducts(delegator, UtilMisc.toList("NEW"));
+context.newProductsCount = context.newProducts.size > 1 ? context.newProducts.size + " Products" : context.newProducts.size + " Product";
+context.importedProducts = MarketplaceHelper.getImportedSellerProducts(delegator);
+context.importedProductsCount = context.importedProducts.size > 1 ? context.importedProducts.size + " Products" : context.importedProducts.size + " Product";
+context.publishedProducts = MarketplaceHelper.getPublishedSellerProducts(delegator);
+context.publishedProductsCount = context.publishedProducts.size > 1 ? context.publishedProducts.size + " Products" : context.publishedProducts.size + " Product";
+context.heldProducts = MarketplaceHelper.getSellerProducts(delegator, UtilMisc.toList("HOLD"));
+context.heldProductsCount = context.heldProducts.size > 1 ? context.heldProducts.size + " Products" : context.heldProducts.size + " Product";

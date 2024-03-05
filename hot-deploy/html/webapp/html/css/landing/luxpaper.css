@@ -1,0 +1,309 @@
+.luxpaper h1,
+.luxpaper h2 {
+	color: #000000;
+}
+.luxpaper h1 {
+	font-size: 45px;
+	line-height: 45px;
+}
+.luxpaper h2 {
+	font-size: 30px;
+	line-height: 30px;
+}
+.luxpaper .section {
+	text-align: center;
+}
+.luxpaper .top-gradient {
+	background: linear-gradient(to bottom, #F3F3F3 0%, #FFF 100%) repeat scroll 0% 0% transparent;
+	height: 10px;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 0;
+}
+.luxpaper .luxcolors > a,
+.luxpaper .luxmore > div {
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+	margin: 10px;
+	position: relative;
+}
+.luxpaper .luxcolors .baby-blue {
+	background-color: #BBD2EB;
+	color: #657a82;
+}
+.luxpaper .luxcolors .blush {
+	background-color: #ffd1ba;
+	color: #657a82;
+}
+.luxpaper .luxcolors .boardwalk-blue {
+	background-color: #5D61A3;
+	color: #87a7c8;
+}
+.luxpaper .luxcolors .blush {
+	background-color: #ffd1ba;
+	color: #da9978;
+}
+.luxpaper .luxcolors .candy-pink {
+	background-color: #FBCED1;
+	color: #ea9499;
+}
+.luxpaper .luxcolors .chocolate {
+	background-color: #4D3F31;
+	color: #9c846c;
+}
+.luxpaper .luxcolors .citrus {
+	background-color: #EAF031;
+	color: #a59d37;
+}
+.luxpaper .luxcolors .garnet {
+	background-color: #833933;
+	color: #c67371;
+}
+.luxpaper .luxcolors .holiday-green {
+	background-color: #58976A;
+	color: #1d6c29;
+}
+.luxpaper .luxcolors .holiday-red {
+	background-color: #9B2421;
+	color: #cc615f;
+}
+.luxpaper .luxcolors .lemonade {
+	background-color: #FBF7A1;
+	color: #8b814a;
+}
+.luxpaper .luxcolors .lilac {
+	background-color: #D1BFCA;
+	color: #955d89;
+}
+.luxpaper .luxcolors .limelight {
+	background-color: #91C360;
+	color: #547e29;
+}
+.luxpaper .luxcolors .magenta {
+	background-color: #C44F7F;
+	color: #fca9cb;
+}
+.luxpaper .luxcolors .mandarin {
+	background-color: #E57D15;
+	color: #fed9b3;
+}
+.luxpaper .luxcolors .navy {
+	background-color: #3A4256;
+	color: #8b814a;
+}
+.luxpaper .luxcolors .nude {
+	background-color: #E1D0A2;
+	color: #955d89;
+}
+.luxpaper .luxcolors .pool {
+	background-color: #1D8EC2;
+	color: #a1dffb;
+}
+.luxpaper .luxcolors .ruby-red {
+	background-color: #9C2523;
+	color: #e97b7a;
+}
+.luxpaper .luxcolors .seafoam {
+	background-color: #B5DDD5;
+	color: #4e8579;
+}
+.luxpaper .luxcolors .smoke {
+	background-color: #585351;
+	color: #b7b5b3;
+}
+.luxpaper .luxcolors .sunflower {
+	background-color: #FFCC50;
+	color: #a27203;
+}
+.luxpaper .luxcolors .tangerine {
+	background-color: #E0664A;
+	color: #fac2b4;
+}
+.luxpaper .luxcolors .teal {
+	background-color: #296E71;
+	color: #7bccd2;
+}
+.luxpaper .luxcolors .vintage-plum {
+	background-color: #753F50;
+	color: #bb7a92;
+}
+.luxpaper .luxcolors .wasabi {
+	background-color: #CCD945;
+	color: #808a17;
+}
+.luxpaper .luxcolors .wisteria {
+	background-color: #7B6A8A;
+	color: #b7a5cc;
+}
+	.luxpaper .luxcolors > a > span {
+		font-size: 16px;
+		position: relative;
+		top: 100px;
+	}
+	.luxpaper .luxmore span {
+		margin-top: 7px;
+		display: inline-block;
+	}
+	.luxpaper .luxmore img {
+		margin-top: 7px;
+	}
+	.luxpaper .luxmore .cb-1 {
+		border: 1px solid #ACACAC;
+	}
+		.luxpaper .luxmore .cb-1 > div > a {
+			color: #A1A1A0;
+		}
+	.luxpaper .luxmore .cb-2 {
+		border: 1px solid #ACACAC;
+	}
+		.luxpaper .luxmore .cb-2 a {
+			color: #C3B28D;
+		}
+	.luxpaper .luxmore .cb-3 {
+		border: 1px solid #DFCFAB;
+	}
+		.luxpaper .luxmore .cb-3 a {
+			color: #385576;
+		}
+	.luxpaper .luxmore .cb-4 {
+		border: 1px solid #6E8BB4;
+	}
+		.luxpaper .luxmore .cb-4 a {
+			color: #E27B25;
+		}
+	.luxpaper .luxmore .cb-5 {
+		border: 1px solid #E07A24;
+	}
+		.luxpaper .luxmore .cb-5 a {
+			color: #C8BE62;
+		}
+	.luxpaper .luxmore a {
+			display: block;
+	}
+		.luxpaper .luxmore > div div {
+			display: table-cell;
+			vertical-align: middle;
+			width: 150px;
+			height: 150px;
+		}
+.luxTextures p {
+	display: inline-block;
+	font-size: 15px;
+	color: #000000;
+	font-weight: bold;
+}
+.luxTextures i {
+	font-size: 6px;
+	vertical-align: middle;
+	line-height: 1px;
+	margin: 0 10px;
+}
+.luxTextures img {
+	display: block;
+	margin: 0 auto 10px;
+}
+.luxRow {
+	display: table;
+	margin: 10px auto;
+}
+.luxRow div {
+	display: table-cell;
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	position: relative;
+}
+.luxRow div span {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	width: 100%;
+	margin-left: -50%;
+}
+.blackFont {
+	font-weight: bold;
+	color: #000000;
+}
+.whiteFont {
+	font-weight: bold;
+	color: #ffffff;
+}
+.header80lb {
+	font-size: 15px;
+	color: #000000;
+	font-weight: bold;
+}
+.newLuxRow {
+	width: 50%;
+	margin: 15px auto;
+	display: table;
+}
+.newLuxRow > div{
+	display: table-cell;
+	width: 50%;
+}
+.newLuxRow div img {
+	display: block;
+	margin: 0 auto 6px;
+}
+.newLuxRow div i {
+	font-size: 6px;
+	vertical-align: middle;
+	line-height: 1px;
+	margin: 0 10px;
+}
+.newLuxRow div p{
+	display: inline-block;
+	font-weight: bold;
+	color: #000000;
+	font-size: 15px;
+}
+.innerLux {
+	margin-top: 10px;
+	position: relative;
+}
+.innerLux span {
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -50%;
+}
+
+@media only screen and (max-width: 1024px) {
+	.luxRow {
+		display: block;
+	}
+	.luxRow div {
+		display: inline-block;
+	}
+	.newLuxRow {
+		width: 100%;
+		display: block;
+	}
+	.newLuxRow div {
+		display: inline-block;
+	}
+	.innerLux {
+		display: block;
+	}
+	.newLuxRow div p {
+		display: block;
+	}
+	.newLuxRow div p i {
+		display: none;
+	}
+}
+@media only screen and (max-width: 767px) {
+
+}
+
+
+
+
+
+
+

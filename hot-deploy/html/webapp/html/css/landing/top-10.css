@@ -1,0 +1,116 @@
+body > .top-10 .content-breadcrumbs {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-left: 0;
+}
+.top-list {
+	max-width: 1000px;
+	margin: 20px auto 0 !important;
+}
+.top-list > div {
+	text-align: center;
+	color: #ffffff;
+	position: relative;
+}
+.top-list > .list-header {
+	background-color: #405a69;
+	padding: 21px 17px 0px 17px;
+}
+	.top-list > .list-header > div {
+		border: 1px solid #697e89;
+		border-bottom: 0px;
+		padding-bottom: 40px;
+	}
+		.top-list > .list-header > div > h1 {
+			font-size: 150px;
+			text-transform: uppercase;
+			line-height: 180px;
+			text-shadow: 5px 5px #3a5260;
+		}
+		.top-list > .list-header > div > div {
+			font-size: 20px;
+			font-weight: bold;
+		}
+.top-list > .list-item {
+	padding-top: 15px;
+	border-top: 1px solid #a5d2d8;
+}
+.top-list > .list-item:nth-child(odd) {
+	background-color: #659ba2;
+}
+.top-list > .list-item:nth-child(even) {
+	background-color: #5c8a91;
+}
+	.top-list > .list-item > br {
+		display: none;
+	}
+	.top-list > .list-item > .item-name {
+		padding: 20px 455px 20px 20px;
+		background-color: #545859;
+		font-size: 22px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+		.top-list .list-item .image-step {
+			display: inline-block;
+			margin: auto;
+		}
+		.top-list .list-item .image-step:after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
+			.top-list .list-item .image-step img {
+				position: relative;
+				top: -1px;
+				left: 6px;
+			}
+	.top-list > .list-item > .item-description {
+		padding: 20px 475px 20px 40px;
+		height: 251px;
+		color: #ffffff;
+		font-size: 16px;
+	}
+	.top-list > .list-item > img {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+@media only screen and (max-width: 1023px) {
+	.top-list > .list-header > div {
+		padding-bottom: 20px;
+	}
+		.top-list > .list-header > div > h1 {
+			font-size: 65px;
+			line-height: 70px;
+		}
+		.top-list > .list-header > div > div {
+			font-size: 15px;
+		}
+	.top-list > .list-item {
+		padding-top: 0px;
+	}
+		.top-list > .list-item > img {
+			float: right;
+			position: relative;
+		}
+		.top-list > .list-item > br {
+			display: block;
+			clear: both;
+		}
+		.top-list > .list-item > .item-name {
+			padding: 20px;
+		}
+		.top-list > .list-item > .item-description {
+			padding: 20px 40px;
+			height: auto
+		}
+}
+@media only screen and (max-width: 767px) {
+	.top-list > .list-item > .item-name {
+		font-size: 16px;
+	}
+	.top-list > .list-item > .item-description {
+		font-size: 12px;
+	}
+}

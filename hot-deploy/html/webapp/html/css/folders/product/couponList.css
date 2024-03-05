@@ -1,0 +1,50 @@
+.foldersCouponList .foldersCouponButton {
+    text-transform: none;
+    background-color: #68a63b;
+    color: #ffffff;
+    font-size: 16px;
+}
+.foldersCouponList .section {
+    background-color: #063b63 !important;
+    border: 1px dashed #68a63b !important;
+}
+.foldersCouponList .name {
+    color: #ffffff !important;
+}
+.foldersCouponList .discount {
+    color: #ffffff !important;
+}
+.foldersCouponList .code {
+    color: #01ff79 !important;
+}
+.foldersCouponList {
+	width: 100%;
+}
+.foldersCouponList .signUp {
+    cursor: pointer;
+}
+.foldersCouponList .signUpText {
+    font-size: 28px;
+    line-height: 28px;
+}
+.foldersCouponList .signUpText p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.foldersCouponList .marchSale {
+    font-size: 40px;
+    line-height: 40px;
+}
+.foldersCouponList .marchSale p {
+    font-size: 20px;
+}
+.foldersCouponList .signUp .discount {
+    margin-top: 24px;
+}
+.foldersCouponList .signUp .foldersCouponButton {
+    width: 55%;
+}
+.foldersCouponList .march10 {
+    height: 130px;
+}

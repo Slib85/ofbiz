@@ -1,0 +1,83 @@
+.container{
+	background-color: #fff;
+	border-radius: .286rem
+}
+.col-lg-3{
+	padding: 40px;
+}
+.sortable {
+	padding: 0;
+}
+.textCenter {
+	text-align: center;
+}
+.resultProducts {
+	padding: 25px 15px 15px 15px !important;
+	height: 245px;
+}
+.resultsProductInfo {
+	white-space: normal;
+	margin: 10px 0;
+	text-align: left;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.resultsProductSubInfo {
+	white-space: normal;
+	margin: 1px 0;
+	text-align: left;
+	font-size: 10px;
+}
+
+.ribbon-vertical .ribbon-inner {
+	top: 0;
+	left: 16px;
+	width: 30px;
+	height: 40px;
+	padding: 7px 0;
+}
+
+.bootstrap-tagsinput {
+	width: 100% !important;
+}
+#redListFixedHeader a {
+	text-decoration: none;
+}
+.table {
+	font-size: 12px;
+}
+.table td {
+	white-space: nowrap;
+}
+
+.quickPromote {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	font-size: 10px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}
+.quickDemote {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	font-size: 10px;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}
+.quickRemove {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 10px;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 2px;
+	cursor: pointer;
+}

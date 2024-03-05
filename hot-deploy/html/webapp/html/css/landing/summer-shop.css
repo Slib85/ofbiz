@@ -1,0 +1,371 @@
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+@font-face {
+	font-family: 'BodoniStd';
+    src: url('../../fonts/BodoniStd.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'BodoniStdBold';
+    src: url('../../fonts/BodoniStdBold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'BodoniStdBoldItalic';
+    src: url('../../fonts/BodoniStdBoldItalic.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'BodoniStdBook';
+    src: url('../../fonts/BodoniStdBook.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'BodoniStdBookItalic';
+    src: url('../../fonts/BodoniStdBookItalic.ttf');
+    font-weight:normal;
+    font-style: italic;
+}
+@font-face {
+	font-family: 'BodoniStdItalic';
+    src: url('../../fonts/BodoniStdItalic.ttf');
+    font-weight:normal;
+    font-style: italic;
+}
+@font-face {
+	font-family: 'BodoniStdPoster';
+    src: url('../../fonts/BodoniStdPoster.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+.flex-row > * {
+    display: inline-flex;
+}
+.flex-row.flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.flex-row.flex-left {
+	justify-content: left;
+	-webkit-justify-content: left;
+  }
+	  .flex-row.flexCount6 > *,
+	  .flex-row.flexCount5 > *,
+	  .flex-row.flexCount4 > *,
+	  .flex-row.flexCount3 > *,
+	  .flex-row.flexCount2 > * {
+		  width: 100%;
+	  }
+	  .flex-row.flexCount6 > * {
+		  max-width: 16.66666%;
+	  }
+	  .flex-row.flexCount5 > * {
+		  max-width: 20%;
+	  }
+	  .flex-row.flexCount4 > * {
+		  max-width: 25%;
+	  }
+	  .flex-row.flexCount3 > * {
+		  max-width: 33.33333%;
+	  }
+	  .flex-row.flexCount2 > * {
+		  max-width: 50%;
+	  }
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+.glow-theme {
+	/* display: inline-block; */
+	transition-duration: 0.3s;
+	transition-property: box-shadow;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	border-radius: 8px;
+}
+.glow-theme:hover {
+	box-shadow: 0 0 8px rgb(26, 52, 95, 0.6);
+	border-radius: 8px;
+}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*------ MAIN WRAPPER ------*/
+.bnc_summer_shop * {
+    margin:0;
+    padding:0;
+}
+
+.bnc_summer_shop{
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_summer_shop:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+/*------ TOP BANNER ------*/
+.summer_shop_banner_wrap {
+    border: 2px solid #eeeeee;
+    position: relative;
+    /* display: table;
+    table-layout: fixed; */
+}
+.summer_shop_banner_wrap .summer-shop-banner-image, 
+.summer_shop_banner_wrap .summer_shop_banner_content {
+    /* display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 25px 30px; */
+}
+.summer_shop_banner_wrap .summer-shop-banner-image img{
+    width: 100%;
+    max-width: 1360px;
+}
+}
+.summer_shop_banner_wrap .summer-shop-banner-image{
+    padding-right: 0;
+}
+.summer_shop_banner_wrap .summer_shop_banner_content{
+    text-align: center;
+    position: absolute;
+    top: 25px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+}
+.summer_shop_banner_content h1 {
+    font-family: 'BodoniStdPoster';
+    color: #000;
+    font-weight: 900;
+    font-size: 4em;
+    line-height: 1;
+}
+.summer_shop_banner_content h2{
+    font-family: 'BodoniStdItalic';
+    color: #000;
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 1;
+    font-style: italic;
+    margin-top: 8px;
+}
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="summer-shop-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_summershop_nav1 */
+nav[role="bnc_summershop_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_summershop_nav1"] a, 
+nav[role="bnc_summershop_nav1"] label {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'OpenSansBold';
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_summershop_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_summershop_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #eeeeee;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+nav[role="bnc_summershop_nav1"] ul > li:hover {
+    background-color: #0b3360;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #b89e99, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_summershop_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_summershop_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_summershop_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_summershop_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_summershop_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_summershop_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: -7px;
+        content: "\2261";
+        font-size: 1.8em;
+        color: #fff;
+   }
+    nav[role="bnc_summershop_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_summershop_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_summershop_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_summershop_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+.summer-prod-grid {
+    padding: 2rem 0rem;
+}
+
+.summer-prod-grid > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(570px, 2fr));
+    grid-gap: 1rem;
+}
+.summer-prod-grid > ul > li {
+    list-style: none;
+}
+.summer-prod-grid > ul > li > figure {
+    text-align: center;
+    max-height: 363px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+}
+.summer-prod-grid > ul > li > a > figure > img {
+    margin: 0 auto;
+    display: block;
+}
+.summer-prod-grid > ul > li > a {
+    padding: 0rem 1rem;
+    margin: .5rem;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.summer-prod-grid > ul > li > a > h3 {
+    font-family: 'OpenSansSemiBold';
+    font-size: 2.25rem;
+    margin: .3em 0;
+    color: #000;
+}
+.summer-prod-grid > ul > li > a > p {
+    font-family: 'OpenSansRegular';
+    color: #5c5c5c;
+    font-size: 18px;
+    padding: 0 1.5em;
+}
+.summer-prod-grid > ul > li > a > button{
+    font-family: 'OpenSansExtraBold';
+    border: none;
+    border-radius: 45px;
+    background-color: #eeeeee;
+    color: #000;
+    padding: 1em 3em;
+    font-size: 19px;
+    text-transform: uppercase;
+    margin: 1em 0 4em 0;
+}
+.summer-prod-grid > ul > li > a:hover > button{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+    .summer_shop_banner_content{
+        display: none !important;
+    }
+    .summer-prod-grid > ul{
+        display: inline-block !important;
+        grid-template-columns: unset !important;
+        grid-gap: unset !important;
+    }
+}

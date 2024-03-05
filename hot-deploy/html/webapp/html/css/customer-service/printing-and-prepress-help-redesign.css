@@ -1,0 +1,21 @@
+.printing-and-prepress-help a{
+    text-decoration: underline;
+}
+.printing-and-prepress-help p {
+	margin-bottom: 10px;
+}
+.printing-and-prepress-help ul li {
+	font-size: 16px;
+}
+.printing-and-prepress-help a:hover {
+	text-decoration: underline;
+}
+.printing-and-prepress-help .bold {
+	font-weight: bold;
+}
+.printing-and-prepress-help .italic {
+	font-style: italic;
+}
+.printing-and-prepress-help .link-blue {
+	color: #1a345f;
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+	<description>Envelopes.com Services</description>
+	<vendor>Envelopes.com</vendor>
+	<version>1.0</version>
+
+	<service name="retryDeclinedOrders" engine="java" max-retry="3" transaction-timeout="1200" location="com.envelopes.order.OrderServices" invoke="retryDeclinedOrders" auth="true">
+		<description>Retry authorization of all declined orders from the before.</description>
+	</service>
+
+	<service name="exportOrderXML" engine="java" location="com.envelopes.order.OrderServices" max-retry="3"  invoke="exportOrderXML" auth="false">
+		<description>Export an order and its files for switch</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+		<attribute name="orderItemSeqId" type="String" mode="IN" optional="true" />
+		<attribute name="sequence" type="Integer" mode="IN" optional="true" />
+	</service>
+
+	<service name="updateDueDate" engine="java" location="com.envelopes.order.OrderServices" max-retry="1"  invoke="updateDueDate" auth="true">
+		<description>Export an order and its files for switch</description>
+		<attribute name="dueDate" type="String" mode="IN" optional="true" />
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+		<attribute name="orderItemSeqId" type="String" mode="IN" optional="true" />
+		<attribute name="statusId" type="String" mode="IN" optional="true" />
+	</service>
+
+	<service name="resetCreditCard" engine="java" location="com.envelopes.order.OrderServices" max-retry="1"  invoke="resetCreditCard" auth="true">
+		<description>Replace credit card date with dummy date after order is processed</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+	</service>
+
+	<service name="autoOutsource" engine="java" location="com.envelopes.order.OrderServices" max-retry="1"  invoke="autoOutsource" auth="true">
+		<description>Check and mark if the line item is outsourceable</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+		<attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+	</service>
+
+	<service name="printableSyracuse" engine="java" location="com.envelopes.order.OrderServices" max-retry="1"  invoke="isPrintableInSyracuse" auth="true">
+		<description>Check and mark if the line item is printable in syracuse</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+		<attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+	</service>
+
+	<service name="autoApprove" engine="java" location="com.envelopes.order.OrderServices" max-retry="1"  invoke="autoApprove" auth="true">
+		<description>Auto approve print jobs that have not been approved in five days</description>
+	</service>
+
+	<service name="setOrderIdPrefix" engine="java" location="com.envelopes.order.OrderServices" max-retry="1"  invoke="setOrderIdPrefix" auth="false">
+		<description>Set the prefix of the order</description>
+		<attribute name="webSiteId" type="String" mode="IN" optional="false" />
+		<attribute name="orderId" type="String" mode="INOUT" optional="false" />
+	</service>
+
+	<service name="changeQuoteStatus" engine="java" auth="true" location="com.envelopes.quote.QuoteServices" invoke="setQuoteStatus">
+		<description>Change the status of an existing order</description>
+		<attribute name="quoteId" type="String" mode="IN"/>
+		<attribute name="statusId" type="String" mode="IN"/>
+		<attribute name="oldStatusId" type="String" mode="OUT" optional="false"/>
+		<attribute name="quoteStatusId" type="String" mode="OUT" optional="true"/>
+		<attribute name="changeReason" type="String" mode="IN" optional="true"/>
+	</service>
+
+	<service name="changeOrderShippedStatus" engine="java" location="com.envelopes.order.OrderServices" max-retry="1"  invoke="changeOrderShippedStatus" auth="true">
+		<description>Check and mark order has shipped or partialy shipped</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+		<attribute name="orderItemSeqId" type="String" mode="IN" optional="true" />
+	</service>
+
+	<service name="getWeeklyFoldersQuoteData" engine="java" max-retry="0" transaction-timeout="1200" auth="false" location="com.envelopes.quote.QuoteServices" invoke="getWeeklyFoldersQuoteData">
+		<description>Get weekly data for quotes and send to Ian</description>
+	</service>
+
+	<service name="setPlateId" engine="java" max-retry="0" transaction-timeout="1200" auth="false" location="com.envelopes.order.OrderServices" invoke="setPlateId">
+		<description>Set automatic plate ID</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+		<attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+	</service>
+
+	<service name="generateArtworkFiles" engine="java" max-retry="0" transaction-timeout="1200" auth="false" location="com.envelopes.order.OrderServices" invoke="generateArtworkFiles">
+		<description>Generate Order Item Texel Artwork Files</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+	</service>
+
+	<service name="sendBackorderEmail" engine="java" max-retry="0" transaction-timeout="1200" auth="false" location="com.envelopes.order.OrderServices" invoke="sendBackorderEmail">
+		<description>Send backorder email for non-dropship items</description>
+		<attribute name="orderId" type="String" mode="IN" optional="false" />
+		<attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+	</service>
+
+</services>

@@ -1,0 +1,35 @@
+#add-new-user .popup-title {
+	border-bottom: 1px solid #d7d7d7;
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+	width: auto;
+	display: inline-block;
+}
+
+#userList {
+	border-collapse: collapse;
+}
+
+#userList .even {
+	background-color: #ececec;
+}
+
+#userList .odd {
+	background-color: #ffffff;
+}
+
+#userList th {
+	padding: 8px 10px;
+}
+
+#userList tr:not(:first-child) {
+	border-top: 1px solid #9e9e9e;
+}
+
+@media only screen and (max-width: 1023px) {
+	.users .add-new-user {
+		text-align: center;
+	}
+}

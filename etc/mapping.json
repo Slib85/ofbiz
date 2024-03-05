@@ -1,0 +1,540 @@
+{
+	"settings":{
+		"analysis":{
+			"char_filter": {
+				"special_symbols": {
+					"type": "mapping",
+					"mappings": [
+						"#=>hashtag\\u0020",
+						"w-2=>w2",
+						"W-2=>W2",
+						"z-fold=>zfold",
+						"Z-fold=>Zfold"
+					]
+				},
+				"special_symbols_reg": {
+					"type": "pattern_replace",
+					"pattern": "(?i)w\\-2",
+					"replacement": "w2"
+				}
+			},
+			"filter":{
+				"autocomplete_filter": {
+					"type": "edge_ngram",
+					"min_gram": 1,
+					"max_gram": 15
+				},
+				"english_stop":{
+					"type":"stop",
+					"stopwords":"_english_"
+				},
+				"english_stemmer": {
+					"type": "porter_stem",
+					"language": "english"
+				},
+				"english_possessive_stemmer": {
+					"type": "porter_stem",
+					"language": "possessive_english"
+				},
+				"ngram_filter": {
+					"type": "nGram",
+					"min_gram":3,
+					"max_gram":5
+				},
+				"synonym_filter" : {
+					"type" : "synonym_graph",
+					"synonyms" : [
+						"lux lining,foil",
+						"cd,dvd",
+						"a7,5 x 7",
+						"seed,mini",
+						"metallic,mettallic,shimmer,sparkle,glitter",
+						"policy,booklet",
+						"coin,jeweler,jewelry,tip,money",
+						"pochette,petals",
+						"holiday,christmas,xmas",
+						"holiday invitations,christmas party invitations",
+						"labels,seals",
+						"digital sheets,13 x 19 paper,12 x 18 paper",
+						"medical,x-ray,expansion",
+						"airmail,express,rush priority",
+						"glassine,translucent,vellum,clear,see through",
+						"currency,ticket",
+						"savoy,cotton",
+						"fuschia,fuchsia,fushcia",
+						"church,remittance,offering,fundraising,donation,charity",
+						"photo,photograph,picture",
+						"flyers,business announcement",
+						"rfid,credit card sleeve,secureshield,rf blocking",
+						"head shot,full face",
+						"sale,clearance",
+						"w-2,w2,w 2",
+						"z fold,zfold,z-fold",
+						"table tents,place cards=>#17 mini",
+						"barronial=>baronial",
+						"interoffice=>clasp",
+						"padded=>bubble"
+					]
+				}
+			},
+			"tokenizer": {
+				"autocomplete_tokenizer": {
+					"type": "edge_ngram",
+					"min_gram": 1,
+					"max_gram": 15,
+					"token_chars": [
+						"letter",
+						"digit"
+					]
+				}
+			},
+			"analyzer": {
+				"autocomplete_analyzer": {
+					"type": "custom",
+					"tokenizer": "autocomplete_tokenizer",
+					"filter": [
+						"standard",
+						"lowercase"
+					]
+				},
+				"brand_analyzer": {
+					"type": "custom",
+					"char_filter": [
+						"special_symbols"
+					],
+					"tokenizer": "standard",
+					"filter": [
+						"standard",
+						"lowercase",
+						"english_stop"
+					]
+				},
+				"standard_analyzer": {
+					"type": "custom",
+					"char_filter": [
+						"special_symbols"
+					],
+					"tokenizer": "standard",
+					"filter": [
+						"standard",
+						"lowercase",
+						"synonym_filter",
+						"english_stop"
+					]
+				},
+				"simplesize_analyzer": {
+					"type": "custom",
+					"char_filter": [
+						"special_symbols"
+					],
+					"tokenizer": "keyword",
+					"filter": [
+						"standard",
+						"lowercase",
+						"synonym_filter"
+					]
+				},
+				"size_analyzer": {
+					"type": "custom",
+					"char_filter": [
+						"special_symbols"
+					],
+					"tokenizer": "whitespace",
+					"filter": [
+						"standard",
+						"lowercase",
+						"synonym_filter"
+					]
+				},
+				"sku_analyzer": {
+					"type": "custom",
+					"tokenizer": "whitespace",
+					"filter": [
+						"standard",
+						"lowercase"
+					]
+				},
+				"stem_gram_analyzer": {
+					"type": "custom",
+					"char_filter": [
+						"special_symbols"
+					],
+					"tokenizer": "standard",
+					"filter": [
+						"standard",
+						"lowercase",
+						"synonym_filter",
+						"english_possessive_stemmer",
+						"english_stop",
+						"english_stemmer",
+						"ngram_filter"
+					]
+				},
+				"stem_analyzer": {
+					"type": "custom",
+					"char_filter": [
+						"special_symbols"
+					],
+					"tokenizer": "standard",
+					"filter": [
+						"standard",
+						"lowercase",
+						"synonym_filter",
+						"english_possessive_stemmer",
+						"english_stop",
+						"english_stemmer"
+					]
+				},
+				"ngram_analyzer": {
+					"type": "custom",
+					"char_filter": [
+						"special_symbols"
+					],
+					"tokenizer": "standard",
+					"filter": [
+						"standard",
+						"lowercase",
+						"synonym_filter",
+						"english_possessive_stemmer",
+						"english_stop",
+						"ngram_filter"
+					]
+				}
+			}
+		}
+	},
+	"mappings":{
+		"product":{
+			"properties":{
+				"autocomplete" : {
+					"type":"text",
+					"analyzer": "autocomplete_analyzer",
+					"search_analyzer": "standard"
+				},
+				"availability":{
+					"type":"text",
+					"index":false
+				},
+				"avgrating":{
+					"type":"double"
+				},
+				"baseprice":{
+					"type":"double"
+				},
+				"basequantity":{
+					"type":"integer",
+					"index":false
+				},
+				"brand":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"collection":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"color":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"colordescription":{
+					"type":"text",
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"colorgroup":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"conversionrate":{
+					"type":"float"
+				},
+				"createdstamp":{
+					"type":"date",
+					"format":"yyyy-MM-dd HH:mm:ss"
+				},
+				"customizable":{
+					"type":"keyword"
+				},
+				"description":{
+					"type":"text",
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"depth":{
+					"type":"keyword"
+				},
+				"fsc":{
+					"type":"keyword"
+				},
+				"height":{
+					"type":"keyword"
+				},
+				"image":{
+					"type":"text",
+					"index":false
+				},
+				"ink":{
+					"type":"keyword"
+				},
+				"laser":{
+					"type":"keyword"
+				},
+				"manualrank":{
+					"type":"long"
+				},
+				"measurement":{
+					"type":"keyword"
+				},
+				"metricsize":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"name":{
+					"type":"text",
+					"analyzer": "standard_analyzer",
+					"search_analyzer": "standard_analyzer"
+				},
+				"new":{
+					"type":"keyword"
+				},
+				"numofpockets":{
+					"type":"keyword"
+				},
+				"numofreviews":{
+					"type":"long"
+				},
+				"onsale":{
+                	"type":"text",
+                	"fields":{
+                		"keyword":{
+                			"type":"keyword"
+                		}
+                	},
+					"analyzer": "standard_analyzer",
+					"search_analyzer": "standard_analyzer"
+				},
+				"originalprice":{
+					"type":"double"
+				},
+				"papertexture":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"paperweight":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"parentid":{
+					"type":"keyword"
+				},
+				"peelandseal":{
+					"type":"text"
+				},
+				"percentsavings":{
+					"type":"long"
+				},
+				"pocketspec":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"pockettype":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"printable":{
+					"type":"keyword"
+				},
+				"printoption":{
+					"type":"keyword"
+				},
+				"productid":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "sku_analyzer",
+					"search_analyzer": "sku_analyzer"
+				},
+				"productstyle":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"producttype":{
+					"type":"keyword"
+				},
+				"productcategory":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"quantitypurchased":{
+					"type":"long"
+				},
+				"ratingsattribute":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"recycled":{
+					"type":"keyword"
+				},
+				"recycledcontent":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"revenue":{
+					"type":"float"
+				},
+				"salesrank":{
+					"type":"float"
+				},
+				"sealingmethod":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "stem_analyzer",
+					"search_analyzer": "stem_analyzer"
+				},
+				"sfi":{
+					"type":"keyword"
+				},
+				"simplesize":{
+					"type":"keyword"
+				},
+				"size":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "size_analyzer",
+					"search_analyzer": "size_analyzer"
+				},
+				"sizecode":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					},
+					"analyzer": "size_analyzer",
+					"search_analyzer": "size_analyzer"
+				},
+				"spinesize":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"tabsize":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"tagline":{
+					"type":"text"
+				},
+				"totalcolors":{
+					"type":"long"
+				},
+				"type":{
+					"type":"keyword"
+				},
+				"url":{
+					"type":"text",
+					"index":false
+				},
+				"views":{
+					"type":"long"
+				},
+				"websiteid":{
+					"type":"text",
+					"fields":{
+						"keyword":{
+							"type":"keyword"
+						}
+					}
+				},
+				"width":{
+					"type":"keyword"
+				}
+			}
+		}
+	}
+}

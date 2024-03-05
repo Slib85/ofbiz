@@ -1,0 +1,52 @@
+<!--<script type="text/javascript" src="../lib/envelopes-library.js"></script>-->
+<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+<script type="text/javascript" src="../lib/jquery.2.1.4.min.js"></script>
+<script type="text/javascript" src="../lib/jquery-ui.1.11.4.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript" src="../lib/envelopes-widget-util.js"></script>
+<script type="text/javascript" src="jquery.envelopes.grid.js"></script>
+<script type="text/javascript" src="jquery.envelopes.grid.proxy.js"></script>
+
+<link href="grid1.css" rel="stylesheet">
+
+<div id="addressing-grid-container" style="display: none; height: 100%; overflow: hidden">
+    <div id='my-grid'></div>
+</div>
+<script type="text/javascript" src="grid.js"></script>
+<script type="text/javascript" src="jquery.envelopes.addressing.js"></script>
+<script>
+    /*var addressesJSON = [
+        {"Name Line 1":"Ms. Sammie Alcaraz",                                "Name Line 2":"",                                   "Address Line 1":"7630 Amelia Rd. Apt. 302",    "Address Line 2":"","City":"Houston",       "State":"TX",   "Zip":"77055",  "Country":"USA"},
+        {"Name Line 1":"Mr. & Mrs. V. L. Alson",                            "Name Line 2":"",                                   "Address Line 1":"P.O. Box 477 ",               "Address Line 2":"","City":"Calvert",       "State":"TX",   "Zip":"77837",  "Country":"USA"},
+        {"Name Line 1":"2411 Washington Ave Leasing Office",                "Name Line 2":"c/o Ms. Margaret Acheampong",        "Address Line 1":"2411 Washington Ave",         "Address Line 2":"","City":"Houston",       "State":"TX",   "Zip":"77007",  "Country":"USA"},
+        {"Name Line 1":"2411 Washington Ave Leasing Office",                "Name Line 2":"c/o Mr. Mark Davis",                 "Address Line 1":"2411 Washington Ave",         "Address Line 2":"","City":"Houston",       "State":"TX",   "Zip":"77007",  "Country":"USA"},
+        {"Name Line 1":"Mrs. Melissa Attaway & Family",                     "Name Line 2":"",                                   "Address Line 1":"1522 Tanglewood Dr.",         "Address Line 2":"","City":"East Hideaway", "State":"TX",   "Zip":"75771",  "Country":"USA"},
+        {"Name Line 1":"Mr. & Mrs. Tom Baird",                              "Name Line 2":"",                                   "Address Line 1":"6402 Cardona Dr. ",           "Address Line 2":"","City":"Katy",          "State":"TX",   "Zip":"77449",  "Country":"USA"},
+        {"Name Line 1":"Mr. & Mrs. Clayton Beasley",                        "Name Line 2":"",                                   "Address Line 1":"3045 Camelia View Lane",      "Address Line 2":"","City":"Dickinson ",    "State":"TX",   "Zip":"77539",  "Country":"USA"},
+        {"Name Line 1":"Mr. & Mrs. Jerry Bellis",                           "Name Line 2":"",                                   "Address Line 1":"2202 Dover Lane",             "Address Line 2":"","City":"Tyler",         "State":"TX",   "Zip":"75703",  "Country":"USA"},
+        {"Name Line 1":"Mr. Troy Bodden",                                   "Name Line 2":"",                                   "Address Line 1":"",                            "Address Line 2":"","City":"",              "State":"",     "Zip":"",       "Country":""},
+        {"Name Line 1":"Mr. & Mrs. Geovany Nuï¿½ez & Family",               "Name Line 2":"",                                   "Address Line 1":"",                            "Address Line 2":"","City":"",              "State":"",     "Zip":"",       "Country":""},
+        {"Name Line 1":"Sr. & Sra. Eduardo Orellana & Familia",             "Name Line 2":"",                                   "Address Line 1":"",                            "Address Line 2":"","City":"",              "State":"",     "Zip":"",       "Country":""}
+        ];*/
+
+//    console.log(gridData);
+</script>
+
+<script>
+    $(document).ready(function() {
+        var grid = $('#my-grid').AddressingGrid({gridData:gridData, responsive:true, overlayRows:12, overlayColumns:8,indenting: true, debug: false, logLevel: EnvelopesLogger.Level.DEBUG});
+        grid.AddressingGrid('showGrid');
+//        var grid = $('#my-grid').AddressingGrid({gridData: buildSampleArray(210, 9),indenting: true, debug: true, logLevel: EnvelopesLogger.Level.DEBUG});
+//        $('#my-grid').AddressingGrid('loadGridData', buildSampleArray(210, 9));
+//        console.log(grid.AddressingGrid('getGridData'));
+//        grid.AddressingGrid('loadData', gridData);
+//        console.log(grid.AddressingGrid('getGridData'));
+//        grid.AddressingGrid('useHeader');
+//        grid.AddressingGrid('useHeader');
+    });
+</script>
+
+
+
+
+

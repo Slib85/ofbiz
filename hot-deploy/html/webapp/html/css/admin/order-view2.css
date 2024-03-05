@@ -1,0 +1,105 @@
+.order-view h1,
+.order-view h2,
+.order-view h3,
+.order-view h4,
+.order-view h5,
+.order-view h6 {
+	text-shadow: none !important;
+}
+.order-view .vertical-center {
+	display: flex;
+	align-items: center;
+}
+.order-view .break-word {
+	word-wrap: break-word;
+}
+.order-view span.order-id {
+	display: block;
+}
+.order-view span.is-rush {
+	padding-left: 0;
+}
+.exportGroup .media,
+.exportGroup .media-body {
+	overflow: visible;
+}
+.exportGroup .media-left {
+	padding-right: 10px;	
+}
+.order-view input[name='button-add'] {
+	cursor: pointer;
+}
+.order-view .btn-wrap {
+	line-height: 1.35;
+	white-space: normal;
+}
+.btn-send-po {
+	background: #f2a654;
+	border-color: #e49947;
+	float: right;
+}
+.btn-send-po:hover {
+	background: #e49947;
+	border-color: #e49947;
+}
+.widget-title > h4 {
+	padding: 14px;
+}
+.widget-title span.tools {
+	margin: 0;
+}
+.fileinput-button {
+	font-size: 13px;
+}
+.order-view .order-actions button > i {
+	margin: 2px 3px;
+}
+.order-view .order-actions > .all-customization {
+	margin-top: 26px;
+}
+.all-customization > div {
+	margin: 0 !important;
+}
+.all-customization .widget {
+	margin-bottom: 26px;
+}
+.all-customization .widget-body {
+	padding: 15px;
+	margin: 0;
+}
+.order-view .widget-body select {
+	width: 100%;
+	margin-bottom: 12px;
+}
+.order-view .widget-body select:last-child {
+	margin-bottom: 0;
+}
+.totals input[type='text'] {
+	width: 100%;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.has-dropdown-options {
+	cursor: text !important;
+}
+.dropdown-options {
+	margin: 0;
+	padding: 0;
+	top: calc(100% - 2px);
+    left: 13px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.dropdown-options li {
+	font-size: .858rem;
+	line-height: 1.571429;
+	padding: .2145rem .786rem;
+	color: inherit;
+	cursor: pointer;
+}
+.dropdown-options li:hover {
+	color: #62a8ea;
+}
+.empty-dropdown {
+	border: none;
+}

@@ -1,0 +1,271 @@
+.design-online.content {
+	padding-top: 0px;
+}
+	.design-online.content .section {
+		background-color: #f7f8fa;
+	}
+		.design-online .banner {
+			/* width: calc(100% + 100px); */
+			text-align: center;
+			position: relative;
+			/* left: -50px; */
+		}
+		.design-online.content .section .topSplit {
+			width: calc(50% - 20px);
+			display: inline-block;
+			vertical-align: top;
+		}
+		.design-online.content .section h5 {
+			font-size: 35px;
+		}
+		.design-online.content .section h4 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+			color:#F4712B;
+		}
+		.design-online.content .section h3 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			color:#F4712B;
+		}
+		.design-online .section .threeVideos {
+			display: table;
+			width: 100%;
+			margin: 40px auto;
+		}
+		.design-online .section .threeVideos .videoColumns {
+			width: 33%;
+			display: table-cell;
+			padding: 0 5px;
+		}
+		.design-online .section .videoContainer{
+			position:relative;
+			padding-bottom:46.25%;
+			padding-top:30px;
+			height:0;
+			overflow:hidden;
+		}
+		.design-online .section .videoContainer iframe,
+		.design-online .section .videoContainer object,
+		.design-online .section .videoContainer embed {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+		}
+		.design-online .section .bottom_videos {
+			max-width: 450px;
+			padding: 20px 0;
+		}
+		.design-online .section .list-head {
+			font-weight: bold;
+			color: #000000;
+			margin: 10px 0;
+		}
+			.design-online .section .list-head > span {
+				text-decoration: underline;
+			}
+		.design-online .button-cta {
+			font-size: 13px;
+		}
+		.design-online .design-video {
+			margin: auto;
+			max-width: 100%;
+		}
+			.design-online .design-video > video {
+				width: 100%;
+				height: auto;
+			}
+				.design-online .design-video > video img {
+					width: 100%;
+				}
+		.design-online .other-links {
+			background-color: #ffffff;
+		}
+		.design-online .featuredProducts {
+			width: 100%;
+		}
+			.design-online .featuredProducts .slideIt-container {
+				height: 240px;
+			}
+		.design-online .colorAvailable {
+			color: #fc7e22;
+		}
+		.design-online .templateColumn {
+			width: 150px;
+		}
+		.design-online .templateColumn > a {
+			display: block;
+		}
+			.design-online .templateColumn .uploadContainer {
+				height: 150px;
+				width: 150px;
+				display: table-cell;
+				vertical-align: middle;
+			}
+				.design-online .templateColumn .uploadContainer > div {
+					background-color: #ffffff;
+					border: 1px solid #b3b2b3;
+					margin: auto;
+					position: relative;
+				}
+				.design-online .templateColumn .uploadContainer [class="10Regular"],
+				.design-online .templateColumn .uploadContainer [class="10Window"],
+				.design-online .templateColumn .uploadContainer [class="10SquareFlap"] {
+					width: 150px;
+					height: 66px;
+				}
+				.design-online .templateColumn .uploadContainer [class="9x12OpenEnd"] {
+					width: 150px;
+					height: 113px;
+				}
+				.design-online .templateColumn .uploadContainer [class="6x9OpenEnd"] {
+					width: 150px;
+					height: 101px;
+				}
+				.design-online .templateColumn .uploadContainer [class="A7SquareFlap"],
+				.design-online .templateColumn .uploadContainer [class="A6SquareFlap"],
+				.design-online .templateColumn .uploadContainer [class="A1SquareFlap"] {
+					width: 150px;
+					height: 108px;
+				}
+				.design-online .templateColumn .uploadContainer [class="A2SquareFlap"] {
+					width: 150px;
+					height: 115px;
+				}
+				.design-online .templateColumn .uploadContainer [class="414x612"] {
+					width: 118px;
+					height: 150px;
+				}
+				.design-online .templateColumn .uploadContainer [class="312x6"] {
+					width: 132px;
+					height: 150px;
+				}
+				.design-online .templateColumn .uploadContainer [class="10x13OpenEnd"] {
+					width: 150px;
+					height: 116px;
+				}
+					.design-online .templateColumn .uploadContainer i {
+						position: absolute;
+						top: calc(50% - 12px);
+						left: calc(50% - 11px);
+						font-size: 24px;
+					}
+					.design-online .templateColumn .uploadContainer .PR-topFloatingText,
+					.design-online .templateColumn .uploadContainer .PR-bottomFloatingText {
+						position: absolute;
+					}
+					.design-online .templateColumn .uploadContainer .PR-topFloatingText {
+						top: 2px;
+						left: calc(50% - 22px);
+					}
+					.design-online .templateColumn .uploadContainer .PR-bottomFloatingText {
+						bottom: 2px;
+						left: calc(50% - 50px);
+					}
+
+/*
+	Randoms
+*/
+.designKey {
+	color: #ff0000;
+}
+.allowedFileTypes {
+	display: inline-block;
+	text-align: center;
+	margin-top: 4px;
+}
+.allowedFileTypes:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+	.allowedFileTypes > * {
+		width: 27px;
+		height: 15px;
+		margin: 0px 2px;
+		display: inline-block;
+		float: left;
+		font-size: 12px;
+		color: #ffffff;
+		line-height: 14px;
+	}
+	.allowedFileTypes .pdf {
+		background-color: #993434;
+	}
+	.allowedFileTypes .eps {
+		background-color: #000000;
+	}
+	.allowedFileTypes .psd {
+		background-color: #405a9c;
+	}
+	.allowedFileTypes .png {
+		background-color: #614070;
+	}
+	.allowedFileTypes .jpg {
+		background-color: #8aa954;
+	}
+	.allowedFileTypes .gif {
+		background-color: #13867f;
+	}
+	.allowedFileTypes .tiff {
+		background-color: #be6a2c;
+	}
+	.allowedFileTypes .ai {
+		background-color: #f6783e;
+	}
+.category .featuredProducts .featuredProductRibbon {
+	font-size: 16px;
+	left: 0px;
+}
+.category .featuredProducts .featuredProductRibbon .ribbonTop,
+.category .featuredProducts .featuredProductRibbon .ribbonBottom {
+	border-right: 20px solid transparent;
+	right: -20px;
+}
+.category .featuredProducts .featuredProductRibbon .ribbonTop {
+	border-top: 22px solid #00a4e4;
+}
+.category .featuredProducts .featuredProductRibbon .ribbonBottom {
+	border-bottom: 22px solid #00a4e4;
+}
+.templatePadding {
+	padding: 25px 0px;
+}
+.directMailBlock {
+	float: right;
+	margin-right: 45px;
+}
+@media only screen and (max-width: 1300px) {
+	.design-online .section .threeVideos .videoColumns {
+		width: 100%;
+		display: block;
+		padding: 0 5px;
+		margin-bottom: 10px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.design-online.content .section .topSplit {
+		width: 100%;
+		display: block;
+	}
+	.directMailBlock {
+		float: none;
+		margin-top: 10px;
+		margin-right: 0px;
+		display: block;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.bannerOrange .strikeThrough {
+		display: none;
+	}
+	.bannerOrange .discountCode {
+		display: none;
+	}
+	.bannerOrange .freeShippingMonthText {
+		display: none;
+	}
+}

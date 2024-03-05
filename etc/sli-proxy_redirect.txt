@@ -1,0 +1,10 @@
+/   https://www.envelopes.com;
+/envelopes/A-10-Envelopes	https://www.envelopes.com/envelopes/control/category?af=si:6x912;
+/envelopes/Wedding-Place-Cards  https://www.envelopes.com/envelopes/control/category?af=st:notecards;
+/envelopes/6x6-Envelopes    https://www.envelopes.com/envelopes/control/category?af=si:6x6;
+/envelopes/5x7-Lined-Envelopes  https://www.envelopes.com/invitations/lined-envelopes;
+/envelopes/7x7-Square   https://www.envelopes.com/envelopes/control/category?af=si:7x7;
+/envelopes/Mini-Note-Cards  https://www.envelopes.com/search?w=mini+cards;
+/envelopes/6.5-X-6.5-Square-Envelope    https://www.envelopes.com/invitations/square-envelopes?af=st:square%20use:invitation%20si:612x612;
+/envelopes/4.75x4.75    https://www.envelopes.com/sizes?af=si:434x434;
+/envelopes/9x12x2   https://www.envelopes.com/sizes?af=si:9x12x2;

@@ -1,0 +1,11 @@
+.terms ol {
+    font-size: 20px;
+}
+.terms ol li {
+    margin-top: 20px;
+}
+    .terms ol p {
+        font-size: 14px;
+        font-weight: normal;
+        margin-top: 10px;
+    }

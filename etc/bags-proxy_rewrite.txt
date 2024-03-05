@@ -1,0 +1,2 @@
+/	/bags/control/main;
+/contact	/bags/control/contact;

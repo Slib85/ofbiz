@@ -1,0 +1,78 @@
+/* FOLDERS.com - TERMS - REDESIGN*/
+/*=====================================*/
+/*=====================================*/
+.uiBoxWrap{
+    position: relative;
+    margin:2em;
+    }
+    .uiBoxWrap input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    visibility: 0;
+    }
+    .boxTitle{
+    background:#e5e5e5;
+    color:#063b63;
+    font-weight: 700;
+    font-size: 16px;
+    padding:1em;
+    position: relative;
+    }
+    .boxTitle label::before{
+    content:"";
+    display: inline-block;
+    border: 15px solid transparent;
+    border-left:20px solid #063b63;
+    }
+    .boxTitle label{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    }
+    .boxDesc{
+    max-height:0px;
+    overflow: hidden;
+    transition:max-height 0.5s;
+    background-color: white;
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+    }
+    .boxDesc p {
+        padding:2em;
+    }
+    .uiBoxWrap input:checked ~ .boxTitle label::before{
+        border-left:15px solid transparent;
+        border-top:20px solid #063b63;
+        margin-top:12px;
+        margin-right:10px;
+    }
+    .uiBoxWrap input:checked ~ .boxTitle ~ .boxDesc{
+        max-height:max-content;
+    }
+
+/*=====================================*/
+/*=====================================*/
+.terms .termsHeader {
+    border-bottom: 2px solid #1A345F;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.terms .termsHeader div {
+    padding: 0 0 10px 0;
+    vertical-align: baseline;
+    display: table-cell;
+    width: 49%;
+}
+
+/*=====================================*/
+/*=====================================*/
+@media only screen and (max-width: 767px) {
+    
+}
+/*=====================================*/
+/*=====================================*/

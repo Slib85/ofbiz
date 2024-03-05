@@ -1,0 +1,40 @@
+.orderSummary .orderSummaryHeader {
+	border-bottom: 1px solid #dadada;
+}
+	.orderSummary .imageColumn {
+		width: 110px;
+	}
+	.orderSummary .infoColumn {
+		width: auto;
+	}
+	.orderSummary .customizationColumn {
+		width: 20%;
+	}
+	.orderSummary .productionTimeColumn {
+		width: 15%;
+	}
+	.orderSummary .quantityAndPriceColumn {
+		width: 15%;
+	}
+.orderSummary .orderSummarySubtotal .orderPrices {
+	text-align: right;
+}
+.orderSummary .orderSummarySubtotal .orderCouponAndTotal {
+	border-top: 1px solid #dadada;
+}
+	.orderSummary .orderSummarySubtotal .orderCouponAndTotal .orderTotal {
+		font-size: 24px;
+		font-weight: bold;
+		float: right;
+		text-align: right;
+	}
+	.orderSummary .orderSummarySubtotal .orderCouponAndTotal .couponCodeContainer {
+		float: left;
+	}
+@media only screen and (max-width: 767px) {
+	.orderSummary .orderSummarySubtotal .orderCouponAndTotal .couponCodeContainer,
+	.orderSummary .orderSummarySubtotal .orderCouponAndTotal .orderTotal {
+		float: none;
+		display: block;
+	}
+}

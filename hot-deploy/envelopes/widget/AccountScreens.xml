@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+
+	<screen name="login-layer">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/account/login-layer.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+    <screen name="reset-password-layer">
+        <section>
+            <widgets>
+                <platform-specific><html><html-template location="component://envelopes/webapp/envelopes/account/reset-password-layer.ftl"/></html></platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="forgot-password">
+        <section>
+            <actions>
+                <set field="forgotPasswordFromCheckout" value="true"/>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/account.groovy"/>
+            </actions>
+            <widgets>
+                <platform-specific><html><html-template location="component://envelopes/webapp/envelopes/account/login-layer.ftl"/></html></platform-specific>
+            </widgets>
+        </section>
+    </screen>
+	<screen name="login">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/account/login.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="account">
+		<section>
+			<actions>
+				<set field="titleProperty" value="My Account"/>
+				<set field="resetPassword" value="false"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/account.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/account.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="directMailingJobs">
+		<section>
+			<actions>
+				<set field="resetPassword" value="false"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/directMailingJobs.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/directMailingJobs.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="reset-password">
+		<section>
+			<actions>
+				<set field="resetPassword" value="true"/>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/account.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/account.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="open-orders">
+		<section>
+			<actions>
+				<set field="titleProperty" value="My Open Orders"/>
+				<set field="orderType" value="open"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/orders.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/orders.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="all-orders">
+		<section>
+			<actions>
+				<set field="titleProperty" value="All Orders"/>
+				<set field="orderType" value="all"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/orders.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/orders.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="return-orders">
+		<section>
+			<actions>
+				<set field="orderType" value="return"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/orders.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/orders.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="order-detail">
+		<section>
+			<actions>
+				<set field="titleProperty" value="My Order"/>
+				<set field="orderType" value="open"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/order-detail.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/order-detail-redesign.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="users">
+		<section>
+			<actions>
+				<set field="titleProperty" value="My User Accounts"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/users.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/users.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="addresses">
+		<section>
+			<actions>
+				<set field="titleProperty" value="My Addresses"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/addresses.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/addresses.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+    <screen name="addressBooks">
+        <section>
+            <actions>
+				<set field="titleProperty" value="My Address Books"/>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/addressBooks.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html><html-template location="component://envelopes/webapp/envelopes/account/addressBooks.ftl"/></html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="addressBook">
+        <section>
+            <actions>
+				<set field="titleProperty" value="My Address Book"/>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/addressBook.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html><html-template location="component://envelopes/webapp/envelopes/account/addressBook.ftl"/></html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+	<screen name="saved-designs">
+		<section>
+            <actions>
+				<set field="titleProperty" value="My Saved Designs"/>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/saved-designs.groovy"/>
+            </actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/designs.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="proof-approval">
+		<section>
+			<actions>
+				<set field="titleProperty" value="Proof Approval Center"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/proof-approval.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/proof-approval.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="file-transfer-center">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/file-transfer.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/file-transfer-center.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="uploadedFiles">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/uploadedFiles.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/uploadedFiles.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="uploadedDirectMailingDocuments">
+		<section>
+			<actions>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/uploadedDirectMailingDocuments.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/account/uploadedDirectMailingDocuments.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="address">
+		<section>
+			<actions>
+                <set field="addressType" value="checkout"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/address.groovy"/>
+			</actions>
+			<widgets>
+				<platform-specific>
+					<html><html-template location="component://envelopes/webapp/envelopes/account/address.ftl"/></html>
+				</platform-specific>
+			</widgets>
+		</section>
+	</screen>
+
+    <screen name="addressingAddress">
+        <section>
+            <actions>
+                <set field="addressType" value="addressing"/>
+                <script location="component://envelopes/webapp/envelopes/WEB-INF/actions/account/address.groovy"/>
+            </actions>
+            <widgets>
+                <platform-specific>
+                    <html><html-template location="component://envelopes/webapp/envelopes/account/address.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+
+	<screen name="blank">
+		<section>
+			<widgets>
+				<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/account/blank.ftl"/></html></platform-specific>
+			</widgets>
+		</section>
+	</screen>
+</screens>

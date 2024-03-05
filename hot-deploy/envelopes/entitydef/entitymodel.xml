@@ -1,0 +1,3208 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entitymodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/entitymodel.xsd">
+	<!-- ========================================================= -->
+	<!-- ======================== Defaults ======================= -->
+	<!-- ========================================================= -->
+	<title>Entity of an Open For Business Envelopes Component</title>
+	<description>None</description>
+	<version>1.0</version>
+
+	<entity entity-name="EnvSession" package-name="com.envelopes.session">
+		<field name="clientId" type="description" />
+		<field name="partyId" type="description" />
+		<field name="sessionId" type="description" />
+		<prim-key field="clientId" />
+		<prim-key field="partyId" />
+		<prim-key field="sessionId" />
+	</entity>
+
+	<!-- ========================================================= -->
+	<!-- org.apache.ofbiz.product.catalog -->
+	<!-- ========================================================= -->
+
+	<extend-entity entity-name="OrderAdjustment">
+		<field name="productPromoActionEnumId" type="id"></field>
+		<relation type="one" fk-name="OA_TO_PPA" rel-entity-name="ProductPromoAction">
+			<key-map field-name="productPromoActionEnumId"/>
+		</relation>
+	</extend-entity>
+
+	<extend-entity entity-name="OrderItemShipGroupAssoc">
+		<field name="trackingNumber" type="id-long"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="Party">
+		<field name="resellerId" type="id"></field>
+		<field name="salesRep" type="id-vlong"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="Product">
+		<field name="parentProductId" type="id"></field>
+		<field name="averageCustomerRating" type="fixed-point"></field>
+		<field name="metaTitle" type="description"></field>
+		<field name="metaDescription" type="description"></field>
+		<field name="metaKeyword" type="description"></field>
+		<field name="colorDescription" type="very-long"></field>
+		<field name="colorCount" type="numeric"></field>
+		<field name="plainPriceDescription" type="description"></field>
+		<field name="printPriceDescription" type="description"></field>
+		<field name="isPrintable" type="indicator"></field>
+		<field name="hasRushProduction" type="indicator"></field>
+		<field name="boxQty" type="numeric"></field>
+		<field name="cartonQty" type="numeric"></field>
+		<field name="hasColorOpt" type="indicator"></field>
+		<field name="binLocation" type="name"></field>
+		<field name="isAssemblyItem" type="indicator"></field>
+		<field name="tagLine" type="description"></field>
+		<field name="onSale" type="indicator"></field>
+		<field name="onClearance" type="indicator"></field>
+		<field name="hasSample" type="indicator"></field>
+		<field name="hasWhiteInk" type="indicator" />
+		<field name="hasCut" type="indicator"></field>
+		<field name="hasFold" type="indicator"></field>
+		<field name="hasVariableData" type="indicator"></field>
+		<field name="hasCustomQty" type="indicator"></field>
+		<field name="leadTimePlain" type="numeric"></field>
+		<field name="leadTimeStandardPrinted" type="numeric"></field>
+		<field name="leadTimeRushPrinted" type="numeric"></field>
+		<field name="marketplaceProductId" type="id"/>
+		<field name="taxCode" type="id"/>
+		<field name="showOutOfStockRecommendations" type="indicator" />
+		<relation type="one" fk-name="PROD_TO_P_PROD" rel-entity-name="Product">
+			<key-map field-name="parentProductId" rel-field-name="productId"/>
+		</relation>
+	</extend-entity>
+
+	<extend-entity entity-name="ProductCategory">
+		<field name="detailTemplate" type="long-varchar"></field>
+		<field name="metaTitleOverride" type="description"></field>
+		<field name="descriptionOverride" type="description"></field>
+		<field name="metaTitle" type="description"></field>
+		<field name="metaDescription" type="description"></field>
+		<field name="metaKeyword" type="description"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="ProductReview">
+		<field name="nickName" type="name"></field>
+		<field name="productQuality" type="description"></field>
+		<field name="productQualityReason" type="description"></field>
+		<field name="productUse" type="description"></field>
+		<field name="describeYourself" type="description"></field>
+		<field name="recommend" type="description"></field>
+		<field name="emailAddress" type="email"></field>
+		<field name="orderId" type="id"></field>
+		<field name="reviewResponse" type="very-long"></field>
+		<field name="contentId" type="id"></field>
+		<field name="showContent" type="indicator"></field>
+		<field name="salesChannelEnumId" type="id"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="ShipmentMethodType">
+		<field name="genericDescription" type="description"></field>
+		<field name="minTransitTime" type="numeric"></field>
+		<field name="maxTransitTime" type="numeric"></field>
+		<field name="taxCode" type="id"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="ShipmentCostEstimate">
+		<field name="zone" type="name"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="ProductPromo">
+		<field name="isSample" type="indicator"></field>
+		<field name="isStackable" type="indicator"></field>
+		<field name="canTradeUse" type="indicator"></field>
+		<field name="showOnSite" type="indicator"></field>
+		<field name="netsuiteId" type="id"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="ProductPromoAction">
+		<field name="allowClearance" type="indicator"></field> <!-- If the promo should allow use on clearance items -->
+		<field name="addToCart" type="indicator"></field> <!-- If a promo requires the system to add to cart -->
+	</extend-entity>
+	<extend-entity entity-name="ProductStorePromoAppl">
+		<field name="webSiteId" type="description"></field> <!-- Comma separated values of website ids that will work -->
+	</extend-entity>
+
+	<extend-entity entity-name="PostalAddress">
+		<field name="companyName" type="name"></field>
+	</extend-entity>
+
+	<extend-entity entity-name="OrderHeader">
+		<field name="exportedDate" type="date-time"></field>
+		<field name="ipAddress" type="id"></field>
+		<field name="marketplaceOrder" type="indicator"/>
+		<index name="OH_MP_ORDER">
+			<index-field name="marketplaceOrder"/>
+		</index>
+	</extend-entity>
+
+	<extend-entity entity-name="OrderItem">
+		<field name="isRushProduction" type="indicator"></field>
+		<field name="artworkSource" type="id"></field>
+		<field name="referenceOrderId" type="id"></field>
+		<field name="referenceOrderItemSeqId" type="id"></field>
+		<field name="referenceQuoteId" type="id"></field>
+		<field name="referenceQuoteItemSeqId" type="id"></field>
+		<field name="dueDate" type="date-time"></field>
+		<field name="responseStatusId" type="id"></field>
+		<field name="isRemoveFromSchedule" type="indicator"></field>
+		<field name="outsourceable" type="indicator"></field>
+		<field name="outsource" type="indicator"></field>
+		<field name="pendingChange" type="indicator"></field>
+		<field name="stockPicked" type="indicator"></field>
+		<field name="lockScene7Design" type="indicator"></field>
+		<field name="savePrintSample" type="indicator"></field>
+		<relation type="one" fk-name="ROI_OH" rel-entity-name="OrderHeader">
+			<key-map field-name="referenceOrderId" rel-field-name="orderId"/>
+		</relation>
+		<relation type="one" fk-name="ROI_CE" rel-entity-name="CustomEnvelope">
+			<key-map field-name="referenceQuoteId" rel-field-name="quoteId"/>
+		</relation>
+	</extend-entity>
+
+	<extend-entity entity-name="UserLogin">
+		<field name="resetToken" type="description"></field>
+		<field name="resetExpireDate" type="date-time"></field>
+		<field name="cartId" type="id-long"></field>
+	</extend-entity>
+
+	<!-- This is being done in the product entitymodel.xml because extend-entity does not support creation of prim keys
+	<extend-entity entity-name="ProductPrice">
+		<field name="quantity" type="numeric"></field>
+		<field name="colors" type="numeric"></field>
+		<prim-key field="quantity"/>
+		<prim-key field="colors"/>
+	</extend-entity>-->
+
+	<extend-entity entity-name="Vendor">
+		<field name="duns" type="id" />
+		<field name="sharedSecret" type="description" />
+		<field name="cxmlEndpoint" type="long-varchar" />
+		<field name="cxmlStatusEndpoint" type="long-varchar" />
+		<field name="vendorTypeId" type="id" />
+		<field name="hasBlackInkRule" type="indicator" />
+		<field name="email" type="description" />
+		<field name="netsuiteId" type="description" />
+		<field name="rules" type="moderately-long" />
+		<field name="poType" type="id" />
+		<field name="internalProcessing" type="indicator" />
+		<field name="notifyOnFulfillment" type="indicator"/>
+		<field name="vendorName" type="description"/>
+		<field name="upsAccount" type="description"/>
+		<field name="fromDomain" type="description"/>
+		<field name="fromIdentity" type="description"/>
+		<field name="toDomain" type="description"/>
+		<field name="toIdentity" type="description"/>
+	</extend-entity>
+	<extend-entity entity-name="VendorProduct">
+		<field name="vendorParentProductId" type="description" />
+		<field name="productName" type="description"/>
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<field name="pricingConfig" type="id" />
+		<field name="stockSupplied" type="indicator" />
+		<index name="VP_PRODID">
+			<index-field name="vendorProductId"/>
+		</index>
+		<index name="VP_PPRODID">
+			<index-field name="vendorParentProductId"/>
+		</index>
+	</extend-entity>
+	<entity entity-name="OrderItemFlag" package-name="com.envelopes.product">
+		<field name="orderId" type="id-ne"/>
+		<field name="orderItemSeqId" type="id-ne"/>
+		<field name="printableSyracuse" type="indicator"/>
+		<prim-key field="orderId" />
+		<prim-key field="orderItemSeqId" />
+		<relation type="one" fk-name="OI_FLAG_OH" rel-entity-name="OrderHeader">
+			<key-map field-name="orderId"/>
+		</relation>
+		<relation type="one" fk-name="OI_FLAG_OI" rel-entity-name="OrderItem">
+			<key-map field-name="orderId"/>
+			<key-map field-name="orderItemSeqId"/>
+		</relation>
+	</entity>
+	<entity entity-name="VendorProductPrice" package-name="com.envelopes.product">
+		<field name="partyId" type="id-ne" />
+		<field name="vendorProductId" type="description" />
+		<field name="vendorParentProductId" type="description" />
+		<field name="price" type="currency-precise" />
+		<field name="quantity" type="numeric" />
+		<field name="colorsFront" type="numeric" />
+		<field name="colorsBack" type="numeric" />
+		<field name="isFrontBlack" type="indicator" />
+		<field name="isBackBlack" type="indicator" />
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<prim-key field="partyId" />
+		<prim-key field="vendorProductId" />
+		<prim-key field="quantity" />
+		<prim-key field="colorsFront" />
+		<prim-key field="colorsBack" />
+		<prim-key field="isFrontBlack" />
+		<prim-key field="isBackBlack" />
+		<prim-key field="fromDate" />
+		<relation type="one" fk-name="V_VPP_PARTY" rel-entity-name="Vendor">
+			<key-map field-name="partyId"/>
+		</relation>
+		<relation type="one" fk-name="V_VPP_PROD" rel-entity-name="VendorProduct">
+			<key-map field-name="vendorProductId"/>
+		</relation>
+		<relation type="one" fk-name="V_VPP_PPROD" rel-entity-name="VendorProduct">
+			<key-map field-name="vendorParentProductId"/>
+		</relation>
+	</entity>
+	<entity entity-name="VendorProductFeatureAppl"
+			package-name="org.apache.ofbiz.product.feature"
+			title="Product Feature Applicability Entity">
+		<field name="productId" type="id"></field>
+		<field name="vendorPartyId" type="description"></field>
+		<field name="vendorProductId" type="description"></field>
+		<field name="productFeatureId" type="id-ne"></field>
+		<field name="productFeatureApplTypeId" type="id"></field>
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<field name="sequenceNum" type="numeric"></field>
+		<field name="amount" type="currency-amount"></field>
+		<field name="recurringAmount" type="currency-amount"></field>
+		<prim-key field="vendorPartyId"/>
+		<prim-key field="vendorProductId"/>
+		<prim-key field="productFeatureId"/>
+		<prim-key field="fromDate"/>
+		<relation type="one" fk-name="VPROD_FAPPL_PID" rel-entity-name="Vendor">
+			<key-map field-name="vendorPartyId" rel-field-name="partyId"/>
+		</relation>
+		<relation type="one" fk-name="VPROD_FAPPL_TYPE" rel-entity-name="ProductFeatureApplType">
+			<key-map field-name="productFeatureApplTypeId"/>
+		</relation>
+		<relation type="one" fk-name="VPROD_FAPPL_PRODUCT" rel-entity-name="VendorProduct">
+			<key-map field-name="vendorProductId"/>
+		</relation>
+		<relation type="one" fk-name="VPROD_FAPPL_PPRODUCT" rel-entity-name="Product">
+			<key-map field-name="productId"/>
+		</relation>
+		<relation type="one" fk-name="VPROD_FAPPL_FEATURE" rel-entity-name="ProductFeature">
+			<key-map field-name="productFeatureId"/>
+		</relation>
+	</entity>
+	<view-entity entity-name="VendorProductFeatureAndAppl"
+				 package-name="org.apache.ofbiz.product.feature"
+				 title="ProductFeature And ProductFeatureAppl View Entity">
+		<member-entity entity-alias="PF" entity-name="ProductFeature"/>
+		<member-entity entity-alias="PFA" entity-name="VendorProductFeatureAppl"/>
+		<alias entity-alias="PF" name="productFeatureId"/>
+		<alias entity-alias="PF" name="productFeatureTypeId"/>
+		<alias entity-alias="PF" name="productFeatureCategoryId"/>
+		<alias entity-alias="PF" name="description"/>
+		<alias entity-alias="PF" name="uomId"/>
+		<alias entity-alias="PF" name="numberSpecified"/>
+		<alias entity-alias="PF" name="defaultAmount"/>
+		<alias entity-alias="PF" name="defaultSequenceNum"/>
+		<alias entity-alias="PF" name="abbrev"/>
+		<alias entity-alias="PF" name="idCode"/>
+		<alias entity-alias="PFA" name="productId"/>
+		<alias entity-alias="PFA" name="vendorPartyId"/>
+		<alias entity-alias="PFA" name="vendorProductId"/>
+		<alias entity-alias="PFA" name="productFeatureApplTypeId"/>
+		<alias entity-alias="PFA" name="fromDate"/>
+		<alias entity-alias="PFA" name="thruDate"/>
+		<alias entity-alias="PFA" name="sequenceNum"/>
+		<alias entity-alias="PFA" name="amount"/>
+		<alias entity-alias="PFA" name="recurringAmount"/>
+		<view-link entity-alias="PF" rel-entity-alias="PFA">
+			<key-map field-name="productFeatureId"/>
+		</view-link>
+		<relation type="one-nofk" rel-entity-name="ProductFeature">
+			<key-map field-name="productFeatureId"/>
+		</relation>
+		<relation type="one-nofk" rel-entity-name="VendorProductFeatureAppl">
+			<key-map field-name="vendorPartyId"/>
+			<key-map field-name="vendorProductId"/>
+			<key-map field-name="productFeatureId"/>
+			<key-map field-name="fromDate"/>
+		</relation>
+		<relation type="one-nofk" rel-entity-name="ProductFeatureType">
+			<key-map field-name="productFeatureTypeId"/>
+		</relation>
+		<relation type="one-nofk" rel-entity-name="ProductFeatureApplType">
+			<key-map field-name="productFeatureApplTypeId"/>
+		</relation>
+		<relation type="one-nofk" rel-entity-name="ProductFeatureCategory">
+			<key-map field-name="productFeatureCategoryId"/>
+		</relation>
+		<relation type="many" rel-entity-name="SupplierProductFeature">
+			<key-map field-name="productFeatureId"/>
+		</relation>
+	</view-entity>
+
+	<entity entity-name="SearchField" package-name="com.bigname.search.elasticsearch">
+		<field name="fieldName" type="id-ne" />
+		<field name="webSiteId" type="id" />
+		<field name="fieldId" type="id" />
+		<field name="description" type="description" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="boostFactor" type="fixed-point" />
+		<field name="searchable" type="indicator" />
+		<field name="changeByUserLoginId" type="id-vlong"></field>
+		<prim-key field="fieldName" />
+		<prim-key field="webSiteId" />
+		<relation type="one" fk-name="SEA_FLD_USRLGN" rel-entity-name="UserLogin">
+			<key-map field-name="changeByUserLoginId" rel-field-name="userLoginId"/>
+		</relation>
+		<index name="SEFLD_WEB">
+			<index-field name="webSiteId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="SearchFacet" package-name="com.bigname.search.elasticsearch">
+		<field name="facetId" type="description" />
+		<field name="facetTypeId" type="id" />
+		<field name="facetName" type="description" />
+		<field name="masterFacetName" type="description" />
+		<field name="referenceId" type="id" />
+		<prim-key field="facetId" />
+		<prim-key field="facetTypeId" />
+	</entity>
+
+	<entity entity-name="SearchSynonym" package-name="com.bigname.search.elasticsearch">
+		<field name="id" type="id-long" />
+		<field name="fromSynonyms" type="description" />
+		<field name="toSynonyms" type="barely-long" />
+		<field name="synonymTypeId" type="id" />
+		<field name="webSiteId" type="id" />
+		<field name="enabled" type="indicator" />
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="id" />
+		<index name="SESYN_WEB">
+			<index-field name="webSiteId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="SearchRedirect" package-name="com.bigname.search.elasticsearch">
+		<field name="id" type="id-long" />
+		<field name="redirectName" type="description" />
+		<field name="redirectUrl" type="description" />
+		<field name="pageTypeId" type="id" />
+		<field name="isQuery" type="barely-long" />
+		<field name="containsQuery" type="barely-long" />
+		<field name="conditionOperator" type="id" />
+		<field name="conditionData" type="moderately-long"/>
+		<field name="webSiteId" type="id" />
+		<field name="enabled" type="indicator" />
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="id" />
+		<index name="SERED_WEB">
+			<index-field name="webSiteId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="SearchBanner" package-name="com.bigname.search.elasticsearch">
+		<field name="id" type="id-long" />
+		<field name="bannerName" type="description" />
+		<field name="banner" type="url" />
+		<field name="bannerBackground" type="url" />
+		<field name="bannerLeft" type="url" />
+		<field name="bannerRight" type="url" />
+		<field name="pageTypeId" type="id" />
+		<field name="positionTypeId" type="id" />
+		<field name="isQuery" type="barely-long" />
+		<field name="containsQuery" type="barely-long" />
+		<field name="conditionOperator" type="id" />
+		<field name="conditionData" type="moderately-long"/>
+		<field name="webSiteId" type="id" />
+		<field name="enabled" type="indicator" />
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="id" />
+		<prim-key field="positionTypeId" />
+		<index name="SEBAN_WEB">
+			<index-field name="webSiteId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="SearchTune" package-name="com.bigname.search.elasticsearch">
+		<field name="id" type="id-long" />
+		<field name="tuneName" type="description" />
+		<field name="pageTypeId" type="id" />
+		<field name="isQuery" type="barely-long" />
+		<field name="containsQuery" type="barely-long" />
+		<field name="conditionOperator" type="id" />
+		<field name="conditionData" type="moderately-long"/>
+		<field name="promotedProductList" type="moderately-long"/>
+		<field name="demotedProductList" type="moderately-long"/>
+		<field name="removedProductList" type="moderately-long"/>
+		<field name="webSiteId" type="id" />
+		<field name="enabled" type="indicator" />
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="id" />
+		<index name="SETUN_WEB">
+			<index-field name="webSiteId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="SearchPage" package-name="com.bigname.search.elasticsearch">
+		<field name="id" type="id" />
+		<field name="pageName" type="description" />
+		<field name="pageTypeId" type="id" />
+		<field name="isQuery" type="barely-long" />
+		<field name="containsQuery" type="barely-long" />
+		<field name="conditionOperator" type="id" />
+		<field name="conditionData" type="moderately-long"/>
+		<field name="promotedProductList" type="moderately-long"/>
+		<field name="demotedProductList" type="moderately-long"/>
+		<field name="removedProductList" type="moderately-long"/>
+		<field name="webSiteId" type="id" />
+		<field name="enabled" type="indicator" />
+		<field name="ignoreCondition" type="indicator" />
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="id" />
+		<index name="SEPAG_WEB">
+			<index-field name="webSiteId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="SearchStopWord" package-name="com.bigname.search.elasticsearch">
+		<field name="id" type="id" />
+		<field name="word" type="description" />
+		<field name="enabled" type="indicator" />
+		<prim-key field="id" />
+	</entity>
+
+	<entity entity-name="PressManPrintJob" package-name="com.envelopes.product">
+		<field name="orderId" type="id-ne"/>
+		<field name="orderItemSeqId" type="id-ne"/>
+		<field name="side" type="numeric"/>
+		<field name="version" type="numeric"/>
+		<field name="isRushJob" type="indicator"/>
+		<field name="jobDueDate" type="date-time"/>
+		<field name="heavyInkCoverage" type="indicator"/>
+		<field name="preferredPressId" type="id"/>
+		<field name="assignedPressId" type="id"/>
+		<field name="internalJobId" type="description"/>
+		<field name="itemId" type="id"/>
+		<field name="parentProductId" type="id"/>
+		<field name="isRushItem" type="indicator"/>
+		<field name="itemDueDate" type="date-time"/>
+		<field name="itemQty" type="numeric"/>
+		<field name="itemWidth" type="fixed-point"/>
+		<field name="itemHeight" type="fixed-point"/>
+		<field name="artHeight" type="fixed-point"/>
+		<field name="artWidth" type="fixed-point"/>
+		<field name="isScene7" type="indicator"/>
+		<field name="isVariableData" type="indicator"/>
+		<field name="isTwoSided" type="indicator"/>
+		<field name="isReprint" type="indicator"/>
+		<field name="reprintReason" type="moderately-long"/>
+		<field name="inkColorId1" type="id"/>
+		<field name="inkColorId2" type="id"/>
+		<field name="inkColorId3" type="id"/>
+		<field name="inkColorId4" type="id"/>
+		<field name="inkColorCode1" type="description"/>
+		<field name="inkColorCode2" type="description"/>
+		<field name="inkColorCode3" type="description"/>
+		<field name="inkColorCode4" type="description"/>
+		<field name="comments" type="moderately-long"/>
+		<field name="completedFlag" type="indicator"/>
+		<prim-key field="orderId"/>
+		<prim-key field="orderItemSeqId"/>
+		<prim-key field="side"/>
+		<prim-key field="version"/>
+		<relation type="one" fk-name="FK_PJ_PREF_PRESS" rel-entity-name="PressManPress">
+			<key-map field-name="preferredPressId" rel-field-name="pressId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PJ_ASGN_PRESS" rel-entity-name="PressManPress">
+			<key-map field-name="assignedPressId" rel-field-name="pressId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PJ_COL_ID_1" rel-entity-name="PressManInkColor">
+			<key-map field-name="inkColorId1" rel-field-name="colorId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PJ_COL_ID_2" rel-entity-name="PressManInkColor">
+			<key-map field-name="inkColorId2" rel-field-name="colorId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PJ_COL_ID_3" rel-entity-name="PressManInkColor">
+			<key-map field-name="inkColorId3" rel-field-name="colorId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PJ_COL_ID_4" rel-entity-name="PressManInkColor">
+			<key-map field-name="inkColorId4" rel-field-name="colorId"/>
+		</relation>
+		<index name="IDX_PJ_COMP_FLG">
+			<index-field name="completedFlag"/>
+		</index>
+		<index name="IDX_PJ_COL_CODE_1">
+			<index-field name="inkColorCode1"/>
+		</index>
+		<index name="IDX_PJ_COL_CODE_2">
+			<index-field name="inkColorCode2"/>
+		</index>
+		<index name="IDX_PJ_COL_CODE_3">
+			<index-field name="inkColorCode3"/>
+		</index>
+		<index name="IDX_PJ_COL_CODE_4">
+			<index-field name="inkColorCode4"/>
+		</index>
+	</entity>
+
+	<entity entity-name="PressManPress" package-name="com.envelopes.product">
+		<field name="pressId" type="id-ne"/>
+		<field name="pressCode" type="description"/>
+		<field name="pressName" type="description"/>
+		<field name="minWidth" type="fixed-point"/>
+		<field name="maxWidth" type="fixed-point"/>
+		<field name="minHeight" type="fixed-point"/>
+		<field name="maxHeight" type="fixed-point"/>
+		<field name="gripperSize" type="fixed-point"/>
+		<field name="imageGap" type="fixed-point"/>
+		<field name="maxColors" type="numeric"/>
+		<field name="whiteInkSupport" type="indicator"/>
+		<field name="isActive" type="indicator"/>
+		<prim-key field="pressId"/>
+	</entity>
+
+	<entity entity-name="PressManProductAttributes" package-name="com.envelopes.product">
+		<field name="parentProductId" type="id-ne"/>
+		<field name="productName" type="description"/>
+		<field name="productType" type="description"/>
+		<field name="height" type="fixed-point"/>
+		<field name="width" type="fixed-point"/>
+		<field name="openHeight" type="fixed-point"/>
+		<field name="openWidth" type="fixed-point"/>
+		<field name="offsetPressId" type="id"/>
+		<field name="digitalPressId" type="id"/>
+		<field name="nonPerfectingFlag" type="indicator"/>
+		<field name="digitalPrintingAvailable" type="indicator"/>
+		<field name="isActive" type="indicator"/>
+		<prim-key field="parentProductId"/>
+		<relation type="one" fk-name="FK_PA_OSET_PRESS_ID" rel-entity-name="PressManPress">
+			<key-map field-name="offsetPressId" rel-field-name="pressId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PA_DIG_PRESS_ID" rel-entity-name="PressManPress">
+			<key-map field-name="digitalPressId" rel-field-name="pressId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="PressManInkColor" package-name="com.envelopes.product">
+		<field name="colorId" type="id-ne"/>
+		<field name="colorCode" type="description"/>
+		<field name="colorCodeOverride" type="description"/>
+		<field name="colorName" type="description"/>
+		<field name="isSpotColor" type="indicator"/>
+		<prim-key field="colorId"/>
+	</entity>
+
+	<entity entity-name="ProductPromoExclusion" package-name="com.envelopes.product">
+		<field name="productPromoId" type="id-ne"></field>
+		<field name="partyId" type="id-ne"></field>
+		<prim-key field="productPromoId"/>
+		<prim-key field="partyId"/>
+		<relation type="one" fk-name="FK_PPE_PROD_PROMO" rel-entity-name="ProductPromo">
+			<key-map field-name="productPromoId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PPE_PARTY" rel-entity-name="Party">
+			<key-map field-name="partyId"/>
+		</relation>
+	</entity>
+
+	<extend-entity entity-name="PaymentGatewayResponse">
+		<field name="requestMsg" type="description" />
+	</extend-entity>
+
+	<extend-entity entity-name="ZipSalesTaxLookup">
+		<field name="groupId" type="id" />
+	</extend-entity>
+
+	<!-- ================================================================== -->
+	<!-- ============		QUOTE CALCULATOR ENTITIES			=========== -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="QcQuote" package-name="com.bigname.quote.calculator">
+		<field name="quoteId" type="id-ne"/>
+		<field name="quoteRequestId" type="id"/>
+		<field name="pricingRequest" type="moderately-long"/>
+		<field name="pricingResponse" type="moderately-long"/>
+		<field name="createdBy" type="id-vlong"/>
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<field name="poId" type="id-ne" />
+		<field name="orderId" type="id-ne" />
+		<field name="orderItemSeqId" type="id-ne" />
+		<field name="comment" type="moderately-long"/>
+		<field name="internalComment" type="moderately-long"/>
+		<field name="production" type="description"/>
+		<prim-key field="quoteId"/>
+		<relation type="one" fk-name="FK_QCS_QTRQ_ID" rel-entity-name="CustomEnvelope">
+			<key-map field-name="quoteRequestId" rel-field-name="quoteId"/>
+		</relation>
+		<relation type="one" fk-name="QC_UL" rel-entity-name="UserLogin">
+			<key-map field-name="createdBy" rel-field-name="userLoginId"/>
+		</relation>
+		<index name="QCQ_POID">
+			<index-field name="poId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="QcVendor" package-name="com.bigname.quote.calculator">
+		<field name="vendorId" type="id-ne"/>
+		<field name="vendorName" type="description"/>
+		<field name="activeFlag" type="indicator"/>
+		<prim-key field="vendorId"/>
+	</entity>
+
+	<entity entity-name="QcStyleGroup" package-name="com.bigname.quote.calculator">
+		<field name="styleGroupId" type="id-ne"/>
+		<field name="styleGroupName" type="description"/>
+		<field name="activeFlag" type="indicator"/>
+		<prim-key field="styleGroupId"/>
+	</entity>
+
+	<entity entity-name="QcStyle" package-name="com.bigname.quote.calculator">
+		<field name="styleId" type="id-ne"/>
+		<field name="styleGroupId" type="id-ne" />
+		<field name="styleName" type="description"/>
+		<field name="styleShortName" type="description"/>
+		<field name="styleDescription" type="description"/>
+		<field name="activeFlag" type="indicator"/>
+		<prim-key field="styleId"/>
+		<prim-key field="styleGroupId"/>
+		<relation type="one" fk-name="FK_QCS_GROUP_ID" rel-entity-name="QcStyleGroup">
+			<key-map field-name="styleGroupId" rel-field-name="styleGroupId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="QcMaterialType" package-name="com.bigname.quote.calculator">
+		<field name="materialTypeId" type="id-ne"/>
+		<field name="materialTypeName" type="description"/>
+		<field name="materialTypeDescription" type="description"/>
+		<field name="activeFlag" type="indicator"/>
+		<prim-key field="materialTypeId"/>
+	</entity>
+
+	<entity entity-name="QcStockType" package-name="com.bigname.quote.calculator">
+		<field name="stockTypeId" type="id-ne"/>
+		<field name="materialTypeId" type="id-ne"/>
+		<field name="stockTypeName" type="description"/>
+		<field name="stockTypeDescription" type="description"/>
+		<field name="activeFlag" type="indicator"/>
+		<prim-key field="stockTypeId"/>
+		<relation type="one" fk-name="FK_QCSTM_TYPE_ID" rel-entity-name="QcMaterialType">
+			<key-map field-name="materialTypeId" rel-field-name="materialTypeId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="QcStock" package-name="com.bigname.quote.calculator">
+		<field name="stockId" type="id-ne"/>
+		<field name="stockTypeId" type="id-ne"/>
+		<field name="stockName" type="description"/>
+		<field name="stockDescription" type="description"/>
+		<field name="activeFlag" type="indicator"/>
+		<prim-key field="stockId"/>
+		<relation type="one" fk-name="FK_QCSS_TYPE_ID" rel-entity-name="QcStockType">
+			<key-map field-name="stockTypeId" rel-field-name="stockTypeId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="QcAttributeType" package-name="com.bigname.quote.calculator">
+		<field name="attributeTypeId" type="id-ne"/>
+		<field name="attributeTypeName" type="description"/>
+		<prim-key field="attributeTypeId"/>
+	</entity>
+
+	<entity entity-name="QcAttribute" package-name="com.bigname.quote.calculator">
+		<field name="attributeId" type="id-ne"/>
+		<field name="attributeName" type="description"/>
+		<field name="attributeLabel" type="description"/>
+		<field name="attributeDescription" type="description"/>
+		<field name="attributeTypeId" type="id" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="activeFlag" type="indicator"/>
+		<prim-key field="attributeId"/>
+		<relation type="one" fk-name="FK_QCA_ATTR_TYPE_ID" rel-entity-name="QcAttributeType">
+			<key-map field-name="attributeTypeId" rel-field-name="attributeTypeId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="QcVendorStyleGroupAssoc" package-name="com.bigname.quote.calculator">
+		<field name="vendorId" type="id-ne"/>
+		<field name="styleGroupId" type="id-ne"/>
+		<field name="quantityBreak" type="description"/>
+		<field name="sequenceNum" type="numeric" />
+		<prim-key field="vendorId"/>
+		<prim-key field="styleGroupId"/>
+		<relation type="one" fk-name="FK_QCVSG_VENDOR_ID" rel-entity-name="QcVendor">
+			<key-map field-name="vendorId" rel-field-name="vendorId"/>
+		</relation>
+		<relation type="one" fk-name="FK_QCVSG_GROUP_ID" rel-entity-name="QcStyleGroup">
+			<key-map field-name="styleGroupId" rel-field-name="styleGroupId"/>
+		</relation>
+	</entity>
+
+	<view-entity entity-name="QcVendorStyleGroup" package-name="com.bigname.quote.calculator">
+		<member-entity entity-alias="SG" entity-name="QcStyleGroup"/>
+		<member-entity entity-alias="VSG" entity-name="QcVendorStyleGroupAssoc"/>
+		<alias entity-alias="SG" name="styleGroupId" />
+		<alias entity-alias="SG" name="styleGroupName" />
+		<alias entity-alias="SG" name="activeFlag" />
+		<alias entity-alias="VSG" name="vendorId" />
+		<!--<alias entity-alias="VSG" name="vendorName" />-->
+		<alias entity-alias="VSG" name="quantityBreak" />
+		<alias entity-alias="VSG" name="sequenceNum" />
+		<view-link entity-alias="SG" rel-entity-alias="VSG">
+			<key-map field-name="styleGroupId" />
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="QcStyleGroupAttributeAssoc" package-name="com.bigname.quote.calculator">
+		<field name="styleGroupId" type="id-ne"/>
+		<field name="attributeId" type="id-ne"/>
+		<field name="sequenceNum" type="numeric" />
+		<prim-key field="styleGroupId"/>
+		<prim-key field="attributeId"/>
+		<relation type="one" fk-name="FK_QCSGA_GROUP_ID" rel-entity-name="QcStyleGroup">
+			<key-map field-name="styleGroupId" rel-field-name="styleGroupId"/>
+		</relation>
+		<relation type="one" fk-name="FK_QCSGA_ATTR_ID" rel-entity-name="QcAttribute">
+			<key-map field-name="attributeId" rel-field-name="attributeId"/>
+		</relation>
+	</entity>
+
+	<view-entity entity-name="QcStyleGroupAttribute" package-name="com.bigname.quote.calculator">
+		<member-entity entity-alias="AT" entity-name="QcAttribute"/>
+		<member-entity entity-alias="SGAT" entity-name="QcStyleGroupAttributeAssoc"/>
+		<alias entity-alias="AT" name="attributeId" />
+		<alias entity-alias="AT" name="attributeName" />
+		<alias entity-alias="AT" name="attributeLabel" />
+		<alias entity-alias="SGAT" name="styleGroupId" />
+		<alias entity-alias="SGAT" name="sequenceNum" />
+		<view-link entity-alias="AT" rel-entity-alias="SGAT">
+			<key-map field-name="attributeId" />
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="QcAttributeValue" package-name="com.bigname.quote.calculator">
+		<field name="attributeValueId" type="id-ne"/>
+		<field name="attributeId" type="id"/>
+		<field name="styleGroupId" type="id"/>
+		<field name="vendorId" type="id" />
+		<field name="quantityBreak" type="description"/>
+		<field name="volumePrice" type="description"/>
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<prim-key field="attributeValueId"/>
+		<relation type="one" fk-name="FK_QCAV_ATTR_ID" rel-entity-name="QcAttribute">
+			<key-map field-name="attributeId" rel-field-name="attributeId"/>
+		</relation>
+		<relation type="one" fk-name="FK_QCAV_STYLE_GROUP_ID" rel-entity-name="QcStyleGroup">
+			<key-map field-name="styleGroupId" rel-field-name="styleGroupId"/>
+		</relation>
+		<relation type="one" fk-name="FK_QCAV_VENDOR_ID" rel-entity-name="QcVendor">
+			<key-map field-name="vendorId" rel-field-name="vendorId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="QcStyleAttributeValue" package-name="com.bigname.quote.calculator">
+		<field name="styleId" type="id-ne"/>
+		<field name="attributeValueId" type="id-ne"/>
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<prim-key field="styleId"/>
+		<prim-key field="attributeValueId"/>
+		<relation type="one" fk-name="FK_QSAV_ATTR_VAL_ID" rel-entity-name="QcAttributeValue">
+			<key-map field-name="attributeValueId" rel-field-name="attributeValueId"/>
+		</relation>
+		<relation type="one" fk-name="FK_QSAV_STYLE_ID" rel-entity-name="QcStyle">
+			<key-map field-name="styleId" rel-field-name="styleId"/>
+		</relation>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- ============			MARKETPLACE ENTITIES			=========== -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="MarketplaceSeller" package-name="com.bigname.marketplace.catalog">
+		<field name="marketplaceSellerId" type="id-ne"/>
+		<field name="sellerName" type="description"/>
+		<field name="sellerStatus" type="description"/>
+		<field name="activeFlag" type="indicator" />
+		<field name="miraklCreatedDate" type="date-time"/>
+		<field name="miraklLastUpdatedDate" type="date-time"/>
+		<prim-key field="marketplaceSellerId"/>
+	</entity>
+
+	<entity entity-name="MarketplaceHierarchy" package-name="com.bigname.marketplace.catalog">
+		<field name="categoryId" type="id-ne"/>
+		<field name="categoryLabel" type="description"/>
+		<field name="parentCategoryId" type="id"/>
+		<field name="level" type="numeric" />
+		<prim-key field="categoryId"/>
+		<relation type="one" fk-name="FK_MPH_PARENT_CAT_ID" rel-entity-name="MarketplaceHierarchy">
+			<key-map field-name="parentCategoryId" rel-field-name="categoryId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="MarketplaceCategory" package-name="com.bigname.marketplace.catalog">
+		<field name="categoryId" type="id-ne"/>
+		<field name="categoryLabel" type="description"/>
+		<field name="categoryDescription" type="description"/>
+		<field name="parentCategoryId" type="id"/>
+		<field name="logisticClass" type="description"/>
+		<field name="level" type="numeric" />
+		<prim-key field="categoryId"/>
+		<relation type="one" fk-name="FK_MPC_PARENT_CAT_ID" rel-entity-name="MarketplaceCategory">
+			<key-map field-name="parentCategoryId" rel-field-name="categoryId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="MarketplaceExcludedCategory" package-name="com.bigname.marketplace.catalog">
+		<field name="categoryId" type="id-ne"/>
+		<field name="categoryLabel" type="description"/>
+		<field name="level" type="indicator" />
+		<prim-key field="categoryId"/>
+	</entity>
+
+	<entity entity-name="MarketplaceProductAttribute" package-name="com.bigname.marketplace.catalog">
+		<field name="attributeId" type="id-ne"/>
+		<field name="attributeLabel" type="description"/>
+		<field name="required" type="indicator"/>
+		<field name="type" type="description"/>
+		<prim-key field="attributeId"/>
+	</entity>
+
+	<entity entity-name="MarketplaceRequiredProductAttribute" package-name="com.bigname.marketplace.catalog">
+		<field name="attributeId" type="id-ne"/>
+		<field name="attributeLabel" type="description"/>
+		<field name="required" type="indicator"/>
+		<field name="type" type="description"/>
+		<prim-key field="attributeId"/>
+	</entity>
+
+	<entity entity-name="MarketplaceSellerUpload" package-name="com.bigname.marketplace.catalog">
+		<field name="uploadId" type="id-ne"/>
+		<field name="sellerId" type="id"/>
+		<field name="fileName" type="description"/>
+		<field name="uploadTime" type="date-time"/>
+		<field name="numOfItems" type="numeric"/>
+		<field name="status" type="description"/>
+		<field name="headerColumns" type="moderately-long"/>
+		<prim-key field="uploadId"/>
+		<relation type="one" fk-name="FK_MPSU_SELLER_ID" rel-entity-name="MarketplaceSeller">
+			<key-map field-name="sellerId" rel-field-name="marketplaceSellerId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="MarketplaceSellerUploadedProduct" package-name="com.bigname.marketplace.catalog">
+		<field name="uploadId" type="id-ne"/>
+		<field name="sellerId" type="id"/>
+		<field name="sequenceNum" type="numeric"/>
+		<field name="attributeValues" type="moderately-long"/>
+		<field name="errorMessage" type="moderately-long"/>
+		<field name="status" type="description"/>
+		<prim-key field="uploadId"/>
+		<prim-key field="sellerId"/>
+		<prim-key field="sequenceNum"/>
+		<relation type="one" fk-name="FK_MPSUP_SELLER_ID" rel-entity-name="MarketplaceSeller">
+			<key-map field-name="sellerId" rel-field-name="marketplaceSellerId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="MarketplaceOffer" package-name="com.bigname.marketplace.catalog">
+		<field name="offerId" type="id-ne"/>
+		<field name="marketplaceOfferId" type="id-ne"/>
+		<field name="marketplaceProductId" type="id-ne"/>
+		<field name="shippingPrice" type="fixed-point"/>
+		<field name="unitPrice" type="fixed-point"/>
+		<field name="volumePricing" type="moderately-long" />
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<prim-key field="offerId"/>
+		<relation type="one" fk-name="FK_MPO_MP_PROD_ID" rel-entity-name="MarketplaceProduct">
+			<key-map field-name="marketplaceProductId" rel-field-name="marketplaceProductId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="MarketplaceOrderHeader" package-name="com.bigname.marketplace.order">
+		<field name="bignameOrderId" type="id-ne"/>
+		<field name="customerFirstName" type="description"/>
+		<field name="customerLastName" type="description"/>
+		<field name="customerEmail" type="description"/>
+		<field name="billingFirstName" type="description"/>
+		<field name="billingLastName" type="description"/>
+		<field name="billingCompany" type="description"/>
+		<field name="billingStreet1" type="description"/>
+		<field name="billingStreet2" type="description"/>
+		<field name="billingCity" type="description"/>
+		<field name="billingState" type="description"/>
+		<field name="billingZip" type="description"/>
+		<field name="billingCountry" type="description"/>
+		<field name="billingPhone1" type="description"/>
+		<field name="billingPhone2" type="description"/>
+		<field name="shippingFirstName" type="description"/>
+		<field name="shippingLastName" type="description"/>
+		<field name="shippingCompany" type="description"/>
+		<field name="shippingStreet1" type="description"/>
+		<field name="shippingStreet2" type="description"/>
+		<field name="shippingCity" type="description"/>
+		<field name="shippingState" type="description"/>
+		<field name="shippingZip" type="description"/>
+		<field name="shippingCountry" type="description"/>
+		<field name="shippingPhone1" type="description"/>
+		<field name="shippingPhone2" type="description"/>
+		<field name="shippingNotes" type="description"/>
+		<field name="internalShippingNotes" type="description"/>
+		<field name="additionalAttributes" type="moderately-long"/>
+		<field name="additionalAttributeValues" type="moderately-long"/>
+		<field name="shippingMethod" type="description"/>
+		<field name="shippingZone" type="description"/>
+		<field name="status" type="description"/>
+		<field name="shippedDate" type="date-time"/>
+		<field name="exportedDate" type="date-time"/>
+		<field name="exportStatus" type="description"/>
+		<prim-key field="bignameOrderId"/>
+	</entity>
+
+	<entity entity-name="MarketplaceOrderDetail" package-name="com.bigname.marketplace.order">
+		<field name="bignameOrderId" type="id-ne"/>
+		<field name="orderItemSeqNum" type="numeric"/>
+		<field name="offerId" type="id"/>
+		<field name="marketplaceProductId" type="id"/>
+		<field name="bignameProductId" type="id"/>
+		<field name="unitPrice" type="fixed-point"/>
+		<field name="quantity" type="numeric"/>
+		<field name="itemTotal" type="fixed-point"/>
+		<field name="shippingTypeCode" type="description"/>
+		<field name="shippingPrice" type="fixed-point"/>
+		<field name="status" type="description"/>
+		<prim-key field="bignameOrderId"/>
+		<prim-key field="orderItemSeqNum"/>
+	</entity>
+
+	<entity entity-name="MarketplaceProduct" package-name="com.bigname.marketplace.catalog">
+		<field name="marketplaceProductId" type="id-ne"/>
+		<field name="marketplaceCategoryId" type="id"/>
+		<field name="marketplaceHierarchyId" type="id"/>
+		<field name="marketplaceSellerId" type="id"/>
+		<field name="sellerProductId" type="id"/>
+		<field name="bignameProductId" type="id"/>
+		<field name="unitPrice" type="description"/>
+		<field name="volumePrice" type="moderately-long" />
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<field name="status" type="description" />
+		<field name="published" type="indicator" />
+		<field name="imported" type="indicator" />
+		<field name="state" type="moderately-long" />
+		<prim-key field="marketplaceProductId"/>
+		<relation type="one" fk-name="FK_MPP_MP_CAT_ID" rel-entity-name="MarketplaceCategory">
+			<key-map field-name="marketplaceCategoryId" rel-field-name="categoryId"/>
+		</relation>
+		<relation type="one" fk-name="FK_MPP_MP_HIER_ID" rel-entity-name="MarketplaceHierarchy">
+			<key-map field-name="marketplaceHierarchyId" rel-field-name="categoryId"/>
+		</relation>
+		<relation type="one" fk-name="FK_MPP_BN_PROD_ID" rel-entity-name="Product">
+			<key-map field-name="bignameProductId" rel-field-name="productId"/>
+		</relation>
+		<index name="MPP_PROD">
+			<index-field name="bignameProductId"/>
+		</index>
+		<index name="MPP_SELL_PROD">
+			<index-field name="sellerProductId"/>
+		</index>
+		<index name="MPP_STATUS">
+			<index-field name="status"/>
+		</index>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- PRODUCT REVIEW CALC                                                -->
+	<!-- ================================================================== -->
+
+	<view-entity entity-name="ProductAndReviewSummary" package-name="org.envelopes.product" title="Product and Review View Entity">
+		<member-entity entity-alias="PROD" entity-name="Product"/>
+		<member-entity entity-alias="PRODREV" entity-name="ProductReview"/>
+		<alias entity-alias="PROD" name="productId" group-by="true"/>
+		<alias entity-alias="PROD" name="parentProductId"/>
+		<alias entity-alias="PRODREV" name="statusId" group-by="true"/>
+		<alias entity-alias="PRODREV" name="salesChannelEnumId" group-by="true"/>
+		<alias entity-alias="PRODREV" name="productReviewId" function="count"/>
+		<alias entity-alias="PRODREV" name="productRating" field="productRating" function="avg"/>
+		<view-link entity-alias="PROD" rel-entity-alias="PRODREV">
+			<key-map field-name="productId"/>
+		</view-link>
+	</view-entity>
+
+	<!-- ================================================================== -->
+	<!-- WAREHOUSES                                                         -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="ProductFeatureAssoc" package-name="com.envelopes.product">
+		<field name="productId" type="id-ne" />
+		<field name="productFeatureId" type="id-ne" />
+		<field name="productFeatureIdTo" type="id-ne" />
+		<field name="productAssocTypeId" type="id-ne" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="reason" type="long-varchar" />
+		<prim-key field="productId"/>
+		<prim-key field="productFeatureId"/>
+		<prim-key field="productFeatureIdTo"/>
+		<prim-key field="productAssocTypeId"/>
+		<relation type="one" fk-name="PROD_FASSOC_PROD" rel-entity-name="Product">
+			<key-map field-name="productId"/>
+		</relation>
+		<relation type="one" fk-name="PROD_FASSOC_TYPE" rel-entity-name="ProductAssocType">
+			<key-map field-name="productAssocTypeId"/>
+		</relation>
+		<relation type="one" fk-name="PROD_FASSOC_MPROD" title="Main" rel-entity-name="ProductFeature">
+			<key-map field-name="productFeatureId"/>
+		</relation>
+		<relation type="one" fk-name="PROD_FASSOC_APROD" title="Assoc" rel-entity-name="ProductFeature">
+			<key-map field-name="productFeatureIdTo" rel-field-name="productFeatureId"/>
+		</relation>
+	</entity>
+
+	<view-entity entity-name="ProductFeatureAndAssoc" package-name="org.apache.ofbiz.product.feature" title="ProductFeature And ProductFeatureAssoc View Entity">
+		<member-entity entity-alias="PF" entity-name="ProductFeature"/>
+		<member-entity entity-alias="PFA" entity-name="ProductFeatureAssoc"/>
+		<alias entity-alias="PF" name="productFeatureId"/>
+		<alias entity-alias="PF" name="productFeatureTypeId"/>
+		<alias entity-alias="PF" name="productFeatureCategoryId"/>
+		<alias entity-alias="PF" name="description"/>
+		<alias entity-alias="PF" name="uomId"/>
+		<alias entity-alias="PF" name="numberSpecified"/>
+		<alias entity-alias="PF" name="defaultAmount"/>
+		<alias entity-alias="PF" name="defaultSequenceNum"/>
+		<alias entity-alias="PF" name="abbrev"/>
+		<alias entity-alias="PF" name="idCode"/>
+		<alias entity-alias="PFA" name="productId"/>
+		<alias entity-alias="PFA" name="productFeatureIdFrom" field="productFeatureId"/>
+		<alias entity-alias="PFA" name="productFeatureIdTo"/>
+		<alias entity-alias="PFA" name="sequenceNum"/>
+		<view-link entity-alias="PF" rel-entity-alias="PFA">
+			<key-map field-name="productFeatureId" rel-field-name="productFeatureIdTo" />
+		</view-link>
+		<relation type="one-nofk" rel-entity-name="ProductFeature">
+			<key-map field-name="productFeatureId"/>
+		</relation>
+		<relation type="one-nofk" rel-entity-name="ProductFeatureAssoc">
+			<key-map field-name="productId"/>
+			<key-map field-name="productFeatureIdTo"/>
+		</relation>
+	</view-entity>
+
+	<entity entity-name="ProductOutsource" package-name="com.envelopes.product">
+		<field name="productId" type="id"></field>
+		<field name="quantity" type="numeric"></field>
+		<field name="colors" type="numeric"></field>
+		<field name="outsourceable" type="indicator"></field>
+		<field name="rules" type="moderately-long"></field>
+		<prim-key field="productId" />
+		<relation type="one" fk-name="OUTSOURCE_PROD" rel-entity-name="Product">
+			<key-map field-name="productId"/>
+		</relation>
+	</entity>
+	<entity entity-name="VendorOrder" package-name="com.envelopes.product">
+		<field name="orderId" type="id-ne"/>
+		<field name="orderItemSeqId" type="id-ne"/>
+		<field name="partyId" type="id-ne"/>
+		<field name="payloadId" type="description"/>
+		<field name="purchaseOrderId" type="id-ne"/>
+		<field name="orderVersion" type="numeric"/>
+		<field name="priceData" type="moderately-long"/>
+		<field name="comments" type="moderately-long"/>
+		<field name="trackingNumber" type="description"/>
+		<field name="invoiceId" type="id-ne"/>
+		<field name="vendorInvoiceId" type="description"/>
+		<field name="shipDate" type="date-time"/>
+		<field name="deliveryDate" type="date-time"/>
+		<field name="packageWeight" type="fixed-point"/>
+		<field name="jobId" type="description"/>
+		<field name="stockIndicator" type="name"/>
+		<field name="cost" type="currency-amount" />
+		<field name="stockLocation" type="name"/>
+		<field name="errorCode" type="id"/>
+		<field name="errorDescription" type="barely-long"/>
+		<field name="statusCode" type="id"/>
+		<prim-key field="orderId" />
+		<prim-key field="orderItemSeqId" />
+		<relation type="one" fk-name="OUTSOURCE_OH" rel-entity-name="OrderHeader">
+			<key-map field-name="orderId"/>
+		</relation>
+		<relation type="one" fk-name="OUTSOURCE_OI" rel-entity-name="OrderItem">
+			<key-map field-name="orderId"/>
+			<key-map field-name="orderItemSeqId"/>
+		</relation>
+		<relation type="one" fk-name="OUTSOURCE_PARTY" rel-entity-name="Party">
+			<key-map field-name="partyId"/>
+		</relation>
+	</entity>
+	<entity entity-name="RewriteRule" package-name="com.envelopes.product">
+		<field name="ruleId" type="description"/>
+		<field name="webSiteId" type="id-ne"/>
+		<field name="rewriteTypeId" type="id-ne"/>
+		<field name="fromUrl" type="moderately-long"/>
+		<field name="toUrl" type="moderately-long"/>
+		<field name="productId" type="id"/>
+		<field name="scene7TemplateId" type="id"/>
+		<field name="responseCode" type="id-ne"/>
+		<field name="timeStamp" type="date-time"/>
+		<field name="manual" type="indicator"/>
+		<field name="active" type="indicator"/>
+		<prim-key field="ruleId" />
+		<prim-key field="webSiteId" />
+		<relation type="one" fk-name="REWR_PROD" rel-entity-name="Product">
+			<key-map field-name="productId"/>
+		</relation>
+		<relation type="one" fk-name="REWR_S7T" rel-entity-name="Scene7Template">
+			<key-map field-name="scene7TemplateId"/>
+		</relation>
+	</entity>
+	<entity entity-name="CanonicalRule" package-name="com.envelopes.product">
+		<field name="ruleId" type="description" />
+		<field name="webSiteId" type="id-ne"/>
+		<field name="url" type="moderately-long" />
+		<field name="canonicalUrl" type="moderately-long" />
+		<field name="active" type="indicator"/>
+		<prim-key field="ruleId" />
+		<index name="CR_WEBSITEID">
+			<index-field name="webSiteId"/>
+		</index>
+		<index name="CR_URL">
+			<index-field name="url"/>
+		</index>
+	</entity>
+	<entity entity-name="ProductLabel" package-name="com.envelopes.product">
+		<field name="productId" type="id-ne"/>
+		<field name="headerName" type="description"/>
+		<field name="imageName" type="description"/>
+		<field name="name" type="description"/>
+		<field name="size" type="description"/>
+		<field name="metricSize" type="description"/>
+		<field name="color" type="description"/>
+		<field name="colorName" type="description"/>
+		<field name="weight" type="description"/>
+		<field name="texture" type="description"/>
+		<field name="bin" type="description"/>
+		<field name="boxQty" type="description"/>
+		<field name="cartonQty" type="description"/>
+		<field name="packQty" type="description"/>
+		<field name="peelAndPress" type="description"/>
+		<field name="nameFontSize" type="description"/>
+		<field name="sizeFontSize" type="description"/>
+		<field name="colorFontSize" type="description"/>
+		<field name="weightFontSize" type="description"/>
+		<field name="multiLineName" type="description"/>
+		<prim-key field="productId" />
+		<relation type="one" fk-name="LBL_PROD" rel-entity-name="Product">
+			<key-map field-name="productId"/>
+		</relation>
+
+	</entity>
+
+	<entity entity-name="SampleFolderLabel" package-name="com.bigname.folders.label">
+		<field name="jobNumber" type="id-ne"/>
+		<field name="jobData" type="moderately-long"/>
+		<field name="jobDataOverride" type="moderately-long"/>
+		<field name="labelsData" type="moderately-long"/>
+		<prim-key field="jobNumber" />
+	</entity>
+
+	<entity entity-name="SeoRule" package-name="com.envelopes.product">
+		<field name="ruleId" type="id-ne"/>
+		<field name="webSiteId" type="id-ne"/>
+		<field name="currentView" type="id-ne"/>
+		<field name="id" type="id"/>
+		<field name="productId" type="id"/>
+		<field name="keyword" type="description"/>
+		<field name="categoryId" type="description"/>
+		<field name="styleId" type="description"/>
+		<field name="sealingId" type="description"/>
+		<field name="sizeId" type="description"/>
+		<field name="finishId" type="description"/>
+		<field name="paperWeightId" type="description"/>
+		<field name="ratingId" type="description"/>
+		<field name="collectionId" type="description"/>
+		<field name="colorGroupId" type="description"/>
+		<field name="colorId" type="description"/>
+		<field name="customizableId" type="description"/>
+		<field name="productTypeId" type="description"/>
+		<field name="metaTitle" type="moderately-long"/>
+		<field name="metaDescription" type="moderately-long"/>
+		<field name="metaKeywords" type="moderately-long"/>
+		<field name="pageDescription" type="moderately-long"/>
+		<field name="altPageDescription" type="moderately-long"/>
+		<field name="footerDescription" type="moderately-long"/>
+		<field name="h1" type="description"/>
+		<field name="h2" type="description"/>
+		<field name="h3" type="description"/>
+		<field name="sequenceNum" type="numeric"/>
+		<field name="manual" type="indicator"/>
+		<field name="imageName" type="description"/>
+		<field name="h1Color" type="description"/>
+		<field name="backgroundBannerColor" type="description"/>
+		<prim-key field="ruleId" />
+		<relation type="one" fk-name="SEO_PROD_P" rel-entity-name="Product">
+			<key-map field-name="productId"/>
+		</relation>
+		<index name="SEOR_WEB">
+			<index-field name="webSiteId"/>
+		</index>
+		<index name="SEOR_CV">
+			<index-field name="currentView"/>
+		</index>
+		<index name="SEOR_ID">
+			<index-field name="id"/>
+		</index>
+		<index name="SEOR_PROD">
+			<index-field name="productId"/>
+		</index>
+		<index name="SEOR_KW">
+			<index-field name="keyword"/>
+		</index>
+		<index name="SEOR_CAT">
+			<index-field name="categoryId"/>
+		</index>
+		<index name="SEOR_COLG">
+			<index-field name="colorGroupId"/>
+		</index>
+		<index name="SEOR_COLOR">
+			<index-field name="colorId"/>
+		</index>
+		<index name="SEOR_STYLE">
+			<index-field name="styleId"/>
+		</index>
+		<index name="SEOR_SEAL">
+			<index-field name="sealingId"/>
+		</index>
+		<index name="SEOR_SIZE">
+			<index-field name="sizeId"/>
+		</index>
+		<index name="SEOR_FINISH">
+			<index-field name="finishId"/>
+		</index>
+		<index name="SEOR_PAPWEIGHT">
+			<index-field name="paperWeightId"/>
+		</index>
+		<index name="SEOR_RATING">
+			<index-field name="ratingId"/>
+		</index>
+		<index name="SEOR_COLLECTION">
+			<index-field name="collectionId"/>
+		</index>
+	</entity>
+
+	<entity entity-name="ProductRecommendation" package-name="com.envelopes.product">
+		<field name="rank" type="numeric" />
+		<field name="normalizedRank" type="fixed-point" />
+		<field name="productId" type="id-ne" />
+		<field name="recommendation1" type="id" />
+		<field name="recommendation2" type="id" />
+		<field name="recommendation3" type="id" />
+		<field name="recommendation4" type="id" />
+		<field name="recommendation5" type="id" />
+		<field name="recommendation6" type="id" />
+		<field name="recommendation7" type="id" />
+		<field name="recommendation8" type="id" />
+		<field name="recommendation9" type="id" />
+		<field name="recommendation10" type="id" />
+		<prim-key field="productId" />
+		<relation type="one" fk-name="PR_PROD" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="ProductStatistic" package-name="com.envelopes.product">
+		<field name="productId" type="id-ne" />
+		<field name="views" type="numeric" />
+		<field name="addedToCart" type="numeric" />
+		<field name="purchased" type="numeric" />
+		<field name="quantityPurchased" type="numeric" />
+		<field name="revenue" type="currency-amount" />
+		<field name="conversionRate" type="fixed-point" />
+		<prim-key field="productId" />
+		<relation type="one" fk-name="PR_PROD" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="OrderItemReorder" package-name="org.envelopes.order" title="Order Item Reorders">
+		<description>Order Item Reorders</description>
+		<field name="orderId" type="id-ne" />
+		<field name="orderItemSeqId" type="id-ne" />
+		<field name="oldOrderId" type="id" />
+		<field name="oldOrderItemSeqId" type="id" />
+		<prim-key field="orderId" />
+		<prim-key field="orderItemSeqId" />
+		<relation type="one" fk-name="ORDER_ITEM_REORD" rel-entity-name="OrderItem">
+			<key-map field-name="orderId" />
+			<key-map field-name="orderItemSeqId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="ZonePostalCodeLookup" package-name="com.envelopes.product" title="Postal Code Database">
+		<field name="shipmentMethodTypeId" type="id-ne" />
+		<field name="postalCode" type="id" />
+		<field name="zone" type="name" />
+		<field name="transitTime" type="numeric" />
+		<prim-key field="shipmentMethodTypeId" />
+		<prim-key field="postalCode" />
+		<relation type="one" fk-name="ZPCL_SHIPMETHOD" rel-entity-name="ShipmentMethodType">
+			<key-map field-name="shipmentMethodTypeId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="ZoneCostLookup" package-name="com.envelopes.product" title="Postal Code Database">
+		<field name="shipmentMethodTypeId" type="id-ne" />
+		<field name="zone" type="name" />
+		<field name="weight" type="fixed-point" />
+		<field name="averageCost" type="currency-precise" />
+		<prim-key field="shipmentMethodTypeId" />
+		<prim-key field="zone" />
+		<prim-key field="weight" />
+		<relation type="one" fk-name="ZCL_SHIPMETHOD" rel-entity-name="ShipmentMethodType">
+			<key-map field-name="shipmentMethodTypeId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="ColorWarehouse" package-name="com.envelopes.product" title="Variants with color, collection, color group, and paper weight features">
+		<field name="virtualProductId" type="id-ne" />
+		<field name="variantProductId" type="id-ne" />
+		<field name="productName" type="description" />
+		<field name="productTypeId" type="id" />
+		<field name="primaryProductCategoryId" type="id" />
+		<field name="colorFeatureId" type="id" />
+		<field name="colorDescription" type="description" />
+		<field name="colorGroupFeatureId" type="id" />
+		<field name="colorGroupDescription" type="description" />
+		<field name="collectionFeatureId" type="id" />
+		<field name="collectionDescription" type="description" />
+		<field name="paperWeightFeatureId" type="id" />
+		<field name="paperWeightDescription" type="description" />
+		<field name="paperTextureFeatureId" type="id" />
+		<field name="paperTextureDescription" type="description" />
+		<field name="coatingFeatureId" type="id" />
+		<field name="coatingDescription" type="description" />
+		<field name="sizeFeatureId" type="id" />
+		<field name="sizeDescription" type="description" />
+		<field name="brandFeatureId" type="id" />
+		<field name="brandDescription" type="description" />
+		<field name="sealingMethod" type="description" />
+		<field name="percentRecycled" type="description" />
+		<field name="isPrintable" type="indicator" />
+		<field name="isFscCertified" type="description" />
+		<field name="isSfiCertified" type="description" />
+		<field name="onSale" type="indicator" />
+		<field name="onClearance" type="indicator" />
+		<field name="isNew" type="indicator" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="colorHexCode" type="short-varchar"></field>
+		<field name="productHeight" type="fixed-point"></field>
+		<field name="productWidth" type="fixed-point"></field>
+		<field name="productDepth" type="fixed-point"></field>
+		<field name="plainPriceDescription" type="description"></field>
+		<field name="printPriceDescription" type="description"></field>
+		<field name="minColors" type="numeric"></field>
+		<field name="maxColors" type="numeric"></field>
+		<field name="hasSample" type="indicator"></field>
+		<field name="hasWhiteInk" type="indicator"></field>
+		<field name="hasCustomQty" type="indicator"></field>
+		<field name="percentSavings" type="numeric" />
+		<prim-key field="virtualProductId" />
+		<prim-key field="variantProductId" />
+		<relation type="one" fk-name="CW_VIRT_PROD" rel-entity-name="Product">
+			<key-map field-name="virtualProductId" rel-field-name="productId"/>
+		</relation>
+		<relation type="one" fk-name="CW_VAR_PROD" rel-entity-name="Product">
+			<key-map field-name="variantProductId" rel-field-name="productId"/>
+		</relation>
+	</entity>
+
+	<view-entity entity-name="ColorAndWebSite" package-name="com.envelopes.product" title="ColorWarehouse, ProductWebSite">
+		<member-entity entity-alias="CW" entity-name="ColorWarehouse" />
+		<member-entity entity-alias="PWS" entity-name="ProductWebSite" />
+		<alias-all entity-alias="CW" />
+		<alias entity-alias="CW" name="createdStamp"/>
+		<alias entity-alias="PWS" name="ae"/>
+		<alias entity-alias="PWS" name="envelopes"/>
+		<alias entity-alias="PWS" name="folders"/>
+		<alias entity-alias="PWS" name="bags"/>
+		<view-link entity-alias="CW" rel-entity-alias="PWS">
+			<key-map field-name="variantProductId" rel-field-name="productId" />
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="BrandWarehouse" package-name="com.envelopes.product" title="Variants that have Brand with color, collection, color group, and paper weight features">
+		<field name="virtualProductId" type="id-ne" />
+		<field name="variantProductId" type="id-ne" />
+		<field name="productTypeId" type="id" />
+		<field name="millFeatureId" type="id" />
+		<field name="millDescription" type="description" />
+		<field name="sizeFeatureId" type="id" />
+		<field name="sizeDescription" type="description" />
+		<field name="sizeCodeFeatureId" type="id" />
+		<field name="sizeCodeDescription" type="description" />
+		<field name="colorFeatureId" type="id" />
+		<field name="colorDescription" type="description" />
+		<field name="colorGroupFeatureId" type="id" />
+		<field name="colorGroupDescription" type="description" />
+		<field name="collectionFeatureId" type="id" />
+		<field name="collectionDescription" type="description" />
+		<field name="paperGradeFeatureId" type="id" />
+		<field name="paperGradeDescription" type="description" />
+		<field name="paperGradeCombinedDesc" type="description" />
+		<field name="paperTextureFeatureId" type="id" />
+		<field name="paperTextureDescription" type="description" />
+		<field name="paperWeightFeatureId" type="id" />
+		<field name="paperWeightDescription" type="description" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="virtualProductId" />
+		<prim-key field="variantProductId" />
+		<relation type="one" fk-name="BW_VIRT_PROD" rel-entity-name="Product">
+			<key-map field-name="virtualProductId" rel-field-name="productId"/>
+		</relation>
+		<relation type="one" fk-name="BW_VAR_PROD" rel-entity-name="Product">
+			<key-map field-name="variantProductId" rel-field-name="productId"/>
+		</relation>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- Homepage Banner                                                     -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="HomepageBanner" package-name="com.envelopes.product">
+		<field name="bannerId" type="id-ne" />
+		<field name="imageType" type="description" />
+		<field name="foregroundImage" type="description" />
+		<field name="foregroundImageFormat" type="description" />
+		<field name="foregroundImageLink" type="description" />
+		<field name="backgroundImage" type="description" />
+		<field name="mobileImage" type="description" />
+		<field name="mobileImageFormat" type="description" />
+		<field name="mobileImageLink" type="description" />
+		<field name="modalPopup" type="description" />
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<prim-key field="bannerId" />
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- Product Website                                                    -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="ProductWebSite" package-name="com.envelopes.product" title="Product and Web Site">
+		<field name="productId" type="id-ne" />
+		<field name="ae" type="indicator" />
+		<field name="envelopes" type="indicator" />
+		<field name="folders" type="indicator" />
+		<field name="bags" type="indicator" />
+		<prim-key field="productId" />
+		<relation type="one" fk-name="PWS_P_PROD" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- Product Assets                                                     -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="ProductAssets" package-name="com.envelopes.product" title="Extra Product Images">
+		<field name="assetId" type="id-ne" />
+		<field name="productId" type="id-ne" />
+		<field name="designId" type="id-ne" />
+		<field name="assetType" type="description" />
+		<field name="assetName" type="description" />
+		<field name="assetDescription" type="description" />
+		<field name="assetThumbnail" type="description" />
+		<field name="sortOrder" type="numeric" />
+		<field name="assetDefault" type="indicator" />
+		<prim-key field="assetId" />
+		<relation type="one" fk-name="PAI_P_PROD" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- Cart Persistence                                                   -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="PersistentCart" package-name="com.envelopes.order" title="Shopping Cart Database">
+		<field name="id" type="id-long-ne" />
+		<field name="ipAddress" type="id-vlong" />
+		<field name="data" type="moderately-long" />
+		<field name="locked" type="indicator" />
+		<field name="agentId" type="id-long" />
+		<field name="agentUserLoginId" type="id-vlong" />
+		<prim-key field="id" />
+		<relation type="one" fk-name="PC_UL" rel-entity-name="UserLogin">
+			<key-map field-name="agentUserLoginId" rel-field-name="userLoginId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="TemporaryOrder" package-name="com.envelopes.order" title="Temporary Orders">
+		<field name="id" type="id-ne" />
+		<field name="cartTransId" type="id-long-ne" />
+		<field name="checkoutTransId" type="id-long-ne" />
+		<field name="data" type="moderately-long" />
+		<field name="comment" type="very-long" />
+		<prim-key field="id" />
+		<prim-key field="cartTransId" />
+		<index name="TEMP_ORDER_CTRANS">
+			<index-field name="checkoutTransId"/>
+		</index>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- Shipping Carrier Data Models                                       -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="ShippingMethod" package-name="com.bigname.shipping" title="Shipping Method">
+		<field name="shippingMethodId" type="id-ne"	/>
+		<field name="shipmentMethodTypeId" type="id-ne"	/>
+		<field name="name" type="description" />
+		<field name="genericName" type="description" />
+		<field name="description" type="description" />
+		<field name="minTransitTime" type="numeric" />
+		<field name="maxTransitTime" type="numeric" />
+		<prim-key field="shippingMethodId" />
+		<relation type="one" fk-name="SM_SMT_ID_FK" title="ShipmentMethodType" rel-entity-name="ShipmentMethodType">
+			<key-map field-name="shipmentMethodTypeId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="ShippingCarrier" package-name="com.bigname.shipping" title="Shipping Carrier">
+		<field name="carrierId" type="id-ne" />
+		<field name="carrierName" type="description" />
+		<field name="description" type="description" />
+		<prim-key field="carrierId" />
+	</entity>
+
+	<entity entity-name="ShippingCarrierMethod" package-name="com.bigname.shipping" title="Shipping Carrier Method">
+		<field name="shippingMethodId" type="id-ne"	/>
+		<field name="carrierId" type="id-ne" />
+		<field name="carrierShippingMethodId" type="description" />
+		<field name="carrierShippingMethodName" type="description" />
+		<field name="nsShippingMethodId" type="description" />
+		<prim-key field="shippingMethodId" />
+		<prim-key field="carrierId" />
+		<relation type="one" fk-name="SCM_SM_ID_FK" title="ShippingMethod" rel-entity-name="ShippingMethod">
+			<key-map field-name="shippingMethodId" />
+		</relation>
+		<relation type="one" fk-name="SCM_SC_ID_FK" title="ShippingCarrier" rel-entity-name="ShippingCarrier">
+			<key-map field-name="carrierId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="ShippingCarrierZoneLookup" package-name="com.bigname.shipping" title="Shipping Carrier Zone Lookup">
+		<field name="carrierId" type="id-ne" />
+		<field name="zipCode" type="id-ne" />
+		<field name="shippingMethodId" type="id-ne" />
+		<field name="zone" type="id-ne" />
+		<prim-key field="carrierId" />
+		<prim-key field="zipCode" />
+		<prim-key field="shippingMethodId" />
+		<prim-key field="zone" />
+		<relation type="one" fk-name="SCZL_SM_ID_FK" title="ShippingMethod" rel-entity-name="ShippingMethod">
+			<key-map field-name="shippingMethodId" />
+		</relation>
+		<relation type="one" fk-name="SCZL_SC_ID_FK" title="ShippingCarrier" rel-entity-name="ShippingCarrier">
+			<key-map field-name="carrierId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="ShippingCarrierRateLookup" package-name="com.bigname.shipping" title="Shipping Carrier Rate Lookup">
+		<field name="carrierId" type="id-ne" />
+		<field name="zone" type="id-ne" />
+		<field name="shippingMethodId" type="id-ne" />
+		<field name="weightBreakId" type="id-ne" />
+		<field name="ratePerUnit" type="fixed-point" />
+		<prim-key field="carrierId" />
+		<prim-key field="zone" />
+		<prim-key field="shippingMethodId" />
+		<prim-key field="weightBreakId" />
+		<relation type="one" fk-name="SCRL_SM_ID_FK" title="ShippingMethod" rel-entity-name="ShippingMethod">
+			<key-map field-name="shippingMethodId" />
+		</relation>
+		<relation type="one" fk-name="SCRL_SC_ID_FK" title="ShippingCarrier" rel-entity-name="ShippingCarrier">
+			<key-map field-name="carrierId" />
+		</relation>
+		<relation type="one" fk-name="SCRL_QB_ID_FK" title="WeightBreak" rel-entity-name="QuantityBreak">
+			<key-map field-name="weightBreakId" rel-field-name="quantityBreakId" />
+		</relation>
+	</entity>
+
+	<view-entity entity-name="ShippingCarrierRateZoneLookupByQuantity" package-name="com.bigname.shipping" never-cache="true" title="Shipping Carrier Rate and Zone lookup by Quantity">
+		<member-entity entity-alias="SCRL" entity-name="ShippingCarrierRateLookup" />
+		<member-entity entity-alias="SCZL" entity-name="ShippingCarrierZoneLookup" />
+		<member-entity entity-alias="QB" entity-name="QuantityBreak" />
+		<alias entity-alias="SCRL" name="carrierId" />
+		<alias entity-alias="SCRL" name="zone" />
+		<alias entity-alias="SCRL" name="shippingMethodId" />
+		<alias entity-alias="SCRL" name="ratePerUnit" />
+		<alias entity-alias="SCRL" name="weightBreakId" />
+		<alias entity-alias="SCZL" name="zipCode" />
+		<alias entity-alias="QB" name="fromQuantity" />
+		<alias entity-alias="QB" name="thruQuantity" />
+		<view-link entity-alias="SCRL" rel-entity-alias="SCZL">
+			<key-map field-name="carrierId" />
+			<key-map field-name="zone" />
+			<key-map field-name="shippingMethodId" />
+		</view-link>
+		<view-link entity-alias="SCRL" rel-entity-alias="QB">
+			<key-map field-name="weightBreakId" rel-field-name="quantityBreakId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="ShippingMethodAndShippingCarrierZoneLookup" package-name="com.envelopes.order" title="Shipping Method and Shipping Carrier Zone Lookup View">
+		<member-entity entity-alias="SM" entity-name="ShippingMethod" />
+		<member-entity entity-alias="SCZL" entity-name="ShippingCarrierZoneLookup" />
+		<alias entity-alias="SM" name="shipmentMethodTypeId" />
+		<alias entity-alias="SM" name="transitTime" field="maxTransitTime" />
+		<alias entity-alias="SCZL" name="postalCode" field="zipCode" />
+		<alias entity-alias="SCZL" name="zone" />
+		<view-link entity-alias="SM" rel-entity-alias="SCZL">
+			<key-map field-name="shippingMethodId" />
+		</view-link>
+	</view-entity>
+
+
+	<!-- ================================================================== -->
+	<!-- Scene7 Data Models                                                 -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="Scene7Template" package-name="com.envelopes.product" title="Scene7 template details">
+		<field name="scene7TemplateId" type="id-ne" />
+		<field name="fxgType" type="id" />
+		<field name="thumbnailId" type="id-ne" />
+		<field name="templateName" type="name" />
+		<field name="templateUrl" type="long-varchar" />
+		<field name="thumbnailPath" type="long-varchar" />
+		<field name="templateDescription" type="description" />
+		<field name="productTypeId" type="id" />
+		<field name="productDesc" type="description" />
+		<field name="quickDesc" type="description" />
+		<field name="width" type="fixed-point" />
+		<field name="height" type="fixed-point" />
+		<field name="colors" type="numeric" />
+		<field name="printPriceDescription" type="description" />
+		<field name="baseQuantity" type="numeric" />
+		<field name="basePrice" type="currency-precise" />
+		<field name="hasAddressing" type="indicator" />
+		<field name="hasVariableData" type="indicator" />
+		<field name="templateAssocTypeId" type="id-ne" />
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<field name="upc" type="id" />
+		<prim-key field="scene7TemplateId" />
+		<relation type="one" fk-name="S7T_PTID" rel-entity-name="ProductType">
+			<key-map field-name="productTypeId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="Scene7TemplateAttr" package-name="com.envelopes.product" title="Scene7 template attribute details">
+		<field name="scene7TemplateId" type="id-ne" />
+		<field name="attributeId" type="id-ne" />
+		<prim-key field="scene7TemplateId" />
+		<prim-key field="attributeId" />
+		<relation type="one" fk-name="S7TA_TEMP_ID" rel-entity-name="Scene7Template">
+			<key-map field-name="scene7TemplateId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="Scene7TemplateCategory" package-name="com.envelopes.product" title="Scene7 Category Data">
+		<field name="scene7TemplateId" type="id-ne" />
+		<field name="categoryId" type="id-ne" />
+		<field name="fromDate" type="date-time" />
+		<field name="thruDate" type="date-time" />
+		<field name="description" type="description" />
+		<prim-key field="scene7TemplateId" />
+		<prim-key field="categoryId" />
+		<prim-key field="fromDate" />
+		<prim-key field="description" />
+		<relation type="one" fk-name="S7TC_TEMP_ID" rel-entity-name="Scene7Template">
+			<key-map field-name="scene7TemplateId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="Scene7ProdAssoc" package-name="com.envelopes.product" title="Association between products and Scene7 template">
+		<field name="productId" type="id-ne" />
+		<field name="scene7TemplateId" type="id-ne" />
+		<field name="templateAssocTypeId" type="id-ne" />
+		<field name="templateTypeId" type="id-ne" />
+		<prim-key field="productId" />
+		<prim-key field="scene7TemplateId" />
+		<prim-key field="templateAssocTypeId" />
+		<relation type="one" fk-name="S7PA_TEMP_ID" rel-entity-name="Scene7Template">
+			<key-map field-name="scene7TemplateId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="Scene7Design" package-name="com.envelopes.product" title="Scene7 design details">
+		<field name="scene7DesignId" type="id-ne" />
+		<field name="scene7TemplateId" type="id" />
+		<field name="productId" type="id" />
+		<field name="parentId" type="id" />
+		<field name="contentId" type="id" />
+		<field name="partyId" type="id-ne" />
+		<field name="type" type="name" />
+		<field name="url" type="moderately-long" />
+		<field name="data" type="moderately-long" />
+		<field name="sessionId" type="description" />
+		<field name="inactive" type="indicator" />
+		<prim-key field="scene7DesignId" />
+		<relation type="one" fk-name="S7D_TEMP_ID" rel-entity-name="Scene7Template">
+			<key-map field-name="scene7TemplateId"/>
+		</relation>
+		<relation type="one" fk-name="S7D_PTY" rel-entity-name="Party">
+			<key-map field-name="partyId" />
+		</relation>
+		<relation type="one" fk-name="S7D_CONT_ID" rel-entity-name="Content">
+			<key-map field-name="contentId" />
+		</relation>
+		<relation type="one" fk-name="S7D_PROD_ID" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="Scene7DesignAttrib" package-name="com.envelopes.product" title="Scene7 design attribute">
+		<field name="scene7DesignId" type="id-ne" />
+		<field name="type" type="id" />
+		<field name="scene7DesignKeyId" type="description" />
+		<field name="scene7DesignValue" type="very-long" />
+		<prim-key field="scene7DesignId" />
+		<prim-key field="scene7DesignKeyId" />
+		<relation type="one" fk-name="S7DA_DID" rel-entity-name="Scene7Design">
+			<key-map field-name="scene7DesignId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="Scene7UserContent" package-name="com.envelopes.product" title="Scene7 User Generated Content">
+		<field name="id" type="id-ne" />
+		<field name="partyId" type="id-ne" />
+		<field name="contentId" type="id" />
+		<field name="galleryId" type="id" />
+		<field name="sessionId" type="description" />
+		<field name="assetUrl" type="long-varchar" />
+		<field name="folder" type="description" />
+		<prim-key field="id" />
+		<relation type="one" fk-name="S7UC_PTY" rel-entity-name="Party">
+			<key-map field-name="partyId" />
+		</relation>
+	</entity>
+
+	<view-entity entity-name="Scene7TemplateAndProdAssoc" package-name="com.envelopes.product" title="Scene7Template, Scene7ProdAssoc">
+		<member-entity entity-alias="ST" entity-name="Scene7Template" />
+		<member-entity entity-alias="SPA" entity-name="Scene7ProdAssoc" />
+		<alias-all entity-alias="ST" />
+		<alias entity-alias="SPA" name="productId"/>
+		<alias entity-alias="SPA" name="spaTemplateAssocTypeId" field="templateAssocTypeId"/>
+		<alias entity-alias="SPA" name="templateTypeId"/>
+		<view-link entity-alias="SPA" rel-entity-alias="ST">
+			<key-map field-name="scene7TemplateId"/>
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="ExternalUserLogin" package-name="com.envelopes.product" title="External Login Data">
+		<field name="id" type="id-vlong-ne" />
+		<field name="provider" type="id-ne" />
+		<field name="gender" type="name" />
+		<field name="photo" type="long-varchar" />
+		<field name="partyId" type="id-ne" />
+		<field name="identifier" type="long-varchar" />
+		<field name="url" type="long-varchar" />
+		<field name="enabled" type="indicator" />
+		<prim-key field="id" />
+		<prim-key field="provider" />
+		<relation type="one" fk-name="EUL_PTY" rel-entity-name="Party">
+			<key-map field-name="partyId" />
+		</relation>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- ORDER ARTWORK                                                      -->
+	<!-- ================================================================== -->
+	<entity entity-name="OrderItemContent" package-name="com.envelopes.product" title="Order Item Content Detail Entity">
+		<field name="orderItemContentId" type="id-ne"></field>
+		<field name="orderId" type="id-ne"></field>
+		<field name="orderItemSeqId" type="id-ne"></field>
+		<field name="contentPurposeEnumId" type="id"></field>
+		<field name="contentPath" type="description"></field>
+		<field name="contentName" type="description"></field>
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="orderItemContentId" />
+		<prim-key field="orderId" />
+		<prim-key field="orderItemSeqId" />
+		<prim-key field="contentPurposeEnumId" />
+		<prim-key field="fromDate" />
+		<relation type="one" fk-name="OICNT_OI" rel-entity-name="OrderItem">
+			<key-map field-name="orderId" />
+			<key-map field-name="orderItemSeqId" />
+		</relation>
+		<relation type="one" fk-name="OICNT_PENUM" rel-entity-name="Enumeration">
+			<key-map field-name="contentPurposeEnumId" rel-field-name="enumId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="OrderItemArtwork" package-name="com.envelopes.product" title="Order Item Artwork Detail Entity">
+		<field name="orderItemArtworkId" type="id-ne"></field>
+		<field name="orderId" type="id-ne"></field>
+		<field name="orderItemSeqId" type="id-ne"></field>
+		<field name="scene7DesignId" type="id"></field>
+		<field name="directMailJobId" type="id"></field>
+		<field name="itemJobName" type="long-varchar"></field>
+		<field name="itemInternalJobName" type="long-varchar"></field>
+		<field name="itemInkColor" type="long-varchar"></field>
+		<field name="frontInkColor1" type="short-varchar"></field>
+		<field name="frontInkColor2" type="short-varchar"></field>
+		<field name="frontInkColor3" type="short-varchar"></field>
+		<field name="frontInkColor4" type="short-varchar"></field>
+		<field name="backInkColor1" type="short-varchar"></field>
+		<field name="backInkColor2" type="short-varchar"></field>
+		<field name="backInkColor3" type="short-varchar"></field>
+		<field name="backInkColor4" type="short-varchar"></field>
+		<field name="croppedWidth" type="fixed-point" />
+		<field name="croppedHeight" type="fixed-point" />
+		<field name="itemPrintPosition" type="long-varchar"></field>
+		<field name="itemPrepressComments" type="very-long"></field>
+		<field name="itemPressmanComments" type="very-long"></field>
+		<field name="itemCustomerComments" type="very-long"></field>
+		<field name="imageArea" type="long-varchar"></field>
+		<field name="itemHtml" type="very-long"></field>
+		<field name="itemHtmlBottom" type="very-long"></field>
+		<field name="itemXml" type="very-long"></field>
+		<field name="email" type="long-varchar"></field>
+		<field name="assignedTo" type="id-vlong"></field>
+		<field name="printPlateId" type="id"></field>
+		<field name="isFourColorPrint" type="indicator"></field>
+		<field name="isSinglePlateJob" type="indicator"></field>
+		<field name="assignedToUserLogin" type="id-vlong"></field>
+		<field name="lastModifiedDate" type="date-time"></field>
+		<field name="lastModifiedByUserLogin" type="id-vlong"></field>
+		<field name="completionTime" type="time"></field>
+		<field name="approvalTime" type="time"></field>
+		<field name="jobStartTime" type="date-time"></field>
+		<field name="jobFinishTime" type="date-time"></field>
+		<field name="approvalStartTime" type="date-time"></field>
+		<field name="approvalFinishTime" type="date-time"></field>
+		<field name="pressMan" type="id"></field>
+		<field name="inkPicked" type="indicator"></field>
+		<field name="inkMatched" type="indicator"></field>
+		<prim-key field="orderItemArtworkId" />
+		<relation type="one" fk-name="ORDER_ITEM_ART" rel-entity-name="OrderItem">
+			<key-map field-name="orderId" />
+			<key-map field-name="orderItemSeqId" />
+		</relation>
+		<relation type="one" fk-name="OI_ART_PLATE" rel-entity-name="PrintPlate">
+			<key-map field-name="printPlateId" />
+		</relation>
+		<relation type="one" fk-name="ORDER_ITEM_ART_S7" rel-entity-name="Scene7Design">
+			<key-map field-name="scene7DesignId" />
+		</relation>
+		<relation type="one" fk-name="ORDER_ITEM_ART_DM" rel-entity-name="DirectMailingJobData">
+			<key-map field-name="directMailJobId" rel-field-name="jobNum" />
+		</relation>
+	</entity>
+
+	<entity entity-name="OrderItemArtworkComment" package-name="com.envelopes.product" title="Comment history for order item artwork">
+		<field name="orderItemArtworkCommentId" type="id-ne" />
+		<field name="orderItemArtworkId" type="id-ne" />
+		<field name="partyId" type="id-ne" />
+		<field name="typeEnumId" type="id" />
+		<field name="message" type="very-long" />
+		<field name="internalNote" type="indicator" />
+		<prim-key field="orderItemArtworkCommentId" />
+		<relation type="one" fk-name="OIAC_OIA_ID"  title="OrderItemArtwork" rel-entity-name="OrderItemArtwork">
+			<key-map field-name="orderItemArtworkId" rel-field-name="orderItemArtworkId" />
+		</relation>
+		<relation type="one" fk-name="OIAC_PRTY_ID" title="Party" rel-entity-name="Party">
+			<key-map field-name="partyId" rel-field-name="partyId" />
+		</relation>
+		<relation type="one" fk-name="OIAC_ENUM_ID" title="Type" rel-entity-name="Enumeration">
+			<key-map field-name="typeEnumId" rel-field-name="enumId" />
+		</relation>
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- PLATE MANAGEMENT                                                   -->
+	<!-- ================================================================== -->
+	<entity entity-name="PrintPress" package-name="com.envelopes.product" title="Printing Press Machines">
+		<field name="printPressId" type="id-ne" />
+		<field name="pressName" type="name" />
+		<field name="description" type="description" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="plateSequence" type="numeric" />
+		<field name="savedState" type="description" />
+		<field name="plateWidth" type="fixed-point" />
+		<field name="plateHeight" type="fixed-point" />
+		<field name="metrixId" type="description" />
+		<prim-key field="printPressId" />
+	</entity>
+
+	<entity entity-name="PrintPlate" package-name="com.envelopes.product" title="Printing Press Machines">
+		<field name="printPlateId" type="id-ne" />
+		<field name="printPressId" type="id-ne" />
+		<field name="schedulePrintPressId" type="id-ne" />
+		<field name="statusId" type="id" />
+		<field name="comment" type="description" />
+		<field name="dueDate" type="date-time" />
+		<field name="sequenceNum" type="numeric" />
+		<prim-key field="printPlateId" />
+		<relation type="one" fk-name="PRINT_PLATE_PRSS" rel-entity-name="PrintPress">
+			<key-map field-name="printPressId" />
+		</relation>
+		<relation type="one" fk-name="PRINT_PLATE_STTS" rel-entity-name="StatusItem">
+			<key-map field-name="statusId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="PrintCard" package-name="com.envelopes.product" title="Printing Press Machines">
+		<field name="printCardId" type="id-ne" />
+		<field name="orderItemArtworkId" type="id-ne" />
+		<field name="statusId" type="id" />
+		<field name="productId" type="id" />
+		<field name="itemDescription" type="description" />
+		<field name="orderId" type="short-varchar" />
+		<field name="quantity" type="numeric" />
+		<field name="isRushProduction" type="indicator" />
+		<field name="dueDate" type="date-time" />
+		<field name="isRemoveFromSchedule" type="indicator" />
+		<prim-key field="printCardId" />
+		<relation type="one" fk-name="PRINT_CARD_OIA" rel-entity-name="OrderItemArtwork">
+			<key-map field-name="orderItemArtworkId" />
+		</relation>
+		<relation type="one" fk-name="PRINT_CARD_STTS" rel-entity-name="StatusItem">
+			<key-map field-name="statusId" />
+		</relation>
+		<relation type="one" fk-name="PRINT_CARD_PRD" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<view-entity entity-name="EnvOrderHeaderRoleAndItems" package-name="org.apache.ofbiz.order.order" never-cache="true" title="Order Header, Order Role And Order Items View Entity">
+		<member-entity entity-alias="OH" entity-name="OrderHeader"/>
+		<member-entity entity-alias="OI" entity-name="OrderItem"/>
+		<member-entity entity-alias="ORL" entity-name="OrderRole"/>
+		<alias entity-alias="OH" name="orderId"/>
+		<alias entity-alias="OH" name="orderDate"/>
+		<alias entity-alias="OH" name="orderStatusId" field="statusId"/>
+		<alias entity-alias="OH" name="exportedDate" />
+		<alias entity-alias="OH" name="grandTotal"/>
+		<alias entity-alias="OH" name="productStoreId"/>
+		<alias entity-alias="OH" name="orderTypeId"/>
+		<alias entity-alias="OH" name="createdBy"/>
+		<alias entity-alias="OH" name="salesChannelEnumId"/>
+		<alias entity-alias="OI" name="orderItemSeqId"/>
+		<alias entity-alias="OI" name="productId"/>
+		<alias entity-alias="OI" name="quantity"/>
+		<alias entity-alias="OI" name="cancelQuantity"/>
+		<alias entity-alias="OI" name="unitPrice"/>
+		<alias entity-alias="OI" name="unitListPrice"/>
+		<alias entity-alias="OI" name="itemDescription"/>
+		<alias entity-alias="OI" name="itemStatusId" field="statusId"/>
+		<alias entity-alias="OI" name="estimatedShipDate"/>
+		<alias entity-alias="OI" name="estimatedDeliveryDate"/>
+		<alias entity-alias="OI" name="shipBeforeDate"/>
+		<alias entity-alias="OI" name="shipAfterDate"/>
+		<alias entity-alias="OI" name="orderItemTypeId"/>
+		<alias entity-alias="OI" name="isRushProduction"/>
+		<alias entity-alias="OI" name="artworkSource"/>
+		<alias entity-alias="OI" name="referenceOrderId"/>
+		<alias entity-alias="OI" name="referenceOrderItemSeqId"/>
+		<alias entity-alias="OI" name="referenceQuoteId"/>
+		<alias entity-alias="OI" name="referenceQuoteItemSeqId"/>
+		<alias entity-alias="OI" name="correspondingPoId"/>
+		<alias entity-alias="OI" name="lockScene7Design"/>
+		<alias entity-alias="OI" name="pendingChange"/>
+		<alias entity-alias="ORL" name="partyId"/>
+		<alias entity-alias="ORL" name="roleTypeId"/>
+		<view-link entity-alias="OH" rel-entity-alias="OI">
+			<key-map field-name="orderId"/>
+		</view-link>
+		<view-link entity-alias="OH" rel-entity-alias="ORL">
+			<key-map field-name="orderId"/>
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="EnvOrderHeaderAndItems" package-name="org.apache.ofbiz.order.order" never-cache="true" title="Order Header And Order Items View Entity">
+		<member-entity entity-alias="OH" entity-name="OrderHeader"/>
+		<member-entity entity-alias="OI" entity-name="OrderItem"/>
+		<alias entity-alias="OH" name="orderId"/>
+		<alias entity-alias="OH" name="orderDate"/>
+		<alias entity-alias="OH" name="orderStatusId" field="statusId"/>
+		<alias entity-alias="OH" name="exportedDate" />
+		<alias entity-alias="OH" name="grandTotal"/>
+		<alias entity-alias="OH" name="productStoreId"/>
+		<alias entity-alias="OH" name="orderTypeId"/>
+		<alias entity-alias="OH" name="createdBy"/>
+		<alias entity-alias="OH" name="salesChannelEnumId"/>
+		<alias entity-alias="OI" name="orderItemSeqId"/>
+		<alias entity-alias="OI" name="productId"/>
+		<alias entity-alias="OI" name="quantity"/>
+		<alias entity-alias="OI" name="cancelQuantity"/>
+		<alias entity-alias="OI" name="unitPrice"/>
+		<alias entity-alias="OI" name="unitListPrice"/>
+		<alias entity-alias="OI" name="itemDescription"/>
+		<alias entity-alias="OI" name="itemStatusId" field="statusId"/>
+		<alias entity-alias="OI" name="estimatedShipDate"/>
+		<alias entity-alias="OI" name="estimatedDeliveryDate"/>
+		<alias entity-alias="OI" name="shipBeforeDate"/>
+		<alias entity-alias="OI" name="shipAfterDate"/>
+		<alias entity-alias="OI" name="orderItemTypeId"/>
+		<alias entity-alias="OI" name="isRushProduction"/>
+		<alias entity-alias="OI" name="artworkSource"/>
+		<alias entity-alias="OI" name="referenceOrderId"/>
+		<alias entity-alias="OI" name="referenceOrderItemSeqId"/>
+		<alias entity-alias="OI" name="referenceQuoteId"/>
+		<alias entity-alias="OI" name="referenceQuoteItemSeqId"/>
+		<alias entity-alias="OI" name="correspondingPoId"/>
+		<alias entity-alias="OI" name="lockScene7Design"/>
+		<alias entity-alias="OI" name="pendingChange"/>
+		<view-link entity-alias="OH" rel-entity-alias="OI">
+			<key-map field-name="orderId"/>
+		</view-link>
+	</view-entity>
+
+	<!-- Table to hold manual loyalty points -->
+	<entity entity-name="LoyaltyPoints" package-name="org.apache.ofbiz.order.order" title="Manual Loyalty Points">
+		<field name="loyaltyPointsId" type="id-ne"></field>
+		<field name="partyId" type="id-ne"></field>
+		<field name="createdByUserLogin" type="id-vlong-ne"></field>
+		<field name="createdDate" type="date-time" />
+		<field name="points" type="numeric"></field>
+		<prim-key field="loyaltyPointsId" />
+		<prim-key field="partyId" />
+		<relation type="one" fk-name="LP_PRTY_ID" title="Party" rel-entity-name="Party">
+			<key-map field-name="partyId" rel-field-name="partyId" />
+		</relation>
+	</entity>
+
+	<!-- Product Stock Information -->
+	<entity entity-name="ProductStock" package-name="org.apache.ofbiz.product.product" title="Stock Level for Products">
+		<field name="productId" type="id-ne"></field>
+		<field name="quantityOnHand" type="numeric"></field>
+		<field name="availableToPromise" type="numeric"></field>
+		<field name="reorderMultiple" type="numeric"></field>
+		<field name="alwaysInstock" type="indicator"></field>
+		<field name="location" type="id"></field>
+		<field name="dropshipOnly" type="indicator"></field>
+		<field name="ignoreBackorderEmail" type="indicator"></field>
+
+		<prim-key field="productId" />
+		<relation type="one" fk-name="PS_PROD_ID" title="Product" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+		<index name="PS_DSO_INDEX">
+			<index-field name="dropshipOnly"/>
+		</index>
+	</entity>
+
+	<!-- Customer Address -->
+	<entity entity-name="CustomerAddress" package-name="org.apache.ofbiz.product.product" title="Customer Address">
+		<field name="customerAddressId" type="id-ne"></field>
+		<field name="customerAddressGroupId" type="id-ne"></field>
+		<field name="name" type="long-varchar"></field>
+		<field name="name2" type="long-varchar"></field>
+		<field name="address1" type="long-varchar"></field>
+		<field name="address2" type="long-varchar"></field>
+		<field name="city" type="long-varchar"></field>
+		<field name="state" type="long-varchar"></field>
+		<field name="zip" type="long-varchar"></field>
+		<field name="country" type="long-varchar"></field>
+		<prim-key field="customerAddressId" />
+		<relation type="one" fk-name="CA_CAG_ID_FK" title="CustomerAddressGroup" rel-entity-name="CustomerAddressGroup">
+			<key-map field-name="customerAddressGroupId" />
+		</relation>
+	</entity>
+
+	<!-- Customer Address Group-->
+	<entity entity-name="CustomerAddressGroup" package-name="org.apache.ofbiz.product.product" title="Customer Address Group">
+		<field name="customerAddressGroupId" type="id-ne"></field>
+		<field name="name" type="long-varchar"></field>
+		<field name="partyId" type="id-ne" />
+		<field name="sessionId" type="description" />
+		<field name="fromDate" type="date-time"></field>
+		<field name="thruDate" type="date-time"></field>
+		<prim-key field="customerAddressGroupId" />
+		<relation type="one" fk-name="CA_PRTY_ID_FK" title="Party" rel-entity-name="Party">
+			<key-map field-name="partyId" />
+		</relation>
+		<index name="CAG_PARTY_ID_IDX">
+			<index-field name="partyId"/>
+		</index>
+	</entity>
+
+	<!-- Variable Data -->
+	<entity entity-name="VariableData" package-name="com.envelopes.variabledata" title="Variable Data">
+		<field name="variableDataId" type="id-ne"/>
+		<field name="variableDataGroupId" type="id-ne" />
+		<field name="sequenceNum" type="numeric"/>
+		<field name="data" type="long-varchar"/>
+		<prim-key field="variableDataId" />
+		<relation type="one" fk-name="VD_VDG_ID_FK" title="VariableDataGroup" rel-entity-name="VariableDataGroup">
+			<key-map field-name="variableDataGroupId" />
+		</relation>
+		<index name="VD_VDG_ID_IDX">
+			<index-field name="variableDataGroupId"/>
+		</index>
+		<index name="VD_SEQ_NUM_IDX">
+			<index-field name="sequenceNum"/>
+		</index>
+	</entity>
+
+	<!-- Variable Data Group -->
+	<entity entity-name="VariableDataGroup" package-name="com.envelopes.variabledata" title="Variable Data Group">
+		<field name="variableDataGroupId" type="id-ne"/>
+		<field name="name" type="long-varchar"/>
+		<field name="attributeSet" type="long-varchar"/>
+		<field name="attributes" type="long-varchar"/>
+		<field name="sessionId" type="description" />
+		<field name="fromDate" type="date-time"/>
+		<field name="thruDate" type="date-time"/>
+		<prim-key field="variableDataGroupId" />
+		<index name="VDG_SES_ID_IDX">
+			<index-field name="sessionId"/>
+		</index>
+	</entity>
+
+	<!-- Amazon Payment Method -->
+	<entity entity-name="AmazonPaymentMethod" package-name="org.apache.ofbiz.accounting.payment">
+		<description>Amazon Payment Method Details</description>
+		<field name="paymentMethodId" type="id-ne"></field>
+		<field name="amazonOrderId" type="short-varchar"></field>
+		<field name="payerStatus" type="short-varchar"></field>
+		<field name="contactMechId" type="id-ne"></field>
+		<field name="transactionId" type="short-varchar"></field>
+		<prim-key field="paymentMethodId"/>
+		<relation type="one" fk-name="AMZ_PMNTMETH" rel-entity-name="PaymentMethod">
+			<key-map field-name="paymentMethodId"/>
+		</relation>
+		<relation type="one" fk-name="AMZ_CMECH" rel-entity-name="ContactMech">
+			<key-map field-name="contactMechId"/>
+		</relation>
+		<relation type="one" fk-name="AMZ_PADDR" rel-entity-name="PostalAddress">
+			<key-map field-name="contactMechId"/>
+		</relation>
+	</entity>
+
+	<!-- PayPal Checkout Payment Method -->
+	<entity entity-name="PayPalCheckoutPaymentMethod" package-name="org.apache.ofbiz.accounting.payment">
+		<description>PayPal Checkout Payment Method Details</description>
+		<field name="paymentMethodId" type="id-ne"></field>
+		<field name="payPalOrderId" type="short-varchar"></field>
+		<field name="payerStatus" type="short-varchar"></field>
+		<field name="contactMechId" type="id-ne"></field>
+		<field name="transactionId" type="short-varchar"></field>
+		<prim-key field="paymentMethodId"/>
+		<relation type="one" fk-name="PPC_PMNTMETH" rel-entity-name="PaymentMethod">
+			<key-map field-name="paymentMethodId"/>
+		</relation>
+		<relation type="one" fk-name="PPC_CMECH" rel-entity-name="ContactMech">
+			<key-map field-name="contactMechId"/>
+		</relation>
+		<relation type="one" fk-name="PPC_PADDR" rel-entity-name="PostalAddress">
+			<key-map field-name="contactMechId"/>
+		</relation>
+	</entity>
+
+	<!-- Offline Payment Method -->
+	<entity entity-name="OfflinePaymentMethod" package-name="org.apache.ofbiz.accounting.payment">
+		<description>Offline Payment Method Details</description>
+		<field name="paymentMethodId" type="id-ne"></field>
+		<field name="checkNumber" type="short-varchar"></field>
+		<field name="contactMechId" type="id-ne"></field>
+		<prim-key field="paymentMethodId"/>
+		<relation type="one" fk-name="OFL_PMNTMETH" rel-entity-name="PaymentMethod">
+			<key-map field-name="paymentMethodId"/>
+		</relation>
+		<relation type="one" fk-name="OFL_CMECH" rel-entity-name="ContactMech">
+			<key-map field-name="contactMechId"/>
+		</relation>
+		<relation type="one" fk-name="OFL_PADDR" rel-entity-name="PostalAddress">
+			<key-map field-name="contactMechId"/>
+		</relation>
+	</entity>
+
+	<!-- MES GATEWAY
+	<entity entity-name="PaymentGatewayMes" package-name="org.apache.ofbiz.accounting.payment" title="MES Payment Gateway Config">
+		<field name="paymentGatewayConfigId" type="id-ne"></field>
+		<field name="certsPath" type="value"><description>Path the the VeriSign Certificate</description></field>
+		<field name="hostAddress" type="value"><description>Address of the payment processor</description></field>
+		<field name="hostPort" type="numeric"><description>Port of the payment processor</description></field>
+		<field name="timeout" type="numeric"><description>Timeout</description></field>
+		<field name="proxyAddress" type="value"><description>Proxy Address</description></field>
+		<field name="proxyPort" type="numeric"><description>Proxy Port</description></field>
+		<field name="proxyLogon" type="value"><description>Proxy Logon</description></field>
+		<field name="proxyPassword" type="value" encrypt="true"><description>Proxy Password</description></field>
+		<field name="vendor" type="short-varchar"><description>Vendor of account information</description></field>
+		<field name="userId" type="short-varchar"><description>PayFlow UserID of account information</description></field>
+		<field name="pwd" type="value" encrypt="true"><description>PayFlow Password of account information</description></field>
+		<field name="partner" type="short-varchar"><description>PayFlow Partner of account information</description></field>
+		<field name="checkAvs" type="indicator"><description>Use Address Verification</description></field>
+		<field name="checkCvv2" type="indicator"><description>Require CVV2 Verification</description></field>
+		<field name="preAuth" type="indicator"><description>Pre-Authorize Payments (if set to N will auto-capture)</description></field>
+		<field name="enableTransmit" type="value"><description>Set to false to not transmit anything</description></field>
+		<field name="logFileName" type="value"><description>Log file name</description></field>
+		<field name="loggingLevel" type="numeric"><description>Logging level</description></field>
+		<field name="maxLogFileSize" type="numeric"><description>Max log file size</description></field>
+		<field name="stackTraceOn" type="indicator"><description>Stack trace on/off</description></field>
+		<field name="redirectUrl" type="value"><description>Express Checkout Redirect URL</description></field>
+		<field name="returnUrl" type="value"><description>Express Checkout Return URL</description></field>
+		<field name="cancelReturnUrl" type="value"><description>Express Checkout Return On Cancel URL</description></field>
+		<prim-key field="paymentGatewayConfigId"/>
+		<relation type="one" fk-name="PGPF_PGC" rel-entity-name="PaymentGatewayConfig">
+			<key-map field-name="paymentGatewayConfigId"/>
+		</relation>
+	</entity>
+	-->
+
+	<!-- ================================================================== -->
+	<!-- CUSTOM ENVELOPES                                                   -->
+	<!-- ================================================================== -->
+	<entity entity-name="CustomEnvelope" package-name="com.envelopes.product">
+		<field name="quoteId" type="id-ne" />
+		<field name="quoteType" type="id" />
+		<field name="webSiteId" type="id" />
+		<field name="statusId" type="id" />
+		<field name="gclid" type="description" />
+		<field name="source" type="description" />
+		<field name="userEmail" type="id-vlong" />
+		<field name="productId" type="id" />
+		<field name="standardSize" type="description" />
+		<field name="sizeOrientation" type="description" />
+		<field name="width" type="floating-point" />
+		<field name="height" type="floating-point" />
+		<field name="style" type="description" />
+		<field name="createdDate" type="date-time" />
+		<field name="sealingMethod" type="description" />
+		<field name="otherSealingMethod" type="description" />
+		<field name="paperType" type="very-long" />
+		<field name="printingRequired" type="indicator" />
+		<field name="windowCount" type="numeric" />
+		<field name="colorNum" type="numeric" />
+		<field name="inkFront" type="numeric" />
+		<field name="inkBack" type="numeric" />
+		<field name="sideNum" type="numeric" />
+		<field name="rushService" type="indicator" />
+		<field name="quantity" type="numeric" />
+		<field name="deadline" type="date-time" />
+		<field name="comment" type="very-long" />
+		<field name="orderedFrom" type="description" />
+		<field name="contactMethod" type="name" />
+		<field name="assignedTo" type="id-vlong" />
+		<field name="exportedDate" type="date-time" />
+		<field name="internalComments" type="very-long" />
+		<field name="isDrift" type="indicator" />
+		<prim-key field="quoteId" />
+	</entity>
+
+	<entity entity-name="CustomEnvelopeWindow" package-name="com.envelopes.product">
+		<field name="envelopeWindowId" type="id-ne" />
+		<field name="quoteId" type="id" />
+		<field name="standardPosition" type="description" />
+		<field name="width" type="floating-point" />
+		<field name="height" type="floating-point" />
+		<field name="leftPosition" type="floating-point" />
+		<field name="bottomPosition" type="floating-point" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="comment" type="very-long" />
+		<prim-key field="envelopeWindowId" />
+		<prim-key field="quoteId" />
+	</entity>
+
+	<entity entity-name="CustomEnvelopeContact" package-name="com.envelopes.product">
+		<field name="customEnvelopeQuoteId" type="id-ne" />
+		<field name="userEmail" type="id-vlong" />
+		<field name="partyId" type="id" />
+		<field name="firstName" type="name" />
+		<field name="lastName" type="name" />
+		<field name="companyName" type="name" />
+		<field name="industry" type="description" />
+		<field name="address1" type="description" />
+		<field name="address2" type="description" />
+		<field name="city" type="description" />
+		<field name="stateProvinceGeoId" type="name" />
+		<field name="countryGeoId" type="description" />
+		<field name="postalCode" type="long-varchar" />
+		<field name="phone" type="name" />
+		<field name="additionalPhone" type="name" />
+		<prim-key field="customEnvelopeQuoteId" />
+	</entity>
+
+	<entity entity-name="CustomEnvelopePrice" package-name="com.envelopes.product">
+		<field name="quotePriceId" type="id" />
+		<field name="quoteId" type="id" />
+		<field name="quantity" type="numeric" />
+		<field name="price" type="currency-precise" />
+		<field name="priceType" type="name" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="expireDate" type="date-time" />
+		<prim-key field="quotePriceId" />
+		<prim-key field="quoteId" />
+	</entity>
+
+	<entity entity-name="CustomEnvelopeDetail" package-name="com.envelopes.product">
+		<field name="quoteId" type="id" />
+		<field name="productionTime" type="description" />
+		<field name="approxShipDate" type="date-time" />
+		<field name="weight" type="floating-point" />
+		<field name="cartonQuantity" type="numeric" />
+		<field name="comment" type="very-long" />
+		<field name="internalNotes" type="very-long" />
+		<prim-key field="quoteId" />
+	</entity>
+
+	<entity entity-name="CustomEnvelopeContent" package-name="com.envelopes.product">
+		<field name="quoteId" type="id" />
+		<field name="contentId" type="id" />
+		<prim-key field="quoteId" />
+	</entity>
+
+	<view-entity entity-name="OrderItemAndCustomEnvelope" package-name="com.envelopes.product" never-cache="true" title="Custom Envelope and Contact Information for View">
+		<member-entity entity-alias="OI" entity-name="OrderItem"/>
+		<member-entity entity-alias="CE" entity-name="CustomEnvelope"/>
+		<alias entity-alias="OI" name="orderId" />
+		<alias entity-alias="OI" name="referenceQuoteId" />
+		<alias entity-alias="CE" name="quoteId" />
+		<alias entity-alias="CE" name="assignedTo" />
+		<view-link entity-alias="OI" rel-entity-alias="CE">
+			<key-map field-name="referenceQuoteId" rel-field-name="quoteId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="CustomEnvelopeAndContact" package-name="com.envelopes.product" never-cache="true" title="Custom Envelope and Contact Information for View">
+		<member-entity entity-alias="CE" entity-name="CustomEnvelope"/>
+		<member-entity entity-alias="CEC" entity-name="CustomEnvelopeContact"/>
+		<alias entity-alias="CE" name="quoteId" />
+		<alias entity-alias="CE" name="webSiteId" />
+		<alias entity-alias="CE" name="statusId" />
+		<alias entity-alias="CE" name="quoteType" />
+		<alias entity-alias="CE" name="gclid" />
+		<alias entity-alias="CE" name="source" />
+		<alias entity-alias="CE" name="standardSize" />
+		<alias entity-alias="CE" name="windowCount" />
+		<alias entity-alias="CE" name="paperType" />
+		<alias entity-alias="CE" name="sealingMethod" />
+		<alias entity-alias="CE" name="printingRequired" />
+		<alias entity-alias="CE" name="productId" />
+		<alias entity-alias="CE" name="quantity" />
+		<alias entity-alias="CE" name="orderedFrom" />
+		<alias entity-alias="CE" name="createdDate" />
+		<alias entity-alias="CE" name="assignedTo" />
+		<alias entity-alias="CE" name="exportedDate" />
+		<alias entity-alias="CE" name="isDrift" />
+		<alias entity-alias="CEC" name="partyId" />
+		<alias entity-alias="CEC" name="firstName" />
+		<alias entity-alias="CEC" name="lastName" />
+		<alias entity-alias="CEC" name="address1" />
+		<alias entity-alias="CEC" name="address2" />
+		<alias entity-alias="CEC" name="city" />
+		<alias entity-alias="CEC" name="stateProvinceGeoId" />
+		<alias entity-alias="CEC" name="postalCode" />
+		<alias entity-alias="CEC" name="phone" />
+		<alias entity-alias="CEC" name="additionalPhone" />
+		<alias entity-alias="CEC" name="userEmail" />
+		<alias entity-alias="CEC" name="companyName" />
+		<alias entity-alias="CEC" name="createdStamp" />
+		<view-link entity-alias="CE" rel-entity-alias="CEC">
+			<key-map field-name="quoteId" rel-field-name="customEnvelopeQuoteId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="CustomEnvelopeAndContactInfo" package-name="com.envelopes.product" never-cache="true" title="Custom Envelope and Contact Information for View">
+		<member-entity entity-alias="CE" entity-name="CustomEnvelope"/>
+		<member-entity entity-alias="CEC" entity-name="CustomEnvelopeContact"/>
+		<member-entity entity-alias="CEW" entity-name="CustomEnvelopeWindow"/>
+		<alias entity-alias="CE" name="quoteId" />
+		<alias entity-alias="CE" name="statusId" />
+		<alias entity-alias="CE" name="quoteType" />
+		<alias entity-alias="CE" name="productId" />
+		<alias entity-alias="CE" name="gclid" />
+		<alias entity-alias="CE" name="source" />
+		<alias entity-alias="CE" name="standardSize" />
+		<alias entity-alias="CE" name="sizeOrientation" />
+		<alias entity-alias="CE" name="windowCount" />
+		<alias entity-alias="CE" name="paperType" />
+		<alias entity-alias="CE" name="sealingMethod" />
+		<alias entity-alias="CE" name="printingRequired" />
+		<alias entity-alias="CE" name="inkFront" />
+		<alias entity-alias="CE" name="inkBack" />
+		<alias entity-alias="CE" name="rushService" />
+		<alias entity-alias="CE" name="quantity" />
+		<alias entity-alias="CE" name="comment" />
+		<alias entity-alias="CE" name="orderedFrom" />
+		<alias entity-alias="CE" name="createdDate" />
+		<alias entity-alias="CE" name="assignedTo" />
+		<alias entity-alias="CE" name="webSiteId" />
+		<alias entity-alias="CE" name="exportedDate" />
+		<alias entity-alias="CE" name="internalComments" />
+		<alias entity-alias="CE" name="isDrift" />
+		<alias entity-alias="CEC" name="partyId" />
+		<alias entity-alias="CEC" name="firstName" />
+		<alias entity-alias="CEC" name="lastName" />
+		<alias entity-alias="CEC" name="address1" />
+		<alias entity-alias="CEC" name="address2" />
+		<alias entity-alias="CEC" name="city" />
+		<alias entity-alias="CEC" name="stateProvinceGeoId" />
+		<alias entity-alias="CEC" name="postalCode" />
+		<alias entity-alias="CEC" name="phone" />
+		<alias entity-alias="CEC" name="additionalPhone" />
+		<alias entity-alias="CEC" name="userEmail" />
+		<alias entity-alias="CEW" name="windowComment" field="comment"/>
+		<alias entity-alias="CEC" name="companyName" />
+		<alias entity-alias="CEC" name="industry" />
+		<alias entity-alias="CEC" name="countryGeoId" />
+		<view-link entity-alias="CE" rel-entity-alias="CEC">
+			<key-map field-name="quoteId" rel-field-name="customEnvelopeQuoteId" />
+		</view-link>
+		<view-link entity-alias="CE" rel-entity-alias="CEW" rel-optional="true">
+			<key-map field-name="quoteId" rel-field-name="quoteId" />
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="QuoteStatus" package-name="com.envelopes.quote" never-cache="true" title="Order Status Entity">
+		<field name="quoteStatusId" type="id-ne"></field>
+		<field name="statusId" type="id"></field>
+		<field name="quoteId" type="id"></field>
+		<field name="statusDatetime" type="date-time"></field>
+		<field name="statusUserLogin" type="id-vlong"></field>
+		<field name="changeReason" type="description"></field>
+		<prim-key field="quoteStatusId"/>
+		<relation type="one" fk-name="QUOTE_STTS_STTS" rel-entity-name="StatusItem">
+			<key-map field-name="statusId"/>
+		</relation>
+		<relation type="one" fk-name="QUOTE_STTS_CE" rel-entity-name="CustomEnvelope">
+			<key-map field-name="quoteId"/>
+		</relation>
+		<relation type="one" fk-name="QUOTE_STTS_USER" rel-entity-name="UserLogin">
+			<key-map field-name="statusUserLogin" rel-field-name="userLoginId"/>
+		</relation>
+	</entity>
+
+	<view-entity entity-name="OrderAndAdjustment" package-name="com.envelopes.order" never-cache="true" title="Get orders and adjustments">
+		<member-entity entity-alias="OH" entity-name="OrderHeader"/>
+		<member-entity entity-alias="OA" entity-name="OrderAdjustment"/>
+		<alias entity-alias="OH" name="orderId" />
+		<alias entity-alias="OH" name="statusId" />
+		<alias entity-alias="OH" name="exportedDate" />
+		<alias entity-alias="OH" name="orderDate" />
+		<alias entity-alias="OH" name="entryDate" />
+		<alias entity-alias="OH" name="createdStamp" />
+		<alias entity-alias="OA" name="orderAdjustmentId" />
+		<alias entity-alias="OA" name="orderAdjustmentTypeId" />
+		<alias entity-alias="OA" name="orderItemSeqId" />
+		<alias entity-alias="OA" name="amount"/>
+		<alias entity-alias="OA" name="productPromoId" />
+		<view-link entity-alias="OH" rel-entity-alias="OA">
+			<key-map field-name="orderId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="OrderAndAdjustmentAndShipGroup" package-name="com.envelopes.order" never-cache="true" title="Get orders and adjustments">
+		<member-entity entity-alias="OH" entity-name="OrderHeader"/>
+		<member-entity entity-alias="OA" entity-name="OrderAdjustment"/>
+		<member-entity entity-alias="OISG" entity-name="OrderItemShipGroup"/>
+		<alias entity-alias="OH" name="orderId" />
+		<alias entity-alias="OH" name="statusId" />
+		<alias entity-alias="OH" name="exportedDate" />
+		<alias entity-alias="OH" name="orderDate" />
+		<alias entity-alias="OH" name="entryDate" />
+		<alias entity-alias="OH" name="createdStamp" />
+		<alias entity-alias="OA" name="orderAdjustmentId" />
+		<alias entity-alias="OA" name="orderAdjustmentTypeId" />
+		<alias entity-alias="OA" name="orderItemSeqId" />
+		<alias entity-alias="OA" name="amount"/>
+		<alias entity-alias="OA" name="productPromoId" />
+		<alias entity-alias="OISG" name="shipGroupSeqId" />
+		<alias entity-alias="OISG" name="contactMechId" />
+		<alias entity-alias="OISG" name="shipmentMethodTypeId" />
+		<alias entity-alias="OISG" name="carrierPartyId" />
+		<alias entity-alias="OISG" name="trackingNumber" />
+		<view-link entity-alias="OH" rel-entity-alias="OA">
+			<key-map field-name="orderId" />
+		</view-link>
+		<view-link entity-alias="OH" rel-entity-alias="OISG">
+			<key-map field-name="orderId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="OrderAndPaymentPreference" package-name="com.envelopes.order" never-cache="true" title="Get orders and payment preference">
+		<member-entity entity-alias="OH" entity-name="OrderHeader"/>
+		<member-entity entity-alias="OPP" entity-name="OrderPaymentPreference"/>
+		<alias entity-alias="OH" name="orderId" />
+		<alias entity-alias="OH" name="statusId" />
+		<alias entity-alias="OH" name="exportedDate" />
+		<alias entity-alias="OH" name="orderDate" />
+		<alias entity-alias="OH" name="entryDate" />
+		<alias entity-alias="OH" name="salesChannelEnumId" />
+		<alias entity-alias="OH" name="createdStamp" />
+		<alias entity-alias="OPP" name="orderPaymentPreferenceId" />
+		<alias entity-alias="OPP" name="paymentMethodTypeId" />
+		<alias entity-alias="OPP" name="paymentMethodId" />
+		<alias entity-alias="OPP" name="paymentStatusId" field="statusId"/>
+		<alias entity-alias="OPP" name="paymentCreatedStamp" field="createdStamp" />
+		<view-link entity-alias="OH" rel-entity-alias="OPP">
+			<key-map field-name="orderId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="ProductListBySize" package-name="com.envelopes.product" never-cache="true" title="Get a list of products based on size.">
+		<member-entity entity-alias="CW" entity-name="ColorWarehouse"/>
+		<member-entity entity-alias="PFA" entity-name="ProductFeatureAppl"/>
+		<member-entity entity-alias="PF" entity-name="ProductFeature"/>
+		<alias entity-alias="CW" name="variantProductId" />
+		<alias entity-alias="CW" name="virtualProductId" />
+		<alias entity-alias="CW" name="primaryProductCategoryId" />
+		<alias entity-alias="CW" name="productName" />
+		<alias entity-alias="CW" name="productWidth" />
+		<alias entity-alias="CW" name="productHeight" />
+		<alias entity-alias="PF" name="description" />
+		<alias entity-alias="PF" name="productFeatureTypeId" />
+		<alias entity-alias="PFA" name="productFeatureApplTypeId" />
+		<view-link entity-alias="CW" rel-entity-alias="PFA">
+			<key-map field-name="variantProductId" rel-field-name="productId"/>
+		</view-link>
+		<view-link entity-alias="PFA" rel-entity-alias="PF">
+			<key-map field-name="productFeatureId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="TopReviewListByCategory" package-name="com.envelopes.product" never-cache="true" title="Get the top list of reviews.">
+		<member-entity entity-alias="PR" entity-name="ProductReview"/>
+		<member-entity entity-alias="P" entity-name="Product"/>
+		<member-entity entity-alias="CW" entity-name="ColorWarehouse" />
+		<alias entity-alias="PR" name="productReviewId" group-by="true" />
+		<alias entity-alias="PR" name="statusId" />
+		<alias entity-alias="PR" name="nickName" />
+		<alias entity-alias="PR" name="productRating" />
+		<alias entity-alias="PR" name="productReview" />
+		<alias entity-alias="PR" name="describeYourself" />
+		<alias entity-alias="PR" name="createdStamp" />
+		<alias entity-alias="P" name="productName" />
+		<alias entity-alias="P" name="productId" />
+		<alias entity-alias="P" name="primaryProductCategoryId" />
+		<alias entity-alias="CW" name="colorDescription" />
+		<view-link entity-alias="PR" rel-entity-alias="CW">
+			<key-map field-name="productId"  rel-field-name="variantProductId"/>
+		</view-link>
+		<view-link entity-alias="PR" rel-entity-alias="P">
+			<key-map field-name="productId" />
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="QuoteNote" package-name="com.envelopes.quote">
+		<field name="quoteId" type="id-ne" />
+		<field name="noteId" type="id-ne" />
+		<prim-key field="quoteId" />
+		<prim-key field="noteId" />
+	</entity>
+
+	<view-entity entity-name="QuoteNoteData" package-name="com.envelopes.quote">
+		<member-entity entity-alias="QN" entity-name="QuoteNote"/>
+		<member-entity entity-alias="ND" entity-name="NoteData"/>
+		<member-entity entity-alias="P" entity-name="Person" />
+		<alias entity-alias="QN" name="quoteId" />
+		<alias entity-alias="ND" name="noteId" />
+		<alias entity-alias="ND" name="noteInfo" />
+		<alias entity-alias="ND" name="noteDateTime" />
+		<alias entity-alias="P" name="firstName" />
+		<alias entity-alias="P" name="lastName" />
+		<view-link entity-alias="QN" rel-entity-alias="ND">
+			<key-map field-name="noteId" />
+		</view-link>
+		<view-link entity-alias="ND" rel-entity-alias="P">
+			<key-map field-name="noteParty" rel-field-name="partyId" />
+		</view-link>
+	</view-entity>
+
+	<!-- ================================================================== -->
+	<!-- FOLDERS.COM                                                 	    -->
+	<!-- ================================================================== -->
+	<entity entity-name="Material" package-name="com.envelopes.product">
+		<field name="materialId" type="id-ne" />
+		<field name="customColorNumber" type="description" />
+		<field name="type" type="description" />
+		<field name="description" type="description" />
+		<field name="color" type="description" />
+		<field name="baseColor" type="description" />
+		<field name="coating" type="description" />
+		<field name="price" type="description" />
+		<field name="img" type="description" />
+		<field name="paperGroup" type="description" />
+		<field name="sequenceNumber" type="numeric" />
+		<field name="colorHexCode" type="short-varchar" />
+		<prim-key field="materialId" />
+	</entity>
+	<entity entity-name="ProductMaterial" package-name="com.envelopes.product">
+		<field name="productId" type="id-ne" />
+		<field name="materialId" type="id-ne" />
+		<prim-key field="productId" />
+		<prim-key field="materialId" />
+		<relation type="one" fk-name="PMM_MATID" rel-entity-name="Material">
+			<key-map field-name="materialId"/>
+		</relation>
+		<relation type="one" fk-name="PMP_PRODID" rel-entity-name="Product">
+			<key-map field-name="productId"/>
+		</relation>
+	</entity>
+	<view-entity entity-name="MaterialAndProductMaterial" package-name="com.envelopes.product" title="Material, ProductMaterial">
+		<member-entity entity-alias="M" entity-name="Material" />
+		<member-entity entity-alias="PM" entity-name="ProductMaterial" />
+		<alias entity-alias="M" name="materialId"/>
+		<alias entity-alias="M" name="customColorNumber"/>
+		<alias entity-alias="M" name="type"/>
+		<alias entity-alias="M" name="description"/>
+		<alias entity-alias="M" name="color"/>
+		<alias entity-alias="M" name="coating"/>
+		<alias entity-alias="M" name="price"/>
+		<alias entity-alias="M" name="img"/>
+		<alias entity-alias="M" name="paperGroup"/>
+		<alias entity-alias="M" name="sequenceNumber"/>
+		<alias entity-alias="M" name="colorHexCode"/>
+		<alias entity-alias="M" name="skuWithColor"/>
+		<alias entity-alias="M" name="baseColor"/>
+		<alias entity-alias="PM" name="materialId"/>
+		<alias entity-alias="PM" name="productId"/>
+		<view-link entity-alias="M" rel-entity-alias="PM">
+			<key-map field-name="materialId" />
+		</view-link>
+	</view-entity>
+	<entity entity-name="ProductSlit" package-name="com.envelopes.product">
+		<field name="style" type="description" />
+		<field name="pocket" type="description" />
+		<field name="type" type="description" />
+		<field name="template" type="description" />
+		<field name="description" type="description" />
+		<field name="hasLeft" type="indicator" />
+		<field name="hasRight" type="indicator" />
+		<field name="hasCenter" type="indicator" />
+		<field name="hasTop" type="indicator" />
+		<field name="hasBottom" type="indicator" />
+		<prim-key field="style" />
+		<prim-key field="pocket" />
+		<prim-key field="type" />
+		<prim-key field="template" />
+	</entity>
+	<entity entity-name="FoilGuide" package-name="com.envelopes.product">
+		<field name="foilId" type="description" />
+		<field name="type" type="description" />
+		<field name="img" type="description" />
+		<prim-key field="foilId" />
+		<prim-key field="type" />
+	</entity>
+	<entity entity-name="NavigationContent" package-name="com.envelopes.product">
+		<field name="id" type="id-ne" />
+		<field name="webSiteId" type="description" />
+		<field name="type" type="numeric" />
+		<field name="description" type="description" />
+		<field name="link" type="url" />
+		<field name="sequenceNum" type="numeric" />
+		<field name="columnSequenceNum" type="numeric" />
+		<prim-key field="id" />
+	</entity>
+
+	<!-- ================================================================== -->
+	<!-- PRICING ENGINE                                                   -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="PeVendor" package-name="com.bigname.pricingengine">
+		<field name="vendorId" type="id-ne"/>
+		<field name="vendorName" type="description"/>
+		<prim-key field="vendorId"/>
+	</entity>
+
+	<entity entity-name="PeAddon" package-name="com.bigname.pricingengine">
+		<field name="addonId" type="id-ne"/>
+		<field name="addonName" type="description"/>
+		<prim-key field="addonId"/>
+	</entity>
+
+	<entity entity-name="PeColorVendorStockAssoc" package-name="com.bigname.pricingengine">
+		<field name="colorCode" type="id-ne"/>
+		<field name="vendorId" type="id-ne"/>
+		<field name="colorGroup" type="description"/>
+		<field name="colorName" type="description"/>
+		<field name="paperTexture" type="description"/>
+		<field name="paperWeight" type="description"/>
+		<field name="vendorStockId" type="description"/>
+		<field name="vendorStock" type="description"/>
+		<field name="pricingAttributeId" type="description"/>
+		<prim-key field="colorCode"/>
+		<prim-key field="vendorId"/>
+		<relation type="one" fk-name="FK_PCVSA_VENDOR_ID" rel-entity-name="PeVendor">
+			<key-map field-name="vendorId" rel-field-name="vendorId"/>
+		</relation>
+		<index name="IDX_PCVSA_CGRP">
+			<index-field name="colorGroup"/>
+		</index>
+		<index name="IDX_PCVSA_CNM">
+			<index-field name="colorName"/>
+		</index>
+		<index name="IDX_PCVSA_PTXT">
+			<index-field name="paperTexture"/>
+		</index>
+		<index name="IDX_PCVSA_PWT">
+			<index-field name="paperWeight"/>
+		</index>
+	</entity>
+
+	<entity entity-name="PeVendorProduct" package-name="com.bigname.pricingengine">
+		<field name="vendorProductId" type="id-ne"/>
+		<field name="vendorId" type="id-ne" />
+		<field name="productName" type="description"/>
+		<field name="shortName" type="description"/>
+		<field name="description" type="description"/>
+		<prim-key field="vendorProductId"/>
+		<prim-key field="vendorId"/>
+		<relation type="one" fk-name="FK_PVP_VENDOR_ID" rel-entity-name="PeVendor">
+			<key-map field-name="vendorId" rel-field-name="vendorId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="PeRelatedVendorProduct" package-name="com.bigname.pricingengine">
+		<field name="vendorProductId" type="id-ne"/>
+		<field name="vendorId" type="id-ne"/>
+		<field name="virtualProductId" type="id-ne"/>
+		<prim-key field="vendorProductId"/>
+		<prim-key field="vendorId"/>
+		<relation type="one" fk-name="FK_PPVPA_VENDOR_PRODUCT_ID" rel-entity-name="PeVendorProduct">
+			<key-map field-name="vendorProductId" rel-field-name="vendorProductId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PPVPA_VENDOR_ID" rel-entity-name="PeVendor">
+			<key-map field-name="vendorId" rel-field-name="vendorId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="PeAttribute" package-name="com.bigname.pricingengine">
+		<field name="attributeId" type="id-ne"/>
+		<field name="attributeName" type="description"/>
+		<field name="attributeLabel" type="description"/>
+		<field name="attributeDescription" type="description"/>
+		<field name="sequenceNum" type="numeric" />
+		<prim-key field="attributeId"/>
+	</entity>
+
+	<entity entity-name="PeAttributeValue" package-name="com.bigname.pricingengine">
+		<field name="attributeValueId" type="id-ne"/>
+		<field name="vendorId" type="id" />
+		<field name="vendorProductId" type="id" />
+		<field name="attributeId" type="id"/>
+		<field name="quantityBreak" type="description"/>
+		<field name="volumePrice" type="description"/>
+		<prim-key field="attributeValueId"/>
+		<relation type="one" fk-name="FK_PEAV_ATTR_ID" rel-entity-name="PeAttribute">
+			<key-map field-name="attributeId" rel-field-name="attributeId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PEAV_VENDOR_ID" rel-entity-name="PeVendor">
+			<key-map field-name="vendorId" rel-field-name="vendorId"/>
+		</relation>
+		<relation type="one" fk-name="FK_PEAV_VENDOR_PRODUCT_ID" rel-entity-name="PeVendorProduct">
+			<key-map field-name="vendorProductId" rel-field-name="vendorProductId"/>
+		</relation>
+	</entity>
+
+	<view-entity entity-name="PartyRoleAndUserLogin" package-name="com.envelopes.product" title="PartyRole, UserLogin">
+		<member-entity entity-alias="PR" entity-name="PartyRole" />
+		<member-entity entity-alias="UL" entity-name="UserLogin" />
+		<alias entity-alias="PR" name="createdStamp"/>
+		<alias entity-alias="PR" name="partyId"/>
+		<alias entity-alias="PR" name="roleTypeId"/>
+		<alias entity-alias="UL" name="partyId"/>
+		<alias entity-alias="UL" name="userLoginId"/>
+		<view-link entity-alias="PR" rel-entity-alias="UL">
+			<key-map field-name="partyId" />
+		</view-link>
+	</view-entity>
+	<!-- The Direct Mailing Entities -->
+	<entity entity-name="DirectMailingContent" package-name="com.bigname.integration.click2mail">
+		<field name="directMailingContentId" type="id-ne"/>
+		<field name="partyId" type="description"/>
+		<field name="contentPurposeEnumId" type="description"/>
+		<field name="contentPath" type="description"/>
+		<field name="contentName" type="description"/>
+		<field name="productId" type="description"/>
+		<field name="documentId" type="description"/>
+		<field name="documentClass" type="description"/>
+		<field name="fromDate" type="date-time"/>
+		<field name="thruDate" type="date-time"/>
+		<prim-key field="directMailingContentId"/>
+	</entity>
+
+	<entity entity-name="DirectMailingConfig" package-name="com.bigname.integration.click2mail">
+		<field name="paramName" type="id-vlong-ne"/>
+		<field name="paramValue" type="very-long"/>
+
+		<prim-key field="paramName"/>
+	</entity>
+
+	<entity entity-name="DirectMailingJobData" package-name="com.bigname.integration.click2mail">
+		<field name="jobNum" type="id-ne"/>
+		<field name="partyId" type="description"/>
+		<field name="productId" type="description"/>
+		<field name="data" type="very-long"/>
+		<field name="fromDate" type="date-time"/>
+		<field name="thruDate" type="date-time"/>
+		<field name="progressStatus" type="description"/>
+		<field name="resultData" type="very-long"/>
+		<field name="cartId" type="description"/>
+		<prim-key field="jobNum"/>
+	</entity>
+
+	<entity entity-name="DirectMailingJobOrder" package-name="com.bigname.integration.click2mail">
+		<field name="jobNum" type="id-ne"/>
+		<field name="jobId" type="description"/>
+		<field name="orderId" type="id-ne"/>
+		<field name="orderItemSeqId" type="description"/>
+		<field name="status" type="description"/>
+		<field name="createdDate" type="date-time"/>
+		<field name="submittedDate" type="date-time"/>
+		<prim-key field="jobNum"/>
+		<relation type="one" fk-name="FK_DMJ_JOB_NUM" rel-entity-name="DirectMailingJobData">
+			<key-map field-name="jobNum" rel-field-name="jobNum"/>
+		</relation>
+		<relation type="one" fk-name="FK_DMJ_ORDER_ID" rel-entity-name="OrderHeader">
+			<key-map field-name="orderId" rel-field-name="orderId"/>
+		</relation>
+	</entity>
+
+	<entity entity-name="DirectMailingOption" package-name="com.bigname.integration.click2mail">
+		<field name="optionId" type="numeric"/>
+		<field name="optionValue" type="description"/>
+		<field name="optionType" type="description"/>
+		<prim-key field="optionId"/>
+	</entity>
+
+	<entity entity-name="DirectMailingProductOption" package-name="com.bigname.integration.click2mail">
+
+		<field name="productOptionId" type="numeric"/>
+		<field name="productId" type="id-ne"/>
+		<field name="level1OptionId" type="numeric"/>
+		<field name="level2OptionId" type="numeric"/>
+		<field name="level3OptionId" type="numeric"/>
+		<field name="level4OptionId" type="numeric"/>
+		<field name="sequenceNum" type="numeric"/>
+		<field name="optionValue" type="description"/>
+		<prim-key field="productOptionId"/>
+		<relation type="one" fk-name="FK_DMPO_PROD_ID" rel-entity-name="Product">
+			<key-map field-name="productId" rel-field-name="productId"/>
+		</relation>
+		<relation type="one" fk-name="FK_DMPO_OPTN_ID1" rel-entity-name="DirectMailingOption">
+			<key-map field-name="level1OptionId" rel-field-name="optionId"/>
+		</relation>
+		<relation type="one" fk-name="FK_DMPO_OPTN_ID2" rel-entity-name="DirectMailingOption">
+			<key-map field-name="level2OptionId" rel-field-name="optionId"/>
+		</relation>
+		<relation type="one" fk-name="FK_DMPO_OPTN_ID3" rel-entity-name="DirectMailingOption">
+			<key-map field-name="level3OptionId" rel-field-name="optionId"/>
+		</relation>
+		<relation type="one" fk-name="FK_DMPO_OPTN_ID4" rel-entity-name="DirectMailingOption">
+			<key-map field-name="level4OptionId" rel-field-name="optionId"/>
+		</relation>
+	</entity>
+	<!-- The Cimpress Entities -->
+
+	<entity entity-name="CimpressProduct" package-name="com.bigname.integration.cimpress">
+		<field name="cimpressProductId" type="id-ne"/>
+		<field name="bignameProductId" type="id-ne"/>
+		<field name="cimpressDescription" type="description"/>
+		<field name="colorsFront" type="description"/>
+		<field name="colorsBack" type="description"/>
+		<field name="price" type="very-long"/>
+		<prim-key field="cimpressProductId"/>
+	</entity>
+
+	<entity entity-name="CimpressOrderData" package-name="com.bigname.integration.cimpress">
+		<field name="bignameOrderId" type="id-ne"/>
+		<field name="cimpressOrderId" type="id-ne"/>
+		<field name="notificationId" type="description"/>
+		<field name="cimpressItemIds" type="very-long"/>
+		<field name="cimpressOrderData" type="very-long"/>
+		<field name="cimpressStatus" type="description"/>
+		<field name="addressChanged" type="indicator"/>
+		<field name="shippingMethodChanged" type="indicator"/>
+		<field name="pending" type="indicator"/>
+		<field name="surePost" type="indicator"/>
+		<field name="priceMismatch" type="indicator"/>
+		<field name="restrictedAddress" type="indicator"/>
+		<field name="newAddress" type="very-long"/>
+		<field name="newShippingMethod" type="very-long"/>
+
+		<prim-key field="bignameOrderId"/>
+	</entity>
+
+	<view-entity entity-name="CimpressOrder" package-name="com.bigname.integration.cimpress" never-cache="true">
+		<member-entity entity-alias="CO" entity-name="CimpressOrderData"/>
+		<member-entity entity-alias="OH" entity-name="OrderHeader"/>
+		<alias entity-alias="CO" name="bignameOrderId" />
+		<alias entity-alias="CO" name="cimpressOrderId" />
+		<alias entity-alias="CO" name="notificationId" />
+		<alias entity-alias="CO" name="cimpressItemIds" />
+		<alias entity-alias="CO" name="cimpressOrderData" />
+		<alias entity-alias="CO" name="cimpressStatus" />
+		<alias entity-alias="CO" name="addressChanged" />
+		<alias entity-alias="CO" name="shippingMethodChanged" />
+		<alias entity-alias="CO" name="pending" />
+		<alias entity-alias="CO" name="surePost" />
+		<alias entity-alias="CO" name="priceMismatch" />
+		<alias entity-alias="CO" name="restrictedAddress" />
+		<alias entity-alias="OH" name="orderId" />
+		<alias entity-alias="OH" name="statusId" />
+		<alias entity-alias="OH" name="orderDate" />
+		<alias entity-alias="OH" name="entryDate" />
+		<view-link entity-alias="CO" rel-entity-alias="OH">
+			<key-map field-name="bignameOrderId" rel-field-name="orderId" />
+		</view-link>
+
+	</view-entity>
+
+	<entity entity-name="CimpressConfig" package-name="com.bigname.integration.cimpress">
+		<field name="paramName" type="id-vlong-ne"/>
+		<field name="paramValue" type="very-long"/>
+
+		<prim-key field="paramName"/>
+	</entity>
+
+	<entity entity-name="BignameJobStatus" package-name="com.bigname.job">
+		<field name="statusId" type="id-ne"/>
+		<field name="name" type="description"/>
+		<field name="description" type="description"/>
+
+		<prim-key field="statusId"/>
+	</entity>
+
+	<entity entity-name="BignameJob" package-name="com.bigname.job">
+		<field name="jobName" type="id-long-ne"/>
+		<field name="jobId" type="numeric"/>
+		<field name="runId" type="numeric"/>
+		<field name="statusId" type="description"/>
+		<field name="lastStartedTimestamp" type="date-time"/>
+		<field name="lastFinishedTimestamp" type="date-time"/>
+
+		<prim-key field="jobId"/>
+	</entity>
+
+	<entity entity-name="BignameJobMessage" package-name="com.bigname.job">
+		<field name="messageId" type="numeric"/>
+		<field name="jobId" type="numeric"/>
+		<field name="runId" type="numeric"/>
+		<field name="message" type="very-long"/>
+		<field name="level" type="description"/>
+		<field name="sequenceNum" type="numeric"/>
+		<field name="messageTimestamp" type="date-time"/>
+
+		<prim-key field="messageId"/>
+	</entity>
+	
+	<entity entity-name="PrepressQueueFilter" package-name="com.bigname.job">
+		<field name="userLoginId" type="id-vlong"/>
+		<field name="queueName" type="description" />
+		<field name="statusId" type="description" />
+		<field name="hidden" type="indicator" />
+
+		<prim-key field="userLoginId"/>
+		<prim-key field="queueName"/>
+		<prim-key field="statusId"/>
+		<relation type="one" fk-name="FK_PQF_UL_ULID" rel-entity-name="UserLogin">
+			<key-map field-name="userLoginId" rel-field-name="userLoginId"/>
+		</relation>
+	</entity>
+
+	<view-entity entity-name="CustomEnvelopeAndQCQuote" package-name="com.envelopes.product" never-cache="true" title="Custom Envelope and QC Quote for View">
+		<member-entity entity-alias="CE" entity-name="CustomEnvelope" />
+		<member-entity entity-alias="CEC" entity-name="CustomEnvelopeContact" />
+		<member-entity entity-alias="QCQ" entity-name="QcQuote" />
+		<alias entity-alias="CE" name="userEmail" />
+		<alias entity-alias="CE" name="statusId" />
+		<alias entity-alias="CE" name="productId" />
+		<alias entity-alias="CE" name="internalComment" field="comment" />
+		<alias entity-alias="CEC" name="userEmail" />
+		<alias entity-alias="CEC" name="firstName" />
+		<alias entity-alias="CEC" name="lastName" />
+		<alias entity-alias="CEC" name="companyName" />
+		<alias entity-alias="CEC" name="address1" />
+		<alias entity-alias="CEC" name="address2" />
+		<alias entity-alias="CEC" name="city" />
+		<alias entity-alias="CEC" name="stateProvinceGeoId" />
+		<alias entity-alias="CEC" name="postalCode" />
+		<alias entity-alias="CEC" name="phone" />
+		<alias entity-alias="CEC" name="countryGeoId" />
+		<alias entity-alias="QCQ" name="quoteId" />
+		<alias entity-alias="QCQ" name="orderId" />
+		<alias entity-alias="QCQ" name="orderItemSeqId" />
+		<alias entity-alias="QCQ" name="quoteRequestId" />
+		<alias entity-alias="QCQ" name="pricingRequest" />
+		<alias entity-alias="QCQ" name="pricingResponse" />
+		<alias entity-alias="QCQ" name="createdStamp" />
+		<alias entity-alias="QCQ" name="comment" />
+		<alias entity-alias="QCQ" name="production" />
+		<view-link entity-alias="CE" rel-entity-alias="QCQ">
+			<key-map field-name="quoteId" rel-field-name="quoteRequestId" />
+		</view-link>
+		<view-link entity-alias="CE" rel-entity-alias="CEC">
+			<key-map field-name="quoteId" rel-field-name="customEnvelopeQuoteId" />
+		</view-link>
+	</view-entity>
+
+	<view-entity entity-name="OrderItemAttributeAndProductAttribute" package-name="com.envelopes.product" never-cache="true" title="Order Item Attribute and Product Attribute">
+		<member-entity entity-alias="OIA" entity-name="OrderItemAttribute" />
+		<member-entity entity-alias="PA" entity-name="ProductAttribute" />
+		<alias entity-alias="OIA" name="orderId" />
+		<alias entity-alias="OIA" name="orderItemSeqId" />
+		<alias entity-alias="OIA" name="attrName" group-by="true" />
+		<alias entity-alias="OIA" name="attrValue" />
+		<alias entity-alias="PA" name="productId" />
+		<alias entity-alias="PA" name="attrDescription" />
+		<view-link entity-alias="OIA" rel-entity-alias="PA">
+			<key-map field-name="attrName" />
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="ProductAddon" package-name="com.envelopes.product" title="Product Addon">
+		<field name="productAddonId" type="id-ne" />
+		<field name="name" type="description" />
+
+		<prim-key field="productAddonId" />
+	</entity>
+		
+	<entity entity-name="ProductAddonQuantityThreshold" package-name="com.envelopes.product" title="Product Addon Quantity Threshold">
+		<field name="productAddonQuantityThresholdId" type="id-ne" />
+		<field name="type" type="description" />
+		<field name="threshold" type="numeric" />
+		<field name="quantity" type="numeric" />
+		<field name="price" type="currency-precise" />
+
+		<prim-key field="productAddonQuantityThresholdId" />
+	</entity>
+
+	<entity entity-name="ProductAddonQuantityThresholdAssoc" package-name="com.envelopes.product" title="Product Addon Quantity Threshold Assoc">
+		<field name="productAddonId" type="id-ne" />
+		<field name="productId" type="id-ne" />
+		<field name="productAddonQuantityThresholdId" type="id-ne" />
+
+		<prim-key field="productAddonId" />
+		<prim-key field="productId" />
+		<prim-key field="productAddonQuantityThresholdId" />
+
+		<relation type="one" fk-name="FK_PRODUCTADDON" rel-entity-name="ProductAddon">
+			<key-map field-name="productAddonId" />
+		</relation>
+		<relation type="one" fk-name="FK_PRODUCT" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+		<relation type="one" fk-name="FK_PRODUCTAQTASSOC" rel-entity-name="ProductAddonQuantityThreshold">
+			<key-map field-name="productAddonQuantityThresholdId" />
+		</relation>
+	</entity>
+
+	<view-entity entity-name="ProductAddonAndQuantityThreshold" package-name="com.envelopes.product" never-cache="true" title="Product Addon and Quantity Threshold View">
+		<member-entity entity-alias="PA" entity-name="ProductAddon" />
+		<member-entity entity-alias="PAQT" entity-name="ProductAddonQuantityThreshold" />
+		<member-entity entity-alias="PAQTA" entity-name="ProductAddonQuantityThresholdAssoc" />
+		
+		<alias entity-alias="PA" name="productAddonId" />
+		<alias entity-alias="PA" name="name" />
+		<alias entity-alias="PAQT" name="productAddonQuantityThresholdId" />
+		<alias entity-alias="PAQT" name="type" />
+		<alias entity-alias="PAQT" name="threshold" />
+		<alias entity-alias="PAQT" name="quantity" />
+		<alias entity-alias="PAQT" name="price" />
+		<alias entity-alias="PAQTA" name="productId" />
+
+		<view-link entity-alias="PA" rel-entity-alias="PAQTA">
+			<key-map field-name="productAddonId" />
+		</view-link>
+		<view-link entity-alias="PAQTA" rel-entity-alias="PAQT">
+			<key-map field-name="productAddonQuantityThresholdId" />
+		</view-link>
+	</view-entity>
+
+	<!-- ================================================================== -->
+	<!-- Product Template                                                   -->
+	<!-- ================================================================== -->
+
+	<entity entity-name="DesignTemplate" package-name="com.envelopes.product" title="Design Templates">
+		<field name="designTemplateId" type="id-ne" />
+		<field name="legacyDesignId" type="id-ne" />
+		<field name="location" type="id" />
+		<field name="name" type="description" />
+		<field name="width" type="fixed-point" />
+		<field name="height" type="fixed-point" />
+		<field name="jsonData" type="very-long" />
+		<field name="fxgData" type="very-long" />
+		<field name="active" type="indicator" />
+
+		<prim-key field="designTemplateId" />
+	</entity>
+
+	<entity entity-name="ProductDesignTemplate" package-name="com.envelopes.product" title="Product and Design Template Link">
+		<field name="productId" type="id-ne" />
+		<field name="designTemplateId" type="id-ne" />
+
+		<prim-key field="productId" />
+		<prim-key field="designTemplateId" />
+		<relation type="one" fk-name="FK_DESIGNTEMPLATEID" rel-entity-name="DesignTemplate">
+			<key-map field-name="designTemplateId" />
+		</relation>
+		<relation type="one" fk-name="FK_PRODUCTID" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<view-entity entity-name="DesignTemplateAndProductDesignTemplate" package-name="com.envelopes.product" title="Design Template and Product View">
+		<member-entity entity-alias="DT" entity-name="DesignTemplate" />
+		<member-entity entity-alias="PDT" entity-name="ProductDesignTemplate" />
+		<alias entity-alias="DT" name="designTemplateId" />
+		<alias entity-alias="DT" name="legacyDesignId" />
+		<alias entity-alias="DT" name="location" />
+		<alias entity-alias="DT" name="name" />
+		<alias entity-alias="DT" name="width" />
+		<alias entity-alias="DT" name="height" />
+		<alias entity-alias="DT" name="jsonData" />
+		<alias entity-alias="DT" name="fxgData" />
+		<alias entity-alias="DT" name="active" />
+		<alias entity-alias="PDT" name="productId" />
+		<view-link entity-alias="DT" rel-entity-alias="PDT">
+			<key-map field-name="designTemplateId" />
+		</view-link>
+	</view-entity>
+
+	<entity entity-name="ChannelsQuantityOverride" package-name="com.envelopes.product" title="Channel Quantity Override">
+		<field name="productId" type="id-ne" />
+		<field name="amazon" type="numeric" />
+		<field name="officeDepot" type="numeric" />
+		<field name="staples" type="numeric" />
+
+		<prim-key field="productId" />
+
+		<relation type="one" fk-name="FK_PRODUCTID" rel-entity-name="Product">
+			<key-map field-name="productId" />
+		</relation>
+	</entity>
+
+	<entity entity-name="WorkOrderEmployee" package-name="com.envelopes.order" title="Work Order Employees">
+		<field name="emailAddress" type="email" />
+		<field name="netsuiteId" type="id" />
+
+		<prim-key field="emailAddress" />
+	</entity>
+</entitymodel>

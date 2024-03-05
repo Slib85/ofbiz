@@ -1,0 +1,71 @@
+.coupons > .section.header h1 {
+	display: table-cell;
+	vertical-align: middle;
+    color: #000000;
+    font-weight: 200;
+}
+.pageHeaderText h1, .pageHeaderText h3{
+	font-weight: bold !important;
+}
+.pageHeaderText h1{
+	font-size: 35px !important;
+	line-height: 36px !important;
+	padding: 10px 0 2px !important;
+	color: #43b5bb !important;
+}
+.pageHeaderText h3{
+	font-size: 20px !important;
+	color: #000000;
+}
+.pageHeaderText p{
+	font-size: 14px !important;
+	padding: 0;
+	font-weight: 500;
+	width: 55%;
+	line-height: 15px;
+}
+.headerImage.mobile-only h1 {
+	color: #b10219 !important; 
+	font-size: 32px !important;
+	font-weight: bold;
+	padding: 20px 0;
+}
+.content.coupons .content-body {
+	display: block !important;
+}
+@media only screen and (max-width: 1023px) {
+	.coupons .header {
+		text-align: center;
+	}
+		.coupons .section.header h5 {
+			padding: 10px;
+			font-size: 24px;
+			font-weight: 300;
+		}
+
+	.pageHeaderText h1{
+		font-size: 30px !important;
+	}
+
+	.pageHeaderText h3{
+		font-size: 18px !important;
+	}
+
+	.pageHeaderText p{
+		font-size: 12px !important;
+		width: 52%;
+	}
+}
+
+@media only screen and (max-width: 860px){
+	.pageHeaderText p{
+		display: none !important;
+	}
+	.holidaySection .pageHeaderText {
+		width: 100% !important;
+	}
+	.pageHeaderText {
+		width: 48% !important;
+	}
+
+}

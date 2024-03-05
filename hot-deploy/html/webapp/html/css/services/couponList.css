@@ -1,0 +1,161 @@
+.couponList.content-body {
+    text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.couponList.content-body > div {
+    display: inline-block !important;
+    width: 300px;
+    height: 315px;
+    white-space: initial;
+    vertical-align: top;
+}
+.couponList.content-body > div > .section {
+    height: 290px;
+    border: 1px dashed #5e585f;
+    background-color: #e6d8ea;
+}
+.couponList.content-body > div > .envCoupBlock,
+.couponList.content-body > div > .folCoupBlock {
+    background-color: transparent;
+    padding: 0;
+}
+.couponList.content-body > div > .section > a {
+    display: block;
+    vertical-align: top;
+    height: 248px;
+    color: inherit;
+}
+.couponList .section {
+    padding: 20px;
+    margin: 20px 10px 0px 10px;
+}
+.couponList .name {
+    font-size: 18px;
+    color: #6c6864;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 140px;
+}
+.couponList .name span {
+    font-size: 40px;
+    display: block;
+    line-height: 40px;
+}
+.couponList .freeShipping {
+    font-size: 24px;
+}
+.couponList .freeShipping p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.couponList .discount {
+    font-size: 11px;
+    font-weight: bold;
+    color: #6c6864;
+    text-transform: uppercase;
+    line-height: 13px;
+    height: 40px;
+}
+.couponList .code {
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #9512bb;
+}
+.couponList .code span {
+    font-weight: bold;
+}
+.couponList .button {
+    text-transform: none;
+}
+.discountProgram, .npDiscountProgram {
+    font-size: 13px !important;
+    line-height: 20px !important;
+}
+.npDiscountProgram span {
+    font-size: 22px !important;
+    line-height: 30px !important;
+    margin-bottom: 16px !important;
+}
+.discountProgram span {
+    font-size: 24px !important;
+    line-height: 30px !important;
+    margin-bottom: 16px !important;
+}
+.couponList span.strikeThrough {
+    font-size: 18px !important;
+    display: inline-block !important;
+    line-height: 18px !important;
+}
+.subscribeHeight {
+    height: 30px !important;
+}
+.couponList .signUp {
+    cursor: pointer;
+}
+.couponList .emailSignUp {
+    font-size: 14px !important;
+    height: 170px !important;
+}
+.emailSignUp span {
+    font-size: 28px !important;
+}
+.freeShippingMonth {
+    font-size: 28px !important;
+    line-height: 28px !important;
+}
+.freeShipping250 {
+    font-size: 26px !important;
+    line-height: 26px !important;
+    display: inline-block !important;
+    text-decoration: underline;
+}
+/*-- custom color styles --*/
+.customOrange {
+    background-color: #fc7e22 !important;
+}
+.customOrange .name,
+.customOrange .discount,
+.customOrange .code{
+    color:#fff;
+}
+.customOrange .button-cta{
+    background-color: #000 !important;
+}
+
+/* Folders Coupon List */
+.foldersCoupon {
+    background-color: #063b63 !important;
+}
+.foldersCoupon a {
+    color: #ffffff;
+}
+.foldersHeadline {
+    font-size: 17px;
+    line-height: 22px;
+    color: #ffffff;
+}
+.foldersHeadline span {
+    font-size: 26px;
+    line-height: 28px;
+}
+.foldersCouponList .foldersButton {
+    background-color: #68a63b;
+    font-weight: bold;
+}
+.foldersCouponList .foldersButton:hover {
+    background-color: #68a63b;
+}
+.foldersCoupon .code {
+    color: #01ff79 !important;
+}
+.foldersCoupon .discount {
+    color: #ffffff;
+}
+@media only screen and (max-width: 1023px) {
+    .couponList.content-body > div {
+        width: 300px !important;
+    }
+}

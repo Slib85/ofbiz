@@ -1,0 +1,152 @@
+.shopByBrand {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/shopByBrandBackground?wid=10&amp;fmt=png-alpha) repeat center;
+	position: relative;
+	width: 100%;
+	padding-top: 40px;
+	z-index: 0;
+}
+.shopByBrandHeader {
+	height: 148px;
+	background-color: #ffffff;
+	display: table;
+	width: 80%;
+	text-align: center;
+	margin-left: 10%;
+	position: relative;
+	z-index: auto;
+}
+.shopByBrandHeader:before {
+	box-shadow: 0px 16px 6px -7px #4e7087;
+	-moz-box-shadow: 0px 16px 6px -7px #4e7087;
+	-webkit-box-shadow: 0px 16px 6px -7px #4e7087;
+    content: " ";
+    height: 100%;
+    width: 50%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    z-index: -1;
+    transform: rotate(-1deg);
+}
+.shopByBrandHeader:after {
+	box-shadow: 0px 16px 6px -7px #4e7087;
+	-moz-box-shadow: 0px 16px 6px -7px #4e7087;
+	-webkit-box-shadow: 0px 16px 6px -7px #4e7087;
+    content: " ";
+    height: 100%;
+    width: 50%;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 6px;
+    z-index: -1;
+    transform: rotate(1deg);
+}
+.shopByBrandHeader h2 {
+	display: table-cell;
+	color: #000000;
+	text-transform: uppercase;
+	vertical-align: middle;
+	font-size: 4vw;
+    font-weight: 900;
+    width: auto;
+    font-family: futura-std, sans-serif;
+    transform: scale(1,1.5);
+}
+.headerImage {
+	display: table-cell;
+	width: 317px;
+}
+.shopByBrandBody {
+	text-align: center;
+}
+.shopByBrandBody h3 {
+	color: #000000;
+	font-size: 24px;
+}
+.mobileImg {
+	display: none;
+}
+@media only screen and (max-width: 1350px) {
+	.shopByBrandHeader h2 {
+		transform: scale(1,2);
+	}
+	.shopByBrandHeader:before {
+		transform: rotate(-1.5deg);
+	}
+	.shopByBrandHeader:after {
+		transform: rotate(1.5deg);
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.shopByBrandBody h3 {
+		font-size: 18px;
+	}
+	.shopByBrandHeader {
+		width: 85%;
+		margin-left: 8%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.desktopImg {
+		display: none;
+	}
+	.mobileImg {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.shopByBrandHeader {
+		height: 96px;
+	}
+	.headerImage {
+		width: 208px;
+	}
+	.shopByBrandHeader:before {
+	    transform: rotate(-2deg);
+	}
+	.shopByBrandHeader:after {
+	    transform: rotate(2deg);
+	}
+}
+@media only screen and (max-width: 635px) {
+	.shopByBrandBody h3 {
+		width: 85%;
+		margin-left: 8%;
+	}
+}
+@media only screen and (max-width: 535px) {
+	.shopByBrandHeader:before {
+	    transform: rotate(-3deg);
+	}
+	.shopByBrandHeader:after {
+	    transform: rotate(3deg);
+	}
+}
+@media only screen and (max-width: 455px) {
+	.shopByBrandHeader {
+		height: 74px;
+	}
+	.shopByBrandHeader h2 {
+		transform: scale(1,2);
+	}
+	.headerImage {
+		width: 160px;
+	}
+	.shopByBrandBody h3 {
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 374px) {
+	.shopByBrandHeader h2 {
+		transform: scale(1,1);
+	}
+	.shopByBrandHeader:before {
+	    transform: rotate(-4.5deg);
+	}
+	.shopByBrandHeader:after {
+	    transform: rotate(4.5deg);
+	}
+}

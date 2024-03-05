@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+	<Party partyId="_NA_"/>
+	<Party partyId="admin"/>
+	<PartyRole partyId="admin" roleTypeId="SALES_REP"/>
+	<Party partyId="Company" partyTypeId="PARTY_GROUP"/>
+	<PartyGroup partyId="Company" groupName="Your Company Name Here"/>
+	<PartyRole partyId="Company" roleTypeId="BILL_FROM_VENDOR"/>
+	<PartyRole partyId="Company" roleTypeId="BILL_TO_CUSTOMER"/>
+	<PartyRole partyId="Company" roleTypeId="INTERNAL_ORGANIZATIO"/>
+	<PartyRole partyId="Company" roleTypeId="_NA_"/>
+	<ContactMech contactMechId="9000" contactMechTypeId="POSTAL_ADDRESS"/>
+	<PartyContactMech partyId="Company" contactMechId="9000" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+	<PostalAddress contactMechId="9000" toName="Company XYZ" address1="2003 Open Blvd" city="Open City" postalCode="999999" countryGeoId="USA" stateProvinceGeoId="CA" geoPointId="9000"/>
+	<ContactMech contactMechId="Company" contactMechTypeId="EMAIL_ADDRESS" infoString="ofbiztest@example.com"/>
+	<PartyContactMech partyId="Company" contactMechId="Company" fromDate="2000-01-01 00:00:00.000" allowSolicitation="Y"/>
+	<PartyContactMechPurpose contactMechPurposeTypeId="PRIMARY_EMAIL" partyId="Company" contactMechId="Company" fromDate="2003-01-01 00:00:00.000"/>
+	<ContactMech contactMechId="CompanySupport" contactMechTypeId="EMAIL_ADDRESS" infoString="ofbizsupport@example.com"/>
+	<PartyContactMech partyId="Company" contactMechId="CompanySupport" fromDate="2003-01-01 00:00:00.0" allowSolicitation="Y"/>
+	<PartyContactMechPurpose contactMechPurposeTypeId="SUPPORT_EMAIL" partyId="Company" contactMechId="CompanySupport" fromDate="2003-01-01 00:00:00.0"/>
+	<PartyContactMechPurpose partyId="Company" contactMechId="9000" contactMechPurposeTypeId="BILLING_LOCATION" fromDate="2000-01-01 00:00:00.000"/>
+	<PartyContactMechPurpose partyId="Company" contactMechId="9000" contactMechPurposeTypeId="GENERAL_LOCATION" fromDate="2000-01-01 00:00:00.000"/>
+	<PartyContactMechPurpose partyId="Company" contactMechId="9000" contactMechPurposeTypeId="PAYMENT_LOCATION" fromDate="2000-01-01 00:00:00.000"/>
+	<PartyGeoPoint partyId="Company" geoPointId="9000" fromDate="2009-01-09 00:00:00.000"/>
+
+	<Party partyId="ENVELOPES" partyTypeId="PARTY_GROUP"/>
+	<PartyGroup partyId="ENVELOPES" groupName="ENVELOPES"/>
+	<PartyRole partyId="ENVELOPES" roleTypeId="CARRIER"/>
+
+	<Party partyId="UPS" partyTypeId="PARTY_GROUP"/>
+	<PartyGroup partyId="UPS" groupName="UPS"/>
+	<PartyRole partyId="UPS" roleTypeId="CARRIER"/>
+
+	<Party partyId="USPS" partyTypeId="PARTY_GROUP"/>
+	<PartyGroup partyId="USPS" groupName="USPS"/>
+	<PartyRole partyId="USPS" roleTypeId="CARRIER"/>
+
+	<Party partyId="INTERNATIONAL" partyTypeId="PARTY_GROUP"/>
+	<PartyGroup partyId="INTERNATIONAL" groupName="INTERNATIONAL"/>
+	<PartyRole partyId="INTERNATIONAL" roleTypeId="CARRIER"/>
+
+	<RoleType roleTypeId="WHOLESALER_EP" description="Envelopes Private Wholesaler" />
+	<RoleType roleTypeId="NET_30" description="Net 30 Payment Option" />
+
+	<!-- Vendor Data for Outsource -->
+	<Party partyId="V_DUPLI"/>
+	<PartyGroup partyId="V_DUPLI" groupName="V_OUTSOURCE"/>
+	<PartyRole partyId="V_DUPLI" roleTypeId="SUPPLIER"/>
+	<Vendor partyId="V_DUPLI" cxmlEndpoint="https://secure.duplionline.com/dolXMLTest/servlet/handlerTest" sharedSecret="dupli123" duns="107741050" vendorTypeId="V_OUTSOURCE"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="43687" vendorProductId="3983" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="75746" vendorProductId="61593" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="45146" vendorProductId="1061" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="75747" vendorProductId="68724" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="43703" vendorProductId="4049" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="75761" vendorProductId="61595" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="45161" vendorProductId="46523" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="61597" vendorProductId="61597" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="43554" vendorProductId="1042A" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="61538" vendorProductId="1045" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="43604" vendorProductId="1425" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="61549" vendorProductId="48641" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="17855" vendorProductId="1641" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="17897" vendorProductId="33777" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="17905" vendorProductId="26587" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="61532" vendorProductId="48633" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="17871" vendorProductId="26993" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="17889" vendorProductId="1639" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="11874" vendorProductId="1715" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="22646" vendorProductId="25127" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="1552" vendorProductId="4108" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="95447" vendorProductId="28735" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="12310" vendorProductId="1724" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="12328" vendorProductId="4255" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="14554" vendorProductId="4256" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="1590B" vendorProductId="B3462" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="8193" vendorProductId="1583" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="8250" vendorProductId="1587A" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="75407" vendorProductId="4139" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="1590" vendorProductId="1590" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="16154" vendorProductId="1737" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="78232" vendorProductId="B81737" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="8847" vendorProductId="1606A" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="75423" vendorProductId="4160" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="72924" vendorProductId="27558" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="72940" vendorProductId="27559" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+	<VendorProduct vendorPartyId="V_DUPLI" productStoreGroupId="_NA_" productId="72932" vendorProductId="27557" vendorParentProductId="36538" price="0" fromDate="2016-4-19 0:00:00.000"/>
+</entity-engine-xml>

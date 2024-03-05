@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+    <screen name="quoteCalculator">
+        <section>
+            <actions>
+                <set field="screenGroup" value="quotes"/>
+                <set field="titleProperty" value="Quote Calculator"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/quote-calculator/calculator.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/quote-calculator/calculator.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="qcVendors">
+        <section>
+            <actions>
+                <set field="screenGroup" value="quoteSettings"/>
+                <set field="screenName" value="vendors"/>
+                <set field="titleProperty" value="Vendors"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/quote-calculator/vendors.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="qc-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/quote-calculator/vendors.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="qcStyleGroups">
+        <section>
+            <actions>
+                <set field="screenGroup" value="quoteSettings"/>
+                <set field="screenName" value="styleGroups"/>
+                <set field="titleProperty" value="Style Groups"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/quote-calculator/styleGroups.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="qc-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/quote-calculator/styleGroups.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="qcStyles">
+        <section>
+            <actions>
+                <set field="screenGroup" value="quoteSettings"/>
+                <set field="screenName" value="styles"/>
+                <set field="titleProperty" value="Styles"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/quote-calculator/styles.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="qc-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/quote-calculator/styles.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="qcMaterialTypes">
+        <section>
+            <actions>
+                <set field="screenGroup" value="quoteSettings"/>
+                <set field="screenName" value="materialTypes"/>
+                <set field="titleProperty" value="Material Types"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/quote-calculator/materialTypes.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="qc-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/quote-calculator/materialTypes.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="qcStockTypes">
+        <section>
+            <actions>
+                <set field="screenGroup" value="quoteSettings"/>
+                <set field="screenName" value="stockTypes"/>
+                <set field="titleProperty" value="Stock Types"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/quote-calculator/stockTypes.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="qc-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/quote-calculator/stockTypes.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="qcStocks">
+        <section>
+            <actions>
+                <set field="screenGroup" value="quoteSettings"/>
+                <set field="screenName" value="stocks"/>
+                <set field="titleProperty" value="Stocks"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/quote-calculator/stocks.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="qc-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/quote-calculator/stocks.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+</screens>

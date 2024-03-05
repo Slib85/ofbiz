@@ -1,0 +1,85 @@
+.estimatePrintCostQuickLink{
+    color: #009cdd;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #009cdd;
+    padding: 5px;
+    float: right;
+    margin: -10px 0 0 0;
+}
+#estimatePrintCost .optionRow {
+    /*background-color: #f5f5f5;*/
+    margin: 10px;
+    /*padding: 10px 10px;*/
+}
+.colorOptionHeader {
+    font-size: 1.4em;
+}
+#estimatePrintCost .optionRow .optionRowContent{
+    display:block;
+    width: 100%;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+.noBackgroundColor{
+    background-color:transparent !important;
+}
+#estimatePrintCost .optionRow .optionRowContent .optionRowColors,
+#estimatePrintCost .optionRow .optionRowContent .optionRowQuantity{
+    display:inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+#estimatePrintCost .optionRow .optionRowContent .optionRowColors:last-child {
+    margin-left: 10px;
+}
+[bns-sidebarid="estimatePrintCostQuantity"] {
+    width: 100%;
+    display: block;
+}
+[bns-sidebarid="estimatePrintCostQuantity"] > div {
+    float: none;
+    width: 49% !important;
+    display: inline-block;
+}
+[bns-sidebarid="estimatePrintCostQuantity"] div.pricePerUnitDisplay {
+    text-align: right;
+    padding: 0 30px 0 0;
+}
+.optionRowQuantityTotal {
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    font-size: 2em;
+}
+.optionRowQuantityTotal span{
+    min-width: 121px;
+    display: inline-block;
+    text-align: left;
+}
+.optionRowQuantityTotal div.totalCaptionText {
+    font-size: .55em;
+    color: #858d93;
+    font-weight: normal;
+    margin-top: 6px;
+}
+#estimatePrintCost span.aboveTextField{
+    margin:-10px 0 10px 0;
+    display: block;
+    font-size: 12px;
+}
+#estimatePrintCost .submitQuoteButton{
+    text-align:right;
+}
+#estimatePrintCost .button{
+    margin:0;
+}
+#estimatePrintCost input[type="text"]{background-color:#fff;}
+
+/*@media(max-width:768px){
+    .estimatePrintCostQuickLink{display:none;}
+}*/
+#inkFrontSelection2 .folderDisplayTable.productColorSelection, 
+#inkBackSelection2 .folderDisplayTable.productColorSelection {
+    height: inherit;
+}

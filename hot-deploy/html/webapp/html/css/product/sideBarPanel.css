@@ -1,0 +1,146 @@
+.sidebarPanel,
+.colorTextureHeading,
+.colorTextureBody,
+.stickyTextureHeading {
+    background: #ffffff;
+}
+.colorTextureBody {
+    padding: 0 15px 15px;
+}
+.colorTextureBodyInner {
+    height: auto;
+    overflow-x: hidden;
+    border-bottom: 1px solid #e1e1e1;
+}
+.colorTextureHeading h4 {
+    background: #009cdd;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    border: none !important;
+    margin: 0 !important;
+}
+.colorTextureHeading h4 {
+    position: relative;
+}
+.colorTextureHeading h4 .fa {
+    content: '\f0d9';
+    font-family: FontAwesome;
+    color: #ffffff;
+    display: inline-block;
+    padding: 5px 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.colorTextureHeading p {
+    padding: 8px;
+    margin: 0;
+}
+.productBackgroundColor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.colorTextureBodyInner .selectList {
+	margin: 10px 0;
+}
+.folderDisplayTable.productColorSelection {
+    position: relative;
+    z-index: 1;
+    width: 100% !important;
+    height: 64px;
+}
+.folderDisplayTable > div {
+    padding: 12px 10px 12px 10px;
+}
+.folderDisplayTable.productColorSelection > div:nth-child(2) {
+    width: auto;
+}
+.foldersTabularRow {
+  display: table;
+  width: 100%;
+}
+.foldersTabularRow > * {
+  display: table-cell;
+  width: auto;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.sidebarPanel.activatedPanel {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebarPanel::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #f8f8f8;
+    padding: 1px;
+    box-shadow: none;
+}
+
+.sidebarPanel::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f8f8f8;
+}
+
+.sidebarPanel::-webkit-scrollbar-thumb {
+    background-color: #7f7f7f;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+}
+.sidebarToggle, .sidebarPanel .selectListItem {
+    background: rgba(255, 255, 255, 0);
+    height: auto;
+    border-width: 1px;
+    position: relative;
+}
+.selectListParent .selectCheckbox:before,
+.selectListItem[selection-selected="true"] .selectCheckbox:before,
+.slSelected .selectCheckbox:before {
+    content: '\f00c';
+    font-family: FontAwesome;
+    display: inline-block;
+    color: #113e60;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.selectCheckbox {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #6c6c6c;
+    border-radius: 4px;
+    margin-bottom: -4px;
+    background: #ffffff;
+    cursor: pointer;
+}
+.width30 {
+    width: 30px !important;
+}
+.sidebarPanel [selection-showonselect] {
+    display: none !important;
+}
+.selectList {
+    border: 1px solid #c8c8c8;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+.slSelected,
+.selectList:hover {
+	border: 1px solid #fc7e22;
+}

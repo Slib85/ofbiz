@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="seoRules">
+		<section>
+			<actions>
+				<set field="screenGroup" value="seo"/>
+				<set field="screenTitle" value="seoRules"/>
+				<set field="titleProperty" value="Create SEO Entries"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/seo/seoRules.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/seo/seoRules.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="rewriteRules">
+		<section>
+			<actions>
+				<set field="screenGroup" value="seo"/>
+				<set field="screenTitle" value="createRewrite"/>
+				<set field="titleProperty" value="Create Rewrite Entries"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/seo/createRewrite.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/seo/createRewrite.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="canonicalRules">
+		<section>
+			<actions>
+				<set field="screenGroup" value="seo"/>
+				<set field="screenTitle" value="canonicalRules"/>
+				<set field="titleProperty" value="Create or Edit Canonical Rules"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/seo/canonicalRules.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/seo/canonicalRules.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

@@ -1,0 +1,214 @@
+.container{
+	margin: 10px;
+}
+.aboutUs{
+	background-color: #f1f1f1;
+}
+.aboutHeader{
+	background-color: #4f9bd5;
+	display: inline-block;
+	position: relative;
+	min-height: 200px;
+	width: 100%;
+	color: #ffffff;
+}
+.aboutHeader img{
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 200px;
+}
+.aboutHeader h2 {
+	padding: 2% 30px 5px;
+	font-size: 34px;
+}
+.aboutHeader p{
+	width: 35%;
+	padding: 0 30px;
+	font-size: 14px;
+}
+.aboutHeader ul{
+	padding-left: 45px;
+}
+.text {
+	width: auto;
+	padding: 10px 30px !important;
+	vertical-align: top !important;
+}
+.text h2{
+	margin: 15px 0 0;
+}
+.text p{
+	margin-bottom: 15px;
+}
+.programs {
+	width: 24%;
+}
+.programs img{
+	vertical-align: middle;
+}
+.programs h5{
+	font-size: 22px;
+}
+.corelDraw{
+	display: block;
+}
+.text div div h5 {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: normal;
+	font-size: 20px;
+}
+.contact{
+	width: 445px;
+	padding: 55px 0 0 !important;
+	vertical-align: top !important;
+}
+.contactInfo, .pdfDownloader {
+	text-align: center;
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+}
+.contactInfo h2{
+	padding: 30px 15px 0;
+	font-size: 25px;
+}
+.contactInfo li{
+	list-style-type: none;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 20px;
+	color: #4caf50;
+}
+.contactInfo a{
+	color: #4caf50;
+}
+.contactInfo i{
+	display: block;
+	font-size: 40px;
+	margin-bottom: 5px;	
+}
+.pdfDownloader {
+	padding: 20px;
+}
+.pdfDownloader img{
+	padding-bottom: 10px;
+}
+.pdfDownloader a{
+	display: block;
+	text-decoration: underline;
+	color: #063b63;
+	font-weight: bold;
+	font-size: 24px;
+}
+.layout{
+	margin-bottom: 10px;
+}
+.layout p, .layout i {
+	display: inline-block;
+}
+.layout p{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.layout i{
+	font-size: 8px;
+	margin: 5px 5px 0 0;
+}
+.listItems {
+	margin-left: 20px;
+}
+.innerList {
+	margin-left: 20px;
+} 
+.layout h4{
+	font-size: 18px;
+}
+span{
+	font-weight: bold;
+}
+.rightCaret {
+	font-size: 10px !important;
+}
+.marginBottom15 {
+	margin-bottom: 15px !important;
+}
+.listItems p{
+	font-size: 16px;
+	margin-left: 10px;
+	display: block;
+}
+.italic {
+	font-style: italic;
+	font-weight: normal;
+}
+.italicBold {
+	font-style: italic;
+}
+.fileUpload i{
+	font-size: 16px;
+}
+@media only screen and (max-width: 1024px) {
+	.text {
+		width: 100%;
+		display: block;
+	}
+	.contact {
+		width: 100%;
+		display: block;
+		text-align: center;
+		padding: 15px 0 0 !important;	
+	}
+	.text img, .contact img{
+		max-width: 300px;
+	}
+	.floatLeft img{
+		float: none;
+	}
+	.floatLeft h2, .floatLeft p{
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.foldersContainerBody h1{
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.foldersContainerHeader h2{
+		font-size: 24px;
+	}
+	.foldersContainerBody h1 {
+		font-size: 28px;
+	}
+	.foldersContainerBody h2{
+		font-size: 20px;
+	}
+	.layout h4{
+		font-size: 14px;
+	}
+	.text {
+		padding: 0;
+	}
+	.programs h5{
+		font-size: 13px;
+	}
+	.listItems li{
+		font-size: 16px;
+	}
+	.listItems p{
+		font-size: 16px;
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,189 @@
+.content {
+    background: #ffffff !important;
+}
+/* Header */
+.updatedEnvHpBanner {
+    height: 325px;
+    display: table;
+    width: 100%;
+}
+.productReviewsBannerText {
+    display: table-cell;
+    width: 32%;
+    padding-left: 25px;
+    vertical-align: middle;
+}
+.updatedEnvHpBanner img {
+    float: right;
+}
+.productReviewsBannerText h1 {
+    color: #0b3360;
+    font-weight: bold;
+}
+.productReviewsBannerText p {
+    color: #ffffff;
+}
+.reviewGradient i.fa {
+    font-size: 30px;
+}
+/* Body */
+.content h3 {
+    margin-top: 10px;
+    text-align: center;
+    color: #0b3360;
+}
+.reviewsTitle {
+    margin: 25px 0 !important;
+}
+.productReviewsContainer .reviewGradient {
+    background: rgb(199,235,244);
+    background: linear-gradient(90deg, rgba(199,235,244,1) 0%, rgba(200,232,245,1) 50%, rgba(200,221,249,1) 100%);
+    border-radius: 20px;
+}
+.slideIt-container.reviewGradient {
+    height: 350px;
+}
+.featuredReviewBlock { 
+    width: 850px;
+    margin-top: 30px;
+}
+.reviewData .reviewBlockTip {
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -15px;
+    top: 135px;
+    transform: rotate(45deg);
+}
+.featuredReviewBlock .reviewImg {
+    background: #ffffff;
+    border-radius: 100px;
+    padding: 30px;
+    height: 225px;
+    border: #2484e3 5px solid;
+    display: inline-block;
+    width: 210px;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.featuredReviewBlock .reviewImg img {
+    margin-top: 30px;
+}
+.featuredReviewBlock .reviewData {
+    display: inline-block;
+    width: 610px;
+    margin-left: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+}
+.reviewData .reviewTitle {
+    color: #0b3360;
+    font-size: 20px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: normal;
+    overflow: hidden;
+}
+.reviewData .reviewWeightColor {
+    color: #ff7639;
+    font-size: 20px;
+}
+.reviewData .reviewContent {
+    width: 100%;
+    vertical-align: top;
+    white-space: normal;
+    margin: 10px 0 10px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.reviewData .reviewContent .fa-quote-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 12px;
+}
+.reviewData .reviewContent .fa-quote-right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 12px;
+}
+.reviewData .reviewContent p {
+    width: 90%;
+    margin: 0 auto;
+}
+.reviewData .reviewDate {
+    float: left;
+}
+.reviewData .reviewName {
+    float: right;
+}
+/* Results */
+.reviewBlock {
+    background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/reviewBlockBkgd?fmt=png-alpha&wid=443) no-repeat;
+    height: 662px;
+    display: inline-block;
+    width: 443px;
+    position: relative;
+    margin: 0 5px 5px;
+}
+.reviewBlock:first-child {
+    margin: 0 5px 5px 0;
+}
+.reviewBlock .reviewImg {
+    border-radius: 100px;
+    background: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 35px;
+    left: 127px;
+    height: 170px;
+    width: 175px;
+    border: #2484e3 3px solid;
+}
+.reviewBlock .reviewImg img {
+    margin: 15px 0 0;
+}
+.reviewBlock .reviewData {
+    background: #ffffff;
+    padding: 40px 25px;
+    width: 90%;
+    border-radius: 10px;
+    position: absolute;
+    top: 250px;
+    left: 22px;
+}
+.reviewBlock .reviewContactInfo {
+    height: 25px;
+}
+.reviewBlock .reviewShopNowBtn {
+    color: #ffffff;
+    background: #3dc9f8;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 25px;
+    left: 70px;
+}
+.reviewBlock .reviewBlockTip {
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 200px;
+    top: 235px;
+    transform: rotate(45deg);
+}

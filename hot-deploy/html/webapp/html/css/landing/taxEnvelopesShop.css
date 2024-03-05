@@ -1,0 +1,94 @@
+body > .content .section {
+	border: 0px;
+	background-color: #ffffff;
+}
+
+.taxEnvelopesShop p {
+	font-size: 16px;
+	font-weight: 200;
+}
+.taxEnvelopesShop .pageContent a {
+	color: inherit;
+	display: block;
+}
+.taxEnvelopesShop .pageHeader {
+	position: relative;
+	height: 88px;
+}
+	.taxEnvelopesShop .pageHeader h1 {
+		color: #7a8735;
+		font-weight: bold;
+		font-size: 35px;
+	}
+	.taxEnvelopesShop .pageHeader img {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+.taxEnvelopesShop .contentHeader1,
+.taxEnvelopesShop .contentHeader2 {
+	text-align: center;
+	color: #353535;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.taxEnvelopesShop .contentHeader1 {
+	font-size: 22px;
+}
+.taxEnvelopesShop .contentHeader2 {
+	font-size: 20px;
+}
+.taxEnvelopesShop .customPrintingBar,
+body > .content.taxEnvelopesShop .section.customPrintingBar {
+	background-color: #7a8735;
+	color: #ffffff;
+	font-size: 20px;
+	text-align: center;
+}
+.pageContent img {
+	display: block;
+	margin: 10px auto 0px auto;
+	bottom: 10px;
+	padding: 0px 20px;
+}
+.taxEnvelopesShop .twoCol,
+.taxEnvelopesShop .fourCol {
+	width: 100%;
+}
+.taxEnvelopesShop .twoCol:after,
+.taxEnvelopesShop .fourCol:after{
+	clear: both;
+	display: table;
+	content: " ";
+}
+	.taxEnvelopesShop .twoCol > *,
+	body > .content.taxEnvelopesShop .twoCol .section,
+	.taxEnvelopesShop .fourCol > *,
+	body > .content.taxEnvelopesShop .fourCol .section {
+		float: left;
+		margin: 20px 10px 0px 10px;
+	}
+.taxEnvelopesShop .twoCol > *,
+body > .content.taxEnvelopesShop .twoCol .section {
+	width: calc(50% - 20px);
+}
+.taxEnvelopesShop .fourCol > *,
+body > .content.taxEnvelopesShop .fourCol .section {
+	width: calc(25% - 20px);
+}
+
+@media only screen and (max-width: 767px) {
+	.taxEnvelopesShop .pageHeader {
+		height: auto;
+		text-align: center;
+	}
+		.taxEnvelopesShop .pageHeader img {
+			position: relative;
+		}
+	.taxEnvelopesShop .twoCol > *,
+	body > .content.taxEnvelopesShop .twoCol .section,
+	.taxEnvelopesShop .fourCol > *,
+	body > .content.taxEnvelopesShop .fourCol .section {
+		width: calc(100% - 20px);
+	}
+}

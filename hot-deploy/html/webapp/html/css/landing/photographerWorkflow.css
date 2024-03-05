@@ -1,0 +1,97 @@
+body > .content .photographerWorkflow {
+    max-width: 916px;
+    margin: 20px auto 0px auto;
+}
+	.photographerWorkflow .photographerWorkflowHeader {
+		background: url('/html/img/landing/photographerWorkflow/headerBackground.jpg');
+		padding: 30px;
+		width: 914px;
+		height: 378px;
+		color: #3e5c68;
+		font-size: 14px;
+	}
+		.photographerWorkflow .photographerWorkflowHeader > div {
+			background-color: #ffffff;
+			padding: 30px 35px;
+			width: 535px;
+			height: 318px;
+		}
+			.photographerWorkflowHeader .headerPart1 {
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.photographerWorkflowHeader .headerPart2 {
+				font-size: 24px;
+				line-height: 24px;
+				color: #1ba4e1;
+				font-weight: bold;
+			}
+			.photographerWorkflowHeader .headerPart3 {
+				font-weight: 200;
+			}
+				.photographerWorkflowHeader .headerPart3 span {
+					font-weight: bold;
+					display: block;
+				}
+			.photographerWorkflowHeader .headerPart4 {
+				display: block;
+			}
+				.photographerWorkflowHeader .headerPart4 a {
+					text-decoration: underline;
+				}
+
+	.photographerWorkflow .productList {
+		padding: 5px;
+		text-align: center;
+	}
+		.productList a {
+			text-align: center;
+			width: 291px;
+			height: 269px;
+			padding: 15px;
+			margin: 5px;
+			background: url('/html/img/landing/photographerWorkflow/productBackground.jpg');
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+		}
+			.productList p {
+				color: #ffffff;
+				line-height: 19px;
+			}
+				.productList p span {
+					color: #cba80c;
+					display: block;
+				}
+			.productList img {
+				margin-top: 15px;
+			}
+			.productList div {
+				border: 2px solid #1ba4e1;
+				width: 252px;
+				color: #ffffff;
+				text-transform: uppercase;
+				padding: 5px;
+				margin-top: 15px;
+				font-size: 18px;
+				position: absolute;
+				bottom: 17px;
+			}
+@media only screen and (max-width: 1023px) {
+	.photographerWorkflow .photographerWorkflowHeader {
+		padding: 15px;
+		background: none;
+		background-color: #2c2118;
+		width: 100%;
+		height: auto;
+	}
+		.photographerWorkflow .photographerWorkflowHeader > div {
+			padding: 10px;
+			width: 100%;
+			height: auto;
+		}
+			.photographerWorkflowHeader .headerPart2 {
+				font-size: 20px;
+				line-height: 20px;
+			}
+}

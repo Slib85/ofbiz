@@ -1,0 +1,352 @@
+.wedding-shop {
+	position: relative;
+	font-size: 15px;
+}
+	.wedding-shop .cpAvailableBar {
+		background-color: #83dce2 !important;
+		color: #ffffff;
+		font-size: 16px;
+	}
+		.cpAvailableBar > div {
+			padding: 10px 20px;
+		}
+		.cpAvailableBar .right {
+			cursor: pointer;
+		}
+			.cpAvailableBar > .right > span {
+				text-decoration: underline;
+			}
+	.wedding-shop h2 {
+		font-size: 30px;
+		line-height: 30px;
+		color: #000000;
+		font-weight: 200;
+		padding-bottom: 10px;
+	}
+	.wedding-shop .button {
+		margin: 0px;
+		padding: 10px 20px !important;
+	}
+	.wedding-shop a:hover {
+		text-decoration: underline;
+	}
+	.wedding-shop .background-left,
+	.wedding-shop .background-right {
+		z-index: 0;
+		position: absolute;
+		top: 0px;
+		width: 400px;
+		height: 100%;
+	}
+	.wedding-shop .background-left {
+		left: 0px;
+		background: url('/html/img/landing/wedding-shop/background-left.png') repeat-y;
+	}
+	.wedding-shop .background-right {
+		right: 0px;
+		background: url('/html/img/landing/wedding-shop/background-right.png') repeat-y;
+	}
+	.wedding-shop .m-ws-content {
+		border: 1px solid #e3d3c5;
+		max-width: 365px;
+		margin: auto;
+		background-color: #f7f8fa;
+		display: block;
+	}
+	.wedding-shop a.m-ws-content:hover {
+		text-decoration: none;
+	}
+		.wedding-shop .m-ws-content h2 {
+			font-size: 16px;
+			color: #0e1419;
+			padding: 10px;
+		}
+	.wedding-shop .wedding-shop-content {
+		position: relative;
+		z-index: 1;
+		margin: auto;
+	}
+		.wedding-shop .wedding-shop-content .banner {
+			overflow: hidden;
+		}
+			.wedding-shop .wedding-shop-content .banner-left {
+				position: absolute;
+				text-align: left;
+			}
+			.wedding-shop .wedding-shop-content .banner-right {
+				text-align: right;
+			}
+				.wedding-shop .wedding-shop-content .banner-right img {
+					max-width: none;
+				}
+		.wedding-shop .wedding-shop-content .section {
+			background-color: #f7f7f7;
+		}
+		.wedding-shop .wedding-shop-content .section .section-head {
+			position: relative;
+			text-align: left;
+			display: block;
+		}
+			.wedding-shop .wedding-shop-content .section h5 {
+				position: relative;
+				font-size: 18px;
+			}
+				.wedding-shop .wedding-shop-content .section a {
+					color: inherit;
+				}
+				.wedding-shop .wedding-shop-content .section h5 i {
+					font-size: 14px;
+				}
+			.wedding-shop .wedding-shop-content .section .section-head > a {
+				position: absolute;
+				right: 0px;
+				top: 4px;
+				font-size: 14px;
+				font-style: italic;
+			}
+			.genericPageHeader .section {
+				height: auto !important;
+				overflow: hidden;
+			}
+			.backgroundLeft {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.backgroundRight{
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.genericPageHeader .pageHeaderText h1 {
+				display: block;
+				font-size: 44px;
+				font-weight: 400;
+			}
+			.genericPageHeader .pageHeaderText h2 {
+				font-size: 18px;
+				margin-top: 0;
+				color: #000000;
+				margin-bottom: 10px;
+
+			}
+			.genericPageHeader .pageHeaderText {
+				display: block !important;
+				width: 62%;
+				margin: 0 14%;
+				position: relative !important;
+				text-align: center;
+			}
+			.genericPageHeader .nav3 {
+				height: auto !important;
+				text-align: center;
+			}
+			.nav3 {
+				margin-top: 0 !important;
+				border-top: none !important;
+			}
+			.nav3 .row div{
+				display: inline-block;
+				font-size: 16px;
+				margin: 0 15px 0 0;
+				padding: 8px 0;
+			}
+			.nav3 .row i {
+				color: #82dbe1;
+				padding-left: 5px;
+			}
+			.nav2 {
+				text-align: center;
+				margin-top: 20px;
+				background-color: #82dbe1 !important;
+				padding: 0 !important;
+			}
+			.nav2 a{
+				color: #ffffff !important;
+				display: inline-block;
+				width: 33%;
+				font-size: 16px;
+			}
+			.navBorder {
+				border-right: 1px solid #ffffff;
+			}
+			
+
+		/* BEGIN HEADERS */
+		.wedding-shop .wedding-shop-content .header-text-1 > p {
+			color: #000000;
+			font-size: 14px;
+			font-weight: 200;
+		}
+		.wedding-shop .wedding-shop-content .header-text-1 > div > div {
+			display: inline-block;
+			margin-right: 20px;
+			font-size: 14px;
+		}
+			.wedding-shop .wedding-shop-content .header-text-1 > div > div i {
+				color: #83DCE2;
+			}
+		.wedding-shop .wedding-shop-content .header-text-2 {
+			background-color: #5874c8;
+			color: #ffffff;
+		}
+		.wedding-shop .wedding-shop-content .header-text-2 > div {
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+		/* END HEADERS */
+		/* BEGIN CONTENT */
+		.wedding-shop .wedding-shop-content .contour-and-square-flap > div,
+		.wedding-shop .wedding-shop-content .printing-services > div,
+		.wedding-shop .wedding-shop-content .invitations-and-save-the-dates > div {
+			width: 50%;
+		}
+			.wedding-shop .wedding-shop-content .jqs-set .section > div.content-list {
+				-moz-column-count: auto;
+				-moz-column-gap: 0;
+				-webkit-column-count: auto;
+				-webkit-column-gap: 0;
+				column-count: auto;
+				column-gap: 0;
+			}
+				.wedding-shop .wedding-shop-content .jqs-set .section > div.content-list > div {
+					display: inline-block;
+					margin: 10px 5px 0px 5px;
+					vertical-align: top;
+				}
+		.wedding-shop .wedding-shop-content .diy-invitations > div {
+			display: inline-block;
+			width: 100%;
+		}
+			.wedding-shop .wedding-shop-content .diy-invitations > div > div {
+				vertical-align: top;
+				display: inline-block;
+				width: 25%;
+			}
+		.wedding-shop .wedding-shop-content .size-guide .slideIt-container {
+			height: 180px;
+		}
+		.wedding-shop .wedding-shop-content .color-guide .slideIt-container {
+			height: 205px;
+		}
+			.wedding-shop .wedding-shop-content .size-guide .size-guide-content,
+			.wedding-shop .wedding-shop-content .color-guide img {
+				width: 150px;
+			}
+			.wedding-shop .wedding-shop-content .size-guide .size-guide-content {
+				height: 150px;
+			}
+				.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div {
+					background-color: #f7f8fa;
+					display: table;
+					height: 100%;
+					width: 100%;
+					padding: 5px;
+				}
+					.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div > div {
+						display: table-cell;
+						vertical-align: middle;
+					}
+						.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div > div > a,
+						.wedding-shop .wedding-shop-content .color-guide a {
+							color: inherit;
+						}
+						.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div > div > a:hover {
+							text-decoration: underline;
+						}
+							.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div > div > a > span,
+							.wedding-shop .wedding-shop-content .color-guide a > span {
+								display: block;
+								font-size: 13px;
+								line-height: 20px;
+							}
+							.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div > div > a > span.guide-type {
+								font-weight: bold;
+							}
+							.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div > div > a > span.guide-size {
+								color: #009cdd;
+							}
+							.wedding-shop .wedding-shop-content .size-guide .size-guide-content > div > div > a > span.guide-colors {
+								font-style: italic;
+								color: #009cdd;
+							}
+				.wedding-shop .wedding-shop-content .size-guide .size-guide-content > span,
+				.wedding-shop .wedding-shop-content .color-guide .color-guide-content > span {
+					display: block;
+					font-size: 16px;
+					}
+		.wedding-shop .wedding-shop-content .other-wedding-envelopes > div {
+			width: 20%;
+		}
+		.wedding-shop .wedding-shop-content .glitterPaperAndEnvelopesContent img {
+			width: 200px;
+		}
+		/* END CONTENT */
+.cpAvailable {
+	position: absolute;
+	width: 600px;
+	margin: auto;
+	left: calc(50% - 300px);
+}
+	.cpAvailable .cpTextHead {
+		color: #01a3e6;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.cpAvailable .cpMainParagraph {
+		text-align: left;
+	}
+.backgroundWhite {
+	background-color: #ffffff !important;
+}
+@media only screen and (max-width: 1023px) {
+	.wedding-shop .wedding-shop-content .contour-and-square-flap > div,
+	.wedding-shop .wedding-shop-content .other-wedding-envelopes > div,
+	.wedding-shop .wedding-shop-content .printing-services > div,
+	.wedding-shop .wedding-shop-content .jqs-set > div {
+		display: block;
+		width: 100%;
+	}
+	.wedding-shop .wedding-shop-content .diy-invitations > div > div {
+		display: inline-block;
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.wedding-shop {
+		font-size: 10px;
+	}
+		.wedding-shop .background-left,
+		.wedding-shop .background-right {
+			display: none;
+		}
+		.wedding-shop .wedding-shop-content .content-body {
+			text-align: center;
+		}
+		.wedding-shop .wedding-shop-content .header-text-1 > span {
+			font-size: 15px;
+			text-align: center;
+			display: block;
+		}
+		.wedding-shop .wedding-shop-content .header-text-1 > div > div {
+			display: block;
+			text-align: center;
+			margin-right: 0px;
+			font-size: 14px;
+		}
+		.wedding-shop .wedding-shop-content .diy-invitations > div > div {
+			display: block;
+			width: 100%;
+		}
+		.wedding-shop .wedding-shop-content .fixed-header > div,
+		.wedding-shop .wedding-shop-content .header-text-2 > div {
+			font-size: 15px;
+			margin-bottom: 2px;
+		}
+	.cpAvailable {
+		width: 80%;
+		left: 50%;
+		margin-left: -40%;
+	}
+}

@@ -1,0 +1,91 @@
+.quickShipBenefits {
+    border: 1px solid #063b63;
+    width: calc(100% - 20px);
+    background-color: #ffffff;
+    margin: auto;
+    padding: 10px;
+}
+    .quickShipBenefits > div {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .quickShipBenefits i {
+        font-size: 38px;
+    }
+    .quickShipBenefits i,
+    .quickShipContainerContent .fa-bolt {
+        color: #ffb400;
+    }
+    .quickShipBenefits > div:nth-child(1) {
+        width: 22%;
+        border-right: 1px solid #dfdfdf;
+    }
+    .quickShipBenefits > div:nth-child(2) {
+        width: 26%;
+        border-right: 1px solid #dfdfdf;
+    }
+    .quickShipBenefits > div:nth-child(3) {
+        width: 34%;
+        border-right: 1px solid #dfdfdf;
+    }
+    .quickShipBenefits > div:nth-child(4) {
+        width: 18%;
+    }
+        .quickShipBenefits > div:nth-child(4) span {
+            position: relative;
+        }
+            .quickShipBenefits > div:nth-child(4) span .fa-dollar {
+                position: absolute;
+                font-size: 20px;
+                color: #ffffff;
+                top: -5px;
+                left: 14px;
+            }
+.quickShipContainerContent {
+    width: calc(100% - 20px);
+    margin: auto;
+}
+.quickShipContainerContent .shopNow {
+    width: 100%;
+    color: #ffffff;
+    max-width: 260px;
+}
+
+@media only screen and (max-width:1024px) {
+    .quickShipBenefits > div:nth-child(1) {
+        border-right: 1px solid #dfdfdf;
+        width: 50%;
+    }
+    .quickShipBenefits > div:nth-child(2) {
+        border-right: 0px;
+        width: 50%;
+    }
+    .quickShipBenefits > div:nth-child(3) {
+        border-right: 1px solid #dfdfdf;
+        border-top: 1px solid #dfdfdf;
+        width: 50%;
+    }
+    .quickShipBenefits > div:nth-child(4) {
+        border-top: 1px solid #dfdfdf;
+        width: 50%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .quickShipBenefits > div:nth-child(1) {
+        border-right: 0px;
+        width: 100%;
+    }
+    .quickShipBenefits > div:nth-child(2) {
+        border-top: 1px solid #dfdfdf;
+        width: 100%;
+    }
+    .quickShipBenefits > div:nth-child(3) {
+        border-right: 0px;
+        border-top: 1px solid #dfdfdf;
+        width: 100%;
+    }
+    .quickShipBenefits > div:nth-child(4) {
+        border-top: 1px solid #dfdfdf;
+        width: 100%;
+    }
+}

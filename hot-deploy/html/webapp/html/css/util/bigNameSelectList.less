@@ -1,0 +1,101 @@
+.selectListParent {
+	border: 1px @standardBorderColor;
+	height: 86px;
+	position: relative;
+	border: 1px solid #dadada;
+	border-right: 86px solid #dadada;
+	padding: 5px;
+	margin: 5px 0px;
+}
+.selectListParent.selectListSmall {
+	height: 56px;
+	border-right: 56px solid #dadada;
+}
+.selectListItem {
+	border: 1px solid transparent;
+	padding: 4px;
+}
+.selectListItem:nth-child(even) {
+	background-color: @lightGray;
+}
+.selectListParent,
+.selectListItem {
+	cursor: pointer;
+}
+.selectListParent[data-dropdown-active],
+.selectListDropDown,
+.selectListParent:hover {
+	border-color: #76cf49;
+}
+.selectListDropDown {
+	max-height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+	.selectListItem.slSelected,
+	.selectListItem:hover {
+		border: 1px solid #063b63;
+	}
+	.selectListParent > div,
+	.selectListItem > div {
+		display: table;
+		height: 100%;
+	}
+		.selectListParent > div > *,
+		.selectListItem > div > *{
+			vertical-align: middle;
+			display: table-cell;
+			padding: 5px;
+		}
+		.selectListParent > div > img,
+		.selectListItem > div > img {
+			padding: 0px;
+		}
+		.selectListParent > div > *:first-child,
+		.selectListItem > div > *:first-child {
+		}
+			.selectListParent > div > * > *,
+			.selectListItem > div > * > * {
+				float: left;
+				margin-left: 10px;
+			}
+			.selectListParent > div > * > *:first-child,
+			.selectListItem > div > * > *:first-child {
+				margin-left: 0px;
+			}
+			.selectListParent > div > *:first-child > *:first-child,
+			.selectListItem > div > *:first-child > *:first-child {
+				margin-left: 0px;
+			}
+		.selectListParent img.itemImage
+		.selectListItem > div > * > * {
+			border: 1px solid #000000;
+		}
+	.selectListParent i.fa-caret-down {
+		position: absolute;
+		right: -56px;
+		top: 16px;
+		color: #ffffff;
+		font-size: 50px;
+	}
+	.selectListParent.selectListSmall i.fa-caret-down {
+		right: -40px;
+		top: 7px;
+		font-size: 40px;
+	}
+@media only screen and (max-width: 767px) {
+	.selectListParent {
+		border-right: 56px solid #dadada;
+	}
+	.selectListDropDown {
+		max-height: 250px;
+	}
+		.selectListParent > div > * > * {
+			float: none;
+			display: block;
+			margin-left: 0px;
+		}
+		.selectListParent i.fa-caret-down {
+			right: -36px;
+		}
+}

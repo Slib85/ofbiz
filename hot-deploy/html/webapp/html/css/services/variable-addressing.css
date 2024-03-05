@@ -1,0 +1,424 @@
+.variable-addressing .section .addressing-title h1 {
+	font-size: 30px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.variable-addressing .section .addressing-title h2 {
+	font-size: 18px;
+	color: #000000;
+	font-weight: 200;
+	font-weight: bold;
+}
+
+.section {
+	border: 1px solid #f2f2f2 !important;
+}
+
+.whiteBannerBar {
+	background-color: #ffffff;
+	width: 100%;
+	height: 72px;
+	position: absolute;
+	top: 35%;
+	opacity: .8;
+}
+
+.banner {
+	position: relative;
+	min-height: 200px;
+	background: url('//actionenvelope.scene7.com/is/image/ActionEnvelope/addressingBackground?fmt=jpg&amp;wid=1239&amp;ts=1');
+	text-align: center;
+}
+
+.variable-addressing .section .addressing-info {
+	display: table;
+	width: 100%;
+}
+	.variable-addressing .section .addressing-info .info-steps {
+		display: table-cell;
+		font-size: 15px;
+		line-height: 24px;
+	}
+		.variable-addressing .section .addressing-info .info-steps span,
+		.variable-addressing .section .addressing-info .info-steps h3 {
+			font-weight: bold;
+			color: #030303;
+			font-size: 15px;
+		}
+	.variable-addressing .section .addressing-info .info-pricing {
+		display: table-cell;
+		vertical-align: top;
+		width: 500px;
+	}
+		.variable-addressing .section .addressing-info .price-calculator,
+		.variable-addressing .section .addressing-info .price-guide {
+			width: 500px;
+			color: #ffffff;
+			font-size: 18px;
+		}
+		.variable-addressing .section .addressing-info .price-calculator div {
+			background-color: #7fd1f1;
+		}
+		.variable-addressing .section .addressing-info .price-calculator div:first-child,
+		.variable-addressing .section .addressing-info .price-guide div{
+			background-color: #00a4e4;
+		}
+			.variable-addressing .section .price-guide .guide-info:after,
+			.variable-addressing .section .price-calculator > div:after {
+				content: " ";
+				clear: both;
+				display: table;
+			}
+			.variable-addressing .section .price-guide .guide-info:nth-child(odd) {
+				background-color: #7fd1f1;
+			}
+			.variable-addressing .section .price-guide .guide-info:nth-child(even) {
+				background-color: #99dbf4;
+			}
+				.variable-addressing .section .price-guide .guide-info .addressing-amount,
+				.variable-addressing .section .price-calculator .addressing-amount {
+					float: left;
+					width: 225px;
+					border-right: 1px solid #c7eeff;
+					padding: 15px;
+				}
+				.variable-addressing .section .price-guide .guide-info .price-per-address,
+				.variable-addressing .section .price-calculator .total-price-per-address {
+					float: left;
+					display: inline-block;
+					width: 275px;
+					font-weight: 200;
+					padding: 15px;
+				}
+				.variable-addressing .section .price-calculator .total-price-per-address {
+					position: relative;
+					top: 6px;
+				}
+
+.info-steps h2{
+	font-size: 32px;
+	color: #00a4e4;
+}
+
+.light-weight{
+	color: #404040;
+	padding: 15px 25px;
+}
+
+.light-weight i, .light-weight p, .light-weight span {
+	display: inline-block;
+}
+
+.light-weight i{
+	font-size: 60px;
+	color: #8d8b8b;
+	margin-bottom: 15px;
+	vertical-align: middle;
+}
+
+.light-weight span, .light-weight p{
+	font-size: 18px !important;
+}
+
+.light-weight span{
+	margin-left: 15px;
+}
+
+.light-weight p{
+	margin-left: 5px;
+}
+
+.addressing-amount input {
+	font-weight: normal;
+	font-size: 16px;
+	text-align: center;
+	color: red;
+	background-color: #ffffff;
+}
+
+.tableHeader{
+	font-size: 20px;
+	padding: 15px;
+}
+
+.addressingTemplate {
+	margin-top: 25px;
+	border: 2px solid black;
+	text-align: center;
+	width: 500px;
+	padding: 25px;
+}
+
+.addressingTemplate h2{
+	font-size: 22px;
+}
+
+.addressingTemplate h2, .addressingTemplate a{
+	display: inline-block;
+}
+
+.addressingTemplate div{
+	color: #00a4e4;
+	font-weight: bold;
+}
+
+.addressingTemplate div h2{
+	font-size: 24px;
+}
+
+.addressingTemplate a{
+	text-decoration: underline;
+	font-size: 23px;
+}
+
+.header-video {
+	width: 600px;
+	background-color: #f1f1f1;
+	display: table;
+	margin: 0 25px;
+}
+
+.video-container {
+	width: 325px;
+	display: table-cell;
+}
+
+.videoText{
+	width: auto;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.videoText p{
+	font-size: 26px;
+	padding: 0 35px;
+}
+
+.videoText span{
+	color: #ff6e42 !important;
+	font-size: 28px !important;
+}
+
+.header-video iframe{
+	padding: 10px;
+}
+
+.shop{
+	display: table;
+	width: 100%;
+}
+
+.getStarted {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 25px;
+	display: table;
+}
+
+.getStarted hr{
+	width: auto;
+	vertical-align: top;
+	display: table-cell;
+}
+.getStarted h3{
+	padding: 0 15px;
+	display: table-cell;
+	width: 245px;
+	line-height: 0;
+}
+.shopButtons .button {
+	text-transform: none !important;
+	font-weight: bold;
+	padding: 20px 0px !important;
+	margin-left: 1%;
+	font-size: 18px;
+	width: 24%;
+	color: #ffffff;
+}
+.shopButtons .button:first-child {
+	margin-left: 0px;
+}
+
+@media only screen and (max-width: 1520px) {
+	.variable-addressing .section .addressing-info {
+		display: block;
+	}
+	.info-pricing{
+		display: block !important;
+		width: 100% !important;
+		margin: 25px;
+	}
+}
+
+@media only screen and (max-width: 1250px) {
+	.shopButtons .button:nth-child(3) {
+		margin-left: 0px;
+	}
+
+	.shopButtons .button {
+		width: 49% !important;
+	}
+
+	
+}
+
+@media only screen and (max-width: 1023px) {
+	.variable-addressing .section .addressing-info .info-steps {
+		padding: 0 0 0 20px;
+	}
+	.info-pricing {
+		margin: 25px 50px;
+	}
+	#step5{
+		width: 60%;
+		vertical-align: bottom;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    .light-weight i, .light-weight p, .light-weight span {
+		display: block;
+	}       
+
+	.light-weight{
+		text-align: center;
+	}
+
+     .info-steps {
+     	display: block;
+     	text-align: center;
+     }
+
+     .info-steps h2{
+     	font-size: 30px;
+     }
+
+	.getStarted hr{
+		display: none;
+	}
+
+	.getStarted h3{
+		margin-bottom: 15px;
+	}
+
+	.shopButtons .button{
+		display: block;
+		width: 80%;
+		margin: 10px auto;
+	}
+
+	.header-video{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.video-container {
+		width: 100%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.videoText{
+		width: 100%;
+		display: block;
+	}
+
+	#step5 {
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.shopButtons .button:first-child , .shopButtons .button:nth-child(3){
+		margin: auto;
+	}
+
+	.videoText span{
+		font-size: 26px !important;
+	}
+
+	.videoText p{
+		font-size: 24px;
+	}
+
+	.getStarted {
+		display: none !important;
+	}
+
+	.shopButtons {
+		display: none !important;
+	}
+
+	.mobileBanner {
+		width: 100%;
+	}
+
+	.info-pricing {
+		margin: 25px 0 !important;
+		padding: 0 0 0 20px;
+	}
+
+	.price-calculator, .price-guide {
+		width: 90% !important;
+		margin: 0 auto;
+	}
+
+	.variable-addressing .section .price-guide .guide-info .addressing-amount,
+	.variable-addressing .section .price-calculator .addressing-amount {
+		width: 40% !important;
+	}
+
+	.variable-addressing .section .price-guide .guide-info .price-per-address,
+	.variable-addressing .section .price-calculator .total-price-per-address {
+		width: 60% !important;
+	}
+
+	.addressing-amount input {
+		font-size: 14px !important;
+	}
+
+	.addressingTemplate{
+		margin: 25px auto !important;
+		width: 90%;
+	}
+	
+}
+
+@media only screen and (max-width: 480px) {
+	.light-weight {
+		width: 70%;
+		margin: 0 15%;
+	}
+
+	.info-steps{
+		padding: 0 !important;
+	}
+
+	.info-steps h2{
+		font-size: 28px;
+	}
+
+	.info-pricing {
+		padding: 0;
+	}
+
+	.addressing-amount input {
+		font-size: 12px !important;
+	}
+
+	input[type=text] {
+		padding: 6px !important;
+	}
+
+	.variable-addressing .section .price-guide .guide-info .addressing-amount,
+	.variable-addressing .section .price-calculator .addressing-amount {
+		width: 42% !important;
+	}
+
+	.variable-addressing .section .price-guide .guide-info .price-per-address,
+	.variable-addressing .section .price-calculator .total-price-per-address {
+		width: 58% !important;
+	}
+
+	
+}

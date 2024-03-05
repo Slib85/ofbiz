@@ -1,0 +1,10 @@
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Marketplace Services</description>
+    <vendor>Envelopes.com</vendor>
+    <version>1.0</version>
+
+    <service name="createOrder" engine="java" auth="false" transaction-timeout="30" max-retry="2" location="com.bigname.marketplace.MarketplaceServices" invoke="createMarketplaceOrder">
+        <description>Send email notification</description>
+        <attribute name="bignameOrderId" type="String" mode="IN" optional="false" />
+    </service>
+</services>

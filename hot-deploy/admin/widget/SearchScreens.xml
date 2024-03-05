@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="searchSettings">
+		<section>
+			<actions>
+				<set field="screenGroup" value="search"/>
+				<set field="screenTitle" value="Update Search Settings"/>
+				<set field="titleProperty" value="Create &amp; Update Search Settings"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/search/settings.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/search/settings.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="createSynonym">
+		<section>
+			<actions>
+				<set field="screenGroup" value="search"/>
+				<set field="screenTitle" value="Create Synonyms"/>
+				<set field="titleProperty" value="Create &amp; Manage Synonyms"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/search/synonyms.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/search/synonyms.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="createRedirect">
+		<section>
+			<actions>
+				<set field="screenGroup" value="search"/>
+				<set field="screenTitle" value="Create Redirects"/>
+				<set field="titleProperty" value="Create &amp; Manage Redirects"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/search/redirects.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/search/redirects.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="createBanner">
+		<section>
+			<actions>
+				<set field="screenGroup" value="search"/>
+				<set field="screenTitle" value="Create Banners"/>
+				<set field="titleProperty" value="Create &amp; Manage Banners"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/search/banners.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/search/banners.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+	<screen name="createTunedResult">
+		<section>
+			<actions>
+				<set field="screenGroup" value="search"/>
+				<set field="screenTitle" value="Tune Results"/>
+				<set field="titleProperty" value="Tune Search Results"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/search/tuneresults.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/search/tuneresults.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="createSearchPage">
+		<section>
+			<actions>
+				<set field="screenGroup" value="search"/>
+				<set field="screenTitle" value="Landing Pages"/>
+				<set field="titleProperty" value="Landing Pages"/>
+				<script location="component://admin/webapp/admin/WEB-INF/actions/search/pages.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://admin/webapp/admin/search/pages.ftl"/></html></platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

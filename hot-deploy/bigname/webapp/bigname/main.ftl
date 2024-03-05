@@ -1,0 +1,1 @@
+<img class="logo" src="<@ofbizContentUrl>/html/img/logo/bigNameBlack.png</@ofbizContentUrl>" alt="BigName.com" title="BigName.com" />

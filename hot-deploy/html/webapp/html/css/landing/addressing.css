@@ -1,0 +1,118 @@
+.addressing {
+	color:#032642;
+	font:normal 10px 'Open Sans', sans-serif;
+	text-align:center;
+}
+
+.addressing > .title {
+	font-size:60px;
+	font-weight:700;
+	line-height:60px;
+	padding-top:30px;
+	text-transform:uppercase;
+}
+
+.addressing .subtitle {
+	font-size: 30px;
+	line-height: 30px;
+	width: 100%;
+	font-weight: 700;
+	padding: 10px 0 30px 0;
+}
+
+.addressing > .caption {
+	font-size:16px;
+	font-weight:700;
+	line-height:22px;
+	padding:20px 0 10px;
+	text-transform:uppercase;
+}
+
+.addressing .highlight {
+	background:#032642;
+	color:#fff;
+}
+
+.addressing .hrsmall{
+	width:50%;
+}
+
+.addressing .hrmini{
+	width:25%;
+	margin-bottom: 0px;
+	height:20px;
+}
+
+.addressing .step > .name {
+	display:block;
+	font-size:30px;
+	height:35px;
+	line-height:35px;
+	margin:40px auto 0;
+	width:125px;
+	text-transform: uppercase;
+}
+
+.addressing .step > .name > span {
+	font-size:20px;
+	font-weight:bolder;
+}
+
+.addressing .step > .content {
+	font-size:16px;
+	padding:20px 0;
+}
+
+.addressing .step > .content > span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.addressing img.screenshot {
+	border: 0;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.addressing .desc{
+	font-size: 12px;
+	text-align: left;
+	display: table;
+	height: 60px;
+}
+
+.addressing .desc > span{
+	display:table-cell;
+	vertical-align:middle;
+	font-weight: 700;
+}
+
+.addressing .pricing{
+	background-color: #0b91be;
+	margin-top: 20px;
+	font-size:16px;
+	color:#fff;
+	padding: 50px 30px;
+	line-height: 28px;
+	font-weight: 700;
+}
+
+.addressing #get-started{
+	width: 500px;
+	height: 70px;
+	padding: 20px;
+}
+
+.addressing #get-started > a{
+	color: #fff;
+	display: table;
+	margin: 0 auto;
+	text-decoration: none;
+}
+.addressing #get-started > a > i{
+	padding-left: 10px;
+	font-size: 18px;
+	display:table-cell;
+	vertical-align:middle;
+}

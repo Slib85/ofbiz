@@ -1,0 +1,1798 @@
+.main {
+	background-color: #f1f1f1;
+}
+	.main .popularSizesContainer {
+		height: 1765px;
+	}
+		.main .popularSizesContainer .sizesLink {
+			display: block;
+			margin-top: 10px;
+			text-align: center;
+		}
+	.main .clearanceStarburst {
+		position: absolute;
+		background-color: #dc3a3a;
+		padding: 5px;
+		text-transform: uppercase;
+		color: #ffffff;
+		font-size: 23px;
+		transform: rotate(-1deg);
+		top: 66px;
+		left: 24px;
+	}
+	.main.content .section {
+		border: 0px;
+	}
+	.main .mobile_offers {
+		background-color: #00A3E4;
+		color: #ffffff;
+		font-size: 12px;
+		padding: 5px;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.main .slideIt-left,
+	.main .slideIt-right {
+		position: relative;
+	}
+		.main .slideIt-left > i,
+		.main .slideIt-right > i {
+			position: absolute;
+			top: 44px;
+			left: 10px;
+			font-size: 24px;
+		}
+		.main .double-row .slideIt-left > i,
+		.main .double-row .slideIt-right > i {
+			top: 144px;
+		}
+	.main .orbit-timer {
+		display: none;
+	}
+	.main .content-row,
+	.main .content-bottom-row {
+		width: 95%;
+	}
+	.main .content-bottom-row a:hover {
+		text-decoration: underline;
+	}
+	.main .content-row {
+		background-color: #f7f8fa;
+		margin: auto;
+	}
+		.main .content-row .calloutParagraph {
+			display: table-cell;
+			width: 174px;
+			height: 180px;
+			overflow: auto;
+		}
+			.main .content-row .calloutParagraph h3 {
+				color: #4dbae1;
+				font-size: 24pt;
+				font-weight: 300;
+				margin: 0px;
+				padding: 0px;
+				vertical-align: top;
+			}
+		.main .content-row .textParagraph {
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			text-align: center;
+		}
+			.main .content-row .textParagraph p {
+				font-size: 13px;
+				line-height: 19px;
+				text-align: justify;
+				padding-bottom: 10px;
+			}
+			.main .content-row .textParagraph h6 {
+				font-size: 16px;
+			    position: relative;
+			    text-align: center;
+			    text-transform: uppercase;
+			    font-weight: bold;
+			    display: inline-block;
+			    padding: 0 15px 5px;
+			    background-color: #F7F8FA;
+			    z-index: 1;
+			}
+			.main .content-row .textParagraph .line {
+			    border-top: solid 1px #d6d6d6;
+			    text-align: center;
+			    z-index: 0;
+			    top: -16px;
+			    position: relative;
+			    left: 0;
+			    right: 0;
+			}
+		.main .content-row .head,
+		.main .content_left .head,
+		.main .content_right .head {
+			font-size: 16px;
+			color: #000000;
+		}
+		.main .orbit-slides-container {
+			border-top: 1px solid #F1F1F1;
+		}
+		.main .orbit-bullets-container {
+			position: relative;
+			top: -20px;
+		}
+			.orbit-bullets {
+				margin-bottom: 0px;
+			}
+		.main .temp-image {
+			background: url("/html/img/home/banners/background/welcome_to_new_and_improved.jpg") repeat;
+		}
+		.main .banner [data-reveal-id] {
+			cursor: pointer;
+		}
+			.main .banner .banner-image {
+				background-color: #51bec1;
+				text-align: center;
+			}
+				.main .banner .banner-image img {
+					display: block;
+					margin: auto;
+				/*	width: 100%;
+					max-width: 1024px !important;*/
+				}
+			.main .banner .banner-image-env {
+				background: url('//actionenvelope.scene7.com/is/image/ActionEnvelope/p_hp-holiday_shop-bg?wid=496') repeat-x;
+			}
+				.main .banner .banner-text span {
+					font-weight: bold;
+				}
+			.main .content-row .slideIt-container {
+				height: 150px;
+			}
+			.main .content-row.double-row .slideIt-container {
+				height: 350px;
+			}
+				.main .content-row .slideIt-container a {
+					display: block;
+					width: 175px;
+					position: relative;
+				}
+				.main .content-row .slideIt-container a:hover {
+					text-decoration: underline;
+				}
+					.main .content-row .slideIt-container img {
+						width: 150px;
+					}
+			.main .content-row .slideIt-container a:nth-child(even) {
+				margin-top: 60px;
+			}
+				.main .sizes > div {
+					margin-top: 13px;
+				}
+					.main .sizes .shopBySizeBackground {
+						width: 120px;
+						margin: auto;
+						background-color: #ffffff;
+						border: 1px solid #cfd1d3;
+					}
+					.main .sizes .shopBySizeBlock {
+						display: table-cell;
+						height: 123px;
+						width: 150px;
+						padding: 5px;
+						vertical-align: middle;
+					}
+						.main .sizes .type {
+							font-size: 33px;
+							color: #009cdd;
+							line-height: 40px;
+						}
+						.main .sizes .size {
+							font-size: 12px;
+							color: #858d93;
+							line-height: 20px;
+						}
+						.main .sizes .envelopes {
+							font-size: 16px;
+							color: #009cdd;
+							line-height: 16px;
+						}
+						.main .sizes .colors {
+							font-size: 12px;
+							color: #f67432;
+							line-height: 14px;
+						}
+	.main .services_list_flex {
+		display: flex;
+		display: -webkit-flex;
+		flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+		justify-content: space-around;
+		-webkit-justify-content: space-around;
+	}
+		.main .services_list > div,
+		.main .services_list_flex > div {
+			margin: 5px;
+		}
+
+	.main .content_right,
+	.main .content_left {
+		width: 250px;
+	}
+		.main .content_right .services,
+		.main .content_right .top_rated_products {
+			width: 230px;
+		}
+		.main .content_right .services {
+			font-size: 16px;
+			outline: 2px solid #00008f;
+		}
+			.main .content_right .services a {
+				padding-left: 5px;
+				margin: 4px 0px;
+				font-size: 16px;
+				display: block;
+			}
+			.main .content_right .services a:hover {
+				text-decoration: underline;
+			}
+		.main .content_right .top_rated_products {
+			height: 780px;
+			padding: 0 20px 20px;
+		}
+			.main .content_right .top_rated_products .trp-body {
+				padding: 5px 0px 0px 5px;
+			}
+				.main .content_right .top_rated_products .trp-body img {
+					display: inline-block;
+				}
+			.main .content_right .top_rated_products .trp-rating {
+				padding-left: 5px;
+			}
+				.main .content_right .top_rated_products .trp-rating div {
+					font-size: 12px !important;
+					width: 80px;
+				}
+			.main .content_right .top_rated_products .trp-end {
+				text-align: right;
+				text-transform: uppercase;
+				padding: 31px 0px 0px 5px;
+			}
+			.main .content_right .top_rated_products .trp-name,
+			.main .content_right .top_rated_products .trp-color {
+				font-size: 12px;
+				margin-bottom: 0px;
+				padding-left: 5px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			.main .content_right .top_rated_products .trp-name {
+				padding: 2px;
+				margin-bottom: 12px;
+				text-align: center;
+			}
+.main .mobileHeaderContentRow > div:first-child {
+	padding-right: 5px !important;
+}
+.main .mobileHeaderContentRow > div:last-child {
+	padding-left: 5px !important;
+}
+	.main .mobileHeaderContentRow a {
+		background-color: #ffffff;
+		display: block;
+	}
+.main .content-full .customer-reviews {
+	/*width: 330px;*/
+}
+	.main .content-full .customer-reviews .review {
+		width: 350px;
+		margin: 0 20px 0 20px;
+	}
+	.main .content-full .customer-reviews .slideIt-container{
+		height: 225px;
+	}
+	.main .content-full .customer-reviews .cr-header {
+		display: table;
+		padding-bottom: 10px;
+	}
+		.main .content-full .customer-reviews .cr-img {
+			display: table-cell;
+			width: 60px;
+			vertical-align: middle;
+		}
+			.main .content-full .customer-reviews .cr-img img {
+				max-width: 60px;
+				max-height: 104px;
+			}
+		.main .content-full .customer-reviews .cr-header-right {
+			display: table-cell;
+			width: 220px;
+			vertical-align: bottom;
+		}
+			.main .content-full .customer-reviews .rating-5_0{
+				margin-left: 20px;
+			}
+			.main .content-full .customer-reviews .cr-product {
+				font-size: 12px;
+				padding: 0px 20px;
+			}.main .content-full .customer-reviews .cr-color {
+				font-size: 11px;
+				padding: 0px 20px;
+			}
+	.main .content-full .customer-reviews .cr-review {
+		width: 100%;
+		vertical-align: top;
+		white-space: normal;
+		margin: 8px 0 10px;
+		height: 100px;
+		overflow: hidden;
+		position: relative;
+	}
+		.main .content-full .customer-reviews .cr-review i.fa-quote-right {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+		}
+		.main .content-full .customer-reviews .cr-review i.fa-quote-left {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		.main .content-full .customer-reviews .cr-review p {
+			padding: 0 25px;
+			overflow: hidden;
+		}
+	.main .content-full .customer-reviews .cr-date {
+		max-width: 310px;
+		width: 80px;
+		font-size: 12px;
+		white-space: normal;
+		text-align: right;
+		display: table-cell;
+	}
+	.main .content-full .customer-reviews .cr-date p {
+		font-size: 12px;
+	}
+	.main .content-full .customer-reviews .cr-author {
+		max-width: 310px;
+		width: 200px;
+		font-size: 12px;
+		white-space: normal;
+		text-align: right;
+		display: table-cell;
+	}
+	.main .content-full .customer-reviews .cr-author p {
+		font-size: 12px;
+	}
+	.main .templateListContainer .slideIt {
+		height: 190px;
+	}
+		.main .templateListContainer .slideIt .templateColumn {
+			width: 175px;
+		}
+			.main .templateListContainer .slideIt .templateColumn img {
+				background-color: #ffffff;
+			}
+		.main .templateListContainer .slideIt-left > i,
+		.main .templateListContainer .slideIt-right > i {
+			top: 80px;
+		}
+.starburstHolidayClearance {
+	color: #ffffff;
+	background-color: #ff0000;
+	text-align: center;
+	position: absolute;
+	padding: 10px;
+	top: 0px;
+	left: 0px;
+	width: 54px;
+	height: 54px;
+	border-radius: 27px;
+	line-height: 16px;
+}
+
+.topPrintedProduct {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/9x12OpenEndEnvelopes?fmt=png-alpha&hei=216) #f9fafe;
+	height: 216px;
+	width: 228px;
+	margin: 0 auto 15px;
+}
+
+@media only screen and (min-width: 1023px) {
+	.services_list .tablet-desktop-only {
+		display: inline-block !important;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.main .banner .banner-image-env {
+	}
+}
+@media only screen and (max-width: 767px) {
+	.main .section {
+		margin: 20px 0px 0px 0px !important;
+	}
+	.main .clearanceStarburst {
+		top: 37px;
+		left: 10px;
+	}
+	.main .content-row .head {
+		text-align: center;
+	}
+	.main .banner .banner-text {
+		font-size: 12px;
+		padding: 5px 0px;
+	}
+	.main .slideIt-left,
+	.main .slideIt-right {
+		width: 20px;
+		min-width: 20px;
+	}
+		.main .content-row .slideIt-left > i,
+		.main .content-row .slideIt-right > i {
+			top: 26px;
+			left: 5px;
+		}
+		.main .double-row .slideIt-left > i,
+		.main .double-row .slideIt-right > i {
+			top: 86px;
+			left: 5px;
+		}
+	.main .content-row .slideIt-container a {
+		width: 105px;
+	}
+	.main .content-row .slideIt-container a:nth-child(even) {
+		margin-top: 30px;
+	}
+		.main .content-row .slideIt-container a > div {
+			font-size: 12px;
+		}
+	.main .content-row .slideIt-container img {
+		width: 100%;
+		max-width: 105px;
+	}
+	.main .content-row .slideIt-container {
+		height: 145px;
+	}
+	.main .content-row.double-row .slideIt-container {
+		height: 240px;
+	}
+	.main .content-row .sizes > div > a > div {
+		width: 105px;
+	}
+	.main .content-row .sizes > div > a > div > div {
+		height: 103px;
+		width: 105px;
+		padding: 3px;
+	}
+		.main .content-row .sizes .type {
+			font-size: 25px;
+			line-height: 25px;
+		}
+		.main .content-row .sizes .size {
+			font-size: 11px;
+			line-height: 16px;
+		}
+		.main .content-row .sizes .envelopes {
+			font-size: 16px;
+			line-height: 16px;
+		}
+		.main .content-row .sizes .colors {
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+	.main .content-full .customer-reviews .review {
+		width: 210px;
+		margin: 0 20px;
+	}
+	.main .content-full .customer-reviews .cr-review {
+		height: 10.5em;
+	}
+		.main .content-full .customer-reviews .cr-date {
+			display: none;
+		}
+		.main .content-full .customer-reviews .cr-author {
+			width: 100%;
+			display: block;
+		}
+	.main .content-full .customer-reviews .slideIt-container{
+		height: 315px;
+	}
+	.main .content-full .customer-reviews .slideIt-left > i,
+	.main .content-full .customer-reviews .slideIt-right > i {
+		top: 96px;
+	}
+	.main .content-full .customer-reviews .cr-header {
+		display: block;
+		padding-bottom: 5px;
+	}
+		.main .content-full .customer-reviews .cr-img {
+			display: block;
+			width: auto;
+			vertical-align: middle;
+		}
+			.main .content-full .customer-reviews .cr-img img {
+				max-width: 75px;
+				max-height: 104px;
+			}
+		.main .content-full .customer-reviews .cr-header-right {
+			display: block;
+			width: 220px;
+			vertical-align: bottom;
+		}
+			.main .content-full .customer-reviews .rating-5_0{
+				margin-left: 0px;
+			}
+			.main .content-full .customer-reviews .cr-product {
+				font-size: 12px;
+				padding: 0px 0px;
+			}
+			.main .content-full .customer-reviews .cr-color {
+				 font-size: 11px;
+				 padding: 0px 0px;
+			}
+	.main .colorContainer img {
+		max-width: 75px !important;
+	}
+	.services_list .mobile-only {
+		display: inline-block !important;
+	}	
+}
+
+
+
+
+
+[class^="sprite-"] {
+    background-image: url(/html/img/sprites/main.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-1801-WH02 {
+    width: 104px;
+    height: 93px;
+    background-position: 0 0;
+}
+
+.sprite-INVDW-28BK {
+    width: 104px;
+    height: 93px;
+    background-position: -104px 0;
+}
+
+.sprite-LUX-PF-12 {
+    width: 104px;
+    height: 93px;
+    background-position: -208px 0;
+}
+
+.sprite-7489-W2 {
+    width: 104px;
+    height: 93px;
+    background-position: -312px 0;
+}
+
+.sprite-LUX-1590-103 {
+    width: 104px;
+    height: 93px;
+    background-position: -416px 0;
+}
+
+.sprite-FLWH4260-04 {
+    width: 104px;
+    height: 93px;
+    background-position: -520px 0;
+}
+
+.sprite-4995-GB {
+    width: 104px;
+    height: 93px;
+    background-position: -624px 0;
+}
+
+.sprite-45161 {
+    width: 104px;
+    height: 93px;
+    background-position: -728px 0;
+}
+
+.sprite-p_hp-512coins {
+    width: 150px;
+    height: 100px;
+    background-position: -832px 0;
+}
+
+.sprite-p_hp-9x12_Open_End_Window {
+    width: 150px;
+    height: 100px;
+    background-position: -982px 0;
+}
+
+.sprite-p_hp-announcement_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -100px;
+}
+
+.sprite-p_hp-baronialEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -100px;
+}
+
+.sprite-p_hp-baronial_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -100px;
+}
+
+.sprite-p_hp-booklet {
+    width: 150px;
+    height: 100px;
+    background-position: -450px -100px;
+}
+
+.sprite-p_hp-brights {
+    width: 150px;
+    height: 100px;
+    background-position: -600px -100px;
+}
+
+.sprite-p_hp-business {
+    width: 150px;
+    height: 100px;
+    background-position: -750px -100px;
+}
+
+.sprite-p_hp-cardstock {
+    width: 150px;
+    height: 100px;
+    background-position: -900px -100px;
+}
+
+.sprite-p_hp-coinEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -200px;
+}
+
+.sprite-p_hp-coin_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -200px;
+}
+
+.sprite-p_hp-coloredPaperBoardMailers {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -200px;
+}
+
+.sprite-p_hp-colorful_10 {
+    width: 340px;
+    height: 95px;
+    background-position: -450px -200px;
+}
+
+.sprite-p_hp-contour {
+    width: 150px;
+    height: 100px;
+    background-position: -790px -200px;
+}
+
+.sprite-p_hp-contourFlapEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -940px -200px;
+}
+
+.sprite-p_hp-contourFlapEnvelopes2 {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -300px;
+}
+
+.sprite-p_hp-cottonCollection {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -300px;
+}
+
+.sprite-p_hp-cotton_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -300px;
+}
+
+.sprite-p_hp-credit_card_sleeves {
+    width: 150px;
+    height: 100px;
+    background-position: -450px -300px;
+}
+
+.sprite-p_hp-crystal_clear_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -600px -300px;
+}
+
+.sprite-p_hp-currency {
+    width: 150px;
+    height: 100px;
+    background-position: -750px -300px;
+}
+
+.sprite-p_hp-currencyEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -900px -300px;
+}
+
+.sprite-p_hp-envelopeLiners {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -400px;
+}
+
+.sprite-p_hp-envelopeLiners2 {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -400px;
+}
+
+.sprite-p_hp-expansion_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -400px;
+}
+
+.sprite-p_hp-flatcards {
+    width: 150px;
+    height: 100px;
+    background-position: -450px -400px;
+}
+
+.sprite-p_hp-foilLinedEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -600px -400px;
+}
+
+.sprite-p_hp-fullface {
+    width: 150px;
+    height: 100px;
+    background-position: -750px -400px;
+}
+
+.sprite-p_hp-glitterEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -900px -400px;
+}
+
+.sprite-p_hp-glitterPaperLiners {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -500px;
+}
+
+.sprite-p_hp-goldGlamourMailers {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -500px;
+}
+
+.sprite-p_hp-greenAndRedEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -500px;
+}
+
+.sprite-p_hp-groceryBagCollection {
+    width: 150px;
+    height: 100px;
+    background-position: -450px -500px;
+}
+
+.sprite-p_hp-groceryBagEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -600px -500px;
+}
+
+.sprite-p_hp-grocery_bag_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -750px -500px;
+}
+
+.sprite-p_hp-holidayGiftCards {
+    width: 150px;
+    height: 100px;
+    background-position: -900px -500px;
+}
+
+.sprite-p_hp-holidayMinis {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -600px;
+}
+
+.sprite-p_hp-invoice_double_window {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -600px;
+}
+
+.sprite-p_hp-linenCollection {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -600px;
+}
+
+.sprite-p_hp-luxMailers {
+    width: 150px;
+    height: 100px;
+    background-position: -450px -600px;
+}
+
+.sprite-p_hp-metallicCollection {
+    width: 150px;
+    height: 100px;
+    background-position: -600px -600px;
+}
+
+.sprite-p_hp-metallic_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -750px -600px;
+}
+
+.sprite-p_hp-mini {
+    width: 150px;
+    height: 100px;
+    background-position: -900px -600px;
+}
+
+.sprite-p_hp-miniEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -700px;
+}
+
+.sprite-p_hp-newArrivalsSquare062016 {
+    width: 230px;
+    height: 230px;
+    background-position: -150px -700px;
+}
+
+.sprite-p_hp-openend {
+    width: 150px;
+    height: 100px;
+    background-position: -380px -700px;
+}
+
+.sprite-p_hp-paper {
+    width: 150px;
+    height: 100px;
+    background-position: -530px -700px;
+}
+
+.sprite-p_hp-paperAndCardstock {
+    width: 150px;
+    height: 100px;
+    background-position: -680px -700px;
+}
+
+.sprite-p_hp-peel_and_press_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -830px -700px;
+}
+
+.sprite-p_hp-petalInvitations {
+    width: 150px;
+    height: 100px;
+    background-position: -980px -700px;
+}
+
+.sprite-p_hp-petals {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -800px;
+}
+
+.sprite-p_hp-petalsAndPockets {
+    width: 150px;
+    height: 100px;
+    background-position: -380px -800px;
+}
+
+.sprite-p_hp-photoGreetingEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -530px -800px;
+}
+
+.sprite-p_hp-photo_greeting_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -680px -800px;
+}
+
+.sprite-p_hp-pocketInvitations {
+    width: 150px;
+    height: 100px;
+    background-position: -830px -800px;
+}
+
+.sprite-p_hp-pockets {
+    width: 150px;
+    height: 100px;
+    background-position: -980px -800px;
+}
+
+.sprite-p_hp-recipientAddressing {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -900px;
+}
+
+.sprite-p_hp-recipient_addressing {
+    width: 340px;
+    height: 95px;
+    background-position: -380px -900px;
+}
+
+.sprite-p_hp-recycled_envelopes {
+    width: 150px;
+    height: 109px;
+    background-position: -720px -900px;
+}
+
+.sprite-p_hp-regular {
+    width: 150px;
+    height: 100px;
+    background-position: -870px -900px;
+}
+
+.sprite-p_hp-remittance {
+    width: 150px;
+    height: 100px;
+    background-position: 0 -1000px;
+}
+
+.sprite-p_hp-remittanceEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -1000px;
+}
+
+.sprite-p_hp-rsvpEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -1000px;
+}
+
+.sprite-p_hp-security_tint_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -450px -1000px;
+}
+
+.sprite-p_hp-shipping {
+    width: 150px;
+    height: 100px;
+    background-position: -870px -1000px;
+}
+
+.sprite-p_hp-specialtyuse {
+    width: 150px;
+    height: 100px;
+    background-position: -1132px 0;
+}
+
+.sprite-p_hp-square {
+    width: 150px;
+    height: 100px;
+    background-position: -1050px -100px;
+}
+
+.sprite-p_hp-squareEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -1090px -200px;
+}
+
+.sprite-p_hp-squareFlapEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -1050px -300px;
+}
+
+.sprite-p_hp-squareflap {
+    width: 150px;
+    height: 100px;
+    background-position: -1050px -400px;
+}
+
+.sprite-p_hp-taupeMetallic {
+    width: 150px;
+    height: 100px;
+    background-position: -1050px -500px;
+}
+
+.sprite-p_hp-thankYouCards {
+    width: 150px;
+    height: 100px;
+    background-position: -1050px -600px;
+}
+
+.sprite-p_hp-w2_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -1130px -700px;
+}
+
+.sprite-p_hp-weddingInvitations {
+    width: 150px;
+    height: 100px;
+    background-position: -1130px -800px;
+}
+
+.sprite-p_hp-weddingshop {
+    width: 340px;
+    height: 95px;
+    background-position: 0 -1100px;
+}
+
+.sprite-p_hp-window {
+    width: 150px;
+    height: 100px;
+    background-position: -1020px -900px;
+}
+
+.sprite-p_hp-woodgrainPaperEnvelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -600px -1009px;
+}
+
+.sprite-p_hp-recipientAddressingRightSide {
+    width: 230px;
+    height: 265px;
+    background-position: -1020px -1009px;
+}
+
+.sprite-p_hp-security_tint_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -340px -1100px;
+}
+
+.sprite-p_hp-w2_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -490px -1109px;
+}
+
+.sprite-p_hp-9x12_window_envelopes {
+    width: 150px;
+    height: 100px;
+    background-position: -640px -1109px;
+}
+.sprite-p_hp-tax_season_folders {
+    width: 150px;
+    height: 100px;
+    background-position: 0px -1195px;
+}
+.sprite-p_hp-tax_season_10x13_booklet {
+    width: 150px;
+    height: 100px;
+    background-position: -150px -1200px;
+}
+.sprite-p_hp-tax_season_9x12Booklet {
+    width: 150px;
+    height: 100px;
+    background-position: -300px -1195px;
+}
+
+/* New Env HP Re Design CSS */
+.envHpBody {
+	background-color: #ffffff;
+	width: 100%;
+}
+.envHpContainer {
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.envHpBorderTop {
+	border-top: #f1f1f1 solid 1px;
+}
+.shopBySizeSection, .shopByColorSection {
+	background-color: #f5f5f5;
+    padding: 30px;
+	text-align: center;
+	display: inline-block;
+    width: 49%;
+}
+.shopByColorSection {
+	margin-right: 1%;
+}
+.shopBySizeSection h3, .shopByColorSection h3 {
+	color: #000000;
+}
+.shopBySizeSlider {
+	height: 175px;
+}
+.shopAllSizesSectionBtn {
+	border-radius: 8px;
+    background-color: #3dc9f8;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 250px;
+	margin: 20px auto 0px;
+	color: #ffffff !important;
+	display: block;
+}
+.shopBySizeSlider .colorBackground {
+	margin: 5px;
+	width: 90px;
+	height: 75px;
+}
+.shopBySizeSlider .colorBackground.white {
+	background-color: #ffffff;
+	border: 1px solid #e0e0e0;
+}
+.shopBySizeSlider .colorBackground.red {
+	background-color: #e22a2a;
+}
+.shopBySizeSlider .colorBackground.gray {
+	background-color: #9a9a9a;
+}
+.shopBySizeSlider .colorBackground.blue {
+	background-color: #307eff;
+}
+.shopBySizeSlider .colorBackground.gold {
+	background: #ffe430; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #ffe430 0%, #d0a83a 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #ffe430 0%,#d0a83a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #ffe430 0%,#d0a83a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe430', endColorstr='#d0a83a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.shopBySizeSlider .colorBackground.natural {
+	background-color: #f4ecc7;
+}
+.shopBySizeSlider .colorBackground.pink {
+	background-color: #fd7ecf;
+}
+.shopBySizeSlider .colorBackground.green {
+	background-color: #3aad55;
+}
+.shopBySizeSlider .colorBackground.silver {
+	background: -moz-linear-gradient(45deg, #bebebe 0%, #fdfdfd 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #bebebe 0%,#fdfdfd 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #bebebe 0%,#fdfdfd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bebebe', endColorstr='#fdfdfd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.shopBySizeSlider .colorBackground.yellow {
+	background-color: #ffc600;
+}
+.shopBySizeSlider .colorBackground.purple {
+	background-color: #9833aa;
+}
+.shopBySizeSlider .colorBackground.black {
+	background-color: #010101;
+}
+.shopBySizeSlider .colorBackground.orange {
+	background-color: #f27709;
+}
+.shopBySizeSlider .colorBackground.brown {
+	background-color: #725e3c;
+}
+.shopBySizeSlider .colorBackground.clear {
+	background-color: #ffffff;
+	border: 1px solid #e0e0e0;
+}
+.shopBySizeSlider .colorBackground.groceryBag {
+	background-color: #a88d5e;
+}
+.slideIt-container.homePageSlider {
+	height: 250px;
+}
+.slideIt-container.templateSlider {
+	height: 300px;
+}
+.mailingEnvelopes h1, .mostPopularTemplates h2, .seasonalProducts h2, .showYouWhatWeOfferSection h2, .customer-reviews h2, .certonaHP h4 {
+	font-size: 26px;
+    color: #0b3360;
+    margin: 20px 0;
+}
+.homePageSlider a, .templateSlider a {
+	color: #0b3360;
+	font-weight: bold;
+	font-size: 16px;
+}
+.templateSlider a img {
+	width: 228px;
+}
+.homePageSlider .colorAvailable {
+	font-weight: normal;
+}
+.seasonalProducts h2 {
+	display: inline-block;
+}
+.showYouWhatWeOfferSection {
+	background-color: #f5f5f5;
+    padding: 10px 0 20px;
+}
+.hpIconContainer {
+	text-align: center;
+	margin-top: 30px;
+}
+.hpIconBlock {
+	display: inline-block;
+    width: 20%;
+	text-align: center;
+	vertical-align: top;
+	margin-right: 1%;
+}
+.hpIconBlock:last-child {
+	margin-right: 0;
+}
+.hpIconBlock p {
+	margin-top: 5px;
+    font-weight: bold;
+    color: #0b3360;
+}
+.mailingEnvelopeSliderBlock {
+	height: 216px;
+	width: 228px;
+	margin: 0 auto 15px;
+}
+.topPrintedProduct {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/TopPrintedEnvelopes?fmt=jpeg&hei=216);
+}
+.squareFlapEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/SquareFlapEnvelopes?fmt=jpeg&hei=216);
+}
+.regularEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/RegularFlapEnvelopes?fmt=jpeg&hei=216);
+}
+.openEndEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/OpenEndEnvelopes?fmt=jpeg&hei=216);
+}
+.squareEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/SquareEnvelopes?fmt=jpeg&hei=216);
+}
+.windowEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/WindowEnvelopes?fmt=jpeg&hei=216);
+}
+.miniEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/MiniEnvelopes?fmt=jpeg&hei=216);
+}
+.openEndEnvelopes9x12 {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/9x12OpenEndEnvelopes?fmt=jpeg&hei=216);
+}
+.remittanceEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/RemittanceEnvelopes?fmt=jpeg&hei=216);
+}
+.doubleWindowEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/DoubleWindowEnvelopes?fmt=jpeg&hei=216);
+}
+.securityTintEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/SecurityTintEnvelopes?fmt=jpeg&hei=216);
+}
+.w2Envelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/W-2Envelopes?fmt=jpeg&hei=216);
+}
+.groceryBagEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/GroceryBagEnvelopes?fmt=jpeg&hei=216);
+}
+.bookletEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/BookletEnvelopes?fmt=jpeg&hei=216);
+}
+.coinEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/CoinEnvelopes?fmt=jpeg&hei=216);
+}
+.announcementEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/AnnouncementEnvelopes?fmt=jpeg&hei=216);
+}
+.contourFlapEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/ContourFlapEnvelopes?fmt=jpeg&hei=216);
+}
+.shippingEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/ShippingEnvelopes?fmt=jpeg&hei=216);
+}
+.peelPressEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/PeelPressEnvelopes?fmt=jpeg&hei=216);
+}
+.baronialEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/BaronialEnvelopes?fmt=jpeg&hei=216);
+}
+.cottonEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/CottonEnvelopes?fmt=jpeg&hei=216);
+}
+.metallicEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/MetallicEnvelopes?fmt=jpeg&hei=216);
+}
+.recycledEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/RecycledEnvelopes?fmt=jpeg&hei=216);
+}
+.creditCardEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/CreditCardSleeves?fmt=jpeg&hei=216);
+}
+.fullFaceEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/FullFaceWindowEnvelopes?fmt=jpeg&hei=216);
+}
+.clearEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/ClearEnvelopes?fmt=jpeg&hei=216);
+}
+.specialtyEnvelopes {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/SpecialtyEnvelopes?fmt=jpeg&hei=216);
+}
+.main .slideIt-left,
+.main .slideIt-right {
+	position: relative;
+}
+.main .slideIt-left > i,
+.main .slideIt-right > i {
+	position: absolute;
+	top: 40%;
+	left: 10px;
+	font-size: 24px;
+}
+.leftSidePromoBlock, .rightSidePromoBlock {
+	display: inline-block;
+	vertical-align: top;
+}
+.leftSidePromoBlock {
+	margin-right: 10px;
+}
+.rightSidePromoBlock img {
+	display: block;
+}
+.designServicesBlock {
+	display: table;
+	width: 100%
+}
+.designServicesBlock .mobileImg {
+	display: none;
+}
+.designServicesImg {
+	display: table-cell;
+	width: 468px;
+}
+.designServicesText {
+	display: table-cell;
+	width: auto;
+	vertical-align: middle;
+	text-align: center;
+}
+.customer-reviews .review {
+	width: 325px;
+	margin: 0 20px 0 20px;
+}
+.customer-reviews .slideIt-container{
+	height: 225px;
+}
+.customer-reviews .cr-header {
+	display: table;
+	padding-bottom: 10px;
+}
+.customer-reviews .cr-img {
+	display: table-cell;
+	width: 60px;
+	vertical-align: middle;
+}
+.customer-reviews .cr-img img {
+	max-width: 60px;
+	max-height: 104px;
+	border: solid 1px #1a90e2;
+    border-radius: 30px;
+}
+.customer-reviews .cr-header-right {
+	display: table-cell;
+	width: 220px;
+	vertical-align: bottom;
+}
+.customer-reviews .rating-5_0{
+	margin-left: 20px;
+}
+.customer-reviews .cr-product {
+	font-size: 12px;
+	padding: 0px 20px;
+}
+.customer-reviews .cr-product a {
+	color: #0b3360;
+    font-size: 14px;
+    font-weight: bold;
+}
+.customer-reviews .cr-color {
+	font-size: 13px;
+	padding: 0px 20px;
+	font-weight: bold;
+    color: #ff7639;
+}
+.customer-reviews .cr-review {
+	width: 100%;
+	vertical-align: top;
+	white-space: normal;
+	margin: 8px 0 10px;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+}
+.customer-reviews .cr-review i.fa-quote-right {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	font-size: 12px;
+}
+.customer-reviews .cr-review i.fa-quote-left {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 12px;
+}
+.customer-reviews .cr-review p {
+	padding: 0 25px;
+	overflow: hidden;
+	font-size: 14px;
+}
+.customer-reviews .cr-date {
+	max-width: 310px;
+	width: 80px;
+	font-size: 12px;
+	white-space: normal;
+	text-align: right;
+	display: table-cell;
+}
+.customer-reviews .cr-date p {
+	font-size: 12px;
+}
+.customer-reviews .cr-author {
+	max-width: 310px;
+	width: 200px;
+	font-size: 12px;
+	white-space: normal;
+	text-align: right;
+	display: table-cell;
+}
+.customer-reviews .cr-author p {
+	font-size: 12px;
+}
+.hpSEOText {
+	background-color: #f5f5f5;
+}
+.hpSEOText .textParagraph {
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+}
+.hpSEOText .textParagraph p {
+	font-size: 13px;
+	line-height: 19px;
+	text-align: justify;
+	padding-bottom: 10px;
+}
+.hpSEOText .textParagraph h6 {
+	font-size: 16px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	padding: 0 15px 5px;
+	background-color: #f5f5f5;
+	z-index: 1;
+}
+.hpSEOText .textParagraph .line {
+	border-top: solid 1px #d6d6d6;
+	text-align: center;
+	z-index: 0;
+	top: -16px;
+	position: relative;
+	left: 0;
+	right: 0;
+}
+.envBodyTable {
+	display: table;
+	width: 100%;
+}
+.envBodyTable .widthAuto {
+	display: table-cell;
+	width: auto;
+}
+.envBodyTable .certonaHpColumn {
+	display: table-cell;
+	width: 350px;
+	vertical-align: top;
+}
+.certonaHpContainer {
+	border: solid 2px #f5f5f5;
+	margin: 0 20px;
+	text-align: center;
+	height: 1125px;
+}
+.certonaHpContainer h4 {
+	background-color: #f5f5f5;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0b3360;
+    padding: 10px 0;
+}
+@media only screen and (max-width:1205px) {
+	.leftSidePromoBlock {
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+	.promoBlockSection {
+		text-align: center;
+	}
+}
+@media only screen and (max-width:1024px) {
+	.shopByColorSection {
+		margin-right: 0;
+		margin-bottom: 20px !important;
+	}
+	.shopBySizeSection, .shopByColorSection {
+		width: 96%;
+		display: block;
+		margin: 0 auto;
+	}
+	.hpIconBlock {
+		margin-bottom: 20px;
+		width: 35%;
+	}
+	.designServicesImg {
+		display: none;
+	}∂
+	.designServicesText {
+		height: 368px;
+	}
+}
+@media only screen and (max-width:768px) {
+	.hpIconBlock {
+		width: 100%;
+	}
+	.designServicesBlock .tabletDesktopImg {
+		display: none;
+	}
+	.designServicesBlock .mobileImg {
+		display: inline-block;
+	}
+	.slideIt-container.homePageSlider, .slideIt-container.templateSlider, .customer-reviews .slideIt-container {
+		width: 97%;
+	}
+}
+@media only screen and (max-width:425px) {
+	.customer-reviews .review {
+		width: 225px;
+	}
+	.customer-reviews .cr-review {
+		height: 118px;
+	}
+	.envHpContainer {
+		max-width: none;
+		width: 100%;
+	}
+}
+/*----------------------------------------*/
+.dis-block{display: block;}
+
+.holiday-banner,
+.holiday-banner-rectangle,
+#portion-slider {
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.holiday-banner {
+	position: relative;
+	background-color: #ebecee;
+}
+.holiday-banner-inner {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1110px;
+}
+.holiday-banner-contain {
+	width: 100%;
+	position: relative;
+}
+[class*="holiday-banner-rectangle"] {
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+}
+.backgroundBannerYearEnd {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/envBackground03192019?fmt=jpeg&qlt=60&wid=2500&ts=2) no-repeat;
+}
+.backgroundBannerFSWedding {
+	background-color: #ffffff;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/freeShippingWeddingShopLeftSide?fmt=png-alpha&wid=510) no-repeat, url(//actionenvelope.scene7.com/is/image/ActionEnvelope/freeShippingWeddingShopRightSide?fmt=png-alpha&wid=515) no-repeat;
+	background-position: left, right;
+}
+.backgroundBannerJan1 {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/envHpBannerL1119?fmt=png-alpha&wid=515) no-repeat, url(//actionenvelope.scene7.com/is/image/ActionEnvelope/envHpBannerR1119?fmt=png-alpha&wid=515) no-repeat;
+	background-position: left, right;
+}
+.backgroundBanner {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/envPrimeDayBannerBackground3?fmt=jpeg&qlt=60&wid=2500) no-repeat;
+}
+.backgroundBanner2 {
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/envHpBannerBackground1119?fmt=jpeg&qlt=60&wid=2500) repeat-x;
+}
+.newYearBannerRectangle-1 {
+	width: 323px;
+	height: 250px;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/p_hp-bannerForeground1-122917?wid=323&fmt=png-alpha&ts=1) no-repeat;
+	left: 7.11909%;
+	top: 17px;
+	position: absolute;
+}
+.newYearBannerRectangle-2 {
+	width: 373px;
+	height: 289px;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/p_hp-bannerForeground2-122917?wid=373&fmt=png-alpha&ts=1) no-repeat;
+	left: 33.88091%;
+	top: 0px;
+	position: absolute;
+}
+.newYearBannerRectangle-3 {
+	width: 380px;
+	height: 247px;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/p_hp-bannerForeground3-122917?wid=380&fmt=png-alpha&ts=2) no-repeat;
+	left: 64.88091%;
+	top: 45px;
+	position: absolute;
+}
+.holiday-banner-rectangle-1 {
+	width: 369px;
+	height: 220px;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/bannerForeground110917-1?wid=369&fmt=png-alpha&ts=1) no-repeat;
+	left: -1.11909%;
+	top: 45px;
+}
+.holiday-banner-rectangle-2 {
+	width: 345px;
+	height: 248px;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/bannerForeground110917-2?wid=345&fmt=png-alpha&ts=1) no-repeat;
+	left: 24.60909%;
+	top: 44px;
+}
+.holiday-banner-rectangle-3 {
+	width: 315px;
+	height: 246px;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/bannerForeground110917-3?wid=315&fmt=png-alpha&ts=1) no-repeat;
+	left: 54.90909%;
+	top: 46px;
+}
+.holiday-banner-rectangle-4 {
+	width: 206px;
+	height: 246px;
+	background: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/bannerForeground111617-4?wid=206&fmt=png-alpha&ts=1) no-repeat;
+	left: 82.90909%;
+	top: 67px;
+}
+.holiday-banner-portion {
+	width: 20.117%;
+	height: 100%;
+	position: relative;
+}
+#portion-slider {
+	background-image: url(//actionenvelope.scene7.com/is/image/ActionEnvelope/Holiday2017_Portion_v2?wid=206&fmt=png-alpha);
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.portion-slide {
+	max-width: 100%;
+}
+#portion-slider img {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.homePageRightSide {
+	max-width: none;
+}
+.hpBannerRightSide {
+	position: absolute;
+	right: 0;
+}
+.hpBannerLeftSide {
+	position: absolute;
+	left: 0;
+}
+.desktopBanners img {
+	width: 100%;
+}
+.holiday-banner-mobile,
+.freeShipping-mobile,
+.desktop1024,
+.desktop768 {
+	display: none;
+}
+@media (max-width: 1024px) {
+	.holiday-banner {
+		border-width: 4px;
+	}
+	.holiday-banner-inner {
+		position: relative;
+		left: 0;
+	}
+	.updatedEnvHpBanner {
+		text-align: center;
+	}
+	.holiday-banner-mobile a {
+		display: inline-block;
+	}
+	.hpBannerRightSide {
+		display: none;
+	}
+	.hpBannerLeftSide {
+		display: none;
+	}
+	.backgroundBanner {
+		background: white;
+	}
+	.fullDesktop {
+		display: none;
+	}
+	.desktop1024 {
+		display: block;
+	}
+}
+@media only screen and (max-width: 1540px) {
+	.backgroundBannerYearEnd {
+		background-position: -200px, 1000px;
+	}
+}
+@media only screen and (max-width: 1280px) {
+	.backgroundBannerYearEnd {
+		background-position: -200px, 975px;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.backgroundBannerYearEnd {
+		background-position: -250px, 875px;
+	}
+}
+@media only screen and (max-width:768px) {
+	.holiday-banner-contain {
+		display: none;
+	}
+	.homePageRightSide {
+		display: none;
+	}
+	.bannerFull {
+		display: none;
+	}
+	.desktop768 {
+		display: block;
+	}
+	.holiday-banner-mobile {
+		display: block;
+		text-align: center;
+	}
+}
+@media only screen and (max-width:415px) {
+	.freeShipping-mobile {
+		display: block;
+	}
+	.freeShipping-mobile img {
+		width: 100%;
+	}
+	.desktop768 {
+		display: none;
+	}
+}

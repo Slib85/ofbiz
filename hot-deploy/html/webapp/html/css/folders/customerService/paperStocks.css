@@ -1,0 +1,284 @@
+.paperStocks .materialImage {
+	border: 1px solid #000000;
+	width: 156px;
+	height: 156px;
+}
+.paperStocks {
+	margin-bottom: 20px;
+}
+
+/* New CSS styles */ 
+
+.freeShippingHeader2 i{
+	border: solid 1px #8dc4ed;
+	border-right: solid 2px #8dc4ed;
+	padding: 5px 10px;
+	transform: scaleX(-1);
+	font-size: 26px;
+	background-color: #8dc4ed;
+	color: #2a385d;
+	display: table-cell;
+	width: 50px;
+}
+.freeShippingHeader2 p {
+	border: solid 1px #8dc4ed;
+	padding: 10px;
+	color: #ffffff;
+	border-left: none;
+	font-weight: bold;
+	display: table-cell;
+	font-size: 16px;
+}
+.paperStocks .foldersContainerBody {
+	margin-top: 60px;
+}
+.shortcutsBlock {
+	display: inline-block;
+	width: 49%;
+}
+.shortcuts {
+	width: 49.5%;
+	margin-right: 1%;
+}
+.shortcuts2 {
+	width: 49%;
+}
+.colorSwatches {
+	margin-top: 10px;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
+.colorSwatches > * {
+	height: 15px;
+	margin: 0 1px;
+	-webkit-flex: 1;
+	flex: 1;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	text-align: center;
+	font-size: 11px;
+	position: relative;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.colorSwatches > * > div {
+	position: absolute;
+	padding-top: 20px;
+	width: 100%;
+	top: -3px;
+}
+.filterColors > *{
+	border: 1px solid #000000;
+    width: 156px;
+    height: 156px;
+    cursor: pointer;
+    margin: 20px 10px 10px;
+    position: relative;
+    display: inline-block;
+}
+.colorSwatches .csWhite{
+	background-color: #fcfcfc;
+	color: #000000;
+}
+.csSilver {
+	background: -moz-linear-gradient(left,rgba(214,217,220,1) 0%,rgba(255,255,255,1) 45%,rgba(255,255,255,1) 55%,rgba(214,217,220,1) 100%);
+    background: -webkit-linear-gradient(left,rgba(214,217,220,1) 0%,rgba(255,255,255,1) 45%,rgba(255,255,255,1) 55%,rgba(214,217,220,1) 100%);
+    background: linear-gradient(to right,rgba(214,217,220,1) 0%,rgba(255,255,255,1) 45%,rgba(255,255,255,1) 55%,rgba(214,217,220,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6d9dc',endColorstr='#d6d9dc',GradientType=1);
+    color: #000;
+}
+.csGold {
+	background: -moz-linear-gradient(left,rgba(245,216,138,1) 0%,rgba(255,255,255,1) 45%,rgba(255,255,255,1) 55%,rgba(245,216,138,1) 100%);
+    background: -webkit-linear-gradient(left,rgba(245,216,138,1) 0%,rgba(255,255,255,1) 45%,rgba(255,255,255,1) 55%,rgba(245,216,138,1) 100%);
+    background: linear-gradient(to right,rgba(245,216,138,1) 0%,rgba(255,255,255,1) 45%,rgba(255,255,255,1) 55%,rgba(245,216,138,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5d88a',endColorstr='#f5d88a',GradientType=1);
+    color: #000;
+}
+.csYellow {
+	background-color: #fdc316;
+	color: #000000;
+}
+.csOrange{
+	background-color: #ff7531;
+	color: #000;
+}
+.csRed {
+	background-color: #f10013;
+	color: #ffffff;
+}
+.csPink {
+	background-color: #ec559e;
+	color: #ffffff;
+}
+.csBlue {
+	background-color: #0d96c5;
+	color: #ffffff;
+}
+.csGreen {
+	background-color: #39a657;
+	color: #ffffff;
+}
+.csPurple {
+	background-color: #a48ab7;
+	color: #ffffff;
+}
+.csNatural {
+	background-color: #e5deca;
+}
+.csGroceryBag {
+	background-color: #b59771;
+	color: #ffffff;
+}
+.csGray {
+	background-color: #797977;
+	color: #ffffff;
+}
+.csBlack {
+	background-color: #1b1b1b;
+	color: #ffffff;
+}
+.csClear {
+	background-color: #e5e5e5;
+	color: #000000;
+}
+.csMetallics {
+	background: #d8dcdf;
+    background: -moz-linear-gradient(left,#d8dcdf 5%,#ad7751 47%,#ad7751 53%,#eecd7e 95%);
+    background: -webkit-linear-gradient(left,#d8dcdf 5%,#ad7751 47%,#ad7751 53%,#eecd7e 95%);
+    background: linear-gradient(to right,#d8dcdf 5%,#ad7751 47%,#ad7751 53%,#eecd7e 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8dcdf',endColorstr='#eecd7e',GradientType=1);
+    color: #000;
+}
+.colorSwatches>*>div:hover{
+	padding-top: 3px;
+}
+.heightLimit {
+	height: 450px;
+	overflow: hidden;
+}
+.showMore {
+	width: 70%;
+	cursor: pointer;
+}
+.paperBinderList {
+	width: 31%;
+}
+.paddedDiplomaShortcuts {
+	width: 32%;
+}
+#interiorPanel h3, #interiorPanel p {
+	display: block;
+}
+.paperStocks .foldersContainerBody {
+	background-color: #ffffff;
+}
+[bns-colorfilterreset] {
+	cursor: pointer;
+	margin: 22px 0 0 15px;
+	border: 1px solid #063b63;
+    padding: 5px;
+}
+.freeShippingHeader2Mobile p{
+	border: 1px solid #063b63;
+	width: 80%;
+	margin: 10px auto 0;
+	padding: 8px;
+	font-size: 16px;
+}
+.freeShippingHeader2Mobile i{
+	transform: scaleX(-1);
+	font-size: 20px;
+}
+.mobileDescription p{
+	font-size: 14px;
+}
+.mobileAnchorTags {
+	text-align: center;
+}
+.mobileAnchorTags a {
+	width: 100%;
+	display: block;
+	font-size: 15px;
+}
+[bns-paperstocklist]{
+	width: 15%;
+}
+.paperStockColorName {
+	position: absolute;
+    bottom: -25px;
+    width: 30%;
+    margin: 0 -15%;
+    left: 50%;
+    color: #000000;
+}
+[bns-bigcolorfilter] {
+	padding: 0 5px;
+}
+@media only screen and (max-width: 1000px) {
+	.shortcuts {
+		width: 48.5%;
+	}
+	.shortcuts2 {
+		width: 48%;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.paperStocks .foldersContainerBody {
+	    margin-top: 10px;
+	}
+	.paperStocks .foldersContainerBody .large3 {
+		display: none;
+	}
+	[bns-colorfilterreset] {
+		margin-top: 12px;
+	}
+	#indexStockColors {
+		margin-top: 20px !important;
+	}
+	[bns-indexstockcolorlist] {
+		text-align: center;
+	}
+	[bns-paperstocklistcontainer] {
+		text-align: center;
+	}
+	.colorSwatches > * {
+		flex: 11%;
+	}
+	.paperStocks .foldersRow {
+	    font-size: 14px !important;
+	}
+	.paperStocks .foldersRow h3{
+	    font-size: 18px;
+	}
+	.paperBinderContentImg {
+		margin: 20px auto;
+	}
+	.paperBinderList {
+		width: 100%;
+	}
+	[bns-paperstocklist] {
+	    width: 20%;
+	}
+}
+@media only screen and (max-width: 575px) {
+	.filterColors {
+		text-align: center;
+	}
+	.filterColors > * {
+		width: 110px;
+    	height: 110px;
+	}
+	[bns-paperstocklist] {
+	    width: 35%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.paperStocks .materialImage {
+		width: 130px;
+		height: 130px;
+	}
+	
+}

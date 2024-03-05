@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+    <ProductAssocType productAssocTypeId="SUB_FEATURE" hasTable="N" description="Sub Feature" />
+
+    <ProductFeatureType productFeatureTypeId="REINFORCED_EDGE" hasTable="N" description="Reinforced Edge" />
+    <ProductFeatureType productFeatureTypeId="DIMENSION_CLOSED" hasTable="N" description="Dimension Closed" />
+    <ProductFeatureType productFeatureTypeId="DIMENSION_OPEN" hasTable="N" description="Dimension Open" />
+    <ProductFeatureType productFeatureTypeId="NUMBER_OF_POCKETS" hasTable="N" description="Number of Pockets" />
+    <ProductFeatureType productFeatureTypeId="MIDDLE_POCKET" hasTable="N" description="Middle Pocket" />
+    <ProductFeatureType productFeatureTypeId="POCKET_CAPACITY" hasTable="N" description="Pocket Capacity" />
+    <ProductFeatureType productFeatureTypeId="POCKET_SPEC" hasTable="N" description="Pocket Spec" />
+    <ProductFeatureType productFeatureTypeId="FASTENER_CAPACITY" hasTable="N" description="Fastener Capacity" />
+    <ProductFeatureType productFeatureTypeId="IMPRINT_METHOD" hasTable="N" description="Imprint Method" />
+    <ProductFeatureType productFeatureTypeId="POCKET_STYLE" hasTable="N" description="Pocket Style" />
+    <ProductFeatureType productFeatureTypeId="CARD_SLITS" hasTable="N" description="Business Card Slits" />
+
+    <ProductFeatureApplType productFeatureApplTypeId="MULTI_SELECTABLE_FEATURE" hasTable="N" description="Multi Selectable" />
+
+</entity-engine-xml>

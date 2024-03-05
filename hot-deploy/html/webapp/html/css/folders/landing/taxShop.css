@@ -1,0 +1,208 @@
+.foldersContainer.foldersContainerLimiter {
+	max-width: 1157px;
+}
+
+.banner {
+	position: relative;
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/theTaxShopBannerBackground?wid=2314&fmt=jpeg&qlt=100') repeat-x;
+}
+
+.banner > div {
+	position: relative;
+	width: 500px;
+	float: left;
+	z-index: 1;
+	color: #ffffff;
+}
+
+.banner > div h2 {
+	font-size: 35px;
+	margin-bottom: 5px;
+}
+
+.banner > div h1 {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.banner > div p {
+	font-size: 15px;
+}
+
+.banner > div a{
+	font-weight: bold;
+}
+
+.banner img {
+	float: right;
+	position: absolute;
+	right: 0px;
+	z-index: 0;
+}
+
+/*.banner:after {
+	content: "";
+	display: block;
+	clear: both;
+}*/
+
+.customButton {
+	display: block;
+	font-size: 15px;
+}
+
+.banner2 {
+	background: url('https://actionenvelope.scene7.com/is/image/ActionEnvelope/taxShopBackgroundBanner1');
+}
+
+.banner2 a {
+	display: inline-block;
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.banner2 span {
+	color: #ffffff;
+	font-size: 18px;
+	margin: 20px;
+}
+
+.banner2 h2 {
+	color: #ffffff;
+	padding: 10px;
+	font-weight: normal;
+	font-size: 22px;
+}
+
+.foldersWidth {
+	width: 215px;
+	background-color: #ffffff;
+}
+
+.customRow img {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.customRow p {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.folderDetails {
+	font-weight: normal !important;
+	color: #a9a9a9;
+	font-size: 12px !important;
+}
+
+.folderPrice {
+	float: right;
+	color: #4ba7f1;
+}
+
+.customButton {
+	text-transform: none;
+	color: #ffffff;
+	background-color: #4caf50;
+}
+
+.foldersRow span {
+	font-size: 16px !important;
+	width: 50%;
+}
+
+.foldersHeaderBanner img {
+	max-width: inherit;
+}
+
+@media only screen and (max-width: 1200px) {
+	.banner2Margin {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.banner > div h2{
+		font-size: 30px;
+	}
+	.foldersHeaderBanner .textLeft.padding20 {
+		width: 48%;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.mobileP {
+		width: 40%;
+	}
+	.banner2Margin {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.foldersHeaderBanner .textLeft.padding20 {
+		width: 100%;
+	}
+	.banner2Margin p {
+		color: #ffffff;
+		font-size: 14px;
+	}
+	.banner > div h1 {
+		font-size: 28px;	
+	}
+	.banner > div h1 {
+		font-size: 18px;
+		margin-left: 0;
+		width: 55%;
+	}
+	.taxShop .foldersHeaderBanner {
+		min-height: inherit;
+		height: 119px;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.banner2 a {
+		display: block;
+	}
+	.banner2 span {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 435px){
+	.banner img {
+		display: none !important;
+	}
+	.foldersHeaderBanner .textLeft {
+		text-align: center !important;
+	}
+	.banner > div h1 {
+		margin: 0 auto;
+		width: 75%;
+	}
+}
+#foldersTaxShopTopBanner{
+    display: table;
+}
+#foldersTaxShopTopBanner div{
+    display: table-cell;
+    width: 50%;
+}
+.foldersTaxText{
+
+}
+.foldersTaxVideo{
+    text-align: right;
+}
+.foldersTaxImages{
+
+}
+@media only screen and (max-width: 768px) {
+    .foldersTaxVideo{
+        display:none !important;
+    }
+    #foldersTaxShopTopBanner div:first-child{
+        width:100%;
+    }
+}

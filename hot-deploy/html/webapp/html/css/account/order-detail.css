@@ -1,0 +1,30 @@
+.order-detail h3 {
+	font-size: 18px;
+	color: #000000;
+	font-weight: bold;
+}
+.billing-shipping-information span {
+	display: block;
+}
+.order-detail .proof_approval_link,
+.order-detail .proof_approval_link:visited {
+	color: #ffffff;
+}
+.order-detail .proof_approval_link {
+	float: left;
+}
+.order-detail .reorder-button {
+	float: right;
+}
+
+@media only screen and (max-width: 767px) {
+	.order-detail .quick_links {
+		text-align: center;
+	}
+	.order-detail .proof_approval_link,
+	.order-detail .reorder-button {
+		float: none;
+		display: block;
+		margin: 20px 0px;
+	}
+}

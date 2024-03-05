@@ -1,0 +1,454 @@
+@font-face {
+	font-family: 'FuturaStdBook';
+    src: url('../../fonts/FuturaStdBook.otf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'FuturaBold';
+    src: url('../../fonts/FuturaBold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'FuturaStdExtraBold';
+    src: url('../../fonts/FuturaStdExtraBold.otf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'FuturaBoldItalic';
+    src: url('../../fonts/FuturaBoldItalic.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'GoodVibrationsScript';
+    src: url('../../fonts/GoodVibrationsScript.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+.flex-row > * {
+    display: inline-flex;
+}
+.flex-row.flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.flex-row.flex-left {
+	justify-content: left;
+	-webkit-justify-content: left;
+  }
+	  .flex-row.flexCount6 > *,
+	  .flex-row.flexCount5 > *,
+	  .flex-row.flexCount4 > *,
+	  .flex-row.flexCount3 > *,
+	  .flex-row.flexCount2 > * {
+		  width: 100%;
+	  }
+	  .flex-row.flexCount6 > * {
+		  max-width: 16.66666%;
+	  }
+	  .flex-row.flexCount5 > * {
+		  max-width: 20%;
+	  }
+	  .flex-row.flexCount4 > * {
+		  max-width: 25%;
+	  }
+	  .flex-row.flexCount3 > * {
+		  max-width: 33.33333%;
+	  }
+	  .flex-row.flexCount2 > * {
+		  max-width: 50%;
+	  }
+
+/*------ MAIN WRAPPER ------*/
+.bnc_grad_shop * {
+    margin:0;
+    padding:0;
+}
+
+.bnc_grad_shop{
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_grad_shop:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+/*------ TOP BANNER ------*/
+.grad_shop_banner_wrap {
+    background-color: #9e9fab;
+    border: 2px solid #eeeeee;
+    position: relative;
+    display: table;
+    table-layout: fixed;
+}
+.grad_shop_banner_wrap .grad-shop-banner-image, 
+.grad_shop_banner_wrap .grad_shop_banner_content {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 25px 30px;
+}
+.grad_shop_banner_wrap .grad-shop-banner-image img{
+    max-width: 670px;
+}
+.grad_shop_banner_wrap .grad-shop-banner-image{
+    padding-right: 0;
+}
+.grad_shop_banner_wrap .grad_shop_banner_content{
+    text-align: center;
+    padding-left: 0;
+}
+.grad_shop_banner_content h1 {
+    font-family: 'OpenSansBold';
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+.grad_shop_banner_content h1 span{
+    display: block;
+}
+.grad_shop_banner_content h1 span:first-child {
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+.grad_shop_banner_content h1 span:last-child {
+    font-size: 46px;
+    letter-spacing: 7px;
+}
+.grad_shop_banner_content p{
+    font-family: 'OpenSansSemiBold';
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    margin: 13px 0 0 0;
+}
+.graduation-quote {
+    position: relative;
+}
+.graduation-quote div:first-child {
+    font-family: 'FuturaBold';
+    font-size: 8em;
+    color: #fff;
+    opacity: 15%;
+    z-index: 0;
+    line-height: 1;
+}
+.graduation-quote div:last-child {
+    font-family: 'GoodVibrationsScript';
+    font-size: 3em;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 113px);
+}
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="grad-shop-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_gradshop_nav1 */
+nav[role="bnc_gradshop_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_gradshop_nav1"] a, 
+nav[role="bnc_gradshop_nav1"] label {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'FuturaStdBook';
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_gradshop_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_gradshop_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #eeeeee;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+nav[role="bnc_gradshop_nav1"] ul > li:hover {
+    background-color: #0b3360;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #b89e99, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_gradshop_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_gradshop_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_gradshop_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_gradshop_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_gradshop_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_gradshop_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: -7px;
+        content: "\2261";
+        font-size: 1.8em;
+        color: #fff;
+   }
+    nav[role="bnc_gradshop_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_gradshop_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_gradshop_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_gradshop_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.bnc_grad_shop_products{
+    color: #000;
+    padding: 40px 0;
+}
+.bnc_grad_shop_products a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+.left-prod-col{
+    text-align: center;
+}
+.right-prod-col{
+
+}
+.right-prod-col * {
+    float: right;
+}
+
+
+.prod-title,
+.prod-desc,
+.prod-cta {
+    font-family: 'OpenSansSemiBold';
+    font-size: 12px;
+    line-height: 1;
+    display: block;
+}
+.prod-title{
+    font-family: 'OpenSansBold';
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin: 0 0 12px 0;
+}
+.prod-desc{
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+}
+.prod-cta{
+    font-family: 'OpenSansBold';
+    font-size: 20px;
+    background-color: #f0f1f2;
+    border-radius: 33px;
+    width: 34%;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+.btm-line-ui{
+    border-bottom: 2px solid #e4e4e4;
+}
+.top-line-ui{
+    border-top: 2px solid #e4e4e4;
+}
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+
+.six-prod-grid {
+    padding: 2rem 1rem;
+  }
+  
+  .six-prod-grid > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+  }
+  
+  .six-prod-grid > ul > li {
+    /* border: 1px solid #E2E2E2; */
+    /* border-radius: .5rem; */
+    list-style: none;
+  }
+  
+  .six-prod-grid > ul > li > figure {
+    text-align: center;
+    max-height: 235px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+  }
+  .six-prod-grid > ul > li > a > figure > img {
+    margin: 0 auto;
+    display: block;
+}
+  
+  .six-prod-grid > ul > li > a > p {
+    font-family: 'OpenSansBold';
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #000;
+    text-align: center;
+  }
+  
+  .six-prod-grid > ul > li > a {
+    padding: .5rem 1rem;
+    margin: .5rem;
+    display: block;
+  }
+/*----------------------------------------*/
+/*----------------------------------------*/
+.block2,
+.block5{
+    border-left: 2px solid #e4e4e4;
+    border-right: 2px solid #e4e4e4;
+}
+
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+@media only screen and (max-width: 425px){
+    .block2, 
+    .block4,
+    .block6 {
+        border: none !important;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 768px){
+    .grad_shop_banner_wrap{
+        display: none;
+    }
+    .block2{
+        border-left: 2px solid #e4e4e4;
+        border-right: none;
+    }
+    .block5{
+        border-left: none;
+        border-right: none;
+    }
+    .block4,
+    .block6 {
+        border-left: 2px solid #e4e4e4;
+    }
+}
+@media only screen and (max-width: 1139px){
+    .block2{
+        border-left: 2px solid #e4e4e4;
+        border-right: none;
+    }
+    .block5{
+        border-left: none;
+        border-right: none;
+    }
+    .block4,
+    .block6 {
+        border-left: 2px solid #e4e4e4;
+    }
+}

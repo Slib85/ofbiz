@@ -1,0 +1,23 @@
+/*-----------------------------------------
+ * Collapsible widget CSS
+-----------------------------------------*/
+[bns-collapse_content] {
+    cursor: pointer;
+    position: relative;
+}
+[bns-collapse_content]:after {
+    margin-bottom: 0;
+    display: block;
+    content: " ";
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 6px);
+    height: 9px;
+    width: 12px;
+}
+[bns-collapse_content][bns-collapsed="false"]:after {
+    background: url('/html/img/landing/taxEnvelopesShop/bnc-arrow-up.png')
+}
+[bns-collapse_content][bns-collapsed="true"]:after {
+    background-image: url('/html/img/landing/taxEnvelopesShop/bnc-arrow-down.png')
+}

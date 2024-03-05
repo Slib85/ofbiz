@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>Envelopes.com Services</description>
+    <vendor>Envelopes.com</vendor>
+    <version>1.0</version>
+    <service name="submitClick2MailJob" engine="java" auth="false" transaction-timeout="300" max-retry="1" location="com.bigname.integration.directmailing.DirectMailingServices" invoke="submitJob">
+        <description>Submitting Direct Mailing job to Click2Mail</description>
+        <attribute name="orderId" type="String" mode="IN" optional="false" />
+        <attribute name="orderItemSeqId" type="String" mode="IN" optional="false" />
+    </service>
+</services>

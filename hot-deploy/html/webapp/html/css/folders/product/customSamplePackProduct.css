@@ -1,0 +1,140 @@
+/* Custom Sample Pack Product Page */
+.sampleProductImg img {
+	margin: 50px auto;
+	display: block;
+}
+
+/* Custom Sample Pack Landing Page */
+body {
+	overflow-x: hidden;
+}
+.customSamplesHeader {
+	background-color: #4f9bd5;
+	position: relative;
+	min-height: 200px;
+	width: 100%;
+	display: inline-block;
+	color: #ffffff;
+}
+.customSamplesHeaderText {
+	padding: 40px;
+	width: 50%;
+}
+.customSamplesHeaderText h3 {
+	font-size: 32px;
+}
+.customSamplesHeaderText p {
+	font-size: 14px;
+}
+.customSamplesHeader img {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.banner2 {
+	background-color: #40a82b;
+}
+.banner2 a {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+}
+.banner2 span {
+    color: #ffd16e;
+    font-size: 18px;
+    margin: 0 8px;
+}
+.customSamplesPackBanner {
+	background-color: white;
+    padding: 10px;
+}
+.customSamplesPackBannerText {
+	display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    text-align: center;
+    padding: 10px 20px;
+}
+.customSamplesPackBannerText h5 {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.customSamplesPackBanner img {
+	border-left: 1px solid #f1f1f1;
+	padding-left: 15px;
+}
+.customSamplesPackBannerText .sampleButton {
+	color: #ffffff;
+	background-color: #40a82b;
+	text-transform: none !important;
+	font-size: 16px !important;
+}
+.slideIt .productInfoContainer {
+	display: block;
+	width: 300px;
+}
+.customSamplesLanding .productSection .slideIt-container {
+	height: 450px;
+}
+.slideIt-container .productInfoContainer {
+	display: block;
+	width: 300px;
+	background-color: #ffffff;
+	white-space: normal !important;
+	padding: 10px;
+}
+.productInfoContainer img {
+	display: block;
+	margin: 0 auto;
+}
+.productInfoContainer .productName {
+	font-size: 16px;
+}
+.productInfoContainer .productSKU {
+	font-size: 13px;
+	font-weight: bold;
+}
+.productInfoContainer .btsProductInfo {
+	min-height: 60px;
+}
+.productInfoContainer .btsProductInfo li {
+	font-size: 12px;
+}
+.productInfoContainer .minimumQuantity {
+	font-size: 14px;
+}
+.productSection h4 {
+	font-size: 24px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+	.customSamplesHeaderText h3 {
+		font-size: 28px;
+	}
+	.customSamplesHeaderText {
+		width: 40%;
+		padding: 25px 0 0 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,179 @@
+/*------------------------------------------
+
+Project Name : xPlus;
+Desgined By  : Faridul Haque;
+Developed By : Sumaiya Shampa & Faridul Haque;
+Date         : 05-Jan-2017
+------------------------------------------*/
+
+
+
+/*
+************************************************
+         == Common footer CSS Start ==
+************************************************ 
+*/
+.footer_left_icon li a:hover {
+    background: #99CA3C;
+}
+.quick_link_list li a:hover {
+    color: #99CA3C;
+}
+.latest_tweets {
+    float: right;
+}
+.latest_tweets_info p i {
+    font-size: 13px;
+    color: #99ca3c;
+    margin-right: 10px;
+}
+.latest_tweets_info:nth-child(2) {
+    margin-top: 30px;
+}
+.latest_tweets_info:nth-child(1) p {
+    max-width: 300px;
+}
+.latest_tweets_info:nth-child(2) p {
+    max-width: 200px;
+}
+.latest_tweets_info p {
+    color: #eeeeee;
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 26px;
+}
+.latest_tweets_info span {
+    color: #888888;
+    font-size: 12px;
+}
+.latest_tweets_info p a {
+    color:#888888;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.latest_tweets_info p a:hover {
+    color:#99CA3C;
+}
+.copyright p a {
+    color: #99ca3c;
+}
+.footer_menu_bottom {
+    float: right;
+}
+.footer_menu_bottom ul li a:hover {
+    color: #99CA3C;
+}
+.footer_menu_bottom ul li a:after,
+.footer_menu_bottom ul li a:before,
+span.scroll_top_up{
+    background: #99CA3C;
+}
+.contact-form{
+    margin-top: -10px;
+}
+.contact-form input[type="email"] {
+    border-color: #ddd;
+    color: #fff;
+    margin-top: 6px;
+    margin-left: -12px;
+    margin-bottom: 40px;
+}
+.contact-form input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid #99CA3C;
+    box-shadow: 0 1px 0 0 #99CA3C;
+}
+.upgraded_h_1 input[type=email]:focus:not([readonly])+label {
+    color: #99CA3C;
+}
+
+
+/* ============================  Rsponsive Css ================================= */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .top_footer .more_about_us, .top_footer .stay_update, .top_footer .quick_link {
+        padding-bottom: 30px;
+    }
+    .latest_tweets_info:nth-child(2) {
+        margin-bottom: 88px;
+    }
+    .copyright {
+        text-align: center;
+    }
+    .bottom_footer_text .footer_menu_bottom {
+        float: none;
+        text-align: center;
+    }
+    .contact_area {
+        padding-bottom: 45px;
+    }
+    .footer_content{
+        width: auto;
+    }
+    .contact-form {
+        margin-bottom: 30px;
+    }
+    .quick_link {
+        float: right;
+    }
+    .latest_tweets {
+        float: left;
+    }
+    .more_about_us, .stay_update, .quick_link {
+        padding-bottom: 70px;
+    }
+    
+}
+
+@media (max-width: 768px){
+    .copyright {
+        text-align: center;
+    }
+    .bottom_footer_text .footer_menu_bottom {
+        float: none;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 767px){
+    .quick_link {
+        float: none;
+    }
+    .footer_menu_bottom ul li {
+        padding-right: 26px;
+    }
+    .latest_tweets_info:nth-child(1) p {
+        max-width: 100%;
+    }
+    .latest_tweets_info:nth-child(2) p {
+        max-width: 100%;
+    }
+    .quick_link_list li {
+        border-bottom: 1px solid #343439;
+        padding: 5px 0;
+        cursor: pointer;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .latest_tweets {
+        float: left;
+        margin-bottom: 50px;
+    }
+    .contact-form {
+        margin:0 0 24px 0;
+    }
+    .quick_link_list li a {
+        font-size: 14px;
+    }
+     .more_about_us, .stay_update, .quick_link {
+        padding-bottom: 50px;
+    }
+    
+}
+

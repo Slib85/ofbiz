@@ -1,0 +1,274 @@
+.custom_quote_shop h1, 
+.custom_quote_shop h2, 
+.custom_quote_shop h3, 
+.custom_quote_shop h4, 
+.custom_quote_shop h5, 
+.custom_quote_shop a {
+    color:#1a345f !important;
+}
+.cq-right {
+    width: 300px;
+}
+.custom_quote_shop a {
+    font-weight: 700;
+}
+.fa-check {
+	color: #fc7e22;
+}
+.required {
+	color: #ff0000;
+}
+.jqs-response {
+	border: 1px solid #E7D6C7;
+	background-color: #F7F8FA;
+	margin: 10px;
+	padding: 10px;
+	display: none;
+}
+	.jqs-response p {
+		font-weight: bold;
+		color: #ff0000;
+	}
+input[type="radio"] {
+	margin: 4px 0px 0px 0px;
+}
+.custom_quote_shop .cqs_header img {
+	float: right;
+}
+.custom_quote_shop .content-body .pbar {
+	padding: 0px 10px;
+}
+.custom_quote_shop .parent_text {
+    font-size: 14px;
+    color: #000000;
+    /* border-bottom: 2px dotted #e0e0e0; */
+}
+.custom_quote_shop .child_text {
+	font-size: 14px;
+	font-weight: 300;
+}
+.mto_printing_method .parent_text,
+.mto_sealing_method .parent_text {
+    font-weight: 700;
+    border-bottom: 2px dotted #e0e0e0;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+}
+.custom_quote_shop h2 {
+	font-size: 30px;
+    line-height: 30px;
+    padding: 0px 0px 10px 0px;
+    font-weight: 700;
+    color: #1a345f;
+}
+.custom_quote_shop .section_header{
+    font-size: 20px;
+}
+[data-step_id="1"] .step_header,
+[data-step_id="2"] .step_header,
+[data-step_id="3"] .step_header,
+[data-step_id="4"] .step_header,
+[data-step_id="5"] .step_header,
+[data-step_id="6"] .step_header,
+[data-step_id="7"] .step_header,
+[data-step_id="8"] .step_header {
+    margin: 20px 0 45px 0;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+.custom_quote_shop .content_container {
+	margin: 0;
+}
+.custom_quote_shop .content_container .mto_printing_method, 
+.custom_quote_shop .content_container .mto_sealing_method {
+    vertical-align: top;
+    padding: 0 45px;
+}
+.custom_quote_shop .content_container .mto_printing_method{
+    border-right: 1px solid #1a345f;
+}
+.custom_quote_shop .content_container .mto_printing_method .jqs-printed_colors,
+.jqs-sealing_method_title {
+    margin-top: 50px;
+}
+.custom_quote_shop .button {
+	margin: 80px 0 0 0;
+    padding: 15px !important;
+    width: 100%;
+}
+.custom_quote_shop .button.submit {
+	padding: 25px 15px 26px 15px !important;
+}
+	.custom_quote_shop .button span {
+		font-size: 12px;
+	}
+.custom_quote_shop .button.new_quote {
+	margin-top: 30px;
+}
+	.custom_quote_shop .button.new_quote span {
+		font-size: 16px;
+	}
+.custom_quote_shop .sealing_method_description-wrap {
+	border: 2px dotted #e0e0e0;
+    padding: 25px;
+    margin: 40px 0 0 0;
+}
+.custom_quote_shop .sealing_method_description-wrap h3 {
+    margin-top: 0;
+}
+.custom_quote_shop .review_and_submit .edit_button {
+    font-size: 16px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #1a345f;
+    padding: 5px 15px;
+}
+.cq-right {
+	width: 250px;
+}
+	.cq-right > div:first-child {
+		margin-top: 0px;
+	}
+[name="window_description"] {
+	display: none;
+}
+.inline-list{
+    height: 30px;
+}
+.txt_ui{
+    font-weight:700;
+    color:#1a345f;
+    font-size:1.5em;
+    overflow: hidden;
+    padding: 24px;
+}
+.txt_ui:before,
+.txt_ui:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
+}
+
+.txt_ui:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.txt_ui:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+/*----------------------------*/
+/*----------------------------*/
+.mto_ui .mto_select, 
+.mto_ui .mto_quantity {
+    background-color: #1a345f;
+}
+.mto_ui .envelope-select, 
+.mto_ui input[type="text"]{
+    margin: 0 !important;
+    border-radius: 8px;
+}
+.mto_ui .mto_select, 
+.mto_ui .mto_else, 
+.mto_ui .mto_quantity {
+    vertical-align: top !important;
+    padding: 20px;
+}
+.mto_step3_subheader{
+    font-size: 25px;
+    margin: 20px 0;
+    line-height: 1;
+}
+/*----------------------------*/
+/*----------------------------*/
+@media only screen and (max-width: 767px) {
+    .custom_quote_shop label[class="envelope-select"] {
+        margin: 0;
+    }
+    .mto_ui .mto_select, 
+    .mto_ui .mto_else, 
+    .mto_ui .mto_quantity {
+        display: block;
+    }
+}
+@media only screen and (max-width: 1023px) {
+	.cq-right {
+		display: none !important;
+	}
+}
+/*----------------------------*/
+/*   RADIO BUTTON RE-DESIGN   */
+/*----------------------------*/
+/* The container */
+.bnc_button {
+    display: block;
+    position: relative;
+    padding-left: 38px;
+    cursor: pointer;
+    height: 60px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.bnc_button .section_selector{
+    font-size: 16px;
+    color: #1a345f;
+}
+/* Hide the browser's default checkbox */
+.bnc_button input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/* Create a custom radio button */
+.bnc_button .bnc_btn_redesign{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #c5c5c5;
+    /* background-color: #eee; */
+    border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.bnc_button:hover input ~ .bnc_btn_redesign{
+    background-color: #0b3460;
+}
+/* When the radio button is checked, add a blue background */
+.bnc_button input:checked ~ .bnc_btn_redesign{
+    background-color: #fff;
+    border: 2px solid #c5c5c5;
+}
+.bnc_button input[id="ship_to_business"]:checked ~ .section_selector {
+    font-weight: 700;
+    color:#0b3460;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.bnc_button .bnc_btn_redesign:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.bnc_button input:checked ~ .bnc_btn_redesign:after {
+    display: block;
+}
+/* Style the indicator (dot/circle) */
+.bnc_button .bnc_btn_redesign:after {
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0b3460;
+}

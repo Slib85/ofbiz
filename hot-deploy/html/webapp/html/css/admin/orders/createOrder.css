@@ -1,0 +1,21 @@
+.panel-body .steps > * {
+	width: 20% !important;
+}
+.multiSelectAdjustment .btn-group {
+	display: block;
+}
+.multiSelectAdjustment .multiselect-container {
+	top: 36px;
+}
+.multiSelectAdjustment button.multiselect {
+	width: 100%;
+	text-align: left;
+}
+.multiSelectAdjustment .dropdown-toggle:after {
+	float: right;
+	top: 8px;
+	position: relative;
+}
+.multiSelectAdjustment .multiselect-container.dropdown-menu {
+	width: 100%;
+}

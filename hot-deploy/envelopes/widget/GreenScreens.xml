@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+	<screen name="green-decorator">
+		<section>
+			<widgets>
+				<decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+					<decorator-section name="body">
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/template/breadcrumbs.ftl"/></html></platform-specific>
+						<platform-specific><html><html-template location="component://envelopes/webapp/envelopes/green/template/side-nav.ftl"/></html></platform-specific>
+						<decorator-section-include name="green-body"/>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+	   </section>
+	</screen>
+
+	<screen name="go-green">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/go-green.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="eco-friendly-shop">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/eco-friendly-shop.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="recycled-envelopes">
+		<section>
+			<actions>
+				<set field="headerItem" value="design"/>
+				<script location="component://envelopes/webapp/envelopes/WEB-INF/actions/green/recycled-envelopes.groovy"/>
+			</actions>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/recycled-envelopes.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="wind-power">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/wind-power.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="certifications">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/certifications.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="earth-friendly-envelopes">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/earth-friendly-envelopes.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="carbon-neutral">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/carbon-neutral.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="soy-inks">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/soy-inks.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+
+	<screen name="please-recycle">
+		<section>
+			<widgets>
+				<decorator-screen name="green-decorator" location="component://envelopes/widget/GreenScreens.xml">
+					<decorator-section name="green-body">
+						<platform-specific>
+							<html><html-template location="component://envelopes/webapp/envelopes/green/please-recycle.ftl"/></html>
+						</platform-specific>
+					</decorator-section>
+				</decorator-screen>
+			</widgets>
+		</section>
+	</screen>
+</screens>

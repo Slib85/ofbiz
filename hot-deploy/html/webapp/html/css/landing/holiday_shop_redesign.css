@@ -1,0 +1,575 @@
+/* ENVELOPES - Rachael Hale Shop */
+@font-face {
+	font-family: 'OpenSansRegular';
+    src: url('../../fonts/OpenSans-Regular.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+    src: url('../../fonts/OpenSans-Bold.ttf');
+    font-weight:700;
+}
+@font-face {
+	font-family: 'OpenSansExtraBold';
+    src: url('../../fonts/OpenSans-ExtraBold.ttf');
+    font-weight:900;
+}
+@font-face {
+	font-family: 'OpenSansLight';
+    src: url('../../fonts/OpenSans-Light.ttf');
+    font-weight:normal;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+    src: url('../../fonts/OpenSans-Semibold.ttf');
+    font-weight:600;
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+    src: url('../../fonts/OpenSans-Italic.ttf');
+    font-weight:normal;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+[bns-collapse_content][bns-collapsed="false"]:after {
+    background: url('/html/img/landing/icons/bnc-arrow-up-black.png') !important;
+}
+[bns-collapse_content][bns-collapsed="true"]:after {
+    background-image: url('/html/img/landing/icons/bnc-arrow-down-black.png') !important;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+.flex-row > * {
+    display: inline-flex;
+}
+.flex-row.flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.flex-row.flex-left {
+	justify-content: left;
+	-webkit-justify-content: left;
+  }
+	  .flex-row.flexCount6 > *,
+	  .flex-row.flexCount5 > *,
+	  .flex-row.flexCount4 > *,
+	  .flex-row.flexCount3 > *,
+	  .flex-row.flexCount2 > * {
+		  width: 100%;
+	  }
+	  .flex-row.flexCount6 > * {
+		  max-width: 16.66666%;
+	  }
+	  .flex-row.flexCount5 > * {
+		  max-width: 20%;
+	  }
+	  .flex-row.flexCount4 > * {
+		  max-width: 25%;
+	  }
+	  .flex-row.flexCount3 > * {
+		  max-width: 33.33333%;
+	  }
+	  .flex-row.flexCount2 > * {
+		  max-width: 50%;
+	  }
+
+/*------ MAIN WRAPPER ------*/
+.bnc_ths_shop * {
+    margin:0;
+    padding:0;
+}
+.bnc_ths_shop {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.bnc_ths_shop:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+/*----------------------------------------*/
+/*------------- MAIN WRAPPERS ------------*/
+/*----------------------------------------*/
+.ENV_LeftColumn_Wrap{
+    width: 22%;
+    float: left;
+    background-color: #f9f9f9;
+    margin: 0 30px 0 0 !important;
+}
+.ENV_RightColumn_Wrap{
+    width: 75%;
+    float: left;
+}
+.ENV_FullWidthColumn_Wrap {
+    display: table;
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.ENV_LeftColumn_Wrap .siderail-banner1,
+.ENV_LeftColumn_Wrap .siderail-banner2 {
+    padding: 15px;
+}
+.ENV_LeftColumn_Wrap .siderail-banner1 .rowWrapper{
+    border-bottom: 1px solid #000;
+    margin: 0 0 20px 0;
+}
+.ENV_LeftColumn_Wrap .siderail-banner1 h2,
+.ENV_LeftColumn_Wrap .siderail-banner2 h2 {
+    font-family: 'OpenSansBold';
+    color: #49822b;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+}
+.ENV_LeftColumn_Wrap .siderail-banner1 .smallHeader{
+    text-align: center;
+    font-weight: 600;
+}
+.ENV_LeftColumn_Wrap .siderail-banner2 {
+    margin: 45px 0 0 0;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+.env-prod-cta{
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+.env-prod-cta:hover{
+    color:#fff;
+    text-decoration: underline;
+}
+
+.block-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid #87ab87;
+    margin: 5px 0;
+    padding: 20px 20px;
+}
+.env-prod-cta:hover .block-row{
+    background-color: #87ab87;
+}
+.inner-block-row {
+    display: block;
+}
+.inner-block-row div {
+    display: table-cell;
+    width: 88px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+.inner-block-row div:first-child {
+    text-align: left;
+    width: 135px;
+}
+.env-shop-all-cta{
+    background-color: #e10202;
+    color: #fff;
+    text-align: center;
+    margin: 3em 0 0 0;
+}
+.env-shop-all-cta a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.env-shop-all-cta a:hover{
+    text-decoration: underline;
+}
+/*======*/
+.env-holiday-color-prods{
+    position: relative;
+}
+.env-holiday-color-content{
+    text-align: center;
+}
+.env-holiday-color-prods div a {
+    display: inline-block;
+    margin: 5px;
+}
+/*----------------------------------------*/
+/*-------------- TOP BANNER --------------*/
+/*----------------------------------------*/
+.bnc_ths_top_banner {
+
+}
+.ths_banner_wrap {
+    position: relative;
+}
+.ths_banner_content {
+    text-align: center;
+    color: #fff;
+
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ths_banner_content div {
+    
+}
+.ths_banner_content .ths-top-line,
+.ths_banner_content .ths-middle-line {
+    line-height: 1;
+    font-size: 2.8em;
+}
+.ths_banner_content .ths-middle-line h1{
+    font-size: 2em;
+}
+.ths_banner_content .ths-middle-line h1 span{
+    font-size: 44px;
+}
+.ths_banner_content p {
+    font-family: 'OpenSansRegular';
+    font-size: 14px;
+    width: 85%;
+    margin: 0 auto;
+}
+/*----------------------------------------*/
+/*----- NAVIGATION BELOW TOP BANNER ------*/
+/*----------------------------------------*/
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+label[for="ths-button"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+/* bnc_ths_nav1 */
+nav[role="bnc_ths_nav1"] {
+    position: relative;
+    width: 100%;
+    margin: -20px 0 35px 0;
+}
+nav[role="bnc_ths_nav1"] a, 
+nav[role="bnc_ths_nav1"] label {
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'OpenSansRegular';
+    transition: color 0.3s ease-in-out;
+}
+nav[role="bnc_ths_nav1"] ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+}
+nav[role="bnc_ths_nav1"] ul > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.55em 0.55em;
+    background-color: #eeeeee;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+nav[role="bnc_ths_nav1"] ul > li:hover {
+    background-color: #49822b;
+    color: #fff;
+    box-shadow: 0 0.05em 0.25em 0 #49822b, inset 0 0 0 2em rgba(0, 0, 0, .3);
+}
+nav[role="bnc_ths_nav1"] ul > li:hover > a {
+    color: #fff;
+}
+nav[role="bnc_ths_nav1"] ul > li:first-child {
+    border-radius: 0 0 0 10px;
+}
+nav[role="bnc_ths_nav1"] ul > li:last-child {
+    border-radius: 0 0 10px 0;
+}
+/* small screens */
+@media screen and (max-width: 47.9375em) /* 767px*/ {
+    nav[role="bnc_ths_nav1"] ul {
+        display: none;
+        height: 100%;
+   }
+    nav[role="bnc_ths_nav1"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.45em;
+        font-size: 1.1em;
+        margin: 0;
+        border: 0.15em solid rgba(60, 60, 60, .2);
+        background-image: url('/html/img/landing/taxEnvelopesShop/bg_dark_grey.png');
+   }
+    nav[role="bnc_ths_nav1"] label:after {
+        position: absolute;
+        right: 0.25em;
+        top: -7px;
+        content: "\2261";
+        font-size: 1.8em;
+        color: #fff;
+   }
+    nav[role="bnc_ths_nav1"] input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+   }
+    nav[role="bnc_ths_nav1"] input[type=checkbox]:checked ~ ul {
+        display: block;
+   }
+    nav[role="bnc_ths_nav1"] input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: 0.8;
+        display: block;
+        border-radius: 0;
+   }
+    nav[role="bnc_ths_nav1"] input[type=checkbox]:checked ~ ul > li:after {
+        position: absolute;
+        right: 0.25em;
+        content: "\203A";
+        font: bold 1.4em sans-serif;
+        color: #fff;
+   }
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.bnc_section_block{
+    color:#fff;
+}
+.bnc_section_content{
+    background-color: #49822b;
+    padding: 15px 45px 15px 15px;
+}
+/*----------------*/
+.bnc_section_block div .bnc_section_header,
+.bnc_section_block div .bnc_section_header h1,
+.bnc_section_block div .bnc_section_header h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+}
+.bnc_section_block div .bnc_section_desc{
+	font-size: 14px;
+}
+/*--------------*/
+.bnc_ths_product_wrap{
+    /* display: block; */
+    position: relative;
+    width: 100%;
+}
+.bnc_ths_product_wrap .bnc_ths_prod{
+    /* border: 1px solid #dddddd; */
+    margin: 0 24px 24px 0;
+    /* display: inline-block; */
+    vertical-align: top;
+    width: 295px;
+    height: 280px;
+}
+.ths_widthOverWrite{
+    width: 100% !important;
+    max-width: 400px;
+    margin: 20px;
+}
+.ths_widthOverWrite2{
+    width: 100% !important;
+    max-width: 610px;
+    margin: 20px;
+}
+.bnc_ths_product_wrap .bnc_ths_prod:last-child {
+    margin-right: 0;
+}
+.bnc_ths_product_wrap .bnc_ths_prod a{
+    display:block;
+}
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content{
+    position: relative;
+}
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'OpenSansExtraBold';
+    padding: 15px 10px;
+    text-align: center;
+}
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name h4, 
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name h5, 
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name i {
+    display: inline-block;
+}
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name h4{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name i{
+    color: #000;
+    font-size: 1.23em;
+}
+.bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_img {
+    background-image: url("https://actionenvelope.scene7.com/is/image/ActionEnvelope/holiday-white-wood-background-pattern?fmt=png-alpha&amp;wid=295");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color:#fff;
+    text-align: center;
+    border-radius: 8px;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+[bns-collapse_content="ENV_CustomPrintServices_content"],
+[bns-collapse_content="ENV_HolidayStockingStuffers_content"] {
+    background-image: url("https://actionenvelope.scene7.com/is/image/ActionEnvelope/green-blurred-light-background-banner?fmt=png-alpha&amp;wid=1360");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#ENV_CustomPrintServices_content .bnc_ths_prod_name,
+#ENV_HolidayStockingStuffers_content .bnc_ths_prod_name {
+    text-align: center;
+    position: relative;
+}
+#ENV_CustomPrintServices_content h5,
+#ENV_HolidayStockingStuffers_content h5 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'OpenSansExtraBold';
+    padding: 15px 10px;
+    text-align: center;
+}
+#ENV_CustomPrintServices_content h5,
+#ENV_HolidayStockingStuffers_content h5, 
+#ENV_CustomPrintServices_content i, 
+#ENV_HolidayStockingStuffers_content i {
+    display: inline-block;
+}
+#ENV_CustomPrintServices_content i,
+#ENV_HolidayStockingStuffers_content i {
+    color: #000;
+    font-size: 1.8em;
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+
+@media only screen and (max-width: 767px){
+    
+}
+@media only screen and (max-width: 1139px){
+    .ENV_LeftColumn_Wrap{
+        display: none;
+    }
+    .ENV_RightColumn_Wrap {
+        width: 100%;
+        float: left;
+    }
+    .ths_banner_content p {
+        display: none;
+    }
+    .ths_banner_content{
+        width: 80%;
+    }
+    .ths_banner_content .ths-top-line {
+        font-size: 2em !important;
+    }
+    .ths_banner_content .ths-middle-line h1 {
+        font-size: 2em !important;
+    }
+    .ths_banner_content .ths-middle-line h1 span {
+        font-size: 40px !important;
+    }
+}
+@media only screen and (max-width: 768px){
+    .ths_banner_content{
+        width: 85%;
+    }
+    .ths_banner_content .ths-top-line, 
+    .ths_banner_content .ths-middle-line {
+        font-size: 1.75em;
+    }
+    .ths_banner_content .ths-middle-line h1 span {
+        font-size: 18px;
+    }
+    .ths_banner_content .ths-middle-line h1 {
+        font-size: 1.5em;
+    }
+    .ths_banner_content p {
+        display: none;
+    }
+}
+@media only screen and (max-width: 425px){
+    .bnc_section_block div .bnc_section_desc{
+        display: none !important;
+    }
+    .ths_banner_content {
+        width: 95% !important;
+    }
+    .ths_banner_content .ths-top-line {
+        font-size: 1.3em !important;
+    }
+    .ths_banner_content .ths-middle-line h1 {
+        font-size: 1.1em !important;
+    }
+    .ths_banner_content .ths-middle-line h1 span {
+        font-size: 18px !important;
+    }
+    .bnc_ths_product_wrap .bnc_ths_prod{
+        /* width: 295px !important;
+        margin: 10px !important; */
+        margin: 2em !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    .bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name i{
+        display: none !important;
+    }
+    .bnc_ths_product_wrap .bnc_ths_prod .bnc_ths_prod_content .bnc_ths_prod_name h4{
+        font-size: 16px !important;
+    }
+}
+/*----------------------------------------*/
+/*----------------------------------------*/
+@media only screen and (min-width: 1360px){
+    /* .bnc_section_block div.bnc_ths_prod:nth-child(3n) {
+        margin-right:0;
+    } */
+}

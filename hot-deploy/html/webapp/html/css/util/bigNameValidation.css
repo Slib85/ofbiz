@@ -1,0 +1,20 @@
+.bigNameValidationBorderAlert {
+    border-color: #ff0000 !important;
+}
+.bigNameValidationTextAlert {
+    color: #ff0000 !important;
+}
+.bigNameValidationErrorMessage {
+    color: #ff0000 !important;
+    font-size: inherit !important;
+    padding: 0px 0px 10px 0px !important;
+}
+[bns-validationerrorheader] {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 15px 20px;
+    margin: 20px 0px;
+}
+

@@ -1,0 +1,70 @@
+pre {
+	white-space: pre-wrap;
+	font-family: inherit;
+}
+.texel {
+	display: none !important;
+}
+.proof-approval .approve-proof > * {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+}
+	.proof-approval .approve-proof .row {
+		max-width: 400px;
+		border-bottom: 1px solid #cccccc;
+		margin: 0px;
+	}
+	.proof-approval .approve-proof .row[class*=submit_reject] {
+		border: 0px;
+	}
+	.proof-approval .approve-proof .row.end {
+		border: none;
+	}
+		.proof-approval .approve-proof .row > div:first-child {
+			text-align: center;
+		}
+		.proof-approval .approve-proof .row.end > div {
+			text-align: center;
+			margin-top: 3px;
+		}
+		.proof-approval .approve-proof .button {
+			width: 160px;
+		}
+.proof-approval .content-right {
+	width: 400px;
+}
+.proof-approval .sub-header {
+	display: inline-block;
+}
+.proof-approval .commentsToCustomer {
+	text-align: left !important;
+}
+.proof-approval .proofParent > div > div {
+	display: inline-block;
+	vertical-align: top;
+}
+.proof-approval .approveOrRejectBody {
+	width: 350px;
+}
+.proof-approval .approveOrRejectButtons:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+.proof-approval .envelopesComments {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+	.proof-approval .envelopesComments .commentHead {
+		font-size: 18px;
+		color: #000000;
+	}
+@media only screen and (max-width: 1023px) {
+	.proof-approval .approve-proof .row.end > div {
+		margin-top: 10px;
+	}
+	.proof-approval .content-right {
+		width: 100%;
+	}
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+    <screen name="dashboard">
+        <section>
+            <actions>
+                <set field="screenGroup" value="pricingEngine"/>
+                <set field="screenName" value="dashboard"/>
+                <set field="titleProperty" value="Pricing Engine Dashboard"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/pricing-engine/peDashboard.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/pricing-engine/dashboard.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="dataImport">
+        <section>
+            <actions>
+                <set field="screenGroup" value="pricingDataImport"/>
+                <set field="titleProperty" value="Pricing Engine Data Import"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/pricing-engine/pricingDataImport.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="peProducts">
+        <section>
+            <actions>
+                <set field="screenGroup" value="pricingEngineSettings"/>
+                <set field="screenName" value="products"/>
+                <set field="titleProperty" value="Pricing Engine - Products"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/pricing-engine/peProducts.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/pricing-engine/products.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="pePricingAttributes">
+        <section>
+            <actions>
+                <set field="screenGroup" value="pricingEngineSettings"/>
+                <set field="screenName" value="pricingAttributes"/>
+                <set field="titleProperty" value="Pricing Engine - Pricing Attributes"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/pricing-engine/pePricingAttributes.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/pricing-engine/pricingAttributes.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="peVendors">
+        <section>
+            <actions>
+                <set field="screenGroup" value="pricingEngineSettings"/>
+                <set field="screenName" value="vendors"/>
+                <set field="titleProperty" value="Pricing Engine - Vendors"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/pricing-engine/peVendors.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/pricing-engine/vendors.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="peColors">
+        <section>
+            <actions>
+                <set field="screenGroup" value="pricingEngineSettings"/>
+                <set field="screenName" value="colors"/>
+                <set field="titleProperty" value="Pricing Engine - Colors"/>
+                <script location="component://admin/webapp/admin/WEB-INF/actions/pricing-engine/peColors.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific><html><html-template location="component://admin/webapp/admin/pricing-engine/colors.ftl"/></html></platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+</screens>

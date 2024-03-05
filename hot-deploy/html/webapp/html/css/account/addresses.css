@@ -1,0 +1,91 @@
+/* BEGIN POPUP */
+#add-new-address,
+#edit-address {
+	border-radius: 5px;
+}
+#add-new-address .shipping-radio {
+	padding-right: 0px;
+}
+#add-new-address .billing-radio {
+	padding: 0px;
+}
+#add-new-address .defaults > div {
+	display: inline-block;
+}
+#add-address #addressForm span {
+	position: relative;
+	top: 7px;
+}
+@media only screen and (max-width: 1023px) {
+	#add-new-address .billing-radio {
+		padding-left: 15px;
+	}
+}
+
+.jqs-contact-mech-purpose-type {
+	font-weight: bold;
+}
+
+#jqs-address-list .default-billing:after {
+    content: '(default billing)';
+}
+
+#jqs-address-list .default-shipping:after {
+    content: '(default shipping)';
+}
+
+#jqs-address-list .default-shipping.default-billing:after {
+    content: '(default shipping and billing)';
+}
+
+/* END POPUP */
+
+/* BEGIN ADDRESSES */
+	.addresses .filter-by {
+		display: table;
+		width: 100%;
+	}
+
+	.addresses .filter-by > span {
+		width: auto;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.addresses .filter-by > div {
+		width: 100px;
+		height: 40px;
+		display: table-cell;
+	}
+
+	@media only screen and (max-width: 1023px) {
+		.addresses .filter-by {
+			margin: 10px auto 0px auto;
+			width: auto;
+		}
+	}
+	/* BEGIN ADDRESS LIST */
+		.addresses .address-list {
+			display: table;
+		}
+			.addresses .address-list > div {
+				border: 1px solid #d7d7d7;
+				min-width: 250px;
+				max-width: 500px;
+				width: auto;
+				display: table-cell;
+				background-color: #ffffff;
+				line-height: 22px;
+			}
+				.addresses .address-list > div .defaults {
+					color: #FC7E22;
+					font-weight: bold;
+				}
+	/* END ADDRESS LIST */
+/* END ADDRESSES */
+
+@media only screen and (max-width: 1023px) {
+	.addresses .add-new-address {
+		text-align: center;
+	}
+}

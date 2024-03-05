@@ -1,0 +1,38 @@
+DROP PROCEDURE IF EXISTS convert_data;
+
+DELIMITER //
+CREATE PROCEDURE convert_data()
+BEGIN
+	DECLARE table_to_alter VARCHAR(255);
+	DECLARE execute_statement VARCHAR(255);
+	DECLARE bDone INT;
+	DECLARE curs CURSOR FOR SELECT TABLE_NAME AS mySQL FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA="ofbiztemp" AND TABLE_TYPE="BASE TABLE";
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET bDone = 1;
+
+	SET AUTOCOMMIT=0;
+	SET UNIQUE_CHECKS=0;
+	SET FOREIGN_KEY_CHECKS=0;
+
+	OPEN curs;
+	SET bDone = 0;
+	REPEAT
+		FETCH curs INTO table_to_alter;
+		IF bDone = 0 THEN
+			SET @execute_statement = CONCAT("ALTER TABLE `", table_to_alter,"` CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci");
+			-- SELECT @execute_statement;
+			PREPARE stmt1 FROM @execute_statement;
+			EXECUTE stmt1;
+		END IF;
+	UNTIL bDone END REPEAT;
+	CLOSE curs;
+
+	SET AUTOCOMMIT=1;
+	SET UNIQUE_CHECKS=1;
+	SET FOREIGN_KEY_CHECKS=1;
+	commit;
+END //
+DELIMITER ;
+
+CALL convert_data();
+
+DROP PROCEDURE convert_data;

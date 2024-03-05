@@ -1,0 +1,184 @@
+.go-green .head {
+	height: 202px;
+}
+
+.go-green .head .dark-color-container {
+	position: relative;
+}
+
+.go-green .head .dark-green-fade {
+	background: rgba(211,246,211,1);
+	background: -moz-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,246,211,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(211,246,211,1) 0%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3f6d3', endColorstr='#ffffff', GradientType=0 );
+	height: 202px;
+	width: 100%;
+	margin: auto;
+	border-radius: 4px;
+	position: absolute;
+}
+
+.go-green .head .light-color-container {
+	padding: 2px 2px 0px 2px;
+}
+
+.go-green .head .light-color-container > div {
+	position: relative;
+}
+
+.go-green .head .light-green-fade {
+	background: rgba(232,250,232,1);
+	background: -moz-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232,250,232,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(232,250,232,1) 0%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8fae8', endColorstr='#ffffff', GradientType=0 );
+	height: 200px;
+	width: 100%;
+	margin: auto;
+	border-radius: 4px;
+	position: absolute;
+	top: 0px;
+}
+
+.go-green .head .text-area > div {
+	padding: 20px;
+	width: 100%;
+	position: absolute;
+}
+
+.go-green .head .text-area h2 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #318923;
+}
+
+.go-green .head .text-area span {
+	display: block;
+	line-height: 20px;
+}
+
+.go-green .head .text-area img {
+	padding: 0px 0px 10px 30px;
+}
+
+.go-green .links {
+	text-align: center;
+	border: 2px solid #F4F4F4;
+	border-radius: 10px;
+}
+
+.go-green .eco-friendly {
+	border: 1px solid #d7d7d7;
+	border-radius: 6px;
+	-webkit-box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+}
+
+.go-green .eco-friendly > .panel-heading {
+	color: #074679;
+	background: rgba(249,249,249,1);
+	background: -moz-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(225,225,225,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(249,249,249,1)), color-stop(100%, rgba(225,225,225,1)));
+	background: -webkit-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(225,225,225,1) 100%);
+	background: -o-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(225,225,225,1) 100%);
+	background: -ms-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(225,225,225,1) 100%);
+	background: linear-gradient(to bottom, rgba(249,249,249,1) 0%, rgba(225,225,225,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#e1e1e1', GradientType=0 );
+	font-weight: bold;
+}
+
+.go-green .eco-friendly > .panel-heading > div {
+	height: 50px;
+	display: table;
+}
+
+.go-green .eco-friendly > .panel-heading h3 {
+	display: table-cell;
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.go-green .eco-friendly > .panel-heading span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.go-green .eco-friendly > .panel-body .panel-body {
+	padding: 0px 15px
+}
+
+.go-green .eco-friendly > .panel-body .panel-heading img {
+	display: inline-block;
+	width: 20px;
+	margin-right: 10px;
+}
+
+.go-green .eco-friendly > .panel-body .panel-heading h4 {
+	display: inline-block;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	font-size: 15px;
+}
+
+.go-green .eco-friendly > .panel-body ul > li {
+	padding: 10px 0px;
+	border-top: 1px solid #d7d7d7;
+}
+
+.go-green .eco-friendly > .panel-body ul > li:first-child {
+	border-top: 0px;
+}
+
+.go-green .eco-friendly > .panel-body > div {
+	border-left: 1px solid #d7d7d7;
+	height: 300px;
+}
+
+.go-green .eco-friendly > .panel-body > div:first-child {
+	border-left: 0px;
+}
+
+.go-green .eco-friendly .sfi {
+	position: relative;
+	font-size: 10px;
+	text-align: center;
+}
+
+.go-green .eco-friendly .sfi a {
+	display: block;
+}
+
+.go-green .bottom-right {
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	font-size: 12px;
+}
+
+.go-green .earth-friendly {
+	position: relative;
+	text-align: center;
+}
+
+.go-green .earth-friendly img {
+	-webkit-box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	box-shadow: inset -1px -11px 10px -10px rgba(0,0,0,0.25);
+	border: 1px solid #d7d7d7;
+	border-radius: 6px;
+	padding: 30px 0px 40px 0px;
+}

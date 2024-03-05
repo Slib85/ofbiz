@@ -1,0 +1,9 @@
+#orderListFixedHeader a {
+	text-decoration: none;
+}
+.table {
+	font-size: 12px;
+}
+.table td {
+	white-space: nowrap;
+}

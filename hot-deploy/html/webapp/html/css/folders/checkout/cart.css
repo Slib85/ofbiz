@@ -1,0 +1,214 @@
+.cart h1 {
+	font-size: 20px;
+}
+.cart .productRow {
+	position: relative;
+	border-top: 1px solid #dadada;
+}
+.cart .productRow:first-child {
+	border: none;
+}
+	.cart .productRow .productImageColumn,
+	.cart .productRow .productInfoColumn,
+	.cart .productRow .productSpecColumn,
+	.cart .productRow .productCustomizationColumn,
+	.cart .productRow .productQuantityAndPriceColumn {
+		vertical-align: top;
+	}
+	.cart .productRow .productImageColumn {
+		padding: 10px;
+	}
+	.cart .productRow .productCustomizationColumn,
+	.cart .productRow .productQuantityAndPriceColumn {
+		padding: 10px;
+	}
+	.cart .productRow .productSpecColumn {
+		padding: 10px 10px 10px 0px;
+	}
+	.cart .productRow .productImageColumn {
+		width: 125px;
+	}
+	.cart .productRow .productInfoColumn {
+		width: auto;
+	}
+		.cart .productRow .productInfoColumn .productSpecColumn {
+			width: 200px;
+		}
+		.cart .productRow .productInfoColumn .productCustomizationColumn {
+			width: 200px;
+		}
+		.cart .productRow .productInfoColumn .productQuantityAndPriceColumn {
+			width: 230px;
+		}
+	.cart .productRow i.removeProduct {
+		position: absolute;
+		top: 5px;
+		right: 0px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+		.cart .productRow .columnHeader,
+		.cart .cartActions .columnHeader {
+			font-weight: bold;
+			font-size: 16px;
+		}
+.cart .cartActions {
+	text-align: right;
+}
+	.cart .cartActions .columnResult {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.cart .cartActions > * {
+		vertical-align: top;
+	}
+	.cart .cartActions .shippingMethodContainer {
+		width: 350px;
+	}
+		.cart .cartActions .columnHeader {
+			text-align: center;
+		}
+		.cart .productRow .columnHeader,
+		.cart .cartActions .columnHeader {
+			font-weight: bold;
+			font-size: 16px;
+		}
+	.cart .cartActions .orderPrices {
+		margin-left: 10px;
+		text-align: right;
+	}
+			.cart .cartActions .orderPrices > div > div:last-child {
+				font-size: 18px;
+				margin-top: 5px;
+				padding-top: 5px;
+				border-top: 1px solid #dadada;
+			}
+.creditCardRelax {
+	width: 405px;
+	background-color: #ffffff;
+	padding: 10px;
+}
+.creditCardRelax i {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 30px;
+	color: #ffaf03;
+}
+.creditCardRelax p {
+	width: 61%;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: bold;
+	padding: 0 5px;
+}
+.creditCardRelax a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28%;
+}
+.preOrderPromiseBlock {
+	background-color: #ffffff;
+	position: relative;
+	margin-top: 15px;
+}
+.preOrderPromiseBlock i {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.preOrderServiceDetail {
+	width: 100%;
+	padding: 10px;
+}
+.preOrderPromiseBlock img {
+	padding: 10px 10px 10px 20px;
+}
+.preOrderBlocks h3 {
+	text-decoration: underline;
+	font-size: 22px;
+}
+.preOrderServiceDetail h3 {
+	font-weight: normal;
+	font-size: 22px;
+}
+.preOrderBlocks {
+	width: 32%;
+	text-align: center;
+	border: solid 1px #7ab9e1;
+	padding: 10px;
+	height: 88px;
+}
+.preOrderBlocks p {
+	padding-top: 5px;
+}
+.preOrderServiceDetail span, .preOrderBlocks span {
+	font-weight: bold;
+}
+@media only screen and (max-width: 1325px) {
+	.preOrderBlocks {
+		height: 100px;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.preOrderBlocks {
+		height: 125px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.cart .productRow .productImageColumn {
+		padding: 5px 5px 5px 0px;
+	}
+	.cart .productRow .productSpecColumn,
+	.cart .productRow .productCustomizationColumn,
+	.cart .productRow .productQuantityAndPriceColumn {
+		display: block;
+		padding-left: 0px;
+	}
+		.cart .productRow .productInfoColumn .productSpecColumn {
+			width: 150px;
+		}
+		.cart .productRow .columnHeader,
+		.cart .cartActions .columnHeader {
+			font-size: 14px;
+		}
+	.cart .cartActions .columnResult {
+		margin-top: 5px;
+	}
+	.cart .cartActions .shippingMethodContainer {
+		width: 100%;
+	}
+	.cart .cartActions .orderPrices {
+		margin-top: 10px;
+	}
+	.preOrderBlocks {
+		width: 100%;
+		height: 80px;
+		margin-bottom: 10px;
+	}
+	.preOrderBlocks:last-child {
+		margin-bottom: 5px;
+	}
+	.creditCardRelax {
+		float: none !important;
+		width: 100%;
+		margin-top: 5px;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.preOrderServiceDetail h3 {
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.preOrderBlocks {
+		height: 90px;
+	}
+	.creditCardRelax a {
+	    width: 100%;
+	}
+	.creditCardRelax p {
+	    width: 85%;
+	}
+}

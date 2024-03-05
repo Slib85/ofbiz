@@ -1,0 +1,121 @@
+/* FOLDERS.com - CONTACT US - REDESIGN*/
+/*=====================================*/
+/*=====================================*/
+.contactUs .FOL_Grid_Wrap {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 50px;
+    padding: 30px 0;
+}
+.contactUs .FOL_Grid_Box {
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    border: 2px solid #dadada;
+}
+.contactUs .FOL_Grid_Box:nth-child(1),
+.contactUs .FOL_Grid_Box:nth-child(2),
+.contactUs .FOL_Grid_Box:nth-child(3) {
+    grid-column: span 4;
+}
+.contactUs .FOL_Grid_Box:nth-child(4) {
+    grid-column: span 12;
+}
+@media screen and (max-width: 767px) {
+    .contactUs .FOL_Grid_Wrap {
+        display: block;
+    }
+    .contactUs .FOL_Grid_Box {
+        margin: 0 0 25px 0;
+    }
+    .contactUs .FOL_Grid_Box .accountInfoBody div {
+        margin: 22px 0;
+    }
+}
+/*=====================================*/
+/*=====================================*/
+.contactUs .accountHeader .FOL_UI_LogOut_CTA {
+    text-align: right;
+}
+.contactUs .accountHeader {
+    border-bottom: 2px solid #1A345F;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.contactUs .accountHeader div {
+    padding: 0 0 10px 0;
+    vertical-align: baseline;
+    display: table-cell;
+    width: 49%;
+}
+.contactUs .accountHeader .accountHeaderContent {
+    /* padding: 12px 0; */
+}
+.contactUs .accountContent .accountInfoHeader {
+    border-bottom: 2px dotted #dcdcdc;
+    padding: 0 0 15px 0;
+}
+.contactUs .accountContent .accountInfoHeader h2 {
+    font-size: 30px;
+    color: #1A345F;
+}
+.contactUs .accountContent .accountInfoHeader i {
+    font-size: 65px;
+    color: #1A345F;
+}
+.contactUs .accountContent .accountInfoBody p {
+    font-size: 20px;
+    line-height: 2;
+}
+.contactUs .accountContent .accountInfoBody a {
+    font-size: 20px;
+}
+.contactUs .accountContent .accountInfoBody a:hover{
+    font-weight: 700;
+    text-decoration: underline;
+}
+/*=====================================*/
+/*=====================================*/
+.contactUs .FOL_Grid_Box:nth-child(4) .accountInfoHeader {
+    padding: 11px 0 20px 0;
+    line-height: 1;
+    /* background-color: #31476f; */
+    /* border: none; */
+}
+.contactUs .FOL_Grid_Box:nth-child(4) h2 {
+    /* color: #fff !important; */
+}
+.contactUs .FOL_Grid_Box:nth-child(4) .accountInfoBody {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.contactUs .FOL_Grid_Box:nth-child(4) .accountInfoBody div {
+    display: table-cell;
+    color: #063b63;
+    font-size: 20px;
+    margin: 10px 0 0 0;
+}
+.repInfoContent{
+    display: block !important;
+    text-align: center;  
+}
+.contactUs .FOL_Grid_Box:nth-child(4) .accountInfoBody div:first-child {
+    border-right: 1px solid #dcdcdc;
+}
+.contactUs .FOL_Grid_Box:nth-child(4) .accountInfoBody div h4 {
+    color: #063b63;
+}
+/*=====================================*/
+/*=====================================*/
+@media only screen and (max-width: 767px) {
+    .contactUs .FOL_Grid_Box:nth-child(4) .accountInfoBody div {
+        display: block;
+    }
+}
+/*=====================================*/
+/*=====================================*/

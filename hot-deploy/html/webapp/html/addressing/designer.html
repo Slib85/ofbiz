@@ -1,0 +1,704 @@
+<html>
+<head>
+    <script type="text/javascript" src="../lib/jquery.2.1.4.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui.1.11.4.min.js"></script>
+    <script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+    <script type="text/javascript" src="../lib/envelopes-widget-util.js"></script>
+    <script type="text/javascript" src="jquery.envelopes.grid.js"></script>
+    <script type="text/javascript" src="jquery.envelopes.grid.proxy.js"></script>
+
+    <link href="grid1.css" rel="stylesheet">
+    <link href="slideout.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="gridOverlayBg hide"></div>
+<div class="gridOverlay hide">
+    <div id='env-addressing-grid'></div>
+</div>
+
+<div class="slideoutMenu">
+<h3>Preview Addresses <a href="#" class="slideoutMenuToggle"><img src="img/closeMenu.png" alt="Close"/></a></h3>
+
+<div class="mainContainer">
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+
+
+<!--checking length -->
+
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<div class="addressContainer">
+    <div>
+        FirstName LastName
+    </div>
+    <div>
+        Address Line 1
+    </div>
+    <div>
+        Address Line 2
+    </div>
+    <div>
+        City State ZipCode
+    </div>
+    <div>
+        Country
+    </div>
+    <div class="addressControls">
+        <a href="#" title="View"><img src="img/viewLabel.png" alt="View"/></a>
+        <a href="#" title="Edit"><img src="img/editLabel.png" alt="Edit"/></a>
+    </div>
+</div>
+<!-- delete this shit -->
+</div>
+</div>
+<!--/.slideoutMenu -->
+
+<a href="#" class="slideoutMenuToggle">toggle menu</a><br>
+<!--<a href="#" class="gridOverlayToggle">toggle grid</a>-->
+
+
+<script type="text/javascript" src="grid.js"></script>
+<script type="text/javascript" src="jquery.envelopes.addressing.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    var grid = $('#env-addressing-grid').AddressingGrid({gridData:gridData, responsive:true, overlayRows:12, overlayColumns:8,indenting: true, debug: false, logLevel: EnvelopesLogger.Level.DEBUG});
+    grid.AddressingGrid('showGrid');
+
+
+    $('.slideoutMenuToggle').on('click', function(event){
+    	event.preventDefault();
+    	// create menu variables
+    	var slideoutMenu = $('.slideoutMenu');
+    	var slideoutMenuWidth = $('.slideoutMenu').width();
+    	
+    	// toggle open class
+    	slideoutMenu.toggleClass("open");
+    	
+    	// slide menu
+    	if (slideoutMenu.hasClass("open")) {
+	    	slideoutMenu.animate({
+		    	right: "0px"
+	    	});	
+    	} else {
+	    	slideoutMenu.animate({
+		    	right: -slideoutMenuWidth
+	    	}, 350);	
+    	}
+    });
+
+    $('.gridOverlayToggle').on('click', function(e){
+    	e.preventDefault();
+    	//create grid variables
+    	var gridOverlay = $('.gridOverlay');
+    	var gridOverlayBg = $('.gridOverlayBg');
+    	var gridOverlayWidth = $('.gridOverlay').width();
+    	var gridOverlayHeight = $('.gridOverlay').height();
+
+    	// toggle open class
+    	gridOverlay.toggleClass("open");
+
+    	//pop grid
+    	if (gridOverlay.hasClass("open")) {
+    		gridOverlayBg.fadeIn('fast');
+    		gridOverlay.fadeIn('fast');
+    		gridOverlay.removeClass("hide");
+    		gridOverlayBg.removeClass("hide");
+    	} else {
+    		gridOverlayBg.fadeOut('fast');
+    		gridOverlay.fadeOut('fast');
+    		gridOverlay.addClass("hide");
+    		gridOverlayBg.addClass("hide");
+    	}
+    });
+});
+</script>
+</body>
+</html>

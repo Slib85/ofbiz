@@ -1,0 +1,218 @@
+.directMailingHeader {
+	background-color: #4f9bd5;
+	display: inline-block;
+	position: relative;
+	min-height: 200px;
+	width: 100%;
+	color: #ffffff;
+	padding: 0 0 0 20px;
+}
+.directMailingHeader h1 {
+	font-size: 38px;
+	padding-top: 5px;
+}
+.directMailingHeader img{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 200px;
+}
+.directMailingHeader p{
+	width: 60%;
+	font-size: 15px;
+}
+.directMailingBody {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+.productImage {
+	width: 325px;
+	padding: 10px;
+}
+.directMailingColumn {
+	max-width: 33%;
+	background-color: #ffffff;
+}
+.directMailingColumn h3 {
+	color: #000000;
+}
+.directMailingColumn .slideIt-container {
+	height: 250px;
+}
+.directMailingThumbnails {
+	margin: 10px 0;
+}
+.directMailingThumbnails img{
+	width: 15%;
+	margin: 0 1%;
+	padding: 1%;
+	cursor: pointer;
+}
+.directMailingButton {
+	width: 100%;
+	padding: 15px;
+	margin: 10px 0 20px;
+	font-size: 17px;
+	cursor: pointer;
+}
+.directMailingDescription p{
+	font-size: 14px;
+}
+.section-boxset{
+    margin-bottom:30px;
+}
+.layoutOptions h4{
+	margin-bottom: 5px;
+	color: #000000;
+	font-weight: 600;
+}
+.layoutOptions p{
+	padding-left: 10px;
+}
+.layoutOptions a {
+    margin-left: 24px;
+    font-size: 12px;
+    color: #1a345f;
+    font-weight: 700;
+}
+.layoutOptions .fa-cloud-download {
+	font-size: 16px;
+	margin-right: 2px;
+}
+.layoutOptions i{
+	color: #1a345f;
+}
+.layoutOptions .fa-circle {
+	font-size: 14px;
+}
+.layoutOptions .fa-pencil-square-o {
+	font-size: 15px;
+	font-weight: bold;
+}
+.downloadTemplate, .faq, .soloFaq {
+	width: 50%;	
+	color: #509bd2;
+}
+.soloFaq {
+	width: 100% !important;
+}
+.downloadTemplate a, .faq p, .soloFaq p {
+	width: 90%;
+	font-size: 15px;
+	font-weight: bold;
+}
+.soloFaq p {
+	display: inline-block;
+	width: 45%;
+	margin-top: 12px;
+}
+.soloFaq .downloadTemplateP {
+	width: 52% !important;
+    margin-left: 10px !important; 
+    color: #1a345f;
+}
+.downloadTemplate i, .faq i, .soloFaq i{
+	font-size: 50px;
+	vertical-align: top;
+	float: left;
+}
+.soloFaq i {
+    float: none !important;
+    color: #1a345f;
+}
+.h4PencilSize {
+	font-size: 20px !important;
+}
+.activeThumbnail {
+	border: 2px solid #509bd2;
+}
+.seoText {
+	background-color: #ffffff;
+    padding: 20px;
+    margin-top: 10px;
+}
+.seoText h5 {
+	color: #000000;
+	font-weight: bold;
+}
+.dmDescription {
+	height: 85px;
+    overflow: hidden;
+}
+.dmDescription span {
+	padding-left: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+	.directMailingHeader {
+		padding: 0 0 0 5px;
+	}
+	.directMailingHeader h1 {
+		font-size: 28px;
+	}
+	.directMailingHeader p{
+		font-size: 14px;
+		width: 58%;
+	}
+	.directMailingColumn h3{
+		font-size: 22px;
+	}
+	.directMailingColumn .slideIt-container {
+		height: 190px;
+	}
+	.layoutOptions h4{
+		font-size: 17px;
+	}
+	.layoutOptions p{
+		font-size: 14px;
+	}
+	.downloadTemplate, .faq {
+		width: 100%;
+	}
+	.faq {
+		margin-top: 10px;
+		vertical-align: middle;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.directMailingColumn {
+		max-width: 75%;
+		margin: 0 auto;
+	}
+	.downloadTemplate i, .faq i {
+		float: none;
+	}
+	.directMailingColumn .slideIt-container {
+		height: 250px;
+	}
+	.directMailingButton {
+		padding: 10px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.directMailingColumn .slideIt-container {
+		height: 190px;
+	}
+	.directMailingColumn h3{
+		font-size: 18px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
